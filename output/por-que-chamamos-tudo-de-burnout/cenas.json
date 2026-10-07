@@ -1,0 +1,27 @@
+[
+  {
+    "text": "Você está com burnout ou só cansado?\nChamar tudo assim pode esconder o verdadeiro problema.",
+    "search": ["tired office worker back view evening", "empty office night desk monitor glow", "office worker exhausted at desk"],
+    "image_prompt": "Cinematic documentary still, vertical 9:16, a person seen from behind with slumped shoulders at a desk in a nearly empty office at end of day, bluish window light and soft monitor glow, slow push-in framing, realistic, dramatic lighting, muted cold color grading, film grain, no visible face, no text, no watermark"
+  },
+  {
+    "text": "Em dois mil e dezenove, a OMS, na CID onze, tratou o burnout como fenômeno ocupacional.\nÉ estresse crônico no trabalho, não administrado com sucesso.\nTrês sinais: exaustão, distanciamento e menor eficácia profissional.\nPela OMS, o termo vale só para o trabalho, não para outras áreas da vida.",
+    "search": ["office desk keyboard hands close-up", "office corridor person walking", "World Health Organization headquarters Geneva"],
+    "image_prompt": "Cinematic documentary still, vertical 9:16, close-up of motionless hands resting on a keyboard on a work desk, a cold cup of coffee beside them, shallow depth of field, cool neutral light, realistic, dramatic lighting, muted color grading, film grain, no face, no text, no watermark"
+  },
+  {
+    "text": "Na nossa leitura, isso muda a pergunta.\nEm vez de perguntar que geração é essa, pergunte: o que no trabalho está esgotando?",
+    "search": ["office workers silhouettes large window", "open plan office empty chairs desks", "group of people standing at window office"],
+    "image_prompt": "Cinematic documentary still, vertical 9:16, a group of people of varied ages seen from behind standing before a wide office window, empty chairs and desks and a plain wall clock without numbers in the foreground, cold blue light, realistic, dramatic lighting, muted color grading, film grain, no faces, no text, no watermark"
+  },
+  {
+    "text": "Isso não nega o sofrimento. Burnout e depressão podem existir juntos, e quem sofre deve buscar avaliação profissional.\nTambém não dá para dizer que jovens sofrem mais só por serem jovens: idade mistura fase da carreira com época de nascimento.",
+    "search": ["waiting room person sitting side view", "young and older worker workbench side by side", "doctor office waiting room empty chairs"],
+    "image_prompt": "Cinematic documentary still, vertical 9:16, a person seated in profile at a distance in a quiet clinic waiting room, soft warm light from a lamp, a young worker and an older worker side by side at work benches seen from behind in the background, realistic, muted color grading, film grain, no visible face, no text, no watermark"
+  },
+  {
+    "text": "Então me diz: o que, no seu trabalho, está te esgotando, a pessoa ou a situação?",
+    "search": ["person leaving office golden light door", "employee walking out of office evening", "office doorway sunset light"],
+    "image_prompt": "Cinematic documentary still, vertical 9:16, wide open framing of a person seen from behind leaving an office at end of day, golden light streaming through the doorway, workspace with desks softly visible behind, calm and reflective mood, realistic, dramatic lighting, muted color grading, film grain, no face, no text, no watermark"
+  }
+]

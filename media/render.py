@@ -1,9 +1,21 @@
 """Edição com FFmpeg: movimento de câmera em cada imagem, áudio por cena, legendas, música com ducking e loudnorm."""
+import functools
+import subprocess
 from pathlib import Path
 
 from .util import run
 
 ROOT = Path(__file__).resolve().parent.parent
+
+
+@functools.lru_cache(maxsize=None)
+def has_filter(name):
+    """True se este ffmpeg tem o filtro pedido (ex.: 'subtitles' exige libass na compilação)."""
+    try:
+        out = subprocess.run(["ffmpeg", "-hide_banner", "-filters"], capture_output=True, text=True).stdout
+    except Exception:
+        return False
+    return f" {name} " in out
 
 
 def _srt_time(t):
@@ -52,17 +64,27 @@ def assemble(cfg, clips, outdir, final_name="video.mp4", srt_text=None, total=0.
     music = r.get("music_file") or ""
     if music and not Path(music).is_absolute():
         music = str(ROOT / music)  # relativo à pasta do projeto, não à pasta do vídeo
-    use_caps = bool(r.get("captions")) and srt_text
-    if use_caps:
+    # A legenda sempre vai para captions.srt (dá para subir como faixa separada no YouTube).
+    # A queima na imagem só acontece se o config pedir E este ffmpeg tiver o filtro 'subtitles' (libass).
+    if srt_text:
         (outdir / "captions.srt").write_text(srt_text, encoding="utf-8")
+    want_caps = bool(r.get("captions")) and bool(srt_text)
+    use_caps = want_caps and has_filter("subtitles")
+    if want_caps and not use_caps:
+        print("   (aviso) este ffmpeg não tem o filtro 'subtitles' (libass): a legenda fica em captions.srt "
+              "para subir como faixa separada no YouTube, sem queimar na imagem.")
 
     cmd = ["ffmpeg", "-y", "-i", str(joined)]
     if music:
         cmd += ["-stream_loop", "-1", "-i", music]
     fc = []
     if use_caps:
-        style = "FontName=Arial,FontSize=14,Outline=2,Shadow=0,MarginV=40,Alignment=2"
-        fc.append(f"[0:v]subtitles=captions.srt:force_style='{style}'[vout]")
+        # commas separam as opções do force_style; como o comando não passa por shell,
+        # elas precisam ser escapadas com barra, e sem aspas literais em volta.
+        # Obs.: exige um ffmpeg compilado com libass (filtro subtitles). Sem ele, desligue
+        # render.captions no config e suba captions.srt como legenda separada no YouTube.
+        style = "FontName=Arial,FontSize=14,Outline=2,Shadow=0,MarginV=40,Alignment=2".replace(",", r"\,")
+        fc.append(f"[0:v]subtitles=captions.srt:force_style={style}[vout]")
     if music:
         mv = r.get("music_volume", 0.15)
         fc.append("[0:a]asplit=2[v1][v2]")

@@ -1,0 +1,28 @@
+=== SHORT: Quem lucra com polarização Gen Z vs boomers ===
+Arquivos: video.mp4 (1080x1920, ~47s) · thumbnail.jpg · captions.srt (legenda para subir separada)
+
+TÍTULO (46 caracteres):
+Quem lucra com a polarização Gen Z vs boomers?
+
+DESCRIÇÃO:
+Quem ganha quando você acha que a Geração Z e os boomers estão em guerra? Um estudo de 2025 e uma estimativa de consultoria mostram incentivos, não uma guerra planejada.
+Siga o canal para mais análises de comportamento social e gerações. Inscreva-se e ative o sino das notificações.
+Cenas e miniatura ilustrativas geradas por IA.
+
+#Shorts #Gerações #RedesSociais
+
+TAGS:
+polarização, gerações, Gen Z, boomers, redes sociais, comportamento social, algoritmo, engajamento, economia da atenção, análise social
+
+TEXTO SUGERIDO PARA A MINIATURA (inserir na edição): Quem lucra?
+
+ANTES DE PUBLICAR:
+- Marque "conteúdo alterado ou sintético" no upload: as cenas e a miniatura são geradas por IA (parecem fotos reais). A narração é voz sintética (Kokoro) — declare se o YouTube perguntar.
+- Suba captions.srt como legenda (este vídeo NÃO tem legenda queimada: o ffmpeg local está sem libass).
+- Troque "o canal" pelo nome real do canal quando estiver definido.
+- Fontes para citar na descrição: Milli et al. (PNAS Nexus, 2025); Fortune (2016, via Source Global Research).
+
+PENDÊNCIA DE CONFORMIDADE (vini — ver auditoria.md):
+- BLOQUEANTE pela regra do canal (CLAUDE.md: 3+ fontes por fato). O roteiro usa 2 fontes.
+  Correção sugerida: incluir uma 3a fonte já presente nas notas (ex.: Brady et al., 2021) após conferir o trecho,
+  ou registrar exceção explícita do dono do canal.

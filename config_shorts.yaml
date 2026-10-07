@@ -1,11 +1,11 @@
-# ===== Configuração do canal (edite aqui; o código não precisa mudar) =====
-# Este é o perfil LONGO (16:9). O perfil de Shorts (9:16) fica em config_shorts.yaml.
-# A identidade editorial completa do canal está em CLAUDE.md e em output/messi_assinatura_canal.md.
+# ===== Perfil de SHORTS (9:16) — este é o padrão do canal na primeira fase =====
+# run.py usa este arquivo com `--format shorts` (o padrão). A identidade editorial completa
+# está em CLAUDE.md e em output/messi_assinatura_canal.md.
 channel:
   niche: "Análise de Comportamento Social e Gerações"   # nicho do canal (definido em 2026-10-07)
   audience: "brasileiros 18-45 interessados em entender comportamento, gerações e sociedade com nuance"
   language: pt-BR        # idioma da narração e dos textos
-  minutes: 2             # duração alvo do vídeo
+  minutes: 1             # SHORT: alvo ~1 min (gancho 3s -> insight -> contraexemplo -> pergunta)
   visual_style: "cinematic documentary still, realistic, dramatic lighting, muted color grading, film grain, no text, no watermark"   # usado só nas imagens geradas (IA)
 
 # Limites e política de custo (sem --allow-paid, o run.py mantém tudo em recursos gratuitos).
@@ -49,10 +49,10 @@ tts:
   pause_seconds: 0.35
 
 images:
-  provider: commons          # commons = imagem real de arquivo livre (grátis, sem chave), com reserva abaixo
+  provider: cloudflare       # SHORTS: Flux schnell na Cloudflare (gratis)
   fallback: cloudflare       # cloudflare (grátis, precisa de conta) | fal (centavos por imagem, mais simples) | local_art (só demonstração)
   model: fal-ai/flux/schnell
-  image_size: landscape_16_9
+  image_size: portrait_16_9
 
 compliance:
   max_videos_per_day: 2      # acima disso o verificador avisa (publicação em volume parece produção em massa)
@@ -65,10 +65,10 @@ commons:
   grade: true                # tratamento leve e igual em todas as imagens reais (contraste, cor, vinheta)
 
 render:
-  width: 1920
-  height: 1080
+  width: 1080
+  height: 1920
   fps: 30
-  captions: true
+  captions: false           # ffmpeg local sem libass: legenda vai como captions.srt separado
   music_file: "music/ambient.mp3"   # trilha .mp3 (opcional)
   music_volume: 0.15
 

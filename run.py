@@ -44,7 +44,44 @@ def step(msg):
     print(f"\n▶ {msg}", flush=True)
 
 
-def make_video(cfg, topic, mock):
+PAID_TTS = {"google"}
+PAID_IMAGES = {"fal"}
+
+
+def enforce_budget(cfg, allow_paid):
+    """Sem --allow-paid, mantém o fluxo em recursos gratuitos (voz local Kokoro + imagens sem custo).
+    Não bloqueia: troca o provedor pago pelo gratuito equivalente e avisa o que fez."""
+    if allow_paid:
+        return
+    t = cfg.setdefault("tts", {})
+    if t.get("provider") in PAID_TTS:
+        print(f"   (orçamento) tts.provider '{t['provider']}' é pago; usando a voz local 'kokoro'. Use --allow-paid para o pago.")
+        t["provider"] = "kokoro"
+    im = cfg.setdefault("images", {})
+    free_img = "cloudflare" if os.environ.get("CF_ACCOUNT_ID") and os.environ.get("CF_API_TOKEN") else "local_art"
+    if im.get("provider") in PAID_IMAGES:
+        print(f"   (orçamento) images.provider '{im['provider']}' é pago; usando '{free_img}'. Use --allow-paid para o pago.")
+        im["provider"] = free_img
+    if im.get("provider") == "commons" and im.get("fallback") in PAID_IMAGES:
+        print(f"   (orçamento) images.fallback '{im['fallback']}' é pago; usando '{free_img}'. Use --allow-paid para o pago.")
+        im["fallback"] = free_img
+
+
+def need_creative(out_file, agent, mock, allow_paid):
+    """Garante que um arquivo criativo exista antes de seguir. A squad (agentes do Claude) é quem os produz
+    de graça; gerar por API da Anthropic custa, então só acontece com --allow-paid. Devolve True se o chamador
+    deve gerar o arquivo agora (mock ou --allow-paid); False se já existe."""
+    if out_file.exists():
+        return False
+    if mock or allow_paid:
+        return True
+    raise SystemExit(
+        f"Falta {out_file.name}. Gere com a squad (@{agent}) e salve em output/<slug>/, "
+        f"ou rode de novo com --allow-paid para gerar pela API da Anthropic (tem custo).")
+
+
+def make_video(cfg, topic, mock, allow_paid=False):
+    enforce_budget(cfg, allow_paid)
     llm = LLM(cfg, mock=mock)
     out = ROOT / "output" / (("mock-" if mock else "") + slugify(topic))
     for d in ("audio", "images", "clips"):
@@ -54,23 +91,20 @@ def make_video(cfg, topic, mock):
     # 1. Pesquisa do tema
     step("1/8 Pesquisando o tema")
     f = out / "notas.md"
-    if not f.exists():
+    if need_creative(f, "modric-pesquisador-tema", mock, allow_paid):
         f.write_text(research.research_topic(llm, cfg, topic), encoding="utf-8")
     notes = f.read_text(encoding="utf-8")
 
     # 1b. Ângulo editorial (ponto de vista próprio, definido antes do roteiro)
     f = out / "angulo.md"
-    if not f.exists():
-        if mock or os.environ.get("ANTHROPIC_API_KEY"):
-            f.write_text(research.make_angle(llm, cfg, topic, notes), encoding="utf-8")
-        else:
-            print("   ⚠ sem angulo.md e sem ANTHROPIC_API_KEY: seguindo sem ângulo editorial (o verificador vai apontar)")
+    if need_creative(f, "messi-estrategista-angulo", mock, allow_paid):
+        f.write_text(research.make_angle(llm, cfg, topic, notes), encoding="utf-8")
     angle = f.read_text(encoding="utf-8") if f.exists() else ""
 
     # 2. Roteiro + revisão
     step("2/8 Escrevendo e revisando o roteiro")
     f = out / "roteiro.txt"
-    if not f.exists():
+    if need_creative(f, "neymar-roteirista", mock, allow_paid):
         draft = scriptmod.write_script(llm, cfg, topic, notes, angle)
         (out / "roteiro_rascunho.txt").write_text(draft, encoding="utf-8")
         final, review = scriptmod.review_script(llm, cfg, notes, draft, angle)
@@ -86,7 +120,7 @@ def make_video(cfg, topic, mock):
     # 3. Cenas e prompts de imagem
     step("3/8 Dividindo em cenas e criando prompts de imagem")
     f = out / "cenas.json"
-    if not f.exists():
+    if need_creative(f, "olise-diretor-arte", mock, allow_paid):
         texts = scenesmod.split_scenes(script, cfg["scenes"]["min_words"])
         prompts = scenesmod.image_prompts(llm, cfg, texts, topic)
         f.write_text(json.dumps([{"text": t, **p} for t, p in zip(texts, prompts)],
@@ -126,7 +160,7 @@ def make_video(cfg, topic, mock):
     # 7. Metadados e thumbnail
     step("7/8 Criando título, descrição, tags e thumbnail")
     f = out / "metadados.json"
-    if not f.exists():
+    if need_creative(f, "mbappe-editor-metadados", mock, allow_paid):
         f.write_text(json.dumps(metamod.make_metadata(llm, cfg, script), ensure_ascii=False, indent=1),
                      encoding="utf-8")
     meta = json.loads(f.read_text(encoding="utf-8"))
@@ -187,12 +221,20 @@ def main():
     ap = argparse.ArgumentParser(description="Orquestrador do canal dark")
     ap.add_argument("command", choices=["video", "ideas", "voices", "check"])
     ap.add_argument("--topic", help="tema do vídeo (comando video)")
+    ap.add_argument("--format", choices=["shorts", "long"], default="shorts",
+                    help="shorts (vertical, ~60s; padrão) ou long (horizontal). Escolhe o config quando --config não é dado.")
     ap.add_argument("--mock", action="store_true", help="simula tudo, sem APIs e sem custo")
-    ap.add_argument("--config", default=str(ROOT / "config.yaml"))
+    ap.add_argument("--allow-paid", action="store_true", dest="allow_paid",
+                    help="autoriza etapas pagas (voz Google, imagens fal, geração de texto pela API da Anthropic)")
+    ap.add_argument("--config", default=None, help="caminho do config; por padrão é escolhido pelo --format")
     a = ap.parse_args()
-    cfg = yaml.safe_load(open(a.config, encoding="utf-8"))
-    if a.mock:  # teste rápido em resolução menor
-        cfg["render"].update(width=1280, height=720, fps=24)
+    config_path = a.config or str(ROOT / ("config_shorts.yaml" if a.format == "shorts" else "config.yaml"))
+    cfg = yaml.safe_load(open(config_path, encoding="utf-8"))
+    if a.mock:  # teste rápido em resolução menor, mantendo a proporção do formato escolhido
+        if cfg["render"].get("height", 0) > cfg["render"].get("width", 0):
+            cfg["render"].update(width=720, height=1280, fps=24)
+        else:
+            cfg["render"].update(width=1280, height=720, fps=24)
 
     if a.command == "voices":
         print("\n".join(tts.list_voices(cfg)))
@@ -216,7 +258,7 @@ def main():
     else:
         if not a.topic:
             ap.error("use --topic \"tema do vídeo\"")
-        make_video(cfg, a.topic, a.mock)
+        make_video(cfg, a.topic, a.mock, allow_paid=a.allow_paid)
 
 
 if __name__ == "__main__":

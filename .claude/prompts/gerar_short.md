@@ -1,73 +1,29 @@
-# Gerar SHORT (Análise de Comportamento Social)
+# Gerar um SHORT (Análise de Comportamento Social e Gerações)
 
-**Use este prompt para gerar um SHORT completo do canal.**
+Jeito recomendado (autônomo): peça ao orquestrador e ele coordena tudo e entrega o vídeo pronto.
 
----
-
-## Etapa 1: Roteiro
-@neymar-roteirista Escreva o roteiro narrado para o SHORT sobre "{TEMA}".
-
-**Contexto:**
-- Nicho: Análise de Comportamento Social
-- Assinatura do canal: em output/messi_assinatura_canal.md (tese: "Geração é rótulo; contexto é explicação")
-- Notas com fontes: output/{SLUG}/notas.md
-- Tema: {TEMA}
-- Ângulo: {ANGULO_PROPOSTO}
-- **Formato SHORT: 30-60 segundos**
-- Estrutura: gancho (3s) → insight único (10-15s) → contraexemplo (10-15s) → pergunta de volta (5-10s)
-- Pelo menos 1/3 de comentário original, não só resumir fontes
-- Salve em output/{SLUG}/roteiro.md
-
----
-
-## Etapa 2: Revisão de Fatos
-@courtois-revisor-fatos Revise o roteiro SHORT contra as notas. Confira fatos, percentuais, links. Marque qualquer imprecisão.
-- Arquivo: output/{SLUG}/roteiro.md
-- Nota: é SHORT (60s), então seja conciso nas observações
-
----
-
-## Etapa 3: Cenas e Prompts de Imagem
-@olise-diretor-arte Divida o roteiro SHORT em 3-5 cenas e crie prompts fotorrealistas para cada uma.
-- Formato: SHORT (60 segundos), então poucas cenas mas impactantes
-- Estilo: fotorrealista, consistente com o canal
-- Salve em output/{SLUG}/cenas.md
-
----
-
-## Etapa 4: Gerar Vídeo
 ```
-python run.py video --topic "{TEMA}" --format shorts
+@debruyne-orquestrador Produza um SHORT sobre "{TEMA}". Slug: {SLUG}. Ângulo de partida: {ANGULO_PROPOSTO}.
 ```
-(Cada etapa guarda resultado em output/{SLUG}/ e pula o que já existe)
+
+De Bruyne roda a sequência abaixo sozinho, com recursos gratuitos, sem pedir aprovação a cada passo. Use as etapas manuais só se quiser conduzir à mão.
 
 ---
 
-## Etapa 5: Metadados (Short)
-@mbappe-editor-metadados Crie título, descrição (com CTA), tags e prompt da miniatura para o SHORT.
-- SHORT title: max 60 caracteres, impactante
-- Descrição: 2-3 linhas com CTA (link canal, inscreva-se, etc)
-- Tags: 5-8 tags relevantes
-- Miniatura: prompt breve (será usada também para analytics)
-- Salve em output/{SLUG}/metadados.md
+## Etapas manuais (opcional)
 
----
+Sempre em `output/{SLUG}/`. Contrato de arquivos que o `run.py` consome: `notas.md`, `angulo.md`, `roteiro.txt` (só narração), `cenas.json`, `metadados.json`.
 
-## Etapa 6: Auditoria YouTube
-@vini-auditor-conformidade Audite o SHORT contra políticas de monetização do YouTube. Aprove ou liste pendências.
-- Foco: conteúdo pode ser monetizado? Tem warnings?
-- Marque se conteúdo sintético (IA) precisa ser marcado
-- Arquivo: output/{SLUG}/auditoria.md
+1. `@modric-pesquisador-tema Pesquise "{TEMA}" com 3+ fontes e salve output/{SLUG}/notas.md`
+2. `@messi-estrategista-angulo Defina o ângulo do SHORT a partir de output/{SLUG}/notas.md e salve output/{SLUG}/angulo.md`
+3. `@neymar-roteirista Escreva o roteiro do SHORT (30-60s) e salve output/{SLUG}/roteiro.txt (só texto narrado)`
+4. `@courtois-revisor-fatos Confira o roteiro contra as notas; corrija output/{SLUG}/roteiro.txt e liste em revisao.md`
+5. `@cristiano-otimizador-viral Deixe output/{SLUG}/roteiro.txt premium; gere roteiro_notas.md e direcao_viral.md`
+6. `@olise-diretor-arte Divida em 3-5 cenas lendo direcao_viral.md e salve output/{SLUG}/cenas.json`
+7. `@mbappe-editor-metadados Crie output/{SLUG}/metadados.json (titulo, descricao com Fontes: e aviso sintético, tags, thumbnail_prompt, thumbnail_texto)`
+8. Renderizar (gratuito): `python run.py video --topic "{TEMA}" --format shorts`
+9. `@vini-auditor-conformidade Audite o SHORT e salve output/{SLUG}/auditoria.md (APROVADO/BLOQUEADO)`
 
----
+Resultado em `output/{SLUG}/`: `video.mp4`, `thumbnail.jpg`, `PUBLICAR.txt`, `CONFORMIDADE.md`, `custo.json`. **Upload manual.**
 
-## Como usar:
-1. Substitua `{TEMA}`, `{SLUG}`, `{ANGULO_PROPOSTO}` pelos valores corretos
-2. Cole cada etapa sequencialmente
-3. Aguarde cada agente terminar antes de mandar a próxima
-4. Após etapa 6, arquivo está pronto para upload manual no YouTube
-
-**Exemplo com tema real:**
-- TEMA: "Quem lucra com polarização Gen Z vs boomers"
-- SLUG: polarizacao-genz-boomers
-- ANGULO_PROPOSTO: "Efeito colateral, não conspiração. Plataformas, mídia e consultoria ganham com conflito geracional."
+> Nota: `--format shorts` é o padrão (perfil `config_shorts.yaml`, 9:16). Sem `--allow-paid`, o `run.py` usa só a voz local Kokoro e imagens sem custo.

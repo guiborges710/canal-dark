@@ -70,4 +70,14 @@ def generate(cfg, prompt, out_path, mock=False, queries=None):
             except Exception as e:  # sem internet, bloqueio etc.: segue para o provedor de reserva
                 print(f"   (aviso) imagem real indisponível ({type(e).__name__}); usando a reserva")
         provider = cfg["images"].get("fallback", "local_art")
-    {"fal": _fal, "cloudflare": _cloudflare, "local_art": _local_art}[provider](cfg, prompt, out_path)
+    gen = {"fal": _fal, "cloudflare": _cloudflare, "local_art": _local_art}[provider]
+    try:
+        gen(cfg, prompt, out_path)
+    except Exception as e:
+        # Um provedor de imagem pode falhar (conta, rede, cota). Em vez de derrubar o vídeo inteiro,
+        # cai para a arte local gratuita e avisa — assim a produção sempre termina com um resultado aproveitável.
+        if provider != "local_art":
+            print(f"   (aviso) provedor de imagem '{provider}' falhou ({type(e).__name__}); usando local_art nesta cena")
+            _local_art(cfg, prompt, out_path)
+        else:
+            raise

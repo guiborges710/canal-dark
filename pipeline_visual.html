@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipeline Canal Dark</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .title h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .title p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .pipeline {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            overflow-x: auto;
+            padding: 20px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .stage {
+            flex: 0 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .agent-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .agent-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .agent-name {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .agent-role {
+            font-size: 0.9em;
+            line-height: 1.4;
+            opacity: 0.95;
+        }
+
+        .agent-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .arrow {
+            font-size: 2em;
+            color: #667eea;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .manual {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 25px;
+            border-radius: 15px;
+            width: 200px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 10px 30px rgba(245, 87, 108, 0.3);
+            font-weight: bold;
+        }
+
+        .manual-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .separator {
+            text-align: center;
+            color: #999;
+            font-size: 0.9em;
+            margin: 30px 0;
+            font-weight: bold;
+        }
+
+        .legend {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .legend-icon {
+            font-size: 1.5em;
+            flex-shrink: 0;
+        }
+
+        .legend-text {
+            color: #666;
+        }
+
+        .legend-text strong {
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .title h1 {
+                font-size: 1.8em;
+            }
+
+            .pipeline {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .agent-box, .manual {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .arrow {
+                transform: rotate(90deg);
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>🎬 Pipeline Canal Dark</h1>
+            <p>Automatizado do início ao fim • 8 agentes especializados</p>
+        </div>
+
+        <div class="pipeline">
+            <div class="stage">
+                <div class="agent-box">
+                    <div class="agent-icon">🔍</div>
+                    <div class="agent-name">Haaland</div>
+                    <div class="agent-role">Pesquisador de Nicho</div>
+                    <div class="agent-role">Descobre temas em crescimento</div>
+                </div>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="stage">
+                <div class="agent-box">
+                    <div class="agent-icon">📚</div>
+                    <div class="agent-name">Modric</div>
+                    <div class="agent-role">Pesquisador de Tema</div>
+                    <div class="agent-role">Reúne 3+ fontes confiáveis</div>
+                </div>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="stage">
+                <div class="agent-box">
+                    <div class="agent-icon">💡</div>
+                    <div class="agent-name">Messi</div>
+                    <div class="agent-role">Estrategista de Ângulo</div>
+                    <div class="agent-role">Define tese e comentário próprio</div>
+                </div>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="stage">
+                <div class="agent-box">
+                    <div class="agent-icon">✍️</div>
+                    <div class="agent-name">Neymar</div>
+                    <div class="agent-role">Roteirista</div>
+                    <div class="agent-role">Escreve roteiro narrado</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pipeline" style="margin-top: 30px;">
+            <div class="stage">
+                <div class="agent-box">
+                    <div class="agent-icon">✔️</div>
+                    <div class="agent-name">Courtois</div>
+                    <div class="agent-role">Auditor de Conformidade</div>
+                    <div class="agent-role">Valida fatos e fontes</div>
+                </div>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="stage">
+                <div class="agent-box">
+                    <div class="agent-icon">🎨</div>
+                    <div class="agent-name">Olise</div>
+                    <div class="agent-role">Diretor de Arte</div>
+                    <div class="agent-role">Cria prompts de imagens</div>
+                </div>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="stage">
+                <div class="agent-box">
+                    <div class="agent-icon">🎬</div>
+                    <div class="agent-name">Python</div>
+                    <div class="agent-role">Gerador de Vídeo</div>
+                    <div class="agent-role">Monta o vídeo final</div>
+                </div>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="stage">
+                <div class="agent-box">
+                    <div class="agent-icon">📝</div>
+                    <div class="agent-name">Mbappe</div>
+                    <div class="agent-role">Editor de Metadados</div>
+                    <div class="agent-role">Título, descrição, tags</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pipeline" style="margin-top: 30px;">
+            <div class="stage">
+                <div class="agent-box">
+                    <div class="agent-icon">🚨</div>
+                    <div class="agent-name">Vini</div>
+                    <div class="agent-role">Auditor de Monetização</div>
+                    <div class="agent-role">Valida políticas YouTube</div>
+                </div>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="stage">
+                <div class="manual">
+                    <div class="manual-icon">👤</div>
+                    <div>Upload Manual</div>
+                    <div style="font-size: 0.8em; margin-top: 10px;">Você faz isso no YouTube</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-icon">⚡</div>
+                <div class="legend-text">
+                    <strong>Totalmente Automatizado</strong>
+                    8 agentes trabalham em sequência sem intervenção
+                </div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-icon">✍️</div>
+                <div class="legend-text">
+                    <strong>Conteúdo Original</strong>
+                    Cada vídeo tem ângulo único e 1/3+ de comentário próprio
+                </div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-icon">📊</div>
+                <div class="legend-text">
+                    <strong>Fatos Verificados</strong>
+                    Mínimo 3 fontes, validadas em cada etapa
+                </div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-icon">🎬</div>
+                <div class="legend-text">
+                    <strong>Pronto para YouTube</strong>
+                    Vídeo gerado, otimizado e auditado automaticamente
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

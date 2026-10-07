@@ -1,0 +1,71 @@
+# ===== Configuração do canal (edite aqui; o código não precisa mudar) =====
+channel:
+  niche: "curiosidades históricas"   # tema provisório da demonstração
+  language: pt-BR        # idioma da narração e dos textos
+  minutes: 2             # duração alvo do vídeo
+  visual_style: "cinematic documentary still, realistic, dramatic lighting, muted color grading, film grain, no text, no watermark"   # usado só nas imagens geradas (IA)
+
+# Qual modelo faz cada agente (fast = Haiku, smart = Sonnet)
+tiers:
+  research: fast
+  writer: smart
+  reviewer: fast
+  scenes: fast
+  metadata: fast
+  ideas: fast
+  angle: smart
+
+models:
+  fast: claude-haiku-4-5-20251001
+  smart: claude-sonnet-5-5
+
+research:
+  youtube_queries: []    # ex.: ["curiosidades históricas", "mistérios da história"]
+  region: BR
+  days_back: 180
+  max_results: 25
+
+tts:
+  provider: kokoro            # kokoro = voz local gratuita | google = Google Cloud TTS (precisa de chave)
+  model_path: models/kokoro-v1.0.int8.onnx
+  voices_path: models/voices-v1.0.bin
+  kokoro_lang: pt-br
+  language_code: pt-BR       # usado só pelo provedor google
+  voice: pm_alex             # kokoro pt-br: pf_dora, pm_alex, pm_santa (google ex.: pt-BR-Wavenet-A)
+  speaking_rate: 1.0
+  pause_seconds: 0.35
+
+images:
+  provider: commons          # commons = imagem real de arquivo livre (grátis, sem chave), com reserva abaixo
+  fallback: cloudflare       # cloudflare (grátis, precisa de conta) | fal (centavos por imagem, mais simples) | local_art (só demonstração)
+  model: fal-ai/flux/schnell
+  image_size: landscape_16_9
+
+compliance:
+  max_videos_per_day: 2      # acima disso o verificador avisa (publicação em volume parece produção em massa)
+  max_title_chars: 70
+
+commons:
+  user_agent: "canal-dark-pipeline/0.1 (guiborges86@gmail.com)"   # o Wikimedia pede um contato no User-Agent; use o seu
+  min_width: 1280            # largura mínima da imagem original, em pixels
+  allow_share_alike: false   # true também aceita licenças CC BY-SA (exigem que adaptações usem a mesma licença)
+  grade: true                # tratamento leve e igual em todas as imagens reais (contraste, cor, vinheta)
+
+render:
+  width: 1920
+  height: 1080
+  fps: 30
+  captions: true
+  music_file: "music/ambient.mp3"   # trilha .mp3 (opcional)
+  music_volume: 0.15
+
+scenes:
+  min_words: 10          # tamanho mínimo de cada cena, em palavras
+
+# Preços para estimar custo (US$). CONFIRME nas páginas oficiais antes de confiar.
+prices:
+  llm_per_mtok:
+    claude-haiku-4-5-20251001: {in: 1.0, out: 5.0}
+    claude-sonnet-5-5: {in: 3.0, out: 15.0}   # confirmar preço do modelo atual
+  tts_per_mchar: 4.0      # Google Standard/WaveNet; Chirp 3 HD = 30
+  image_each: 0.003       # Flux schnell

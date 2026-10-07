@@ -1,0 +1,12 @@
+{
+  "aprovado": true,
+  "revisor": "Claude (neste chat), contra notas.md",
+  "problemas_corrigidos": [
+    "\"quase quatro horas\" trocado por \"cerca de quatro horas\" (a fonte diz roughly 4 hours)"
+  ],
+  "cuidados_mantidos": [
+    "numero de voltas das ondas de choque: dito como \"varias vezes\" (fontes divergem entre 4 e 7)",
+    "queda de temperatura: \"cerca de um grau, segundo algumas estimativas\"",
+    "ligacao com O Grito: apresentada como hipotese (\"ha quem sugira\", \"possivelmente\")"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+ "ideias": [
+  {
+   "titulo": "Ideia simulada 1",
+   "angulo": "ângulo simulado",
+   "por_que_funciona": "teste",
+   "dificuldade_visual": "baixa"
+  },
+  {
+   "titulo": "Ideia simulada 2",
+   "angulo": "ângulo simulado",
+   "por_que_funciona": "teste",
+   "dificuldade_visual": "baixa"
+  },
+  {
+   "titulo": "Ideia simulada 3",
+   "angulo": "ângulo simulado",
+   "por_que_funciona": "teste",
+   "dificuldade_visual": "baixa"
+  }
+ ],
+ "base": [
+  {
+   "titulo": "vídeo simulado",
+   "canal": "x",
+   "views": 1,
+   "views_por_dia": 1,
+   "dias": 1
+  }
+ ]
+}

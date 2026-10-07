@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "nome": "Análise de Comportamento Social e Gerações",
+    "cpm": "R$ 25-60",
+    "crescimento": "+40%/ano",
+    "monetizacao": "Alto",
+    "producao_h": 3.5,
+    "dificuldade": "Médio",
+    "concorrencia": "Baixa",
+    "risco": "Baixo"
+  },
+  {
+    "id": 2,
+    "nome": "Educação Financeira Pessoal",
+    "cpm": "R$ 45-80",
+    "crescimento": "+50%/ano",
+    "monetizacao": "Muito Alto",
+    "producao_h": 3.5,
+    "dificuldade": "Médio",
+    "concorrencia": "Alta",
+    "risco": "Baixo-Médio"
+  },
+  {
+    "id": 3,
+    "nome": "Curiosidades com Ângulo Crítico",
+    "cpm": "R$ 20-45",
+    "crescimento": "+2 anos durabilidade",
+    "monetizacao": "Médio-Alto",
+    "producao_h": 4.5,
+    "dificuldade": "Médio",
+    "concorrencia": "Alta",
+    "risco": "Baixo"
+  },
+  {
+    "id": 4,
+    "nome": "Bem-estar e Mindfulness",
+    "cpm": "R$ 15-35",
+    "crescimento": "+60%/ano",
+    "monetizacao": "Médio",
+    "producao_h": 2.5,
+    "dificuldade": "Fácil-Médio",
+    "concorrencia": "Alta",
+    "risco": "Baixo-Médio"
+  },
+  {
+    "id": 5,
+    "nome": "Geopolítica e História Moderna",
+    "cpm": "R$ 20-50",
+    "crescimento": "+30-50%/ano",
+    "monetizacao": "Médio-Alto",
+    "producao_h": 5.5,
+    "dificuldade": "Médio-Alto",
+    "concorrencia": "Baixa",
+    "risco": "Médio"
+  },
+  {
+    "id": 6,
+    "nome": "IA e Tecnologia do Futuro",
+    "cpm": "R$ 30-70",
+    "crescimento": "+150% em 2024-25",
+    "monetizacao": "Alto-Muito Alto",
+    "producao_h": 4.5,
+    "dificuldade": "Médio",
+    "concorrencia": "Média",
+    "risco": "Baixo"
+  },
+  {
+    "id": 7,
+    "nome": "Crítica de Cinema e Séries",
+    "cpm": "R$ 15-40",
+    "crescimento": "+40% streamings",
+    "monetizacao": "Médio-Baixo",
+    "producao_h": 7,
+    "dificuldade": "Médio-Alto",
+    "concorrencia": "Média",
+    "risco": "Médio-Alto"
+  }
+]

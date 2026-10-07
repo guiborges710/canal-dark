@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "nome": "Análise de Comportamento Social e Gerações",
+    "cpm": "R$ 25-60",
+    "crescimento": "+40% ao ano",
+    "monetizacao": "Alto",
+    "concorrencia": "Baixa"
+  },
+  {
+    "id": 2,
+    "nome": "Educação Financeira Pessoal (Nicho Diferenciado)",
+    "cpm": "R$ 45-80",
+    "crescimento": "+50% ao ano",
+    "monetizacao": "Muito Alto",
+    "concorrencia": "Alta"
+  },
+  {
+    "id": 3,
+    "nome": "Curiosidades Educacionais com Ângulo Crítico",
+    "cpm": "R$ 20-45",
+    "crescimento": "+Contínuo",
+    "monetizacao": "Médio-Alto",
+    "concorrencia": "Alta"
+  },
+  {
+    "id": 4,
+    "nome": "Bem-estar e Mindfulness com Conteúdo Original",
+    "cpm": "R$ 15-35",
+    "crescimento": "+60% ao ano",
+    "monetizacao": "Médio",
+    "concorrencia": "Alta"
+  },
+  {
+    "id": 5,
+    "nome": "Geopolítica e História Moderna",
+    "cpm": "R$ 20-50",
+    "crescimento": "+30-50% ao ano",
+    "monetizacao": "Médio-Alto",
+    "concorrencia": "Baixa"
+  },
+  {
+    "id": 6,
+    "nome": "Inteligência Artificial e Tecnologia do Futuro",
+    "cpm": "R$ 30-70",
+    "crescimento": "+150% em 2024-2025",
+    "monetizacao": "Alto-Muito Alto",
+    "concorrencia": "Média"
+  },
+  {
+    "id": 7,
+    "nome": "Crítica de Cinema, Séries e Análise Cultural",
+    "cpm": "R$ 15-40",
+    "crescimento": "+40% (streamings)",
+    "monetizacao": "Médio-Baixo",
+    "concorrencia": "Média"
+  }
+]

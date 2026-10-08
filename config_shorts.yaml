@@ -16,7 +16,12 @@ budget:
 # Entrega e publicação.
 publish:
   destination: "output/<slug>/"   # onde ficam video.mp4, thumbnail.jpg e PUBLICAR.txt
-  youtube_upload: manual          # o upload é sempre manual e depende de autorização explícita
+  # Upload automático via OAuth (python run.py publish). Padrão: sobe como PRIVADO e você
+  # publica no Studio. Só roda depois do Vini aprovar (auditoria.md com APROVADO).
+  privacy: private                # private (padrão) | unlisted | public
+  category_id: 22                 # 22 = People & Blogs; 27 = Education
+  client_secret_file: client_secret.json   # credencial OAuth (gitignored); baixada do Google Cloud
+  token_file: .youtube_token.json          # token gerado no 1º consentimento (gitignored)
 
 # Qual modelo faz cada agente (fast = Haiku, smart = Sonnet)
 tiers:
@@ -68,7 +73,14 @@ render:
   width: 1080
   height: 1920
   fps: 30
-  captions: false           # ffmpeg local sem libass: legenda vai como captions.srt separado
+  captions: true            # texto na tela estilo viral, queimado via overlay de PNGs (Pillow)
+  caption_max_words: 3      # palavras por bloco (poucas = mais viral)
+  caption_size: 0.06        # altura da fonte como fração da altura do vídeo
+  caption_y: 0.72           # centro vertical do texto (fração da altura; 0.72 = terço inferior)
+  caption_uppercase: true   # MAIÚSCULAS dão mais impacto
+  # caption_font: ""        # caminho .ttf opcional; padrão: Arial Black / Impact
+  # caption_color: "#FFFFFF"
+  # caption_stroke_color: "#000000"
   music_file: "music/ambient.mp3"   # trilha .mp3 (opcional)
   music_volume: 0.15
 

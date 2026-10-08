@@ -1,0 +1,27 @@
+[
+  {
+    "text": "Essa geração não aguenta nada. Toda geração já disse isso da seguinte.",
+    "search": ["living room interior", "man standing back view window", "teenager headphones silhouette"],
+    "image_prompt": "Vertical 9:16 close view of a dim suburban living room, an adult seen from behind with arms crossed in a critical pose, a blurred teenager with headphones sitting far in the background, no faces visible, cool desaturated tones with a warm lamp accent, empty space at top and bottom. photorealistic, cinematic documentary photograph, natural lighting, high detail, no text, no watermark"
+  },
+  {
+    "text": "Um estudo de dois mil e dezenove achou um padrão: quem é forte num traço, como gostar de ler, tende a achar os jovens piores nisso. Na nossa leitura, a queixa é um espelho, não um retrato. Diz mais de quem fala do que de quem é criticado.",
+    "search": ["library bookshelf", "old books shelf dim light", "mirror reflection blurred"],
+    "image_prompt": "Vertical 9:16 documentary photograph of a bookshelf in dim penumbra with worn books, then a framing of an antique mirror leaning on a wall whose reflection is a soft out-of-focus silhouette, no identifiable face, cool dessaturated palette with a small warm highlight, free space at top and bottom. photorealistic, cinematic documentary photograph, natural lighting, high detail, no text, no watermark"
+  },
+  {
+    "text": "Aristóteles, há mais de dois mil anos, já descrevia jovens convencidos de que sabiam tudo. Mas calma. Nem toda diferença é implicância.",
+    "search": ["Ancient Agora of Athens ruins", "Stoa of Attalos Athens", "ancient Greek ruins golden light"],
+    "image_prompt": "Vertical 9:16 low-angle view of ancient Greek agora ruins with weathered marble columns and a stone bench, golden hour light, slow cinematic depth, a few warm contrasty tones, no people, no statues with recognizable faces, sky in the upper third left clear for overlay. photorealistic, cinematic documentary photograph, natural lighting, high detail, no text, no watermark"
+  },
+  {
+    "text": "Nos Estados Unidos, segundo o Pew, quinze por cento dos millennials moravam com os pais, contra oito por cento dos primeiros boomers, na mesma faixa de idade.",
+    "search": ["moving boxes front door house", "young adult carrying boxes", "suburban house front door"],
+    "image_prompt": "Vertical 9:16 photograph of a young adult seen from behind carrying cardboard moving boxes toward the open front door of a modest suburban family house, late afternoon warm light, long shadows, face not visible, parked car with open trunk nearby, emotional and quiet mood. photorealistic, cinematic documentary photograph, natural lighting, high detail, no text, no watermark"
+  },
+  {
+    "text": "Teste: uma pessoa de mil novecentos e oitenta e três, no contexto de hoje, moraria com os pais? Uma hipótese é que sim. Se for, o contexto explica mais que a geração. Qual hábito seu já foi chamado de coisa da sua geração, mas vem da sua situação?",
+    "search": ["cassette tape radio 1980s", "bills on kitchen table", "kitchen table coffee cup smartphone"],
+    "image_prompt": "Vertical 9:16 documentary photograph of a wooden table: first a vintage 1980s radio and cassette tape, then the same table with a bill and a smartphone, a person seen only from behind, finally a quiet morning kitchen table with a coffee cup and phone in soft window light, inviting calm mood, no faces. photorealistic, cinematic documentary photograph, natural lighting, high detail, no text, no watermark"
+  }
+]

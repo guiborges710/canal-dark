@@ -5,3 +5,6 @@ pillow>=10.0
 kokoro-onnx>=0.4   # só se usar a voz local
 soundfile>=0.12    # só se usar a voz local
 numpy>=1.24
+google-api-python-client>=2.100   # só para o upload no YouTube (run.py publish)
+google-auth-oauthlib>=1.2         # só para o upload no YouTube
+google-auth-httplib2>=0.2         # só para o upload no YouTube

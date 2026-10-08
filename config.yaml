@@ -16,7 +16,12 @@ budget:
 # Entrega e publicação.
 publish:
   destination: "output/<slug>/"   # onde ficam video.mp4, thumbnail.jpg e PUBLICAR.txt
-  youtube_upload: manual          # o upload é sempre manual e depende de autorização explícita
+  # Upload automático via OAuth (python run.py publish). Padrão: sobe como PRIVADO e você
+  # publica no Studio. Só roda depois do Vini aprovar (auditoria.md com APROVADO).
+  privacy: private                # private (padrão) | unlisted | public
+  category_id: 22                 # 22 = People & Blogs; 27 = Education
+  client_secret_file: client_secret.json   # credencial OAuth (gitignored); baixada do Google Cloud
+  token_file: .youtube_token.json          # token gerado no 1º consentimento (gitignored)
 
 # Qual modelo faz cada agente (fast = Haiku, smart = Sonnet)
 tiers:

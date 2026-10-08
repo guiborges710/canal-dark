@@ -153,7 +153,13 @@ def make_video(cfg, topic, mock, allow_paid=False):
         if not clips[i].exists():
             render.scene_clip(cfg, imgs[i], audio[i], durs[i], clips[i], i)
     srt = render.build_srt(scenes, durs, pause)
-    final = render.assemble(cfg, clips, out, srt_text=srt, total=sum(durs))
+    caps = None
+    if cfg["render"].get("captions"):
+        from media import captions as capmod
+        cues = capmod.build_cues(scenes, durs, pause, capmod.caps_cfg(cfg)["max_words"])
+        caps = capmod.render_captions(cfg, cues, out)
+        print(f"   texto na tela: {len(caps)} blocos queimados no vídeo (estilo viral)")
+    final = render.assemble(cfg, clips, out, srt_text=srt, captions=caps, total=sum(durs))
     total = duration(final)
     print(f"   Vídeo pronto: {final.name} ({total / 60:.1f} min)")
 
@@ -219,8 +225,11 @@ def main():
             pass
     load_env()
     ap = argparse.ArgumentParser(description="Orquestrador do canal dark")
-    ap.add_argument("command", choices=["video", "ideas", "voices", "check"])
-    ap.add_argument("--topic", help="tema do vídeo (comando video)")
+    ap.add_argument("command", choices=["video", "ideas", "voices", "check", "publish"])
+    ap.add_argument("--topic", help="tema do vídeo (comando video/publish)")
+    ap.add_argument("--slug", help="pasta do vídeo em output/ (alternativa ao --topic no publish)")
+    ap.add_argument("--privacy", choices=["private", "unlisted", "public"], default=None,
+                    help="visibilidade no publish; padrão = publish.privacy do config (private)")
     ap.add_argument("--format", choices=["shorts", "long"], default="shorts",
                     help="shorts (vertical, ~60s; padrão) ou long (horizontal). Escolhe o config quando --config não é dado.")
     ap.add_argument("--mock", action="store_true", help="simula tudo, sem APIs e sem custo")
@@ -255,10 +264,43 @@ def main():
         for i, it in enumerate(ideas, 1):
             print(f"{i}. {it['titulo']} — {it['angulo']}")
         print(f"\nSalvo em {out / 'ideias.json'}")
+    elif a.command == "publish":
+        publish_video(cfg, a, ROOT)
     else:
         if not a.topic:
             ap.error("use --topic \"tema do vídeo\"")
         make_video(cfg, a.topic, a.mock, allow_paid=a.allow_paid)
+
+
+def publish_video(cfg, a, root):
+    """Sobe um vídeo já produzido e AUDITADO para o YouTube (privado por padrão).
+    Só publica depois de o Vini aprovar (auditoria.md com APROVADO)."""
+    if not (a.slug or a.topic):
+        raise SystemExit("use --slug <pasta> ou --topic \"tema do vídeo\" (o mesmo usado para gerar)")
+    slug = a.slug or slugify(a.topic)
+    out = root / "output" / slug
+    if not out.is_dir():
+        raise SystemExit(f"Pasta não encontrada: {out}. Gere o vídeo antes de publicar.")
+
+    # Regra do canal: nada vai ao ar sem o Vini aprovar.
+    audit = out / "auditoria.md"
+    if not audit.exists():
+        raise SystemExit(
+            f"Falta {audit}. O Vini (vini-auditor-conformidade) precisa auditar o vídeo antes do upload.")
+    txt = audit.read_text(encoding="utf-8").upper()
+    if "APROVADO" not in txt or "BLOQUEADO" in txt:
+        raise SystemExit(
+            f"A auditoria em {audit} não está APROVADA (ou está BLOQUEADA). Resolva as pendências do Vini "
+            "antes de publicar.")
+
+    from media import youtube
+    step("Publicando no YouTube")
+    res = youtube.upload(cfg, out, root, privacy=a.privacy)
+    print(f"\n✔ Enviado como {res['privacy']}.")
+    print(f"   Assistir: {res['url']}")
+    print(f"   Revisar/publicar no Studio: {res['studio_url']}")
+    print("   Lembre: se houver imagens de IA que pareçam reais, marque 'conteúdo alterado/sintético' no Studio "
+          "antes de tornar público.")
 
 
 if __name__ == "__main__":

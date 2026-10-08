@@ -54,7 +54,7 @@ def scene_clip(cfg, img, audio, dur, out, idx):
          "-c:a", "aac", "-b:a", "192k", "-ac", "2", str(out)])
 
 
-def assemble(cfg, clips, outdir, final_name="video.mp4", srt_text=None, total=0.0):
+def assemble(cfg, clips, outdir, final_name="video.mp4", srt_text=None, captions=None, total=0.0):
     r = cfg["render"]
     joined = outdir / "clips" / "joined.mp4"
     (outdir / "clips" / "list.txt").write_text("".join(f"file '{c.name}'\n" for c in clips), encoding="utf-8")
@@ -65,32 +65,34 @@ def assemble(cfg, clips, outdir, final_name="video.mp4", srt_text=None, total=0.
     if music and not Path(music).is_absolute():
         music = str(ROOT / music)  # relativo à pasta do projeto, não à pasta do vídeo
     # A legenda sempre vai para captions.srt (dá para subir como faixa separada no YouTube).
-    # A queima na imagem só acontece se o config pedir E este ffmpeg tiver o filtro 'subtitles' (libass).
     if srt_text:
         (outdir / "captions.srt").write_text(srt_text, encoding="utf-8")
-    want_caps = bool(r.get("captions")) and bool(srt_text)
-    use_caps = want_caps and has_filter("subtitles")
-    if want_caps and not use_caps:
-        print("   (aviso) este ffmpeg não tem o filtro 'subtitles' (libass): a legenda fica em captions.srt "
-              "para subir como faixa separada no YouTube, sem queimar na imagem.")
+    # O texto na tela estilo "viral" é queimado via overlay de PNGs (gerados pelo media/captions.py
+    # com Pillow). Não depende de libass/drawtext no build do ffmpeg — só do filtro 'overlay'.
+    use_caps = bool(captions)
 
     cmd = ["ffmpeg", "-y", "-i", str(joined)]
     if music:
         cmd += ["-stream_loop", "-1", "-i", music]
+    base = 2 if music else 1  # índice do primeiro PNG de legenda entre os inputs do ffmpeg
+    if use_caps:
+        for png, _, _ in captions:
+            cmd += ["-loop", "1", "-i", str(png)]
     fc = []
     if use_caps:
-        # commas separam as opções do force_style; como o comando não passa por shell,
-        # elas precisam ser escapadas com barra, e sem aspas literais em volta.
-        # Obs.: exige um ffmpeg compilado com libass (filtro subtitles). Sem ele, desligue
-        # render.captions no config e suba captions.srt como legenda separada no YouTube.
-        style = "FontName=Arial,FontSize=14,Outline=2,Shadow=0,MarginV=40,Alignment=2".replace(",", r"\,")
-        fc.append(f"[0:v]subtitles=captions.srt:force_style={style}[vout]")
+        # Compõe cada PNG (do tamanho do quadro, texto já posicionado) sobre o vídeo, só na
+        # janela de tempo do bloco. 't' é o tempo do vídeo principal, que começa em zero.
+        cur = "[0:v]"
+        for i, (_, s, e) in enumerate(captions):
+            dst = "[vout]" if i == len(captions) - 1 else f"[v{i}]"
+            fc.append(f"{cur}[{base + i}:v]overlay=0:0:enable='between(t,{s:.3f},{e:.3f})'{dst}")
+            cur = dst
     if music:
         mv = r.get("music_volume", 0.15)
-        fc.append("[0:a]asplit=2[v1][v2]")
+        fc.append("[0:a]asplit=2[asrc1][asrc2]")
         fc.append(f"[1:a]volume={mv}[m]")
-        fc.append("[m][v1]sidechaincompress=threshold=0.05:ratio=10:attack=20:release=500[duck]")
-        fc.append("[v2][duck]amix=inputs=2:duration=first:dropout_transition=0[mix]")
+        fc.append("[m][asrc1]sidechaincompress=threshold=0.05:ratio=10:attack=20:release=500[duck]")
+        fc.append("[asrc2][duck]amix=inputs=2:duration=first:dropout_transition=0[mix]")
         fc.append("[mix]loudnorm=I=-14:TP=-1.5:LRA=11[aout]")
     else:
         fc.append("[0:a]loudnorm=I=-14:TP=-1.5:LRA=11[aout]")

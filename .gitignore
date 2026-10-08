@@ -1,3 +1,7 @@
 .env
 .venv/
 __pycache__/
+
+# Credenciais do YouTube (OAuth) — NUNCA versionar
+client_secret*.json
+.youtube_token.json

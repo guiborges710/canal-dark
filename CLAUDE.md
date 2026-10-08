@@ -22,12 +22,16 @@ Objetivo: canal sem rosto, automatizado ao máximo, **monetizável**. Seguir TOD
 - Chaves de API ficam só no `.env`. Nunca em chat ou código.
 
 ## Fluxo (agentes em .claude/agents; debruyne-orquestrador coordena de ponta a ponta)
-memphis-social-media (referências virais do nicho; 1º do fluxo) → haaland-pesquisador-nicho → modric-pesquisador-tema → messi-estrategista-angulo → neymar-roteirista (30-60s) → courtois-revisor-fatos → cristiano-otimizador-viral (roteiro premium + direcao_viral.md, lendo referencias_virais.md) → olise-diretor-arte (3-5 cenas, lendo direcao_viral.md) → mbappe-editor-metadados → **python run.py video --format shorts** (narração+imagens+edição) → vini-auditor-conformidade → upload manual (futuramente memphis-social-media).
+**Fluxo ENXUTO (padrão diário de SHORTS, 5 passos + render):**
+modric-pesquisador-tema → neymar-roteirista (num passe só: ângulo + roteiro 30-60s premium/viral + direcao_viral.md) → courtois-revisor-fatos → olise-diretor-arte (3-5 cenas, lendo direcao_viral.md) → mbappe-editor-metadados → **python run.py video --format shorts** (narração+imagens+edição) → vini-auditor-conformidade → upload manual (Memphis).
+
+**Agentes sob-demanda (fora do fluxo diário):**
+- memphis-social-media → referencias_virais.md: rodar **~1x por semana**; o neymar reusa o arquivo existente.
+- haaland-pesquisador-nicho → só para trocar/expandir nicho ou lote de ideias (nicho atual já fixo).
+- messi-estrategista-angulo e cristiano-otimizador-viral → passes dedicados de ângulo/viral para **vídeo longo** (`--format long`) ou reforço pontual. No diário, o **Neymar** já absorve os dois.
 
 **Para SHORTS:**
-- messi define ângulo em formato short (gancho → insight → contraexemplo → pergunta)
-- neymar escreve roteiro de 30-60 segundos, não 8-12 minutos
-- cristiano deixa o roteiro premium (gancho de 1-3s, retenção, pattern interrupts) e gera direcao_viral.md para imagem/edição
+- neymar define o ângulo (gancho → insight → contraexemplo → pergunta), escreve 30-60s (não 8-12 min), deixa o roteiro premium (gancho 1-3s, retenção, pattern interrupts) e gera direcao_viral.md para imagem/edição — tudo num passe
 - olise cria 3-5 cenas, seguindo a direcao_viral.md
 - `--format shorts` é o **padrão** do run.py (perfil config_shorts.yaml, 9:16); `--format long` usa config.yaml (16:9)
 

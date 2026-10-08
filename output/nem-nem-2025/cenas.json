@@ -1,0 +1,32 @@
+[
+  {
+    "text": "Em dois mil e vinte e cinco, dezessete vírgula cinco por cento dos jovens brasileiros eram nem-nem. O rótulo diz: geração sem vontade. Os dados contam outra história.",
+    "search": ["young person silhouette window sunrise city Brazil", "Sao Paulo skyline dawn", "person standing at window morning"],
+    "image_prompt": "Photorealistic documentary photo, vertical 9:16, a young person seen from behind standing before a large window at sunrise, Brazilian city skyline in cold blue light, shallow depth of field, slow cinematic framing, no face visible, no text, no watermark"
+  },
+  {
+    "text": "São jovens de quinze a vinte e nove anos sem trabalho, sem estudo e sem curso, segundo a PNAD Contínua Educação, do IBGE. Em dois mil e dezenove eram vinte e dois vírgula quatro por cento. Foram de onze milhões para oito vírgula dois milhões.",
+    "search": ["hands holding resume papers", "Brazil public transport morning commuters", "bus stop Brazil morning"],
+    "image_prompt": "Photorealistic documentary photo, vertical 9:16, close-up of young hands holding a folder of resume papers at a crowded Brazilian bus stop in the morning, neutral soft daylight, blurred commuters behind, no identifiable faces, no text, no watermark"
+  },
+  {
+    "text": "Uma geração não perde a vontade e a recupera em seis anos. Na nossa leitura, mudou a situação, não o caráter.",
+    "search": ["busy street Brazil day and night", "city street night lights Brazil", "pedestrians crossing avenue Sao Paulo"],
+    "image_prompt": "Photorealistic documentary photo, vertical 9:16, busy Brazilian city avenue with pedestrians as motion-blurred silhouettes, transition from daylight to dusk lights, wide framing, contemplative mood, no identifiable faces, no text, no watermark"
+  },
+  {
+    "text": "Mas a média esconde. Mulheres: vinte e dois vírgula oito por cento. Homens: doze vírgula quatro. Pretos e pardos: dezenove vírgula oito. Brancos: catorze.",
+    "search": ["Brazil residential home interior window", "Brazil neighborhood street people walking", "Brazilian favela street daily life"],
+    "image_prompt": "Photorealistic documentary photo, vertical 9:16, split composition: left a modest home doorway with household items, right a neighborhood street with people walking seen from behind, contrasting light, respectful tone, no identifiable faces, no text, no watermark"
+  },
+  {
+    "text": "O que explica? Os dados não dizem. Uma hipótese nossa: a carga de cuidado em casa. Isso não foi medido aqui.",
+    "search": ["hands washing dishes kitchen", "home kitchen warm light", "person folding clothes at home"],
+    "image_prompt": "Photorealistic documentary photo, vertical 9:16, close-up of hands tidying a warm-lit home kitchen table, a child's toy nearby, soft golden light, intimate and careful mood, no faces, no text, no watermark"
+  },
+  {
+    "text": "Quando você ouve nem-nem, em quem pensa? E se perguntar pela situação de cada um?",
+    "search": ["silhouette open door light", "doorway sunlight silhouette", "open door morning light"],
+    "image_prompt": "Photorealistic documentary photo, vertical 9:16, silhouette of a person standing in an open doorway with bright daylight pouring in, calm and hopeful closing mood, centered framing, no face visible, no text, no watermark"
+  }
+]

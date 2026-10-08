@@ -1,0 +1,25 @@
+# ===== Mini-fluxo de REELS (Instagram) — TOTALMENTE SEPARADO do canal do YouTube =====
+# Este arquivo é só deste mini-fluxo (reels/make_reel.py). Não tem relação com
+# config_shorts.yaml / config.yaml do run.py. As imagens vêm de FORA (outra IA): este
+# script não gera imagem, só narração + legendas + música + montagem 9:16.
+
+tts:
+  provider: kokoro                         # voz local gratuita (mesmos modelos do canal)
+  model_path: models/kokoro-v1.0.int8.onnx
+  voices_path: models/voices-v1.0.bin
+  kokoro_lang: pt-br
+  voice: pm_alex                           # pf_dora | pm_alex | pm_santa
+  speaking_rate: 1.0
+  pause_seconds: 0.35                       # respiro entre cenas
+
+render:
+  width: 1080
+  height: 1920
+  fps: 30
+  captions: true
+  caption_max_words: 3
+  caption_size: 0.045
+  caption_y: 0.46
+  caption_uppercase: true
+  music_file: "music/ambient.mp3"           # trilha opcional (relativa à raiz do projeto); "" desliga
+  music_volume: 0.15

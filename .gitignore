@@ -5,3 +5,17 @@ __pycache__/
 # Credenciais do YouTube (OAuth) — NUNCA versionar
 client_secret*.json
 .youtube_token.json
+
+# Mini-fluxo de Reels: artefatos gerados (mantém cenas.json e prompt_imagens.txt)
+reels/projetos/*/audio/
+reels/projetos/*/clips/
+reels/projetos/*/captions/
+reels/projetos/*/imagens/
+reels/projetos/*/reel.mp4
+reels/projetos/*/captions.srt
+
+# Referências virais: conteúdo de terceiros baixado (capas, transcrições cruas, vídeos).
+# Mantém só os .md curados (referencias_nicho.md, analise_viral.md, README.md).
+referencias/capas/
+referencias/transcricoes/
+referencias/videos/

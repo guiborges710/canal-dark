@@ -1,0 +1,27 @@
+[
+  {
+    "text": "Gen Z é mais econômica que os millennials? A pergunta já nasce torta.",
+    "search": ["two coffee cups on table top view", "calculator on desk", "coffee cup and calculator"],
+    "image_prompt": "Overhead top-down photograph of a wooden table with two white coffee cups placed on opposite sides and a small calculator between them, cool late-afternoon light, teal and amber tones, shallow depth of field, calm analytical mood, documentary style, photorealistic, no people, no text, no watermark"
+  },
+  {
+    "text": "A Deloitte ouviu mais de vinte e três mil pessoas em quarenta e quatro países. Cinquenta e dois por cento da Gen Z vive de salário em salário. Entre os millennials? Também cinquenta e dois por cento.",
+    "search": ["paycheck on table", "two people seen from behind looking at documents", "office desk bills and pay stub"],
+    "image_prompt": "Photograph from behind of two people, one younger and one older, seated side by side at a table looking at the same paycheck and a printed bill, faces not visible, cool late-afternoon window light, teal and amber palette, documentary style, photorealistic, medium shot, no text, no watermark"
+  },
+  {
+    "text": "O mesmo número. Na nossa leitura, isso sugere que o aperto vem do contexto, como o custo de vida, e não do ano de nascimento.",
+    "search": ["rain on window", "credit card and bills on table", "household bills close-up"],
+    "image_prompt": "Close-up photograph of a credit card and a stack of utility bills on a table beside a window streaked with rain, blurred gray city in the background, heavy but quiet mood of rising cost of living, teal and amber tones, shallow depth of field, documentary style, photorealistic, no people, no text, no watermark"
+  },
+  {
+    "text": "Agora, nos Estados Unidos, o Federal Reserve mediu quem tem reserva para três meses de despesas. De dezoito a vinte e nove anos, trinta e sete por cento. De trinta a quarenta e quatro, quarenta e nove por cento. O relatório atribui a diferença à fase da vida. Atenção: são faixas de idade, não gerações exatas. Ou seja, parte do que chamamos de hábito de geração pode ser só começo de carreira.",
+    "search": ["Federal Reserve building Washington", "staircase steps person climbing from behind", "savings jar coins"],
+    "image_prompt": "Photograph of a wide outdoor concrete staircase at dusk, one young person in silhouette from behind standing on the lower steps and another figure several steps higher, faces unseen, symbolizing life stages, cool blue-teal light with warm amber highlights, documentary style, photorealistic, no text, no watermark"
+  },
+  {
+    "text": "Então, da próxima vez que alguém disser que uma geração é assim, pergunte: ela é assim, ou está nessa fase?",
+    "search": ["fogged mirror", "hands holding smartphone", "person holding phone close-up"],
+    "image_prompt": "Close-up photograph of two hands holding a smartphone with a blank softly glowing screen, in front of a fogged bathroom mirror, no face visible, cool teal ambient light with amber accent, shallow depth of field, reflective contemplative mood, documentary style, photorealistic, no text, no watermark"
+  }
+]

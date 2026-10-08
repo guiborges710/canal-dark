@@ -1,0 +1,27 @@
+ESTILO GLOBAL (APLICAR A TODAS AS IMAGENS):
+Estilo: ilustrações modernas e acessíveis de pequenos negócios e atendimento pelo WhatsApp. Paleta de cores constante: tons creme suave (fundo), verde escuro (similar ao ícone WhatsApp), laranja queimado (destaques). Layout vertical 9:16 (formato Reels do Instagram). Letras grandes e legíveis, pouco texto por cena, margens seguras. Sem apresentador real. Composição limpa, minimalista, fácil de ler em celular.
+
+---
+
+001 — Ilustração de celular em primeiro plano exibindo conversa WhatsApp com uma mensagem curta e isolada 'R$ 140' em balão de chat único, estilo flat e minimalista, fundo creme claro, nenhum apresentador.
+
+002 — Ilustração de proprietário ou proprietária de pequeno negócio (barbershop, salão, oficina ou similar) com expressão confusa/incerta olhando celular, símbolo de ponto de interrogação grande acima da cabeça, ambiente interno do negócio ao fundo desfocado, fundo creme, cores quentes.
+
+003 — Checklist visual com três checkboxes, cada um com texto em português: linha 1: 'O que está incluído'; linha 2: 'Valor total'; linha 3: 'Prazo'. Checkboxes com marcas verdes de confirmação, letras grandes e bem espaçadas, fundo creme, estilo gráfico moderno.
+
+004 — Conversa WhatsApp mostrando mensagem longa e estruturada com exemplo de orçamento: "Montagem de mesa: R$ 120 + deslocamento R$ 20. Total R$ 140, sem peças. Podemos combinar sábado às 9h?" Ao lado do celular, ilustração pequena do cliente assentindo ou satisfeito com expressão positiva, fundo creme.
+
+005 — Ilustração de kit digital em layout flat aberto/expandido: ícones visuais de documentos PDF, formulários, mensagens em cards empilhados desordenadamente (sugerindo variedade), interface limpa e moderna, paleta creme com destaques em verde escuro e laranja queimado, sem pessoas.
+
+006 — Ilustração de mão (ou mão neutra) usando celular, tela mostrando app digital com campos de mensagem editáveis, cursor de edição destacado, símbolos de copiar e colar sutilmente visíveis, fundo creme, movimento suave sugerido pela composição, paleta consistente.
+
+007 — Ilustração minimalista de interface Instagram com 'link na bio' destacado, seta ou ícone apontando para o link, símbolo de link (corrente) em destaque, fundo creme, cores quentes da paleta, composição limpa e direta, sugestão de fechamento/ação.
+
+---
+
+INSTRUÇÕES PARA A OUTRA IA:
+- Salve cada imagem como: 001.png, 002.png, 003.png, 004.png, 005.png, 006.png, 007.png (na ordem exata).
+- Mantenha consistência de estilo, paleta e composição entre todas as sete imagens.
+- Todas as imagens devem caber em 9:16 (vertical, Reels format).
+- Nenhuma imagem precisa de voz ou apresentador.
+- Use as descrições de cores e tom indicadas no ESTILO GLOBAL em cada imagem.

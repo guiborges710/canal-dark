@@ -1,0 +1,139 @@
+# PROMPTS DE IMAGENS — REEL ELOY MISÚ (18s, 5 cenas, 9:16)
+
+**ESTILO GLOBAL:**
+Fotografia culinária em luz quente de final de tarde. Paleta: creme, bege, marrom café e toques de caramelo. Sombras naturais e textura elegante. Bancadas e superfícies limpas, sempre com espaço respeitável para composição de textos em serifada editorial. Sem pessoas, personagens, carinho, casal ou elementos românticos. Imagens substanciais e bem iluminadas. Fotografias profissionais de produtos e ambientes, nunca render 3D ou ilustrações.
+
+---
+
+## CENA 1 — "O almoço de domingo tem um último capítulo." (0–3s)
+
+**Prompt:**
+Fotografia de uma bancada de madeira clara ou creme vista de acima, com louça empilhada delicadamente (pratos brancos ou tons neutros), guardanapos de linho bege e uma lista de planejamento culinário sobre a superfície — a lista não precisa ter texto legível, apenas parecer um cardápio ou planejamento manuscrito. Luz quente de final de tarde atravessa a cena, criando sombras suaves. Composição com espaço superior livre (cerca de 25% do topo) para título. Nenhuma pessoa, nenhuma mesa posta para duas. Fotografia profissional, textura elegante, sem elementos de urgência ou escassez.
+
+**Referências e função:**
+- Arquivos: Nenhum produto nesta cena
+- Fundo: Fotografia de bancada + louça + listagem de planejamento
+
+**Elementos que devem permanecer intactos:**
+- Louça (forma e cor neutra)
+- Guardanapos de linho
+- Superfície de madeira clara ou creme
+- Luz quente natural
+
+**Área livre para texto:**
+- Topo (25%): título principal
+- Centro-superior: legível para sobreposição
+
+**Restrições e negative prompt:**
+Evitar: mesa posta para dois, velas, corações, casal, elementos românticos, pessoas, garfos/facas em primeiro plano, logotipos visíveis, produtos comerciais de marca, urgência, escassez.
+
+---
+
+## CENA 2 — "A sobremesa entrou no seu plano?" (3–6s)
+
+**Prompt:**
+Fotografia de um prato de sobremesa (de louça branca ou creme, formato redondo ou quadrado elegante) vazio ou com apenas uma colher de sobremesa sobre a bancada de creme/bege. Enquadramento fechado (close-up), destacando textura da louça e a elegância do objeto. Sombras naturais criam profundidade. Luz quente, sem reflexos intensos. Nenhuma sugestão de esvaziamento, falta de estoque ou produto acabado. Fotografia profissional, composição limpa.
+
+**Referências e função:**
+- Arquivos: Nenhum produto nesta cena
+- Fundo: Prato vazio + colher + superfície
+
+**Elementos que devem permanecer intactos:**
+- Louça (formato e acabamento elegante)
+- Colher (simples, não de plástico)
+- Superfície clara
+
+**Área livre para texto:**
+- Lado inferior ou lateral: frase "A sobremesa entrou no seu plano?"
+- Espaço de movimento: deslocamento lateral (deixar margem direita livre)
+
+**Restrições e negative prompt:**
+Evitar: embalagem vazia, produto terminado, sinais de falta, prato quebrado, arranhaduras, detritos, elementos que sugiram indisponibilidade, pessoas.
+
+---
+
+## CENA 3 — "Café, Oreo ou Biscoff?" (6–10s)
+
+**Prompt:**
+Montagem visual com os três sabores de tiramisu ORIGINAIS — Café, Oreo e Biscoff — em seus potes íntegros. Usar as fotos originais (cafe.png, oreo.png, biscoff.png) preservadas totalmente. Fundo creme/bege com luz quente. Os três potes distribuídos em composição triangular ou horizontal, todos visíveis e identificáveis. Espaço reservado acima ou ao lado de cada pote para o nome sobreposto durante montagem (Café, Oreo, Biscoff). Sem redesenho dos potes, sem adição de talheres, frutas ou ingredientes extras. Se a ferramenta não puder garantir fidelidade total do produto, devolver apenas o FUNDO e orientar montagem das fotos originais depois.
+
+**Referências e função:**
+- Arquivos: cafe.png, oreo.png, biscoff.png (ORIGINAIS INTACTOS)
+- Fundo: Superfície creme com luz quente, ou fundo criado + instrução para montar produtos originais
+
+**Elementos que devem permanecer intactos:**
+- Potes (formato, cores, camadas, cobertura — exatamente como originais)
+- Rótulos/identidade do produto (se visíveis)
+- Proporções e aparência integral
+
+**Área livre para texto:**
+- Acima de cada pote: nome do sabor (Café, Oreo, Biscoff)
+- Topo ou centro: pergunta "Café, Oreo ou Biscoff?"
+
+**Restrições e negative prompt:**
+Evitar: redesenho dos potes, frutas adicionadas, caldas, ingredientes extras, embalagens inventadas, colheradas fora do pote, renders 3D, desfoque dos produtos, pessoas comendo. **OBRIGATÓRIO: fidelidade total aos originais cafe.png, oreo.png, biscoff.png.**
+
+**Indicação especial:** "Fundo apenas + montagem original" — se a ferramenta não garantir fidelidade, gerar somente fundo creme com iluminação quente e espaço para inserção das três fotos originais posteriormente.
+
+---
+
+## CENA 4 — "Escolha antes. Aproveite depois." (10–14s)
+
+**Prompt:**
+Fotografia de UM pote original de Biscoff em destaque (arquivo biscoff.png preservado integralmente) sobre cenário creme/bege com guardanapo de linho ao lado. Luz quente de final de tarde, sombras naturais. Composição com o pote em destaque visual (maior, mais iluminado). Nenhuma colherada, nenhuma retirada de conteúdo, nenhum tiramisu servido em prato separado. Apenas o pote íntegro como entregue. Fotografia profissional, elegante.
+
+**Referências e função:**
+- Arquivo: biscoff.png (ORIGINAL INTACTO — principal)
+- Fundo: Cenário creme + guardanapo de linho + luz quente
+
+**Elementos que devem permanecer intactos:**
+- Pote Biscoff (formato, cores, cobertura, camadas — exatamente original)
+- Conteúdo intacto (sem retirar ou servir)
+- Rótulo/identidade (se visível)
+
+**Área livre para texto:**
+- Centro ou inferior: "Escolha antes. Aproveite depois."
+- Margem direita (12%): deixar livre para eventuais elementos gráficos
+
+**Restrições e negative prompt:**
+Evitar: colherada fora do pote, tiramisu em prato separado, conteúdo removido, embalagem aberta de forma exagerada, pessoas, garfos, facas, decorações adicionadas, redesenho do produto. **OBRIGATÓRIO: preservação integral do pote biscoff.png.**
+
+---
+
+## CENA 5 — "Planeje sua encomenda pela DM." + "@eloymisu • Jundiaí" (14–18s)
+
+**Prompt:**
+Montagem dos três produtos originais (cafe.png, oreo.png, biscoff.png — intactos) sobre fundo creme/bege com luz quente. Composição simples e equilibrada, todos os três potes visíveis e bem distribuídos. Espaço livre no topo (25%) para logo circular REAL da Eloy Misú e chamada "Planeje sua encomenda pela DM." Espaço livre na base (20%) para apoio "@eloymisu • Jundiaí". Movimento quase estático, apenas para legibilidade clara. Sem WhatsApp, prazos, selos de disponibilidade, pedidos confirmados ou criação de logo (usar apenas o original).
+
+**Referências e função:**
+- Arquivos: cafe.png, oreo.png, biscoff.png (ORIGINAIS INTACTOS)
+- Fundo: Superfície creme, luz quente
+
+**Elementos que devem permanecer intactos:**
+- Os três potes (formato, cores, integridade visual)
+- Proporções entre produtos
+- Logo REAL da Eloy Misú (não inventar nem redesenhar)
+
+**Área livre para texto:**
+- Topo (25%): logo + "Planeje sua encomenda pela DM."
+- Base (20%): "@eloymisu • Jundiaí"
+- Borda direita (12%): livre
+- Centro: produtos bem visíveis
+
+**Restrições e negative prompt:**
+Evitar: WhatsApp, ícones de rede social, prazos de entrega, selos de "pronta entrega", "Domingo", promoção de preço, palavras "ilimitado" ou "esgotado", logo inventado, pessoas comendo, depoimentos, elementos que sugiram urgência ou escassez, redesenho dos potes. **OBRIGATÓRIO: integridade dos originais cafe.png, oreo.png, biscoff.png e uso exclusivo do logo real.**
+
+---
+
+## RESUMO DE ENTREGA
+
+✓ 5 prompts em português, numerados e prontos para uso
+✓ Referências de arquivo (fundo + produtos originais)
+✓ Elementos que não podem ser alterados
+✓ Áreas livres para texto (topo, base, laterais)
+✓ Restrições e negative prompts explícitos
+✓ Indicação "fundo apenas + montagem" quando necessária
+✓ Fidelidade de produto: OBRIGATÓRIA
+✓ Sem imagens, vídeo ou áudio gerados nesta etapa
+
+**Próximo passo:** Cole este arquivo na outra IA. Salve as imagens em `reels/projetos/eloy-misu-tiramisu/imagens/` com nomes `001.jpg`, `002.jpg`, `003.jpg`, `004.jpg`, `005.jpg`. Depois, rode `python reels/make_reel.py eloy-misu-tiramisu` para gerar o reel.mp4.

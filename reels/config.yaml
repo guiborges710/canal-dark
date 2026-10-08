@@ -8,7 +8,7 @@ tts:
   model_path: models/kokoro-v1.0.int8.onnx
   voices_path: models/voices-v1.0.bin
   kokoro_lang: pt-br
-  voice: pm_alex                           # pf_dora | pm_alex | pm_santa
+  voice: pf_dora                           # pf_dora | pm_alex | pm_santa
   speaking_rate: 1.0
   pause_seconds: 0.35                       # respiro entre cenas
 
@@ -16,7 +16,7 @@ render:
   width: 1080
   height: 1920
   fps: 30
-  captions: true
+  captions: false
   caption_max_words: 3
   caption_size: 0.045
   caption_y: 0.46

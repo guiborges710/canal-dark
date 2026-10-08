@@ -1,0 +1,19 @@
+TÍTULO:
+Geração não explica: contexto explica
+
+DESCRIÇÃO:
+52% da Gen Z e 52% dos millennials vivem de salário em salário. Deloitte e Federal Reserve sugerem que o aperto vem do contexto material, não do ano de nascimento. Análise honesta sobre o que rótulos geracionais escondem. Inscreva-se! Fontes: Deloitte Gen Z and Millennial Survey 2025, Federal Reserve SHED 2026. Conteúdo contém narração sintética e ilustrações geradas por computador.
+
+Obs.: as cenas sem registro histórico usam ilustrações geradas por computador; diga isso na descrição.
+
+TAGS (separadas por vírgula):
+geração, Gen Z, millennials, comportamento social, economia, rótulo, análise, contexto, fase da vida
+
+TEXTO SUGERIDO PARA A THUMBNAIL: 52% igual: não é geração
+ARQUIVOS: video.mp4 e thumbnail.jpg
+
+ANTES DE PUBLICAR:
+- Assista ao vídeo inteiro e confira os fatos principais contra as fontes em notas.md.
+- No upload, responda a pergunta sobre conteúdo alterado ou sintético: imagens geradas por IA que pareçam reais
+  (cenas de um evento real que não foram registradas) exigem a divulgação. Confira a regra atual no YouTube Studio.
+- A política de conteúdo inautêntico pesa contra vídeos em molde repetido e sem comentário próprio: o roteiro precisa ter ponto de vista e pesquisa originais.

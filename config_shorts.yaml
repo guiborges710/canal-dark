@@ -74,7 +74,7 @@ render:
   height: 1920
   fps: 30
   captions: true            # texto na tela estilo viral, queimado via overlay de PNGs (Pillow)
-  caption_max_words: 3      # palavras por bloco (poucas = mais viral)
+  caption_max_words: 7      # palavras por bloco (reduzido de 3 para evitar sobrecarga de memória do ffmpeg)
   caption_size: 0.045       # padrão TikTok: fonte menor, 1 linha na maioria dos blocos
   caption_y: 0.46           # zona segura: logo acima do centro, fora da UI nativa (topo e rodapé)
   caption_uppercase: true   # MAIÚSCULAS dão mais impacto

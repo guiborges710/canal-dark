@@ -23,7 +23,7 @@ Objetivo: canal sem rosto, automatizado ao máximo, **monetizável**. Seguir TOD
 
 ## Fluxo (agentes em .claude/agents; debruyne-orquestrador coordena de ponta a ponta)
 **Fluxo ENXUTO (padrão diário de SHORTS, 5 passos + render):**
-modric-pesquisador-tema → neymar-roteirista (num passe só: ângulo + roteiro 30-60s premium/viral + direcao_viral.md) → courtois-revisor-fatos → olise-diretor-arte (3-5 cenas, lendo direcao_viral.md) → mbappe-editor-metadados → **python run.py video --format shorts** (narração+imagens+edição) → vini-auditor-conformidade → upload manual (Memphis).
+modric-pesquisador-tema → neymar-roteirista (num passe só: ângulo + roteiro 30-60s premium/viral + direcao_viral.md) → courtois-revisor-fatos → olise-diretor-arte (3-5 cenas, lendo direcao_viral.md) → mbappe-editor-metadados → **python run.py video --format shorts** (narração+imagens+edição) → vini-auditor-conformidade → **publicação (Memphis): `python run.py publish --to all`** sobe para YouTube (privado) **e** TikTok (rascunhos); você finaliza/torna público manualmente em cada plataforma.
 
 **Agentes sob-demanda (fora do fluxo diário):**
 - memphis-social-media → referencias_virais.md: rodar **~1x por semana**; o neymar reusa o arquivo existente.
@@ -66,7 +66,7 @@ Pedir "produza um vídeo sobre X" autoriza todo o fluxo com recursos **gratuitos
 ## Comandos
 - `python run.py video --topic "..."` gera o SHORT (cada etapa guarda em output/<slug>/ e pula o que já existe). `--format long` para 16:9. `--allow-paid` libera etapas pagas. `--mock` simula tudo sem custo.
 - `python run.py ideas`, `python run.py check --topic "..."`, `python run.py voices`.
-- `python run.py publish --slug <pasta>` (ou `--topic "..."`) sobe o vídeo pronto para o YouTube via OAuth. **Padrão: PRIVADO** (`publish.privacy`), você revê e publica no Studio. Só roda se `auditoria.md` estiver **APROVADO** (regra do **Vini**). `--privacy unlisted|public` sobrepõe. Upload público automático exigiria verificação (audit) do app OAuth no Google.
+- `python run.py publish --slug <pasta>` (ou `--topic "..."`) sobe o vídeo pronto. **`--to youtube` (padrão) | `tiktok` | `all`.** YouTube via OAuth, **PRIVADO** por padrão (`publish.privacy`); TikTok via Content Posting API, cai nos **rascunhos** da conta (escopo `video.upload`, sem auditoria). Em ambos você revê e torna público manualmente (Studio / app TikTok). Só roda se `auditoria.md` estiver **APROVADO** (regra do **Vini**). `--privacy unlisted|public` sobrepõe (só YouTube). Setup do TikTok (conta + app dev + chaves no `.env`): ver [TIKTOK_SETUP.md](TIKTOK_SETUP.md). Chaves novas no `.env`: `TIKTOK_CLIENT_KEY`, `TIKTOK_CLIENT_SECRET`. Módulo: [media/tiktok.py](media/tiktok.py), espelha [media/youtube.py](media/youtube.py).
 
 ## Arquitetura do código (o run.py consome o que a squad produz)
 Duas camadas distintas: a **squad** são os subagentes do Claude Code em [.claude/agents/](.claude/agents/) (escrevem o conteúdo de graça); o **pipeline** é código Python que faz voz, imagem e edição. Os `agents/*.py` são um *fallback* pago que gera o mesmo conteúdo pela API da Anthropic, usado só com `--mock` ou `--allow-paid`.

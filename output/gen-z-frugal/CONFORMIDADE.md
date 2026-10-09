@@ -2,11 +2,10 @@
 
 Verificação automática de problemas comuns. **Não garante monetização**: a decisão é do YouTube, que também revisa o canal.
 
-Resultado: 8 ok, 3 atenção, 0 faltando.
+Resultado: 8 ok, 2 atenção, 0 faltando.
 
 ## Verificações automáticas
 
-- [ATENÇÃO] **Cadência alta**: 5 vídeos nas últimas 24 h (limite sugerido: 2). Uploads em volume que uma equipe humana não faria são um sinal de produção em massa.
 - [ATENÇÃO] **Imagens geradas por IA em cenas sem registro**: Se parecerem reais (cena de um evento que não foi fotografado), é preciso marcar conteúdo sintético no upload. Prefira ilustração claramente estilizada.
 - [ATENÇÃO] **Conteúdo sensível no título ou na miniatura**: Termos: sangue. Tragédias podem monetizar em contexto educativo, mas miniaturas gráficas ou tom explorador limitam os anúncios.
 - [OK]     **Pesquisa com várias fontes**: 6 sites distintos em notas.md.

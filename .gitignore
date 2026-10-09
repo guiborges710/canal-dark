@@ -5,6 +5,7 @@ __pycache__/
 # Credenciais do YouTube (OAuth) — NUNCA versionar
 client_secret*.json
 .youtube_token.json
+.tiktok_token.json
 
 # Mini-fluxo de Reels: artefatos gerados (mantém cenas.json e prompt_imagens.txt)
 reels/projetos/*/audio/

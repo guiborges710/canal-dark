@@ -105,9 +105,10 @@ def montar(slug, mock=False):
     srt = render.build_srt(scenes, durs, pause)
     caps = None
     if c["render"].get("captions"):
-        cues = capmod.build_cues(scenes, durs, pause, capmod.caps_cfg(c)["max_words"])
-        caps = capmod.render_captions(c, cues, d)
-        print(f"      {len(caps)} blocos de legenda queimados")
+        mw = capmod.caps_cfg(c)["max_words"]
+        blocks = capmod.build_word_cues(scenes, durs, pause, mw)
+        caps = capmod.render_caption_frames(c, blocks, d, c["render"]["fps"], sum(durs))
+        print(f"      {len(blocks)} blocos karaokê, {caps[2]} frames")
 
     print("[3/3] Render final")
     final = render.assemble(c, clips, d, final_name="reel.mp4", srt_text=srt, captions=caps, total=sum(durs))

@@ -156,9 +156,10 @@ def make_video(cfg, topic, mock, allow_paid=False):
     caps = None
     if cfg["render"].get("captions"):
         from media import captions as capmod
-        cues = capmod.build_cues(scenes, durs, pause, capmod.caps_cfg(cfg)["max_words"])
-        caps = capmod.render_captions(cfg, cues, out)
-        print(f"   texto na tela: {len(caps)} blocos queimados no vídeo (estilo viral)")
+        mw = capmod.caps_cfg(cfg)["max_words"]
+        blocks = capmod.build_word_cues(scenes, durs, pause, mw)
+        caps = capmod.render_caption_frames(cfg, blocks, out, cfg["render"]["fps"], sum(durs))
+        print(f"   texto na tela: {len(blocks)} blocos karaokê, {caps[2]} frames (estilo viral)")
     final = render.assemble(cfg, clips, out, srt_text=srt, captions=caps, total=sum(durs))
     total = duration(final)
     print(f"   Vídeo pronto: {final.name} ({total / 60:.1f} min)")
@@ -229,7 +230,9 @@ def main():
     ap.add_argument("--topic", help="tema do vídeo (comando video/publish)")
     ap.add_argument("--slug", help="pasta do vídeo em output/ (alternativa ao --topic no publish)")
     ap.add_argument("--privacy", choices=["private", "unlisted", "public"], default=None,
-                    help="visibilidade no publish; padrão = publish.privacy do config (private)")
+                    help="visibilidade no publish (só YouTube); padrão = publish.privacy do config (private)")
+    ap.add_argument("--to", choices=["youtube", "tiktok", "all"], default="youtube",
+                    help="destino do publish: youtube (padrão), tiktok ou all (ambos)")
     ap.add_argument("--format", choices=["shorts", "long"], default="shorts",
                     help="shorts (vertical, ~60s; padrão) ou long (horizontal). Escolhe o config quando --config não é dado.")
     ap.add_argument("--mock", action="store_true", help="simula tudo, sem APIs e sem custo")
@@ -293,14 +296,24 @@ def publish_video(cfg, a, root):
             f"A auditoria em {audit} não está APROVADA (ou está BLOQUEADA). Resolva as pendências do Vini "
             "antes de publicar.")
 
-    from media import youtube
-    step("Publicando no YouTube")
-    res = youtube.upload(cfg, out, root, privacy=a.privacy)
-    print(f"\n✔ Enviado como {res['privacy']}.")
-    print(f"   Assistir: {res['url']}")
-    print(f"   Revisar/publicar no Studio: {res['studio_url']}")
-    print("   Lembre: se houver imagens de IA que pareçam reais, marque 'conteúdo alterado/sintético' no Studio "
-          "antes de tornar público.")
+    destino = getattr(a, "to", "youtube")
+    if destino in ("youtube", "all"):
+        from media import youtube
+        step("Publicando no YouTube")
+        res = youtube.upload(cfg, out, root, privacy=a.privacy)
+        print(f"\n✔ YouTube: enviado como {res['privacy']}.")
+        print(f"   Assistir: {res['url']}")
+        print(f"   Revisar/publicar no Studio: {res['studio_url']}")
+        print("   Lembre: se houver imagens de IA que pareçam reais, marque 'conteúdo alterado/sintético' no Studio "
+              "antes de tornar público.")
+
+    if destino in ("tiktok", "all"):
+        from media import tiktok
+        step("Publicando no TikTok")
+        res = tiktok.upload(cfg, out, root)
+        print(f"\n✔ TikTok: vídeo nos rascunhos (publish_id {res['publish_id']}).")
+        print(f"   {res['where']}")
+        print("   Legenda sugerida salva em upload_tiktok.json (ajuste no app se quiser).")
 
 
 if __name__ == "__main__":

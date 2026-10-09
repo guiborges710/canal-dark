@@ -67,26 +67,26 @@ def assemble(cfg, clips, outdir, final_name="video.mp4", srt_text=None, captions
     # A legenda sempre vai para captions.srt (dá para subir como faixa separada no YouTube).
     if srt_text:
         (outdir / "captions.srt").write_text(srt_text, encoding="utf-8")
-    # O texto na tela estilo "viral" é queimado via overlay de PNGs (gerados pelo media/captions.py
-    # com Pillow). Não depende de libass/drawtext no build do ffmpeg — só do filtro 'overlay'.
+    # O texto na tela estilo "viral" é uma SEQUÊNCIA de frames PNG (gerada pelo media/captions.py
+    # com Pillow: poucas palavras, palavra falada em destaque, pop de escala). Entra como UM único
+    # input (demuxer image2) + UM único overlay — memória constante, sem libass/drawtext no build.
+    # `captions`, quando presente, é a tupla (dir_frames, fps, n_frames).
     use_caps = bool(captions)
+    cap_dir = cap_fps = None
+    if use_caps:
+        cap_dir, cap_fps, _ = captions
 
     cmd = ["ffmpeg", "-y", "-i", str(joined)]
     if music:
         cmd += ["-stream_loop", "-1", "-i", music]
-    base = 2 if music else 1  # índice do primeiro PNG de legenda entre os inputs do ffmpeg
+    base = 2 if music else 1  # índice do input de legenda entre os inputs do ffmpeg
     if use_caps:
-        for png, _, _ in captions:
-            cmd += ["-loop", "1", "-i", str(png)]
+        cmd += ["-framerate", str(cap_fps), "-i", str(cap_dir / "%05d.png")]
     fc = []
     if use_caps:
-        # Compõe cada PNG (do tamanho do quadro, texto já posicionado) sobre o vídeo, só na
-        # janela de tempo do bloco. 't' é o tempo do vídeo principal, que começa em zero.
-        cur = "[0:v]"
-        for i, (_, s, e) in enumerate(captions):
-            dst = "[vout]" if i == len(captions) - 1 else f"[v{i}]"
-            fc.append(f"{cur}[{base + i}:v]overlay=0:0:enable='between(t,{s:.3f},{e:.3f})'{dst}")
-            cur = dst
+        # Compõe a sequência de legendas sobre o vídeo num overlay só. Os PNGs já têm o texto
+        # posicionado no quadro inteiro e são transparentes onde não há legenda.
+        fc.append(f"[0:v][{base}:v]overlay=0:0:shortest=1[vout]")
     if music:
         mv = r.get("music_volume", 0.15)
         fc.append("[0:a]asplit=2[asrc1][asrc2]")

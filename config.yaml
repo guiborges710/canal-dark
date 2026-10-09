@@ -22,6 +22,8 @@ publish:
   category_id: 22                 # 22 = People & Blogs; 27 = Education
   client_secret_file: client_secret.json   # credencial OAuth (gitignored); baixada do Google Cloud
   token_file: .youtube_token.json          # token gerado no 1º consentimento (gitignored)
+  tiktok_token_file: .tiktok_token.json        # token OAuth do TikTok (gitignored); veja TIKTOK_SETUP.md
+  tiktok_redirect_uri: https://localhost/callback   # precisa bater com o registrado no app dev
 
 # Qual modelo faz cada agente (fast = Haiku, smart = Sonnet)
 tiers:

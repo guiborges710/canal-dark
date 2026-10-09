@@ -18,10 +18,15 @@ publish:
   destination: "output/<slug>/"   # onde ficam video.mp4, thumbnail.jpg e PUBLICAR.txt
   # Upload automático via OAuth (python run.py publish). Padrão: sobe como PRIVADO e você
   # publica no Studio. Só roda depois do Vini aprovar (auditoria.md com APROVADO).
-  privacy: private                # private (padrão) | unlisted | public
+  privacy: public                 # private | unlisted | public (canal já publica direto público)
   category_id: 22                 # 22 = People & Blogs; 27 = Education
   client_secret_file: client_secret.json   # credencial OAuth (gitignored); baixada do Google Cloud
   token_file: .youtube_token.json          # token gerado no 1º consentimento (gitignored)
+  # TikTok (python run.py publish --to tiktok). Sobe para os RASCUNHOS da conta via
+  # Content Posting API; você finaliza e publica no app. Chaves em .env:
+  # TIKTOK_CLIENT_KEY / TIKTOK_CLIENT_SECRET. Veja TIKTOK_SETUP.md.
+  tiktok_token_file: .tiktok_token.json        # token OAuth do TikTok (gitignored)
+  tiktok_redirect_uri: https://localhost/callback   # precisa bater com o registrado no app dev
 
 # Qual modelo faz cada agente (fast = Haiku, smart = Sonnet)
 tiers:
@@ -73,12 +78,14 @@ render:
   width: 1080
   height: 1920
   fps: 30
-  captions: true            # texto na tela estilo viral, queimado via overlay de PNGs (Pillow)
-  caption_max_words: 7      # palavras por bloco (reduzido de 3 para evitar sobrecarga de memória do ffmpeg)
-  caption_size: 0.045       # padrão TikTok: fonte menor, 1 linha na maioria dos blocos
-  caption_y: 0.46           # zona segura: logo acima do centro, fora da UI nativa (topo e rodapé)
+  captions: true            # texto na tela estilo viral: sequência de frames (Pillow) + 1 overlay
+  caption_max_words: 1      # 1 palavra por vez, acompanhando a voz (estilo karaokê word-by-word)
+  caption_size: 0.0339      # ~65px em 1920 de altura (fração da altura)
+  caption_y: 0.62           # terço médio-inferior, fora da zona de UI nativa (receita viral)
   caption_uppercase: true   # MAIÚSCULAS dão mais impacto
-  # caption_font: ""        # caminho .ttf opcional; padrão: Arial Black / Impact
+  caption_active_color: "#FFD700"  # palavra falada em amarelo (karaokê estilo CapCut/Hormozi)
+  caption_pop: 0.12         # pop de escala na entrada de cada bloco (~120ms)
+  # caption_font: ""        # .ttf opcional; padrão: assets/fonts/Montserrat-ExtraBold.ttf
   # caption_color: "#FFFFFF"
   # caption_stroke_color: "#000000"
   music_file: "music/ambient.mp3"   # trilha .mp3 (opcional)

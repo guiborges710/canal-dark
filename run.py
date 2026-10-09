@@ -233,6 +233,10 @@ def main():
                     help="visibilidade no publish (só YouTube); padrão = publish.privacy do config (private)")
     ap.add_argument("--to", choices=["youtube", "tiktok", "all"], default="youtube",
                     help="destino do publish: youtube (padrão), tiktok ou all (ambos)")
+    ap.add_argument("--publish-at", dest="publish_at", default=None,
+                    help="agenda a publicação no YouTube (horário de Brasília), ex.: \"2026-10-14 18:30\". "
+                         "O vídeo sobe privado e o YouTube o torna público sozinho nessa data/hora. "
+                         "Só vale para YouTube; força privacy=private.")
     ap.add_argument("--format", choices=["shorts", "long"], default="shorts",
                     help="shorts (vertical, ~60s; padrão) ou long (horizontal). Escolhe o config quando --config não é dado.")
     ap.add_argument("--mock", action="store_true", help="simula tudo, sem APIs e sem custo")
@@ -275,6 +279,37 @@ def main():
         make_video(cfg, a.topic, a.mock, allow_paid=a.allow_paid)
 
 
+def _parse_publish_at(texto):
+    """Converte 'YYYY-MM-DD HH:MM' (horário de Brasília) em RFC3339 UTC (ex.: 2026-10-14T21:30:00Z).
+
+    Aceita também o separador 'T' e segundos opcionais. Devolve a string pronta para o
+    campo status.publishAt do YouTube. Erra se a data estiver no passado ou em formato inválido.
+    """
+    from datetime import datetime, timezone
+    try:
+        from zoneinfo import ZoneInfo
+        tz = ZoneInfo("America/Sao_Paulo")
+    except Exception:  # fallback: trata a entrada como UTC-3 fixo se faltar tzdata
+        from datetime import timedelta
+        tz = timezone(timedelta(hours=-3))
+
+    s = texto.strip().replace("T", " ")
+    dt = None
+    for fmt in ("%Y-%m-%d %H:%M:%S", "%Y-%m-%d %H:%M", "%d/%m/%Y %H:%M:%S", "%d/%m/%Y %H:%M"):
+        try:
+            dt = datetime.strptime(s, fmt)
+            break
+        except ValueError:
+            continue
+    if dt is None:
+        raise SystemExit(
+            f"--publish-at inválido: {texto!r}. Use o formato \"2026-10-14 18:30\" (horário de Brasília).")
+    dt = dt.replace(tzinfo=tz)
+    if dt <= datetime.now(tz):
+        raise SystemExit(f"--publish-at precisa estar no futuro (recebi {texto!r}, já passou).")
+    return dt.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
 def publish_video(cfg, a, root):
     """Sobe um vídeo já produzido e AUDITADO para o YouTube (privado por padrão).
     Só publica depois de o Vini aprovar (auditoria.md com APROVADO)."""
@@ -296,16 +331,24 @@ def publish_video(cfg, a, root):
             f"A auditoria em {audit} não está APROVADA (ou está BLOQUEADA). Resolva as pendências do Vini "
             "antes de publicar.")
 
+    publish_at = _parse_publish_at(a.publish_at) if getattr(a, "publish_at", None) else None
+
     destino = getattr(a, "to", "youtube")
     if destino in ("youtube", "all"):
         from media import youtube
         step("Publicando no YouTube")
-        res = youtube.upload(cfg, out, root, privacy=a.privacy)
-        print(f"\n✔ YouTube: enviado como {res['privacy']}.")
+        res = youtube.upload(cfg, out, root, privacy=a.privacy, publish_at=publish_at)
+        if res.get("publish_at"):
+            print(f"\n✔ YouTube: enviado privado e AGENDADO para {a.publish_at} (Brasília).")
+            print("   O YouTube torna o vídeo público sozinho nessa data/hora. Você não precisa fazer nada no Studio.")
+        else:
+            print(f"\n✔ YouTube: enviado como {res['privacy']}.")
         print(f"   Assistir: {res['url']}")
-        print(f"   Revisar/publicar no Studio: {res['studio_url']}")
-        print("   Lembre: se houver imagens de IA que pareçam reais, marque 'conteúdo alterado/sintético' no Studio "
-              "antes de tornar público.")
+        print(f"   Revisar no Studio: {res['studio_url']}")
+        print("   Lembre: se houver imagens de IA que pareçam reais, marque 'conteúdo alterado/sintético' no Studio.")
+
+    if publish_at and destino in ("tiktok", "all"):
+        print("\n⚠ --publish-at só vale para o YouTube; o TikTok continua caindo nos rascunhos (publicação manual).")
 
     if destino in ("tiktok", "all"):
         from media import tiktok

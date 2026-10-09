@@ -20,3 +20,5 @@ reels/projetos/*/captions.srt
 referencias/capas/
 referencias/transcricoes/
 referencias/videos/
+
+.claude/settings.local.json

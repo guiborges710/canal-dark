@@ -78,10 +78,13 @@ def _read_metadata(out: Path):
     return meta, desc
 
 
-def upload(cfg, out: Path, root: Path, privacy=None):
+def upload(cfg, out: Path, root: Path, privacy=None, publish_at=None):
     """Sobe out/video.mp4 para o YouTube e define a miniatura. Devolve dict com id/url.
 
     `privacy` sobrepõe o config; o padrão do canal é 'private'.
+    `publish_at` (RFC3339 UTC, ex.: '2026-10-14T21:30:00Z') agenda a publicação: o vídeo
+    sobe PRIVADO e o YouTube o torna público sozinho nessa data/hora. Quando usado, a
+    visibilidade é forçada para 'private' (exigência da API para agendamento).
     """
     _require_libs()
     from googleapiclient.discovery import build
@@ -93,6 +96,11 @@ def upload(cfg, out: Path, root: Path, privacy=None):
         raise SystemExit(f"Falta {video_file}. Gere o vídeo antes de publicar.")
 
     privacy = privacy or pub.get("privacy", "private")
+    if publish_at:
+        # A API só agenda (publishAt) quando o vídeo é enviado como privado.
+        if privacy != "private":
+            print(f"   ⚠ Agendamento exige privacy=private; ignorando --privacy {privacy}.", flush=True)
+        privacy = "private"
     client_secret = root / pub.get("client_secret_file", "client_secret.json")
     token_file = root / pub.get("token_file", ".youtube_token.json")
 
@@ -117,12 +125,15 @@ def upload(cfg, out: Path, root: Path, privacy=None):
             "madeForKids": False,
         },
     }
+    if publish_at:
+        body["status"]["publishAt"] = publish_at   # YouTube publica sozinho nessa data/hora (UTC)
 
     media = MediaFileUpload(str(video_file), mimetype="video/mp4",
                             chunksize=4 * 1024 * 1024, resumable=True)
     req = youtube.videos().insert(part="snippet,status", body=body, media_body=media)
 
-    print(f"   Enviando {video_file.name} ({privacy})...", flush=True)
+    agendado = f", agendado para {publish_at}" if publish_at else ""
+    print(f"   Enviando {video_file.name} ({privacy}{agendado})...", flush=True)
     resp = None
     while resp is None:
         status, resp = req.next_chunk()
@@ -148,6 +159,7 @@ def upload(cfg, out: Path, root: Path, privacy=None):
         "url": url,
         "studio_url": f"https://studio.youtube.com/video/{video_id}/edit",
         "privacy": privacy,
+        "publish_at": publish_at,
         "title": meta["titulo"],
     }
     (out / "upload.json").write_text(json.dumps(result, ensure_ascii=False, indent=1), encoding="utf-8")

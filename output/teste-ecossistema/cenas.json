@@ -1,0 +1,27 @@
+[
+  {
+    "text": "Dizem que ninguém quer trabalhar. Mas quarenta vírgula oito por cento dos jovens brasileiros, de quinze a vinte e nove anos, só trabalham.",
+    "search": ["young worker Brazil street", "delivery worker bicycle Sao Paulo", "young people commuting Brazil"],
+    "image_prompt": "Photorealistic documentary photo, vertical 9:16, young Brazilian worker seen from behind in a work uniform, walking through a busy São Paulo street at dawn, cool blue-gray palette, shallow depth of field, no recognizable face, no text, no watermark."
+  },
+  {
+    "text": "Em dois mil e dezenove, vinte e dois vírgula quatro por cento não trabalhavam, não estudavam nem se qualificavam. No dado mais recente do IBGE, dezessete vírgula cinco. Caiu.",
+    "search": ["unemployed youth Brazil", "empty classroom desks", "statistics chart downward trend"],
+    "image_prompt": "Photorealistic documentary photo, vertical 9:16, close-up of a young person's hands resting on a table beside a closed notebook and a phone, near a window with cold morning light, muted blue palette, face out of frame, no text, no watermark."
+  },
+  {
+    "text": "Esses números medem situação, não vontade. A frase confunde as duas coisas. E o rótulo jovem esconde diferenças. Entre as mulheres, vinte e dois vírgula oito por cento estão fora do trabalho e do estudo. Entre os homens, doze vírgula quatro.",
+    "search": ["Brazilian woman at home with child", "young man and woman Brazil city", "women caregiving household Brazil"],
+    "image_prompt": "Photorealistic documentary photo, vertical 9:16, split composition of two neutral scenes: a woman's silhouette doing household tasks in a modest kitchen, and a man's silhouette leaving for work at a bus stop, cool desaturated palette, faces not visible, no text, no watermark."
+  },
+  {
+    "text": "Aqui, o contexto pesa mais que a geração. O problema existe, só não é preguiça. Nos Estados Unidos, a satisfação alta com o emprego vai de quarenta e quatro por cento entre os jovens a sessenta e sete entre os maiores de sessenta e cinco. Pode ser fase da vida.",
+    "search": ["office workers United States", "older worker office desk", "open plan office young employees"],
+    "image_prompt": "Photorealistic documentary photo, vertical 9:16, calm modern American office, wide shot with a young employee and an older employee at separate desks seen from behind, soft cool daylight through large windows, blue-gray palette, no recognizable faces, no text, no watermark."
+  },
+  {
+    "text": "Quando alguém diz que uma geração é assim, que situação está sendo esquecida?",
+    "search": ["empty chair window light", "person looking at city skyline", "quiet urban dusk"],
+    "image_prompt": "Photorealistic documentary photo, vertical 9:16, clean minimal scene of an empty chair by a large window overlooking a city at dusk, soft cool blue light, generous empty space at the top for large text, no people, no text, no watermark."
+  }
+]

@@ -1,0 +1,28 @@
+TÍTULO:
+Ninguém quer trabalhar? O que os dados dizem sobre os jovens
+
+DESCRIÇÃO:
+A frase 'ninguém quer trabalhar' costuma usar um dado que mede situação, não vontade. Este short compara o rótulo com números do IBGE sobre jovens brasileiros de 15 a 29 anos e mostra por que o recorte por sexo muda a conversa.
+
+Se você já ouviu 'a geração tal é assim', pense em qual situação está sendo deixada de fora. Inscreva-se no canal para mais análises de comportamento social e gerações.
+
+Narração sintética (voz gerada por computador) e ilustrações geradas por computador. Não são pessoas reais.
+
+Fontes:
+- IBGE, Agência de Notícias (PNAD Educação): https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/47222-cai-a-proporcao-de-jovens-que-nao-trabalham-nao-estudam-e-nem-se-qualificam
+- Estadão Conteúdo via Diário de Pernambuco, 19/06/2026: https://www.diariodepernambuco.com.br/brasil/2026/06/11716952-n-de-jovens-nem-nem-no-brasil-cai-mas-ainda-e-maior-que-populacao-de-santa-catarina.html
+- Pew Research Center (dados dos EUA, 2023, usados só como contraponto): https://www.pewresearch.org/short-reads/2023/05/25/young-workers-express-lower-levels-of-job-satisfaction-than-older-ones-but-most-are-content-with-their-job/
+
+Obs.: as cenas sem registro histórico usam ilustrações geradas por computador; diga isso na descrição.
+
+TAGS (separadas por vírgula):
+jovens brasileiros, mercado de trabalho, geração, IBGE, nem nem, trabalho e estudo, comportamento social, análise social
+
+TEXTO SUGERIDO PARA A THUMBNAIL: Ninguém quer trabalhar? Depende do contexto
+ARQUIVOS: video.mp4 e thumbnail.jpg
+
+ANTES DE PUBLICAR:
+- Assista ao vídeo inteiro e confira os fatos principais contra as fontes em notas.md.
+- No upload, responda a pergunta sobre conteúdo alterado ou sintético: imagens geradas por IA que pareçam reais
+  (cenas de um evento real que não foram registradas) exigem a divulgação. Confira a regra atual no YouTube Studio.
+- A política de conteúdo inautêntico pesa contra vídeos em molde repetido e sem comentário próprio: o roteiro precisa ter ponto de vista e pesquisa originais.

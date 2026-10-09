@@ -1,0 +1,27 @@
+ESTILO GLOBAL (APLICAR A TODAS AS IMAGENS):
+Ilustrações com formas arredondadas e expressivas, para vídeo vertical 9:16 (formato Reels). Celular levemente inclinado como elemento recorrente. Paleta constante: fundo creme claro, verde escuro nos elementos principais e laranja queimado nos destaques. Alto contraste, pouco detalhe. Variar entre close e plano aberto conforme a cena. Sem apresentador, sem rosto em destaque. Sem logotipos, marcas, símbolos de aplicativos reconhecíveis, dinheiro voando ou cifrões. Sem texto legível dentro das imagens: as mensagens serão inseridas depois na montagem, grandes e sincronizadas com a narração. Deixar espaço livre no topo e na parte inferior para as legendas.
+
+---
+
+001 — Celular levemente inclinado sobre superfície clara, tela mostrando um balão de conversa recebido com formato arredondado, close, sem texto legível, fundo creme, destaque em verde escuro.
+
+002 — Plano aberto de uma mão pairando sobre um teclado de celular, em hesitação, com um pequeno rótulo arredondado em laranja queimado ao lado, sem texto legível, sem cifrões, fundo creme.
+
+003 — Três ícones arredondados alinhados lado a lado: um calendário, um ponto de interrogação e uma porta semiaberta, em verde escuro e laranja queimado, sem texto legível, fundo creme, composição limpa.
+
+004 — Plano aberto de celular apoiado sobre uma mesa, com um balão de conversa vazio e grande ocupando o centro da tela, pausa visual, sem texto legível, verde escuro nos elementos principais, fundo creme.
+
+005 — Close de celular inclinado com um balão de conversa grande em laranja queimado em destaque, forma arredondada, sem texto legível dentro do balão, fundo creme.
+
+006 — Dois balões de conversa lado a lado em uma tela de celular, um com ponto de interrogação e outro com marca de confirmação em verde escuro, sem texto legível, fundo creme, composição arredondada.
+
+007 — Plano aberto de celular sobre a mesa com espaço amplo ao redor, um balão de conversa discreto em verde escuro e um espaço vazio que sugere tempo para decidir, sem texto legível, fundo creme.
+
+008 — Celular levemente inclinado com um ícone de marcador de salvamento em destaque em laranja queimado, pequenos balões de conversa arredondados ao fundo, sem texto legível, fundo creme.
+
+---
+
+INSTRUÇÕES PARA A OUTRA IA:
+- Salve cada imagem como: 001.png, 002.png, 003.png, 004.png, 005.png, 006.png, 007.png, 008.png (na ordem exata).
+- Mantenha a mesma paleta, o mesmo estilo e a mesma família de formas em todas as oito imagens.
+- Todas as imagens em 9:16 (vertical), com espaço livre no topo e na base.

@@ -1,0 +1,27 @@
+ESTILO GLOBAL (APLICAR A TODAS AS IMAGENS):
+Ilustração flat, minimalista e limpa, para vídeo vertical 9:16 (formato Reels). Paleta constante: fundo creme claro, verde escuro nos elementos principais e laranja queimado nos destaques. Alto contraste, formas simples, pouco detalhe. Sem apresentador, sem rosto em destaque. Sem logotipos, marcas, símbolos de aplicativos reconhecíveis, dinheiro voando ou cifrões. Deixar espaço livre no topo e na parte inferior para as legendas. Mesma composição de celular e de pequeno negócio de lavagem de carros em todas as cenas.
+
+---
+
+001 — Close de celular apoiado sobre uma superfície clara, tela mostrando uma notificação de mensagem genérica com um balão de conversa e um ponto de interrogação, fundo creme desfocado, destaque em verde escuro.
+
+002 — Tela de celular ocupando o centro da imagem com um único balão de conversa curto e isolado, muito espaço em branco ao redor, balão em verde escuro, fundo creme.
+
+003 — Ilustração de celular com um balão de conversa e três ícones de ponto de interrogação saindo dele, expressão de dúvida representada por formas simples, destaques em laranja queimado, fundo creme.
+
+004 — Ilustração flat de um pequeno ponto de lavagem de carros visto de frente: um carro de passeio ao lado de um balde e uma esponja, piso claro, paredes simples, paleta de verde escuro e laranja queimado, fundo creme.
+
+005 — Tela de celular com um balão de conversa mais longo, com linhas abstratas que sugerem texto, em verde escuro sobre fundo claro, ao lado de um pequeno ícone de carro limpo, fundo creme.
+
+006 — Ilustração de celular com um balão de conversa e um calendário simples com um ponto de interrogação em um dos dias, destaques em laranja queimado, fundo creme.
+
+007 — Ilustração de três blocos empilhados representando itens de uma lista, cada um com um ícone de marcação de confirmação em verde escuro, fundo creme, estilo flat.
+
+008 — Tela de celular em primeiro plano com um ícone de marcador de salvamento em destaque em laranja queimado, pequenos balões de conversa ao fundo, fundo creme.
+
+---
+
+INSTRUÇÕES PARA A OUTRA IA:
+- Salve cada imagem como: 001.png, 002.png, 003.png, 004.png, 005.png, 006.png, 007.png, 008.png (na ordem exata).
+- Mantenha a mesma paleta, o mesmo estilo e a mesma composição em todas as oito imagens.
+- Todas as imagens em 9:16 (vertical), com espaço livre no topo e na base.

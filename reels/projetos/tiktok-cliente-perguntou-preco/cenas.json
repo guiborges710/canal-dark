@@ -1,0 +1,34 @@
+[
+ {
+  "text": "Cliente perguntou o preço? Veja uma resposta para adaptar.",
+  "image_prompt": "Close de celular apoiado sobre uma superfície clara, tela mostrando uma notificação de mensagem genérica com um balão de conversa e um ponto de interrogação, sem texto legível, sem logotipos, fundo creme desfocado, destaque em verde escuro, composição vertical com espaço livre no topo para legenda."
+ },
+ {
+  "text": "Responda só com o valor: custa cinquenta reais.",
+  "image_prompt": "Tela de celular ocupando o centro da imagem com um único balão de conversa curto e isolado, sem texto legível, muito espaço em branco ao redor, fundo creme, balão em verde escuro, sem logotipos, sem apresentador, composição vertical com espaço livre para legenda."
+ },
+ {
+  "text": "Só que essa resposta deixa dúvidas: o que está incluído?",
+  "image_prompt": "Ilustração de celular com um balão de conversa e três ícones de ponto de interrogação saindo dele, expressão de dúvida representada por formas simples, fundo creme, paleta com laranja queimado nos destaques, sem texto legível, sem logotipos, composição vertical com espaço livre para legenda."
+ },
+ {
+  "text": "Vamos a um exemplo fictício de lavagem de carro.",
+  "image_prompt": "Ilustração flat de um pequeno ponto de lavagem de carros visto de frente: um carro de passeio ao lado de um balde e uma esponja, piso claro, paredes simples, sem placas com texto, sem logotipos, fundo creme, paleta de verde escuro e laranja queimado, composição vertical com espaço livre para legenda."
+ },
+ {
+  "text": "Olá! A lavagem custa cinquenta reais e inclui limpeza externa e aspiração interna.",
+  "image_prompt": "Tela de celular com um balão de conversa mais longo, com linhas abstratas que sugerem texto sem letras legíveis, em verde escuro sobre fundo claro, ao lado de um pequeno ícone de carro limpo, sem logotipos, sem texto dentro da imagem, fundo creme, composição vertical com espaço livre para legenda."
+ },
+ {
+  "text": "Para qual dia você está procurando horário?",
+  "image_prompt": "Ilustração de celular com um balão de conversa e um calendário simples com um ponto de interrogação em um dos dias, sem números legíveis nem textos, fundo creme, destaques em laranja queimado, sem logotipos, composição vertical com espaço livre para legenda."
+ },
+ {
+  "text": "Adapte o preço, os itens e a pergunta ao seu serviço real.",
+  "image_prompt": "Ilustração de três blocos empilhados representando itens de uma lista, cada um com um ícone de marcação de confirmação em verde escuro, sem texto legível, fundo creme, estilo flat e limpo, sem logotipos, composição vertical com espaço livre para legenda."
+ },
+ {
+  "text": "Salve este exemplo para adaptar no seu próximo atendimento.",
+  "image_prompt": "Tela de celular em primeiro plano com um ícone de marcador de salvamento em destaque em laranja queimado, pequenos balões de conversa ao fundo, sem texto legível, fundo creme, sem logotipos, sem apresentador, composição vertical com espaço livre para legenda."
+ }
+]

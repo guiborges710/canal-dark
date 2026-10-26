@@ -1,0 +1,80 @@
+{
+  "id": "casal-em-casa-2026-10-25",
+  "status": "agendado",
+  "slot": "2026-10-25T10:00:00-03:00",
+  "assets": [
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-25\\1000\\001.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "f69cda0245291e93bf53184f4e20d322edf2f7a92517b4ddc50db9300695ed70"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-25\\1000\\002.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "7c51188363b00a584dec931feec3488db46bea406d16dda9026d01dfb687ecca"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-25\\1000\\003.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "7c2f8671b7f831321b1f530bbcf7a6f21b28749e46beb39279543ffeb1131131"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-25\\1000\\004.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "5eaf5717d2d94617f5d3dd2ff08c5e928db0dd13bb3e7891fb647323a9d43d7c"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-25\\1000\\005.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "6ba7da15d64a1d5f0b07c38914abd9f84baa5f47902e07a34b93f1c44a370086"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-25\\1000\\006.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "7766aa1a9ac94521a76b2331a214d44d5ec8a5cc0ab53e8b9480149a04863a4b"
+    }
+  ],
+  "media_count": 6,
+  "reference_url": "https://www.tiktok.com/@closetminimal/photo/7576732447551868181",
+  "native_ai_label_required": true,
+  "on_image_ai_disclaimer": false,
+  "qa": {
+    "all_final_files_visually_inspected": true,
+    "central_3_4_crop_reviewed": true,
+    "top_right_bottom_ui_overlap_reviewed": true,
+    "native_feed_preview_reviewed": true,
+    "anatomy_reviewed": true,
+    "uniform_square_dimensions": true
+  },
+  "title": "4 ideias de fotos de casal em casa 🤍",
+  "caption": "Qual combina com vocês: sofá, café, chão da sala ou filme? Comenta 1, 2, 3 ou 4 🤍 Quatro ideias para fotografar juntos em casa, usando uma luz confortável e uma posição natural. Adaptem ao jeito de vocês. Curtiu? Deixa um coração e segue @closetminimal para mais ideias de fotos e looks fáceis. #fotodecasal #posesdecasal #fotosemcasa #ideiasdefotos #closetminimal",
+  "tool": "imagegen integrado",
+  "prompt": "6 slides originais: capa, lado a lado, café, chão da sala, filme, CTA. Área segura creme; correções de margem em2,5,6.",
+  "sound": "Until I Found You - Ana Luise Fernandes Lima Miranda",
+  "publication_note": "Lote inédito originalmente preparado23/10 e nunca publicado; programado25/10 após fila nativa vazia e nova préviaFeed conferida.",
+  "tiktok_id": "7700559383473786130",
+  "remote_id": "7700559383473786130",
+  "public_url": "https://www.tiktok.com/@closetminimal/photo/7700559383473786130",
+  "verified_date": "2026-10-25",
+  "provider_status_verified": "Studio25out10:00;Todosdesativado;IDconfirmado",
+  "native_ai_label": true,
+  "destination_verified": "Perfil da sessão @closetminimal antes deupload eAgendar"
+}

@@ -1,34 +1,30 @@
-# ===== Perfil de SHORTS (9:16) — este é o padrão do canal na primeira fase =====
-# run.py usa este arquivo com `--format shorts` (o padrão). A identidade editorial completa
-# está em CLAUDE.md e em output/messi_assinatura_canal.md.
+# Perfil do canal (Shorts 9:16, animação vetorial por código). Único perfil: o estilo novo é só Short por enquanto.
 channel:
   niche: "Análise de Comportamento Social e Gerações"   # nicho do canal (definido em 2026-10-07)
   audience: "brasileiros 18-45 interessados em entender comportamento, gerações e sociedade com nuance"
-  language: pt-BR        # idioma da narração e dos textos
-  minutes: 1             # SHORT: alvo ~1 min (gancho 3s -> insight -> contraexemplo -> pergunta)
-  visual_style: "cinematic documentary still, realistic, dramatic lighting, muted color grading, film grain, no text, no watermark"   # usado só nas imagens geradas (IA)
+  language: pt-BR        # idioma dos textos dos cartões e da descrição
+  minutes: 0.75          # alvo de duração do texto (~150 palavras/min): Short de 30 a 60 s; o vídeo real vem do cenas.json
 
-# Limites e política de custo (sem --allow-paid, o run.py mantém tudo em recursos gratuitos).
+# Limites e política de custo. A pipeline inteira roda sem custo: render local, efeitos por código.
 budget:
-  max_usd_per_video: 0        # 0 = só recursos gratuitos (voz Kokoro local, imagens sem custo)
-  max_retries_per_step: 2     # tentativas por etapa antes de desistir e avisar
+  max_usd_per_video: 0        # 0 = nada pago; o único gasto possível é o texto pela API (--allow-paid)
+  max_retries_per_step: 2
 
 # Entrega e publicação.
 publish:
-  destination: "output/<slug>/"   # onde ficam video.mp4, thumbnail.jpg e PUBLICAR.txt
-  # Upload automático via OAuth (python run.py publish). Padrão: sobe como PRIVADO e você
-  # publica no Studio. Só roda depois do Vini aprovar (auditoria.md com APROVADO).
+  destination: "output/<slug>/"   # onde ficam video.mp4, thumbnail.jpg, PUBLICAR.txt e CONFORMIDADE.md
+  # Upload automático via OAuth (python run.py publish). Padrão: sobe como PRIVADO e você publica no Studio.
+  # Só roda depois do Vini aprovar (auditoria.md com APROVADO).
   privacy: private                # private (padrão) | unlisted | public
   category_id: 22                 # 22 = People & Blogs; 27 = Education
-  client_secret_file: client_secret.json   # credencial OAuth (gitignored); baixada do Google Cloud
+  client_secret_file: client_secret.json   # credencial OAuth (gitignored)
   token_file: .youtube_token.json          # token gerado no 1º consentimento (gitignored)
 
-# Qual modelo faz cada agente (fast = Haiku, smart = Sonnet)
+# Qual modelo faz cada agente de texto (só usado no fallback --allow-paid)
 tiers:
   research: fast
   writer: smart
   reviewer: fast
-  scenes: fast
   metadata: fast
   ideas: fast
   angle: smart
@@ -43,54 +39,20 @@ research:
   days_back: 180
   max_results: 25
 
-tts:
-  provider: kokoro            # kokoro = voz local gratuita | google = Google Cloud TTS (precisa de chave)
-  model_path: models/kokoro-v1.0.int8.onnx
-  voices_path: models/voices-v1.0.bin
-  kokoro_lang: pt-br
-  language_code: pt-BR       # usado só pelo provedor google
-  voice: pm_alex             # kokoro pt-br: pf_dora, pm_alex, pm_santa (google ex.: pt-BR-Wavenet-A)
-  speaking_rate: 1.0
-  pause_seconds: 0.35
-
-images:
-  provider: cloudflare       # SHORTS: Flux schnell na Cloudflare (gratis)
-  fallback: cloudflare       # cloudflare (grátis, precisa de conta) | fal (centavos por imagem, mais simples) | local_art (só demonstração)
-  model: fal-ai/flux/schnell
-  image_size: portrait_16_9
+# Vídeo: animação vetorial (render/) com efeitos sonoros por código. Sem narração, sem imagens.
+render:
+  width: 1080
+  height: 1920
+  fps: 30
+  duracao_min_s: 20
+  duracao_max_s: 60
 
 compliance:
   max_videos_per_day: 2      # acima disso o verificador avisa (publicação em volume parece produção em massa)
   max_title_chars: 70
 
-commons:
-  user_agent: "canal-dark-pipeline/0.1 (guiborges86@gmail.com)"   # o Wikimedia pede um contato no User-Agent; use o seu
-  min_width: 1280            # largura mínima da imagem original, em pixels
-  allow_share_alike: false   # true também aceita licenças CC BY-SA (exigem que adaptações usem a mesma licença)
-  grade: true                # tratamento leve e igual em todas as imagens reais (contraste, cor, vinheta)
-
-render:
-  width: 1080
-  height: 1920
-  fps: 30
-  captions: true            # texto na tela estilo viral, queimado via overlay de PNGs (Pillow)
-  caption_max_words: 7      # palavras por bloco (reduzido de 3 para evitar sobrecarga de memória do ffmpeg)
-  caption_size: 0.045       # padrão TikTok: fonte menor, 1 linha na maioria dos blocos
-  caption_y: 0.46           # zona segura: logo acima do centro, fora da UI nativa (topo e rodapé)
-  caption_uppercase: true   # MAIÚSCULAS dão mais impacto
-  # caption_font: ""        # caminho .ttf opcional; padrão: Arial Black / Impact
-  # caption_color: "#FFFFFF"
-  # caption_stroke_color: "#000000"
-  music_file: "music/ambient.mp3"   # trilha .mp3 (opcional)
-  music_volume: 0.15
-
-scenes:
-  min_words: 10          # tamanho mínimo de cada cena, em palavras
-
-# Preços para estimar custo (US$). CONFIRME nas páginas oficiais antes de confiar.
+# Preço por milhão de tokens da API (só entra no custo quando o texto é gerado pela API, --allow-paid).
 prices:
   llm_per_mtok:
     claude-haiku-4-5-20251001: {in: 1.0, out: 5.0}
     claude-sonnet-5-5: {in: 3.0, out: 15.0}   # confirmar preço do modelo atual
-  tts_per_mchar: 4.0      # Google Standard/WaveNet; Chirp 3 HD = 30
-  image_each: 0.003       # Flux schnell

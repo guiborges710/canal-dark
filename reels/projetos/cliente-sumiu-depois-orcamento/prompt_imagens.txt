@@ -1,0 +1,36 @@
+Você vai gerar as imagens de um Reels vertical para Instagram. Gere 9 imagens separadas, na ordem, nomeadas 001 a 009.
+
+TEMA: cliente que some depois do orçamento. Pequena oficina de móveis de madeira, dono atendendo pelo celular.
+
+ESTILO GLOBAL — OBRIGATÓRIO, siga exatamente em TODAS as imagens, sem exceção:
+- Estilo: ilustração digital quente, com formas arredondadas, contornos suaves e preenchimento sólido. Personagens com rostos simpáticos e expressivos, cabeça levemente maior que o corpo. Nada fotorrealista, nada 3D, nada de foto.
+- Paleta exclusiva: madeira clara, creme, verde escuro e laranja queimado. Plantas verdes como elemento de cenário. Não use outras cores como cor principal.
+- Cenário preenchendo a imagem até a base, sem grandes áreas brancas ou vazias.
+- Luz suave e uniforme, sem sombras duras e sem brilho dramático, igual em todas as cenas.
+- Personagem principal: homem adulto, cabelo cacheado, barba curta, camiseta verde e avental verde. Sempre a mesma aparência (rosto, cabelo, barba, roupa) em todas as cenas em que aparecer.
+- Celular, quando aparecer: sempre o mesmo modelo, com moldura verde escuro e tela creme. As telas ficam SEM letras (os textos são inseridos depois na montagem).
+- Formato vertical 9:16 (1080x1920), sem bordas.
+- Sem nenhum texto, letra, número, legenda, logotipo ou marca d'água dentro da imagem.
+- Assunto principal centralizado, com o terço inferior livre de elementos importantes (é onde vai a legenda).
+
+CENAS:
+
+001 — Homem de cabelo cacheado, barba curta, camiseta e avental verdes, olhando para o celular na mão com expressão de dúvida e sobrancelhas franzidas. Mesa de madeira clara com uma estante montada ao lado, ferramentas organizadas. Plantas verdes, fundo creme e verde escuro.
+
+002 — Close de celular de moldura verde escuro e tela creme. A tela mostra um cartão de orçamento em creme com contorno laranja queimado, sem letras, e um pequeno ícone de olho em verde escuro ao lado. Mão de um homem de cabelo cacheado, barba curta e camiseta verde segurando o aparelho. Madeira clara e plantas ao fundo.
+
+003 — Homem de cabelo cacheado, barba curta, camiseta e avental verdes, com o celular na mão e expressão de impaciência. A tela mostra um balão de conversa curto em laranja queimado, sem letras. Madeira clara, plantas verdes, fundo creme e verde escuro.
+
+004 — Homem de cabelo cacheado, barba curta, camiseta e avental verdes, sentado em um banco de madeira clara, cabeça levemente inclinada, olhando o celular com ar pensativo. Na tela, um balão laranja queimado vazio e um ícone de ampulheta em verde escuro, sem letras. Plantas verdes e fundo creme.
+
+005 — Homem de cabelo cacheado, barba curta, camiseta e avental verdes, sorrindo e digitando no celular. A tela mostra um balão de resposta longo em creme com contorno verde escuro, sem letras. Ao fundo, uma estante de madeira clara já montada e plantas verdes.
+
+006 — Close de celular de moldura verde escuro e tela creme. A tela mostra dois balões em formato de cápsula, um em verde escuro e outro em laranja queimado, sem letras. Dedo de um homem de cabelo cacheado, barba curta e camiseta verde tocando a tela. Madeira clara e plantas ao fundo.
+
+007 — Homem de cabelo cacheado, barba curta, camiseta e avental verdes, de pé diante de um calendário de madeira na parede com blocos verdes e laranja queimado, apontando para um dos blocos com ar tranquilo e sorriso leve. Plantas verdes, madeira clara, fundo creme.
+
+008 — Homem de cabelo cacheado, barba curta, camiseta e avental verdes, em plano próximo, sorriso acolhedor, com uma das mãos aberta à altura do peito, celular guardado no bolso do avental. Plantas verdes ao redor, madeira clara, fundo creme e verde escuro.
+
+009 — Homem de cabelo cacheado, barba curta, camiseta e avental verdes, segurando um celular com um ícone de marcador de salvar em laranja queimado, sorrindo e olhando para o espectador. Cenário completo da oficina, madeira clara, plantas verdes e fundo creme, sem grandes áreas brancas.
+
+Gere uma imagem por cena, na ordem, e salve como 001, 002, 003 … 009.

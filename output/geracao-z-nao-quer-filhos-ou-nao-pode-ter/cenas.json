@@ -1,0 +1,43 @@
+[
+  {
+    "tipo": "gancho",
+    "duracao": 4,
+    "numeros": ["88%", "87%"],
+    "cores": ["azul", "laranja"],
+    "legenda": ["SEGURANÇA FINANCEIRA", "E EMPREGO ESTÁVEL"],
+    "pergunta": ["NÃO QUEREM?", "OU NÃO PODEM?"],
+    "rodape": ["73 PAÍSES, UNFPA 2026"]
+  },
+  {
+    "tipo": "barras_horizontais",
+    "duracao": 6,
+    "titulo": ["O QUE PRECISA", "ANTES DO FILHO?"],
+    "subtitulo": ["% QUE CITARAM CADA FATOR"],
+    "barras": [
+      {"rotulo": "SEGURANÇA FINANCEIRA", "valor": 88, "cor": "azul"},
+      {"rotulo": "EMPREGO ESTÁVEL", "valor": 87, "cor": "laranja"}
+    ],
+    "destaque": ["ISSO É CONDIÇÃO,", "NÃO CARÁTER"]
+  },
+  {
+    "tipo": "barras",
+    "duracao": 6,
+    "titulo": ["NÃO PODEM PAGAR", "(EUA, SEM FILHOS)"],
+    "escala_max": 40,
+    "unidade": "%",
+    "barras": [
+      {"rotulo": "MENOS DE 50", "valor": 36, "cor": "laranja"},
+      {"rotulo": "50 OU MAIS", "valor": 12, "cor": "azul"}
+    ],
+    "rodape": ["MAS O MAIS CITADO:", "NÃO QUER TER FILHOS"],
+    "rodape_cor": "amarelo"
+  },
+  {
+    "tipo": "fechamento",
+    "duracao": 10,
+    "negacao": ["NÃO É SÓ: É DA", "GERAÇÃO?"],
+    "afirmacao": ["É: QUERER OU", "PODER?"],
+    "reforco": ["E QUEM DECIDE", "AS CONDIÇÕES?"],
+    "pergunta": ["O QUE FALTA", "PARA VOCÊ DECIDIR?"]
+  }
+]

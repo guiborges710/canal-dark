@@ -1,0 +1,17 @@
+SOBREPOSIÇÕES DE TEXTO — cliente-sumiu-depois-orcamento
+(Textos para inserir na montagem como overlay gráfico. Não dependem da IA de imagens.)
+
+ATENÇÃO: tempos são ESTIMATIVAS (≈ 2,5 palavras/s + pausa de 0,35 s entre cenas).
+Recalibrar com a duração real de cada audio/NNN.mp3 antes de fechar a edição.
+
+Rótulo discreto em todo o vídeo, a partir de 3,5 s, canto inferior esquerdo, pequeno e semitransparente: "Exemplo fictício"
+
+CENA 001 — Gancho. Sem sobreposição.
+CENA 002 — Cartão de orçamento na tela. Opcional: rótulo "Orçamento" acima do cartão.
+CENA 003 — Balão laranja (tela): "???"
+CENA 004 — Balão vazio com ampulheta: sem texto.
+CENA 005 — Balão creme (tela): "Oi, Ana! Ficou alguma dúvida sobre o que está incluído na montagem?"
+CENA 006 — Cápsulas (tela): "Tudo bem. Você prefere que eu retome na sexta ou aguarde seu contato?"
+CENA 007 — Bloco do calendário: "Combine o retorno" (opcional).
+CENA 008 — Sem sobreposição.
+CENA 009 — Ícone de salvar: "Salve para o próximo orçamento sem resposta."

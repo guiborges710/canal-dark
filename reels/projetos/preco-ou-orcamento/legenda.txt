@@ -1,0 +1,17 @@
+Seu cliente recebeu um preço ou um orçamento?
+
+Exemplo fictício, só para ilustrar:
+
+Antes:
+R$140
+
+Depois:
+Montagem de estante: R$120
+Deslocamento: R$20
+Total: R$140
+Peças não incluídas.
+Data e horário a combinar após conferir a agenda.
+
+O preço é o mesmo. A diferença é o que está escrito.
+
+Salve para revisar seu próximo orçamento.

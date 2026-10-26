@@ -1,17 +1,22 @@
 #!/usr/bin/env python3
-"""Orquestrador do canal dark.
+"""Orquestrador do canal dark (Shorts, estilo de animação vetorial).
 
 Uso:
-  python run.py video --topic "tema do vídeo" [--mock]
+  python run.py video --topic "tema do vídeo" [--mock] [--allow-paid]
+  python run.py check --topic "tema do vídeo"
   python run.py ideas [--mock]
-  python run.py voices
+  python run.py publish --slug <pasta> [--privacy private|unlisted|public]
+
+Cada etapa grava seu arquivo em output/<slug>/ e pula o que já existe. A squad (agentes do Claude Code)
+escreve o conteúdo de graça; este script valida, renderiza e confere. --allow-paid só libera a geração
+de texto pela API da Anthropic, usada quando a squad não está disponível.
 """
 import argparse
 import json
 import os
-import re
 import sys
 import unicodedata
+import re
 from pathlib import Path
 
 import yaml
@@ -20,9 +25,8 @@ ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
 
 from agents.llm import LLM  # noqa: E402
-from agents import research, script as scriptmod, scenes as scenesmod, metadata as metamod  # noqa: E402
-from media import tts, images, render  # noqa: E402
-from media.util import duration, parallel  # noqa: E402
+from agents import research, script as scriptmod, metadata as metamod  # noqa: E402
+from media import motion  # noqa: E402
 
 
 def load_env():
@@ -44,232 +48,93 @@ def step(msg):
     print(f"\n▶ {msg}", flush=True)
 
 
-PAID_TTS = {"google"}
-PAID_IMAGES = {"fal"}
-
-
-def enforce_budget(cfg, allow_paid):
-    """Sem --allow-paid, mantém o fluxo em recursos gratuitos (voz local Kokoro + imagens sem custo).
-    Não bloqueia: troca o provedor pago pelo gratuito equivalente e avisa o que fez."""
-    if allow_paid:
-        return
-    t = cfg.setdefault("tts", {})
-    if t.get("provider") in PAID_TTS:
-        print(f"   (orçamento) tts.provider '{t['provider']}' é pago; usando a voz local 'kokoro'. Use --allow-paid para o pago.")
-        t["provider"] = "kokoro"
-    im = cfg.setdefault("images", {})
-    free_img = "cloudflare" if os.environ.get("CF_ACCOUNT_ID") and os.environ.get("CF_API_TOKEN") else "local_art"
-    if im.get("provider") in PAID_IMAGES:
-        print(f"   (orçamento) images.provider '{im['provider']}' é pago; usando '{free_img}'. Use --allow-paid para o pago.")
-        im["provider"] = free_img
-    if im.get("provider") == "commons" and im.get("fallback") in PAID_IMAGES:
-        print(f"   (orçamento) images.fallback '{im['fallback']}' é pago; usando '{free_img}'. Use --allow-paid para o pago.")
-        im["fallback"] = free_img
-
-
 def need_creative(out_file, agent, mock, allow_paid):
     """Garante que um arquivo criativo exista antes de seguir. A squad (agentes do Claude) é quem os produz
-    de graça; gerar por API da Anthropic custa, então só acontece com --allow-paid. Devolve True se o chamador
-    deve gerar o arquivo agora (mock ou --allow-paid); False se já existe."""
+    de graça; gerar por API da Anthropic custa, então só acontece com --allow-paid (ou --mock).
+    Devolve True se o chamador deve gerar o arquivo agora; False se já existe."""
     if out_file.exists():
         return False
     if mock or allow_paid:
         return True
     raise SystemExit(
         f"Falta {out_file.name}. Gere com a squad (@{agent}) e salve em output/<slug>/, "
-        f"ou rode de novo com --allow-paid para gerar pela API da Anthropic (tem custo).")
+        "ou rode de novo com --allow-paid para gerar pela API.")
 
 
 def make_video(cfg, topic, mock, allow_paid=False):
-    enforce_budget(cfg, allow_paid)
     llm = LLM(cfg, mock=mock)
     out = ROOT / "output" / (("mock-" if mock else "") + slugify(topic))
-    for d in ("audio", "images", "clips"):
-        (out / d).mkdir(parents=True, exist_ok=True)
+    out.mkdir(parents=True, exist_ok=True)
     print(f"Pasta do vídeo: {out}")
 
     # 1. Pesquisa do tema
-    step("1/8 Pesquisando o tema")
+    step("1/6 Pesquisando o tema")
     f = out / "notas.md"
     if need_creative(f, "modric-pesquisador-tema", mock, allow_paid):
         f.write_text(research.research_topic(llm, cfg, topic), encoding="utf-8")
     notes = f.read_text(encoding="utf-8")
 
-    # 1b. Ângulo editorial (ponto de vista próprio, definido antes do roteiro)
+    # 1b. Ângulo editorial
     f = out / "angulo.md"
     if need_creative(f, "messi-estrategista-angulo", mock, allow_paid):
         f.write_text(research.make_angle(llm, cfg, topic, notes), encoding="utf-8")
-    angle = f.read_text(encoding="utf-8") if f.exists() else ""
 
-    # 2. Roteiro + revisão
-    step("2/8 Escrevendo e revisando o roteiro")
+    # 2. Texto do vídeo (roteiro.txt: o que aparece nos cartões, em ordem)
+    step("2/6 Escrevendo e revisando o texto")
     f = out / "roteiro.txt"
     if need_creative(f, "neymar-roteirista", mock, allow_paid):
+        angle = (out / "angulo.md").read_text(encoding="utf-8") if (out / "angulo.md").exists() else ""
         draft = scriptmod.write_script(llm, cfg, topic, notes, angle)
-        (out / "roteiro_rascunho.txt").write_text(draft, encoding="utf-8")
         final, review = scriptmod.review_script(llm, cfg, notes, draft, angle)
         (out / "revisao.json").write_text(json.dumps(review, ensure_ascii=False, indent=1), encoding="utf-8")
         f.write_text(final, encoding="utf-8")
-    script = f.read_text(encoding="utf-8")
-    words = len(script.split())
-    target = scriptmod.target_words(cfg)
-    print(f"   {words} palavras (alvo ~{target})")
-    if words < target * 0.7:
-        print("   ⚠ roteiro bem abaixo do alvo; o vídeo ficará mais curto que o planejado")
 
-    # 3. Cenas e prompts de imagem
-    step("3/8 Dividindo em cenas e criando prompts de imagem")
+    # 3. Cenas (cenas.json): a squad desenha a sequência de cartões e gráficos
+    step("3/6 Montando as cenas da animação")
     f = out / "cenas.json"
     if need_creative(f, "olise-diretor-arte", mock, allow_paid):
-        texts = scenesmod.split_scenes(script, cfg["scenes"]["min_words"])
-        prompts = scenesmod.image_prompts(llm, cfg, texts, topic)
-        f.write_text(json.dumps([{"text": t, **p} for t, p in zip(texts, prompts)],
-                                ensure_ascii=False, indent=1), encoding="utf-8")
-    scenes = json.loads(f.read_text(encoding="utf-8"))
-    print(f"   {len(scenes)} cenas")
+        if mock:
+            from agents import mocks
+            f.write_text(json.dumps(mocks.CENAS, ensure_ascii=False, indent=1), encoding="utf-8")
+        else:
+            raise SystemExit("Geração de cenas pela API não existe neste estilo. Peça a @olise-diretor-arte.")
+    cenas = json.loads(f.read_text(encoding="utf-8"))
+    print(f"   {len(cenas)} cenas, {sum(c['duracao'] for c in cenas):.0f} s")
 
-    # 4. Narração
-    step("4/8 Gerando a narração")
-    audio = [out / "audio" / f"{i:03}.mp3" for i in range(len(scenes))]
-    parallel(lambda a: tts.synth(cfg, scenes[a[0]]["text"], a[1], mock), list(enumerate(audio)))
+    # 4. Render: animação + efeitos sonoros + MP4 + miniatura (sem imagens, sem voz)
+    step("4/6 Renderizando a animação")
+    video = motion.render(out, cenas_path=f)
 
-    # 5. Imagens
-    step("5/8 Gerando as imagens")
-    imgs = [out / "images" / f"{i:03}.jpg" for i in range(len(scenes))]
-    workers = 1 if cfg["images"].get("provider") == "commons" else 4
-    parallel(lambda a: images.generate(cfg, scenes[a[0]]["image_prompt"], a[1], mock,
-                                       queries=scenes[a[0]].get("search")), list(enumerate(imgs)), workers=workers)
-    real = len(list((out / "images").glob("*.json")))
-    if cfg["images"].get("provider") == "commons":
-        print(f"   {real} de {len(scenes)} cenas com imagem real de arquivo; as demais usam a reserva "
-              f"({cfg['images'].get('fallback', 'local_art')})")
-
-    # 6. Edição
-    step("6/8 Editando o vídeo")
-    pause = cfg["tts"]["pause_seconds"]
-    durs = [duration(a) + pause for a in audio]
-    clips = [out / "clips" / f"{i:03}.mp4" for i in range(len(scenes))]
-    for i in range(len(scenes)):
-        if not clips[i].exists():
-            render.scene_clip(cfg, imgs[i], audio[i], durs[i], clips[i], i)
-    srt = render.build_srt(scenes, durs, pause)
-    caps = None
-    if cfg["render"].get("captions"):
-        from media import captions as capmod
-        cues = capmod.build_cues(scenes, durs, pause, capmod.caps_cfg(cfg)["max_words"])
-        caps = capmod.render_captions(cfg, cues, out)
-        print(f"   texto na tela: {len(caps)} blocos queimados no vídeo (estilo viral)")
-    final = render.assemble(cfg, clips, out, srt_text=srt, captions=caps, total=sum(durs))
-    total = duration(final)
-    print(f"   Vídeo pronto: {final.name} ({total / 60:.1f} min)")
-
-    # 7. Metadados e thumbnail
-    step("7/8 Criando título, descrição, tags e thumbnail")
+    # 5. Metadados e publicação
+    step("5/6 Criando título, descrição e tags")
     f = out / "metadados.json"
     if need_creative(f, "mbappe-editor-metadados", mock, allow_paid):
-        f.write_text(json.dumps(metamod.make_metadata(llm, cfg, script), ensure_ascii=False, indent=1),
+        roteiro = (out / "roteiro.txt").read_text(encoding="utf-8")
+        f.write_text(json.dumps(metamod.make_metadata(llm, cfg, roteiro), ensure_ascii=False, indent=1),
                      encoding="utf-8")
     meta = json.loads(f.read_text(encoding="utf-8"))
-    thumb = out / "thumbnail.jpg"
-    images.generate(cfg, meta["thumbnail_prompt"] + ", " + cfg["channel"]["visual_style"], thumb, mock)
-    from media import commons
-    credit_lines = commons.credits(out / "images")
-    credit_block = ""
-    if credit_lines:
-        credit_block = ("CRÉDITOS DAS IMAGENS (cole no fim da descrição; várias licenças exigem a atribuição):\n"
-                        + "\n".join(credit_lines) + "\n\n")
-    if real < len(scenes):
-        credit_block += "Obs.: as cenas sem registro histórico usam ilustrações geradas por computador; diga isso na descrição.\n\n"
-    (out / "creditos.txt").write_text(credit_block, encoding="utf-8")
     (out / "PUBLICAR.txt").write_text(
-        f"TÍTULO:\n{meta['titulo']}\n\nDESCRIÇÃO:\n{meta['descricao']}\n\n{credit_block}"
+        f"TÍTULO:\n{meta['titulo']}\n\nDESCRIÇÃO:\n{meta['descricao']}\n\n"
         f"TAGS (separadas por vírgula):\n{', '.join(meta['tags'])}\n\n"
         f"TEXTO SUGERIDO PARA A THUMBNAIL: {meta.get('thumbnail_texto', '')}\n"
         f"ARQUIVOS: video.mp4 e thumbnail.jpg\n\n"
         "ANTES DE PUBLICAR:\n"
         "- Assista ao vídeo inteiro e confira os fatos principais contra as fontes em notas.md.\n"
-        "- No upload, responda a pergunta sobre conteúdo alterado ou sintético: imagens geradas por IA que pareçam reais\n"
-        "  (cenas de um evento real que não foram registradas) exigem a divulgação. Confira a regra atual no YouTube Studio.\n"
+        "- A descrição já diz que é animação feita por computador, sem voz. Não há imagem de IA nem foto de terceiros.\n"
         "- A política de conteúdo inautêntico pesa contra vídeos em molde repetido e sem comentário próprio: "
         "o roteiro precisa ter ponto de vista e pesquisa originais.\n",
         encoding="utf-8")
 
-    # Verificação de conformidade com as políticas do YouTube
+    # 6. Conformidade e custo
+    step("6/6 Conformidade e custo")
     from compliance import check as compliance_check
     report, counts = compliance_check(out, cfg)
     (out / "CONFORMIDADE.md").write_text(report, encoding="utf-8")
     print(f"   Conformidade: {counts['OK']} ok, {counts['ATENÇÃO']} atenção, {counts['FALTA']} faltando (veja CONFORMIDADE.md)")
-
-    # 8. Custo estimado
-    step("8/8 Custo estimado deste vídeo (apenas chamadas novas desta execução)")
-    p = cfg["prices"]
-    chars = sum(len(s["text"]) for s in scenes)
-    tts_cost = 0 if (mock or cfg["tts"].get("provider") == "kokoro") else chars / 1e6 * p["tts_per_mchar"]
-    prov = cfg["images"].get("provider")
-    paid_provider = cfg["images"].get("fallback") if prov == "commons" else prov
-    n_paid = (len(scenes) - real if prov == "commons" else len(scenes)) + 1  # +1 da thumbnail
-    img_cost = 0 if (mock or paid_provider != "fal") else n_paid * p["image_each"]
-    llm_cost = llm.cost_usd()
-    cost = {"claude_usd": llm_cost, "voz_usd": round(tts_cost, 4), "imagens_usd": round(img_cost, 4),
-            "total_usd": round(llm_cost + tts_cost + img_cost, 4)}
+    cost = {"claude_usd": llm.cost_usd(), "voz_usd": 0, "imagens_usd": 0, "total_usd": llm.cost_usd()}
     (out / "custo.json").write_text(json.dumps(cost, indent=1), encoding="utf-8")
     print("  ", cost)
-    print(f"\n✔ Pronto. Suba manualmente o vídeo usando {out / 'PUBLICAR.txt'}")
-
-
-def main():
-    for stream in (sys.stdout, sys.stderr):  # evita erro de acentos/símbolos no terminal do Windows
-        try:
-            stream.reconfigure(encoding="utf-8")
-        except Exception:
-            pass
-    load_env()
-    ap = argparse.ArgumentParser(description="Orquestrador do canal dark")
-    ap.add_argument("command", choices=["video", "ideas", "voices", "check", "publish"])
-    ap.add_argument("--topic", help="tema do vídeo (comando video/publish)")
-    ap.add_argument("--slug", help="pasta do vídeo em output/ (alternativa ao --topic no publish)")
-    ap.add_argument("--privacy", choices=["private", "unlisted", "public"], default=None,
-                    help="visibilidade no publish; padrão = publish.privacy do config (private)")
-    ap.add_argument("--format", choices=["shorts", "long"], default="shorts",
-                    help="shorts (vertical, ~60s; padrão) ou long (horizontal). Escolhe o config quando --config não é dado.")
-    ap.add_argument("--mock", action="store_true", help="simula tudo, sem APIs e sem custo")
-    ap.add_argument("--allow-paid", action="store_true", dest="allow_paid",
-                    help="autoriza etapas pagas (voz Google, imagens fal, geração de texto pela API da Anthropic)")
-    ap.add_argument("--config", default=None, help="caminho do config; por padrão é escolhido pelo --format")
-    a = ap.parse_args()
-    config_path = a.config or str(ROOT / ("config_shorts.yaml" if a.format == "shorts" else "config.yaml"))
-    cfg = yaml.safe_load(open(config_path, encoding="utf-8"))
-    if a.mock:  # teste rápido em resolução menor, mantendo a proporção do formato escolhido
-        if cfg["render"].get("height", 0) > cfg["render"].get("width", 0):
-            cfg["render"].update(width=720, height=1280, fps=24)
-        else:
-            cfg["render"].update(width=1280, height=720, fps=24)
-
-    if a.command == "voices":
-        print("\n".join(tts.list_voices(cfg)))
-    elif a.command == "check":
-        if not a.topic:
-            ap.error("use --topic \"tema do vídeo\" (o mesmo usado para gerar)")
-        from compliance import check as compliance_check
-        d = ROOT / "output" / (("mock-" if a.mock else "") + slugify(a.topic))
-        report, counts = compliance_check(d, cfg)
-        (d / "CONFORMIDADE.md").write_text(report, encoding="utf-8")
-        print(report)
-    elif a.command == "ideas":
-        ideas, videos = research.generate_ideas(LLM(cfg, mock=a.mock), cfg)
-        out = ROOT / "output"
-        out.mkdir(exist_ok=True)
-        (out / "ideias.json").write_text(json.dumps({"ideias": ideas, "base": videos}, ensure_ascii=False, indent=1),
-                                         encoding="utf-8")
-        for i, it in enumerate(ideas, 1):
-            print(f"{i}. {it['titulo']} — {it['angulo']}")
-        print(f"\nSalvo em {out / 'ideias.json'}")
-    elif a.command == "publish":
-        publish_video(cfg, a, ROOT)
-    else:
-        if not a.topic:
-            ap.error("use --topic \"tema do vídeo\"")
-        make_video(cfg, a.topic, a.mock, allow_paid=a.allow_paid)
+    print(f"\n✔ Pronto: {video}. Suba manualmente usando {out / 'PUBLICAR.txt'}")
 
 
 def publish_video(cfg, a, root):
@@ -299,8 +164,50 @@ def publish_video(cfg, a, root):
     print(f"\n✔ Enviado como {res['privacy']}.")
     print(f"   Assistir: {res['url']}")
     print(f"   Revisar/publicar no Studio: {res['studio_url']}")
-    print("   Lembre: se houver imagens de IA que pareçam reais, marque 'conteúdo alterado/sintético' no Studio "
-          "antes de tornar público.")
+
+
+def main():
+    for stream in (sys.stdout, sys.stderr):  # evita erro de acentos/símbolos no terminal do Windows
+        try:
+            stream.reconfigure(encoding="utf-8")
+        except Exception:
+            pass
+    load_env()
+    ap = argparse.ArgumentParser(description="Orquestrador do canal dark")
+    ap.add_argument("command", choices=["video", "ideas", "check", "publish"])
+    ap.add_argument("--topic", help="tema do vídeo (video/check/publish)")
+    ap.add_argument("--slug", help="pasta do vídeo em output/ (alternativa ao --topic no publish)")
+    ap.add_argument("--privacy", choices=["private", "unlisted", "public"], default=None,
+                    help="visibilidade no publish; padrão = publish.privacy do config (private)")
+    ap.add_argument("--mock", action="store_true", help="simula o texto (sem API); o render é real")
+    ap.add_argument("--allow-paid", action="store_true", dest="allow_paid",
+                    help="autoriza gerar texto pela API da Anthropic quando a squad não entregou")
+    a = ap.parse_args()
+    cfg = yaml.safe_load(open(ROOT / "config_shorts.yaml", encoding="utf-8"))
+
+    if a.command == "check":
+        if not a.topic:
+            ap.error("use --topic \"tema do vídeo\" (o mesmo usado para gerar)")
+        from compliance import check as compliance_check
+        d = ROOT / "output" / (("mock-" if a.mock else "") + slugify(a.topic))
+        report, counts = compliance_check(d, cfg)
+        (d / "CONFORMIDADE.md").write_text(report, encoding="utf-8")
+        print(report)
+    elif a.command == "ideas":
+        ideas, videos = research.generate_ideas(LLM(cfg, mock=a.mock), cfg)
+        out = ROOT / "output"
+        out.mkdir(exist_ok=True)
+        (out / "ideias.json").write_text(json.dumps({"ideias": ideas, "base": videos}, ensure_ascii=False, indent=1),
+                                         encoding="utf-8")
+        for i, it in enumerate(ideas, 1):
+            print(f"{i}. {it['titulo']} — {it['angulo']}")
+        print(f"\nSalvo em {out / 'ideias.json'}")
+    elif a.command == "publish":
+        publish_video(cfg, a, ROOT)
+    else:
+        if not a.topic:
+            ap.error("use --topic \"tema do vídeo\"")
+        make_video(cfg, a.topic, a.mock, allow_paid=a.allow_paid)
 
 
 if __name__ == "__main__":

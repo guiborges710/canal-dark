@@ -1,0 +1,38 @@
+[
+  {
+    "text": "O cliente pediu desconto, e você já ia baixar o preço? Olha essa resposta.",
+    "image_prompt": "Homem adulto de cabelo curto e barba curta, camiseta verde escuro, em uma oficina de madeira clara, com expressão surpresa e a mão levantada. Ele segura um celular levemente inclinado, com a tela mostrando uma conversa com o balão 'Faz por menos?' em creme. Cabeçalho da tela com o texto 'Exemplo fictício'. Fundo de madeira clara com ferramentas penduradas e plantas verdes. Enquadramento centralizado, terço inferior livre."
+  },
+  {
+    "text": "O cliente manda: faz por menos?",
+    "image_prompt": "Close do celular, levemente inclinado, com moldura verde escuro e tela creme. Cabeçalho da conversa com o texto 'Exemplo fictício'. Um único balão creme alinhado à esquerda com o texto 'Faz por menos?' em verde escuro, grande e legível. Fundo de madeira clara desfocado, com detalhes em laranja queimado. Enquadramento centralizado."
+  },
+  {
+    "text": "Antes de baixar o preço, deixe claro o que está incluído.",
+    "image_prompt": "Homem adulto de cabelo curto e barba curta, camiseta verde escuro, segurando uma prancheta de madeira clara com três itens marcados com check em laranja queimado. Ao lado, uma estante de madeira clara meio montada. Fundo de oficina com plantas verdes. Sem texto na prancheta, apenas os ícones de check. Enquadramento centralizado, terço inferior livre."
+  },
+  {
+    "text": "Nesse valor estão a montagem e o deslocamento.",
+    "image_prompt": "Close do celular, levemente inclinado, com moldura verde escuro e tela creme. Cabeçalho da conversa com o texto 'Exemplo fictício'. Um balão verde escuro alinhado à direita com o texto 'Nesse valor estão a montagem e o deslocamento.' em creme, legível. Abaixo, um balão creme à esquerda com o texto 'Faz por menos?'. Fundo de madeira clara desfocado, com detalhes em laranja queimado."
+  },
+  {
+    "text": "Se existir uma opção menor que faça sentido, ofereça.",
+    "image_prompt": "Homem adulto de camiseta verde escuro em uma oficina de madeira clara, apontando com a mão aberta para dois caminhos desenhados no chão em laranja queimado. No caminho da esquerda, uma estante de madeira clara pronta sobre um pequeno suporte com uma chave de fenda. No da direita, uma caixa de ferramentas maior. Plantas verdes ao fundo. Sem nenhum texto. Enquadramento centralizado, terço inferior livre."
+  },
+  {
+    "text": "Para montar apenas a estante, consigo passar outro orçamento. Quer essa opção?",
+    "image_prompt": "Close do celular, levemente inclinado, com moldura verde escuro e tela creme. Cabeçalho da conversa com o texto 'Exemplo fictício'. Um balão verde escuro alinhado à direita com o texto 'Para montar apenas a estante, consigo passar outro orçamento. Quer essa opção?' em creme, legível e sem erros de grafia. Fundo de madeira clara desfocado, com detalhes em laranja queimado."
+  },
+  {
+    "text": "Se não houver alternativa, mantenha o limite.",
+    "image_prompt": "Homem adulto de cabelo curto e barba curta, camiseta verde escuro, com a palma da mão aberta em gesto de pausa e expressão calma. Atrás dele, uma pequena van de entrega em laranja queimado e uma estante de madeira clara. Fundo de oficina com plantas verdes. Sem nenhum texto. Enquadramento centralizado, terço inferior livre."
+  },
+  {
+    "text": "Para esse serviço completo, esse é o valor que consigo oferecer.",
+    "image_prompt": "Close do celular, levemente inclinado, com moldura verde escuro e tela creme. Cabeçalho da conversa com o texto 'Exemplo fictício'. Um balão verde escuro alinhado à direita com o texto 'Para esse serviço completo, esse é o valor que consigo oferecer.' em creme, legível e sem erros de grafia. Fundo de madeira clara desfocado, com detalhes em laranja queimado."
+  },
+  {
+    "text": "Salva para responder ao próximo pedido de desconto.",
+    "image_prompt": "Homem adulto de camiseta verde escuro sorrindo, mostrando um celular levemente inclinado com um ícone de marcador de salvar em laranja queimado na tela creme. Fundo de oficina de madeira clara com plantas verdes. Sem nenhum texto além do cabeçalho 'Exemplo fictício' na tela. Enquadramento centralizado, terço inferior livre."
+  }
+]

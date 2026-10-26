@@ -1,0 +1,14 @@
+Browser tab: 1, Title: "TikTok Studio", URL: "https://www.tiktok.com/tiktokstudio/content".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 139, 145, 156, 167, 178, 189, 200, 211, 222, 233
++					241 image
++					242 image
++					243 image
++					244 image
++					245 image
++					246 image
++					247 image
++					248 image
++					249 image
++					250 image
+The focused UI element is 1 AXWebArea TikTok Studio, URL: tiktok.com/tiktokstudio/content

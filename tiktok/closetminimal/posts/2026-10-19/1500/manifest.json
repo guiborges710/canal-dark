@@ -1,0 +1,53 @@
+{
+  "id": "sozinha-look-inteiro-2026-10-19",
+  "slot": "2026-10-19T15:00:00-03:00",
+  "status": "agendado",
+  "tiktok_id": "7698334950075960583",
+  "remote_id": "7698334950075960583",
+  "public_url": "https://www.tiktok.com/@closetminimal/photo/7698334950075960583",
+  "local_dir": "posts/2026-10-19/1500",
+  "media_count": 2,
+  "asset_sha256": [
+    "1ec30deccce0ee0889bc2c95f3304e79861e5e9a77135a7ace731615c4b0a0b7",
+    "bd8ebbcbe6ce60a00a9366d4e0debd4ac6217470496ea91631a0bc605cc04dfb"
+  ],
+  "verified_date": "2026-10-19",
+  "provider_status_verified": "TikTok Studio:19 de out,15:00;relógio de agendamento;Todos desativado",
+  "destination_verified": "Perfil do menu da sessão @closetminimal antes de upload e ação final",
+  "native_ai_label": true,
+  "on_image_ai_disclaimer": false,
+  "visual_cta": [
+    "comentário contextual",
+    "curtir",
+    "seguir @closetminimal"
+  ],
+  "reference_url": "https://www.tiktok.com/@closetminimal/photo/7583616310253276436",
+  "qa": {
+    "all_files_inspected": true,
+    "central_3_4_crop_reviewed": true,
+    "native_feed_preview_reviewed": true,
+    "anatomy_reviewed": true,
+    "uniform_square_dimensions": true
+  },
+  "publication_route": "TikTok Studio browser",
+  "assets": [
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-19\\1500\\001.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "1ec30deccce0ee0889bc2c95f3304e79861e5e9a77135a7ace731615c4b0a0b7"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-19\\1500\\002.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "bd8ebbcbe6ce60a00a9366d4e0debd4ac6217470496ea91631a0bc605cc04dfb"
+    }
+  ],
+  "rights": "Imagens originais de adultos fictícios geradas por IA",
+  "prompt": "Foto única natural, fonte branca sans-serif, área central com margens desfocadas generosas, anatomia realista e CTAs visuais. Revisão:zoom-out conjunto de foto e texto."
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "tipo": "gancho",
+    "duracao": 4,
+    "numeros": ["3%", "15%"],
+    "cores": ["azul", "laranja"],
+    "legenda": ["HOMENS SEM NENHUM", "AMIGO PRÓXIMO (EUA)"],
+    "pergunta": ["A CULPA É DA", "GERAÇÃO?"],
+    "rodape": ["QUE LUGAR SUMIU?"]
+  },
+  {
+    "tipo": "barras",
+    "duracao": 6,
+    "titulo": ["HOMENS SEM AMIGO", "PRÓXIMO (EUA)"],
+    "escala_max": 15,
+    "unidade": "%",
+    "barras": [
+      {"rotulo": "1990", "valor": 3, "cor": "azul"},
+      {"rotulo": "2021", "valor": 15, "cor": "laranja"}
+    ],
+    "rodape": ["MÉTODOS DIFERENTES:", "TENDÊNCIA, NÃO MEDIDA"],
+    "rodape_cor": "amarelo"
+  },
+  {
+    "tipo": "barras_horizontais",
+    "duracao": 6,
+    "titulo": ["QUEM TEM AMIGOS", "VAI A EVENTOS LOCAIS?"],
+    "subtitulo": ["PARTICIPOU DE EVENTO LOCAL"],
+    "barras": [
+      {"rotulo": "COM 6+ AMIGOS", "valor": 60, "cor": "azul"},
+      {"rotulo": "SEM AMIGO PRÓXIMO", "valor": 33, "cor": "laranja"}
+    ],
+    "destaque": ["AMIZADE DEPENDE DE", "LUGAR, ROTINA E TEMPO"],
+    "conclusao": ["QUANDO O LUGAR SOME,", "A AMIZADE SOME JUNTO"]
+  },
+  {
+    "tipo": "barras",
+    "duracao": 4,
+    "titulo": ["O CONTRAEXEMPLO"],
+    "escala_max": 60,
+    "unidade": "%",
+    "barras": [
+      {"rotulo": "JOVENS", "valor": 56, "cor": "laranja"},
+      {"rotulo": "IDOSOS", "valor": 41, "cor": "azul"}
+    ],
+    "rodape": ["FIZERAM UM AMIGO NOVO", "NO ÚLTIMO ANO"],
+    "rodape_cor": "azul-claro"
+  },
+  {
+    "tipo": "fechamento",
+    "duracao": 10,
+    "negacao": ["NÃO É: QUE GERAÇÃO", "É ESSA?"],
+    "afirmacao": ["É: QUE LUGAR", "SUMIU?"],
+    "reforco": ["E NINGUÉM COLOCOU", "OUTRO NO LUGAR?"],
+    "pergunta": ["QUAL LUGAR SUMIU", "NA SUA VIDA?"]
+  }
+]

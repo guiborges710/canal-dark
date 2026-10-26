@@ -1,0 +1,77 @@
+{
+  "id": "sozinha-passeio-quatro-2026-10-22",
+  "status": "agendado",
+  "slot": "2026-10-22T15:00:00-03:00",
+  "assets": [
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1500\\001.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "cac767ebe5de25d5298ac40b3d14c7c7f1c3d624e74c78260da67437533bc3d0"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1500\\002.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "7e181a44fe34b0447b55af11cab6f3e608ee8c6abaeb1ba78cb7e0ec34a32347"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1500\\003.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "4656a53e61b4aea8a5f721fc7de8c070c40879289cf2b41ffbb2b4418f3a0422"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1500\\004.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "1fd43da3f6a8eb037e4afa264289aa1361da3f7a076fa25976b37dcc0de16230"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1500\\005.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "531618585da94c31b4aa2534ba8c3326cf8ec596dd37abbbde385a5c9319d462"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1500\\006.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "f1d0e5d1be3dd4c73b3368bc8df4fc1f9120c934caebcc91fc5c6d37dc3c7bba"
+    }
+  ],
+  "media_count": 6,
+  "reference_url": "https://www.tiktok.com/@closetminimal/photo/7583616310253276436",
+  "native_ai_label_required": true,
+  "on_image_ai_disclaimer": false,
+  "tiktok_id": "7699453870833011975",
+  "remote_id": "7699453870833011975",
+  "public_url": "https://www.tiktok.com/@closetminimal/photo/7699453870833011975",
+  "verified_date": "2026-10-22",
+  "provider_status_verified": "Studio22out15:00;relógio;Todosdesativado",
+  "native_ai_label": true,
+  "destination_verified": "Perfil @closetminimal imediatamente antes do upload e agendamento",
+  "qa": {
+    "all_final_files_visually_inspected": true,
+    "central_3_4_crop_reviewed": true,
+    "top_right_bottom_ui_overlap_reviewed": true,
+    "native_feed_preview_reviewed": true,
+    "anatomy_reviewed": true,
+    "uniform_square_dimensions": true
+  },
+  "tool": "imagegen integrado",
+  "prompt": "Fotografia original de adultas fictícias,fotossozinhanopasseio:porta,janela,banco,caminhada. Sansserifmarromfundo creme;capadesenvolvimento4exemplosCTA;revisãoimagegenredução80%efinal90%em1,2,6paraáreasegura.",
+  "sound": "Suddenly I See - KT Tunstall"
+}

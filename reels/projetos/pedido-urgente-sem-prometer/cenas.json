@@ -1,0 +1,34 @@
+[
+  {
+    "text": "O cliente pediu para amanhã. Você respondeu consigo. Sem nem olhar sua agenda.",
+    "image_prompt": "Oficina pequena e acolhedora, madeira clara e plantas ao fundo. Um homem de cabelo cacheado, barba curta, camiseta e avental verdes, com o celular na mão e expressão de quem acabou de falar rápido demais. Um cliente de costas, no balcão, com uma sacola. Fundo creme e verde escuro, cenário cobrindo toda a imagem."
+  },
+  {
+    "text": "A vontade de ajudar é rápida. Olhar a agenda leva dez segundos.",
+    "image_prompt": "Homem de cabelo cacheado, barba curta, camiseta e avental verdes, parado no meio da oficina, com o olhar voltado para um quadro de agenda na parede. Plantas em vasos, madeira clara, detalhes em laranja queimado. Sem nenhum texto."
+  },
+  {
+    "text": "Sua agenda já está cheia. Dois serviços hoje, e uma encomenda nova que ainda nem cabe.",
+    "image_prompt": "Bancada de oficina com duas peças em conserto e uma pilha de caixas ainda fechadas ao lado. Quadro de agenda com blocos verdes e laranja queimado, todos ocupados. Homem de cabelo cacheado, barba curta, camiseta e avental verdes, com a mão na testa, pensativo. Sem nenhum texto."
+  },
+  {
+    "text": "Dizer consigo agora é prometer sem conferir. Quem paga a conta, depois, é você.",
+    "image_prompt": "Close do homem de cabelo cacheado, barba curta, camiseta e avental verdes, com o celular na mão, sério e pensativo. Ao fundo, um relógio de parede e um calendário riscado. Madeira clara, plantas, fundo creme. Sem nenhum texto."
+  },
+  {
+    "text": "Responda outro jeito: Vou conferir se consigo atender esse prazo.",
+    "image_prompt": "Homem de cabelo cacheado, barba curta, camiseta e avental verdes, digitando uma resposta no celular com tranquilidade, em frente à bancada da oficina. Um balão de conversa em creme e laranja queimado, sem nenhum texto. Plantas e madeira clara ao redor."
+  },
+  {
+    "text": "Pergunte o serviço e o horário limite. Qual serviço você precisa, e até que horário amanhã?",
+    "image_prompt": "Homem de cabelo cacheado, barba curta, camiseta e avental verdes, sorrindo e conversando com um cliente do outro lado do balcão, em gesto de pergunta. Balões de conversa vazios em creme e laranja queimado. Plantas e madeira clara, fundo creme. Sem nenhum texto."
+  },
+  {
+    "text": "Te confirmo até as dez. Um retorno com hora marcada vale mais que um sim apressado.",
+    "image_prompt": "Homem de cabelo cacheado, barba curta, camiseta e avental verdes, olhando um relógio de pulso e fazendo um gesto de confirmação com a mão. Fundo de oficina com madeira clara, plantas e detalhes em verde escuro. Sem nenhum texto."
+  },
+  {
+    "text": "Salva essa resposta antes de aceitar o próximo pedido urgente.",
+    "image_prompt": "Homem de cabelo cacheado, barba curta, camiseta e avental verdes, sorrindo e segurando o celular com um ícone de marcador de salvar em laranja queimado. Cenário completo da oficina, madeira clara, plantas e fundo creme, sem grandes áreas brancas. Sem nenhum texto."
+  }
+]

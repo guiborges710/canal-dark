@@ -12,7 +12,6 @@ METADATA = json.dumps({
     "titulo": "Título simulado do vídeo de teste",
     "descricao": "Descrição simulada. Este vídeo foi gerado apenas para testar o pipeline.",
     "tags": ["teste", "simulado", "pipeline"],
-    "thumbnail_prompt": "a dramatic mountain landscape at sunrise",
     "thumbnail_texto": "TESTE",
 })
 IDEAS = json.dumps([
@@ -24,3 +23,17 @@ ANGLE = ("## Tese\nTese simulada do vídeo de teste.\n\n## Pergunta que prende\n
          "## Três ideias que o espectador não encontra numa busca rápida\n1. Ideia simulada (fonte: exemplo.com)\n"
          "2. Ideia simulada (fonte: exemplo.com)\n3. Ideia simulada (fonte: exemplo.com)\n\n"
          "## Comentário próprio\nInterpretação simulada, marcada como interpretação.\n\n## Estrutura\nBlocos simulados.\n")
+
+# Cenas de teste (--mock): a animação roda de verdade, só o texto é simulado.
+CENAS = [
+    {"tipo": "gancho", "duracao": 4, "numeros": ["3%", "15%"], "legenda": ["TESTE SIMULADO", "SEM API"],
+     "pergunta": ["ESTE É O TESTE", "DO MOTOR?"], "rodape": ["PIPELINE OK"]},
+    {"tipo": "barras", "duracao": 6, "titulo": ["BARRAS DE TESTE"], "escala_max": 15,
+     "barras": [{"rotulo": "A", "valor": 3, "cor": "azul"}, {"rotulo": "B", "valor": 15, "cor": "laranja"}],
+     "rodape": ["SIMULADO, SEM DADOS"]},
+    {"tipo": "barras_horizontais", "duracao": 6, "titulo": ["COMPARAÇÃO DE TESTE"],
+     "barras": [{"rotulo": ["PRIMEIRA"], "valor": 60, "cor": "azul"}, {"rotulo": ["SEGUNDA"], "valor": 33, "cor": "laranja"}],
+     "destaque": ["RESULTADO", "SIMULADO"]},
+    {"tipo": "fechamento", "duracao": 10, "negacao": ["NÃO É: TESTE", "É ESSA?"], "afirmacao": ["É: O MOTOR", "FUNCIONA?"],
+     "reforco": ["SE VOCÊ VIU ISTO,", "O RENDER ESTÁ OK"], "pergunta": ["QUAL CARTÃO", "FICOU MELHOR?"]},
+]

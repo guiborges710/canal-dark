@@ -1,0 +1,56 @@
+SOBREPOSIÇÕES DE TEXTO — preco-ou-orcamento
+(Textos inseridos na montagem como overlay gráfico. Não dependem da IA de imagens.)
+
+ATENÇÃO: tempos são ESTIMATIVAS (≈ 2,5 palavras/s + pausa de 0,35 s entre cenas).
+Recalibrar com a duração real de cada audio/NNN.mp3 antes de fechar a edição.
+Marcação "entra em X s" = início do texto; "fica até" = fim da cena ou da próxima troca.
+
+Duração estimada por cena: 001 3,5 s · 002 4,5 s · 003 3,5 s · 004 3,5 s · 005 4,0 s · 006 5,0 s · 007 4,0 s · 008 3,0 s (total ≈ 31 s)
+
+Rótulo discreto em todo o vídeo, a partir de 3,5 s, canto inferior esquerdo, pequeno e semitransparente: "Exemplo fictício"
+
+---------------------------------------------------------------
+CENA 001 (0,0 – 3,5 s) — Gancho
+- Sem sobreposição de valores. Narração apenas.
+- Opcional: nenhum texto na tela.
+
+CENA 002 (3,5 – 8,0 s) — "Você manda: cento e quarenta reais..."
+- 3,5 s: rótulo "Antes" acima do balão vazio, pequeno.
+- ~5,0 s (ao dizer "cento e quarenta reais"): "R$140" entra DENTRO do balão vazio, centralizado.
+- Fica até o fim da cena.
+
+CENA 003 (8,0 – 11,5 s) — "Olha a diferença. Mesmo serviço. Mesmo valor."
+- 8,0 s: transição para o cartão de orçamento na mesma moldura do celular.
+- Cabeçalho do cartão "Orçamento" entra em 8,0 s (sem valores ainda).
+- Sem linhas com valores nesta cena.
+
+CENA 004 (11,5 – 15,0 s) — "Montagem da estante: cento e vinte reais."
+- 11,5 s: linha 1 entra: "Montagem de estante: R$120"
+
+CENA 005 (15,0 – 19,0 s) — "Deslocamento: vinte reais. Total: cento e quarenta."
+- 15,0 s: linha 2 entra: "Deslocamento: R$20"
+- ~17,5 s (ao dizer "Total: cento e quarenta"): linha 3 entra, em destaque (negrito / laranja queimado): "Total: R$140"
+
+CENA 006 (19,0 – 24,0 s) — "Peças não incluídas. Data e horário a combinar após conferir a agenda."
+- 19,0 s: linha 4 entra: "Peças não incluídas."
+- 21,0 s: linha 5 entra: "Data e horário a combinar após conferir a agenda."
+- O CARTÃO COMPLETO fica na tela de 21,0 s a 25,0 s (≥ 4 s, exigência do briefing).
+
+CENA 007 (24,0 – 28,0 s) — "O preço não mudou. Agora o cliente sabe o que está contratando."
+- 25,0 s: cartão completo sai; entra a COMPARAÇÃO lado a lado:
+  - Lado esquerdo, rótulo "Antes": "R$140"
+  - Lado direito, rótulo "Depois": cartão resumido com "Total: R$140"
+  - Destaque obrigatório: rótulo central "Mesmo total: R$140" (ou "Total: R$140 nos dois lados")
+- Fica até o fim da cena.
+
+CENA 008 (28,0 – 31,0 s) — "Salve para revisar seu próximo orçamento."
+- 28,0 s: faixa no terço inferior, poucas palavras: "Salve para revisar seu próximo orçamento."
+- Não colocar texto sobre a moldura do celular nesta cena.
+
+---------------------------------------------------------------
+REGRAS DE MONTAGEM
+- Um bloco de texto visível por vez, no máximo ~2 linhas simultâneas fora dos cartões.
+- Legenda da narração (subtítulo) só nas cenas 001, 002 e 008. Nas cenas 003 a 007 o terço inferior fica livre para o cartão/comparação não se sobrepor.
+- Aproximações discretas (zoom de 3% a 5%) em 002, 005 e 007 para guiar a atenção; sem cortes bruscos.
+- Fonte sans-serif arredondada, creme sobre verde escuro para os valores; "Total" em laranja queimado.
+- Nenhum texto gerado pela IA de imagens: tudo acima é inserido pela montagem.

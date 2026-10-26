@@ -1,0 +1,35 @@
+Você vai gerar as imagens de um Reels vertical para TikTok. Gere 8 imagens separadas, na ordem, nomeadas 001 a 008.
+
+TEMA: a diferença entre receber um preço isolado e receber um orçamento com escopo, total e prazo claro. Pequena oficina de montagem de móveis, cliente recebendo uma mensagem de WhatsApp.
+
+ESTILO GLOBAL — OBRIGATÓRIO, siga exatamente em TODAS as imagens, sem exceção:
+- Estilo: ilustração digital quente e acolhedora, com formas arredondadas, contornos suaves e personagens expressivos. Nada fotorrealista, nada 3D, nada de foto.
+- Paleta exclusiva: creme, madeira clara, verde escuro e laranja queimado. Plantas verdes como elemento de cenário. Não use outras cores como cor principal.
+- Cenário preenchendo a imagem até a base, sem grandes áreas brancas ou vazias.
+- Iluminação suave e uniforme, sem sombras duras e sem brilho dramático, igual em todas as cenas.
+- Personagem principal: homem adulto, cabelo cacheado castanho, barba curta, camiseta verde escuro e avental verde escuro. Sempre a mesma aparência (rosto, cabelo, barba, roupa) em todas as cenas em que aparecer.
+- Cenário: pequena oficina de montagem de móveis, com bancada de madeira clara, estante, ferramentas organizadas e plantas.
+- Celular, quando aparecer: sempre o mesmo modelo, com moldura verde escuro, bordas arredondadas e tela creme.
+- Formato vertical 9:16 (1080x1920), sem bordas.
+- Sem nenhuma letra, número, preço, marca ou logotipo dentro da imagem. Textos e valores serão inseridos depois, na edição: não escreva nada nas telas, balões ou cartões.
+- Terço inferior da imagem com poucos detalhes e sem elementos essenciais, para acomodar legendas.
+
+CENAS:
+
+001 — Plano próximo de um homem adulto de cabelo cacheado castanho, barba curta, camiseta verde escuro e avental verde escuro, segurando à frente do peito um celular com moldura verde escuro e tela creme, em destaque no centro da imagem. Expressão de dúvida: sobrancelhas franzidas, cabeça levemente inclinada, boca apertada. Fundo desfocado de oficina com bancada de madeira clara e plantas.
+
+002 — Close do celular com moldura verde escuro e tela creme ocupando a maior parte da imagem, na mão do homem de cabelo cacheado castanho, barba curta, avental verde escuro visível na parte de baixo. Na tela, um único balão de conversa curto e vazio, em creme com contorno laranja queimado, posicionado no centro superior da tela, sem nenhuma letra ou número dentro. Bancada de madeira clara e plantas desfocadas ao fundo.
+
+003 — Mesmo celular com moldura verde escuro e tela creme, agora em plano médio, na mão do mesmo homem de cabelo cacheado castanho, barba curta, camiseta e avental verde escuro, levemente virado para o lado. Na tela, um cartão creme em formato de lista, com linhas horizontais vazias e um cabeçalho em laranja queimado, sem nenhuma letra ou número. Bancada de madeira clara, ferramentas organizadas na parede ao fundo e plantas verdes.
+
+004 — Homem de cabelo cacheado castanho, barba curta, camiseta e avental verde escuro, montando uma estante de madeira clara sobre a bancada, com uma chave de fenda na mão e expressão concentrada e satisfeita. Parafusos e peças de madeira organizados sobre a bancada, plantas ao redor e ferramentas penduradas na parede ao fundo. Enquadramento de plano médio, centralizado.
+
+005 — Homem de cabelo cacheado castanho, barba curta, camiseta e avental verde escuro, caminhando para fora da oficina carregando uma caixa de ferramentas verde escuro, em direção a uma pequena van creme estacionada na frente da porta, com a porta lateral aberta. Madeira clara, plantas nas laterais da porta e céu creme sem detalhes. Representa o deslocamento até o cliente. Enquadramento de plano médio, centralizado.
+
+006 — Duas composições lado a lado sobre a bancada de madeira clara: à esquerda, pequenos recipientes creme com parafusos, buchas e dobradiças separados, mostrando peças que não estão incluídas; à direita, um calendário de mesa creme com grade de quadrados totalmente vazios, sem nenhum número, e um marcador verde escuro sobre um dos quadrados. Homem de cabelo cacheado castanho, barba curta, camiseta e avental verde escuro, ao centro, com a mão apontando para o calendário. Plantas verdes ao fundo.
+
+007 — Duas molduras de celular verde escuro com tela creme lado a lado, em primeiro plano, sobre a bancada de madeira clara, com a mesma estrutura: cada tela tem um cartão creme com linhas horizontais vazias, sem nenhuma letra ou número. A tela da direita tem as linhas um pouco mais preenchidas em verde escuro, sem nenhuma letra ou número. Entre as duas molduras, um pequeno divisor vertical laranja queimado. Ao fundo, o homem de cabelo cacheado castanho, barba curta, camiseta e avental verde escuro, sorrindo de leve. Plantas e ferramentas organizadas no cenário.
+
+008 — Homem de cabelo cacheado castanho, barba curta, camiseta e avental verde escuro, sorrindo, em plano próximo, segurando com uma mão um celular com moldura verde escuro e tela creme, e com a outra mão um marcador de salvar grande em laranja queimado, no formato de fita de favorito, erguido ao lado do rosto. Bancada de madeira clara, plantas verdes e ferramentas organizadas ao fundo. Terço inferior com poucos detalhes.
+
+Gere uma imagem por cena, na ordem do lote, e salve como 001, 002, 003… até 008, exatamente nessa ordem.

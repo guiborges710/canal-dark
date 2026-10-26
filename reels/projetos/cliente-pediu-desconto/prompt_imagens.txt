@@ -1,0 +1,38 @@
+Você vai gerar as imagens de um Reels vertical para Instagram. Gere 9 imagens separadas, na ordem, nomeadas 001 a 009.
+
+Tema: como responder a um pedido de desconto sem dizer só "não consigo" — mostrar o que está incluído e oferecer uma alternativa. Exemplo fictício de uma oficina de montagem de estantes.
+
+ESTILO GLOBAL — OBRIGATÓRIO, siga exatamente em TODAS as imagens, sem exceção. Referência visual: ilustração digital plana, quente e acolhedora, no mesmo padrão de uma linha de posts de atendimento pelo WhatsApp.
+- Estilo: ilustração vetorial plana com contornos suaves em verde escuro, formas arredondadas e preenchimento sólido. Personagens com rostos simpáticos e expressivos, cabeça levemente maior que o corpo. Nada fotorrealista, nada 3D, nada de foto.
+- Paleta exclusiva: verde escuro, madeira clara e laranja queimado como cores principais. Creme apenas para a tela do celular e os balões de conversa. Plantas verdes como elemento de cenário.
+- Cenário: oficina de montagem com madeira clara, ferramentas penduradas na parede e estantes de madeira clara.
+- Luz suave e uniforme, sem sombras duras e sem brilho dramático, igual em todas as cenas.
+- Celular: sempre o mesmo modelo, com moldura verde escuro e bordas bem arredondadas, tela creme, levemente inclinado (cerca de 10 graus).
+- Balões de conversa: do cliente, creme com texto verde escuro, alinhados à esquerda. Da oficina, verde escuro com texto creme, alinhados à direita.
+- Textos nas telas de celular: são as ÚNICAS palavras permitidas na imagem. Escreva exatamente o texto indicado entre aspas, em português correto, grande e legível, sem erros de grafia nem letras trocadas. Todo celular mostra, no cabeçalho, o texto "Exemplo fictício".
+- Personagem principal: homem adulto, cabelo curto, barba curta, camiseta verde escuro. Sempre a mesma aparência (rosto, cabelo, barba, roupa) em todas as cenas em que aparecer.
+- Formato vertical 9:16 (1080x1920), sem bordas.
+- Fora das telas de celular, nenhum texto, letra, número, legenda, logotipo ou marca d'água.
+- Assunto principal centralizado, com o terço inferior livre (é onde vai a legenda).
+
+CENAS:
+
+001 — Homem adulto de cabelo curto e barba curta, camiseta verde escuro, em uma oficina de madeira clara, com expressão surpresa e a mão levantada. Ele segura um celular levemente inclinado, com a tela mostrando uma conversa com o balão creme "Faz por menos?". Cabeçalho da tela: "Exemplo fictício". Fundo de madeira clara com ferramentas penduradas e plantas verdes.
+
+002 — Close do celular, levemente inclinado, com moldura verde escuro e tela creme. Cabeçalho da conversa: "Exemplo fictício". Um único balão creme alinhado à esquerda com o texto "Faz por menos?", grande e legível. Fundo de madeira clara desfocado, com detalhes em laranja queimado.
+
+003 — Homem adulto de cabelo curto e barba curta, camiseta verde escuro, segurando uma prancheta de madeira clara com três itens marcados com check em laranja queimado. Ao lado, uma estante de madeira clara meio montada. Fundo de oficina com plantas verdes. A prancheta tem apenas os ícones de check, sem texto.
+
+004 — Close do celular, levemente inclinado, com moldura verde escuro e tela creme. Cabeçalho da conversa: "Exemplo fictício". Um balão verde escuro alinhado à direita com o texto "Nesse valor estão a montagem e o deslocamento." em creme, legível. Abaixo, um balão creme à esquerda com o texto "Faz por menos?". Fundo de madeira clara desfocado, com detalhes em laranja queimado.
+
+005 — Homem adulto de camiseta verde escuro em uma oficina de madeira clara, apontando com a mão aberta para dois caminhos desenhados no chão em laranja queimado. No caminho da esquerda, uma estante de madeira clara pronta sobre um pequeno suporte, com uma chave de fenda ao lado. No da direita, uma caixa de ferramentas maior. Plantas verdes ao fundo. Sem nenhum texto.
+
+006 — Close do celular, levemente inclinado, com moldura verde escuro e tela creme. Cabeçalho da conversa: "Exemplo fictício". Um balão verde escuro alinhado à direita com o texto "Para montar apenas a estante, consigo passar outro orçamento. Quer essa opção?" em creme, legível e sem erros de grafia. Fundo de madeira clara desfocado, com detalhes em laranja queimado.
+
+007 — Homem adulto de cabelo curto e barba curta, camiseta verde escuro, com a palma da mão aberta em gesto de pausa e expressão calma. Atrás dele, uma pequena van de entrega em laranja queimado e uma estante de madeira clara. Fundo de oficina com plantas verdes. Sem nenhum texto.
+
+008 — Close do celular, levemente inclinado, com moldura verde escuro e tela creme. Cabeçalho da conversa: "Exemplo fictício". Um balão verde escuro alinhado à direita com o texto "Para esse serviço completo, esse é o valor que consigo oferecer." em creme, legível e sem erros de grafia. Fundo de madeira clara desfocado, com detalhes em laranja queimado.
+
+009 — Homem adulto de cabelo curto e barba curta, camiseta verde escuro, sorrindo e mostrando um celular levemente inclinado com um ícone de marcador de salvar em laranja queimado na tela creme. Fundo de oficina de madeira clara com plantas verdes. Na tela, apenas o cabeçalho "Exemplo fictício" e o ícone; nenhum outro texto.
+
+Gere uma imagem por cena, na ordem, e salve como 001, 002, 003 … 009.

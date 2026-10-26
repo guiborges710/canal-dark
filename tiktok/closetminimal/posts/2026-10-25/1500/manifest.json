@@ -1,0 +1,70 @@
+{
+  "id": "sozinha-oculos-2026-10-25",
+  "status": "agendado",
+  "slot": "2026-10-25T15:00:00-03:00",
+  "assets": [
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-25\\1500\\001.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "d356c7258db324469cae41df1275d19fb15cb6e9e4a50aeba48bfc90153008f7"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-25\\1500\\002.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "3279e9bf7827588f7a04378ddd687288de01f706cb5ff2d6d3eec1ceb0f4ff55"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-25\\1500\\003.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "d373234f0b23bd97fbfdd1305635dbd2e2ca0ed465d4fbd307a025a9d11bcdb7"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-25\\1500\\004.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "4c2e347139e4e9679aed219c20119532775548df215b79f445ebd863cecd1bc4"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-25\\1500\\005.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "0b526690fb8883f38bd4e6a04c7eb83a7daf3819c416a2c5ec0ee41655e0f522"
+    }
+  ],
+  "media_count": 5,
+  "reference_url": "https://www.tiktok.com/@closetminimal/photo/7583616310253276436",
+  "native_ai_label_required": true,
+  "native_ai_label": true,
+  "on_image_ai_disclaimer": false,
+  "destination_verified": "Perfil da sessão @closetminimal imediatamente antes deupload eAgendar",
+  "qa": {
+    "all_final_files_visually_inspected": true,
+    "central_3_4_crop_reviewed": true,
+    "top_right_bottom_ui_overlap_reviewed": true,
+    "native_feed_preview_reviewed": true,
+    "anatomy_reviewed": true,
+    "uniform_square_dimensions": true
+  },
+  "tool": "imagegen integrado",
+  "prompt": "5slides originais: capa, olhar lado, banco, parede eCTA. Fotos de adulta fictícia, óculos, branco e bege; creme e sansmarrom; slides4e5reduzidos80%paraárea segura.",
+  "sound": "Suddenly I See - KT Tunstall",
+  "tiktok_id": "7700560729660755208",
+  "remote_id": "7700560729660755208",
+  "public_url": "https://www.tiktok.com/@closetminimal/photo/7700560729660755208",
+  "verified_date": "2026-10-25",
+  "provider_status_verified": "Studio25out15:00;Todosdesativado;IDconfirmado",
+  "rights": "Fotos originais geradas adulta fictícia; som catálogoTikTok"
+}

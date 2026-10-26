@@ -1,0 +1,70 @@
+{
+  "id": "sozinha-bolsa-2026-10-26",
+  "status": "agendado",
+  "slot": "2026-10-26T15:00:00-03:00",
+  "assets": [
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-26\\1500\\001.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "a7c8ad72a7f5121c3e47cf51baad6c6db1ccb00e3c73bddad944d569158f4c69"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-26\\1500\\002.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "ed1d88711910c30cf27e6daea47b8d3aa47ae08c944c466f82362657494546cb"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-26\\1500\\003.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "677787b984abe86854d5696bddbc5fc580630807db7280b9a155c899ddee685c"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-26\\1500\\004.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "328c34cd64095cbb90f06f3a337952db5be2e9a63df76f5326183e22e78d88eb"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-26\\1500\\005.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "c3da5aff2f97738458cf4df2a2ae00220eb0163d749aea544c414c65ea7dd031"
+    }
+  ],
+  "media_count": 5,
+  "reference_url": "https://www.tiktok.com/@closetminimal/photo/7583616310253276436",
+  "native_ai_label_required": true,
+  "native_ai_label": true,
+  "on_image_ai_disclaimer": false,
+  "destination_verified": "Perfil da sessão @closetminimal imediatamente antes decada upload eAgendar",
+  "qa": {
+    "all_final_files_visually_inspected": true,
+    "central_3_4_crop_reviewed": true,
+    "top_right_bottom_ui_overlap_reviewed": true,
+    "native_feed_preview_reviewed": true,
+    "anatomy_reviewed": true,
+    "uniform_square_dimensions": true
+  },
+  "tool": "imagegen integrado",
+  "prompt": "Original,5slides:capa+3exemplos+CTA. Creme,sansmarrom,adultosfictícios,posesnaturais. CorreçãoIAparaafastarCTA/legenda.",
+  "sound": "Suddenly I See - KT Tunstall",
+  "tiktok_id": "7700934220943789330",
+  "remote_id": "7700934220943789330",
+  "public_url": "https://www.tiktok.com/@closetminimal/photo/7700934220943789330",
+  "verified_date": "2026-10-26",
+  "provider_status_verified": "Studio26out15:00;relógio;Todosdesativado;IDconfirmado",
+  "rights": "Imagens originais geradas de adultos fictícios;somcatálogoTikTok"
+}

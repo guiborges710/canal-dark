@@ -1,0 +1,31 @@
+Você vai gerar as imagens de um Reels vertical para Instagram. Gere 8 imagens separadas, na ordem, nomeadas 001 a 008.
+
+ESTILO GLOBAL — OBRIGATÓRIO, siga exatamente em TODAS as imagens, sem exceção. Referência visual: ilustração digital plana, quente e acolhedora, no mesmo padrão de uma linha de posts de atendimento pelo WhatsApp.
+- Estilo: ilustração vetorial plana com contornos suaves em verde escuro, formas arredondadas e preenchimento sólido. Personagens com rostos simpáticos e expressivos, cabeça levemente maior que o corpo. Nada fotorrealista, nada 3D, nada de foto.
+- Paleta exclusiva: fundo creme claro (ou cenário claro de ateliê com madeira clara); verde escuro para roupas, contornos e detalhes; laranja queimado para destaques, ícones e balões. Plantas verdes como elemento de cenário. Não use outras cores como cor principal.
+- Luz suave e uniforme, sem sombras duras e sem brilho dramático, igual em todas as cenas.
+- Celular: sempre o mesmo modelo, com moldura verde escuro e bordas bem arredondadas, tela creme, levemente inclinado (cerca de 10 graus). Balões de conversa em creme e laranja queimado, sem texto.
+- Personagem principal: mulher adulta jovem, cabelo cacheado preso em coque, blusa creme e avental verde escuro. Sempre a mesma aparência (rosto, cabelo, roupa) quando aparecer. O cliente, quando aparecer, é um homem adulto de camisa verde escuro.
+- Formato vertical 9:16 (1080x1920), sem bordas.
+- Sem nenhum texto, letra, número, legenda, logotipo ou marca d'água dentro da imagem.
+- Assunto principal centralizado, com o terço inferior livre (é onde vai a legenda).
+
+CENAS:
+
+001 — Lojista de expressão preocupada segurando uma etiqueta de preço com a mão, com um celular levemente inclinado ao lado mostrando uma tela de comparação. Um fio de moedas laranja queimado cai ao fundo. Traços arredondados, enquadramento centralizado.
+
+002 — Personagem pensativa olhando para um sinal de dúvida grande, arredondado e flutuando sobre um balcão. Celular levemente inclinado na mão. Fundo creme com detalhes verde escuro. Sem nenhum texto.
+
+003 — Carro arredondado e sujo sendo lavado por fora, com jatos de água e espuma. Ícones simples de carro e gotas d'água em verde escuro e laranja queimado. Sem nenhum texto nas placas ou cartazes.
+
+004 — Dois carros arredondados lado a lado: um com espuma só por fora e outro com espuma por fora e o interior limpo, com volante e bancos visíveis. Celular levemente inclinado no canto. Fundo creme. Sem nenhum texto.
+
+005 — Lupa grande e arredondada sobre o interior de um carro, revelando assentos e volante, com uma personagem apontando para a diferença. Cores verde escuro e laranja queimado sobre fundo creme. Sem nenhum texto.
+
+006 — Personagem sorrindo com calma, a mão aberta em gesto de pausa, em frente a um balcão. Celular levemente inclinado ao lado. Expressão confiante e acolhedora, fundo creme. Sem nenhum texto.
+
+007 — Personagem conversando de forma tranquila e simpática com um cliente, em gesto de explicação, com um celular levemente inclinado na mão. Balões de fala vazios e arredondados, sem nenhum texto. Fundo creme com detalhes verde escuro.
+
+008 — Personagem sorrindo e mostrando um celular levemente inclinado com um ícone de marcador de salvar em laranja queimado. Fundo creme e verde escuro, enquadramento centralizado. Sem nenhum texto.
+
+Gere uma imagem por cena, na ordem, e salve como 001, 002, 003 … 008.

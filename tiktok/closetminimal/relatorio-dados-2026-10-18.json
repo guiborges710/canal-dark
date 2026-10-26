@@ -1,0 +1,136 @@
+{
+  "observed_date": "2026-10-18",
+  "studio_snapshot_local_time": "14:10 America/Sao_Paulo",
+  "baseline_date": "2026-10-13",
+  "baseline_followers": 1192,
+  "current_profile_followers": 1192,
+  "net_snapshot_change": 0,
+  "remaining_to_goal": 808,
+  "baseline_likes_displayed": "86.4K",
+  "current_likes_displayed": "86.5K",
+  "likes_profile_delta": "aproximadamente 100; contadores arredondados, não exato",
+  "closed_period": "2026-10-13 a 2026-10-17 conforme seletor do Studio",
+  "account_period": {
+    "views_displayed": "6,9 mil",
+    "likes": 119,
+    "profile_views": 27,
+    "shares": 8,
+    "comments": null,
+    "net_followers": -1
+  },
+  "new_posts_published": 12,
+  "scheduled_remaining": [
+    {
+      "id": "7698029651645435142",
+      "time": "2026-10-18T18:00:00-03:00"
+    }
+  ],
+  "new_post_views_sum": 5573,
+  "new_post_likes_sum": 104,
+  "new_post_comments_sum": 0,
+  "post_rows": [
+    {
+      "date": "13/10 11:56",
+      "title": "Casal sem travar",
+      "id": "7696166494614342932",
+      "views": 575,
+      "likes": 9,
+      "comments": 0
+    },
+    {
+      "date": "13/10 14:06",
+      "title": "Onde colocar as mãos",
+      "id": "7696199868771028225",
+      "views": 602,
+      "likes": 6,
+      "comments": 0
+    },
+    {
+      "date": "13/10 21:06",
+      "title": "Casal no jantar",
+      "id": "7696308052927974664",
+      "views": 767,
+      "likes": 4,
+      "comments": 0
+    },
+    {
+      "date": "14/10 08:00",
+      "title": "Casal sem rosto",
+      "id": "7696396971141188871",
+      "views": 855,
+      "likes": 30,
+      "comments": 0
+    },
+    {
+      "date": "14/10 12:00",
+      "title": "Sozinha no café",
+      "id": "7696397559325134088",
+      "views": 485,
+      "likes": 6,
+      "comments": 0
+    },
+    {
+      "date": "15/10 10:00",
+      "title": "Casal no espelho",
+      "id": "7696765073129229574",
+      "views": 603,
+      "likes": 25,
+      "comments": 0
+    },
+    {
+      "date": "15/10 15:00",
+      "title": "Sozinha caminhando",
+      "id": "7696765908387187976",
+      "views": 440,
+      "likes": 7,
+      "comments": 0
+    },
+    {
+      "date": "16/10 09:59",
+      "title": "Casal sentado",
+      "id": "7697249626709085447",
+      "views": 582,
+      "likes": 3,
+      "comments": 0
+    },
+    {
+      "date": "17/10 10:00",
+      "title": "Casal no parque",
+      "id": "7697476467810159890",
+      "views": 248,
+      "likes": 4,
+      "comments": 0
+    },
+    {
+      "date": "17/10 15:00",
+      "title": "Para onde olhar",
+      "id": "7697477269769522440",
+      "views": 394,
+      "likes": 9,
+      "comments": 0
+    },
+    {
+      "date": "18/10 12:22",
+      "title": "Selfies de casal",
+      "id": "7698028494801898768",
+      "views": 19,
+      "likes": 1,
+      "comments": 0
+    },
+    {
+      "date": "18/10 14:00",
+      "title": "Sozinha na escada",
+      "id": "7698029145527192840",
+      "views": 3,
+      "likes": 0,
+      "comments": 0
+    }
+  ],
+  "caveats": [
+    "Métricas de conta no período incluem posts antigos; soma de posts novos é outra população e outro intervalo. Não somar os dois.",
+    "Seguidores líquidos -1 no período fechado e saldo0 entre snapshots têm cortes temporais diferentes. Ganhos e perdas brutos não disponíveis.",
+    "CSV Followers exportado possui datas deslocadas 12–16/10, enquanto seletor mostra13–17/10; preservado sem realinhar.",
+    "Não foi possível atribuir seguidores individuais aos posts novos.",
+    "Idades de posts diferentes; publicação18/10 ainda muito recente."
+  ]
+}

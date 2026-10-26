@@ -1,0 +1,34 @@
+Você vai gerar as imagens de um Reels vertical para Instagram. Gere 8 imagens separadas, na ordem, nomeadas 001 a 008.
+
+TEMA: como responder a um pedido urgente sem prometer um prazo que você ainda não confirmou. Pequena oficina, encomenda com prazo para amanhã.
+
+ESTILO GLOBAL — OBRIGATÓRIO, siga exatamente em TODAS as imagens, sem exceção:
+- Estilo: ilustração digital quente, com formas arredondadas, contornos suaves e preenchimento sólido. Personagens com rostos simpáticos e expressivos, cabeça levemente maior que o corpo. Nada fotorrealista, nada 3D, nada de foto.
+- Paleta exclusiva: madeira clara, creme, verde escuro e laranja queimado. Plantas verdes como elemento de cenário. Não use outras cores como cor principal.
+- Cenário preenchendo a imagem até a base, sem grandes áreas brancas ou vazias.
+- Luz suave e uniforme, sem sombras duras e sem brilho dramático, igual em todas as cenas.
+- Personagem principal: homem adulto, cabelo cacheado, barba curta, camiseta verde e avental verde. Sempre a mesma aparência (rosto, cabelo, barba, roupa) em todas as cenas em que aparecer.
+- Celular, quando aparecer: sempre o mesmo modelo, com moldura verde escuro e tela creme.
+- Formato vertical 9:16 (1080x1920), sem bordas.
+- Sem nenhum texto, letra, número, legenda, logotipo ou marca d'água dentro da imagem.
+- Assunto principal centralizado, com o terço inferior livre de elementos importantes (é onde vai a legenda).
+
+CENAS:
+
+001 — Oficina pequena e acolhedora, madeira clara e plantas ao fundo. Um homem de cabelo cacheado, barba curta, camiseta e avental verdes, com o celular na mão e expressão de quem acabou de falar rápido demais. Um cliente de costas, no balcão, com uma sacola. Fundo creme e verde escuro.
+
+002 — Homem de cabelo cacheado, barba curta, camiseta e avental verdes, parado no meio da oficina, com o olhar voltado para um quadro de agenda na parede. Plantas em vasos, madeira clara, detalhes em laranja queimado.
+
+003 — Bancada de oficina com duas peças em conserto e uma pilha de caixas ainda fechadas ao lado. Quadro de agenda com blocos verdes e laranja queimado, todos ocupados. Homem de cabelo cacheado, barba curta, camiseta e avental verdes, com a mão na testa, pensativo.
+
+004 — Close do homem de cabelo cacheado, barba curta, camiseta e avental verdes, com o celular na mão, sério e pensativo. Ao fundo, um relógio de parede e um calendário riscado. Madeira clara, plantas, fundo creme.
+
+005 — Homem de cabelo cacheado, barba curta, camiseta e avental verdes, digitando uma resposta no celular com tranquilidade, em frente à bancada da oficina. Um balão de conversa em creme e laranja queimado, sem nenhum texto. Plantas e madeira clara ao redor.
+
+006 — Homem de cabelo cacheado, barba curta, camiseta e avental verdes, sorrindo e conversando com um cliente do outro lado do balcão, em gesto de pergunta. Balões de conversa vazios em creme e laranja queimado. Plantas e madeira clara, fundo creme.
+
+007 — Homem de cabelo cacheado, barba curta, camiseta e avental verdes, olhando um relógio de pulso e fazendo um gesto de confirmação com a mão. Fundo de oficina com madeira clara, plantas e detalhes em verde escuro.
+
+008 — Homem de cabelo cacheado, barba curta, camiseta e avental verdes, sorrindo e segurando o celular com um ícone de marcador de salvar em laranja queimado. Cenário completo da oficina, madeira clara, plantas e fundo creme, sem grandes áreas brancas.
+
+Gere uma imagem por cena, na ordem, e salve como 001, 002, 003 … 008.

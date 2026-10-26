@@ -46,7 +46,7 @@ def generate_ideas(llm, cfg):
         videos = [{"titulo": "vídeo simulado", "canal": "x", "views": 1, "views_por_dia": 1, "dias": 1}]
     else:
         if not cfg["research"]["youtube_queries"]:
-            raise SystemExit("Preencha research.youtube_queries no config.yaml (termos de busca do nicho).")
+            raise SystemExit("Preencha research.youtube_queries no config_shorts.yaml (termos de busca do nicho).")
         videos = youtube_outliers(cfg)
     system = prompt("research_ideas", niche=ch["niche"], language=ch["language"])
     user = json.dumps(videos, ensure_ascii=False, indent=1)

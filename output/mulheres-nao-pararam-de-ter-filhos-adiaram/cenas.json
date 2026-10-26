@@ -1,0 +1,42 @@
+[
+  {
+    "tipo": "gancho",
+    "duracao": 4,
+    "numeros": ["-5,8%", "27,7"],
+    "cores": ["azul", "laranja"],
+    "legenda": ["NASCIMENTOS EM 2024", "IDADE DA MÃE EM 2022"],
+    "pergunta": ["É FALTA DE", "VONTADE?"],
+    "rodape": ["O CALENDÁRIO MUDOU"]
+  },
+  {
+    "tipo": "barras",
+    "duracao": 6,
+    "titulo": ["IDADE MÉDIA DA MÃE", "AO TER FILHOS (BR)"],
+    "escala_max": 30,
+    "unidade": "",
+    "barras": [
+      {"rotulo": "2010", "valor": 26.4, "cor": "azul"},
+      {"rotulo": "2022", "valor": 27.7, "cor": "laranja"}
+    ],
+    "rodape": ["SUBIU 1,3 ANO", "EM DOIS CENSOS"],
+    "rodape_cor": "amarelo"
+  },
+  {
+    "tipo": "barras_horizontais",
+    "duracao": 6,
+    "titulo": ["MÃES DE ATÉ 24 ANOS", "EM 2024"],
+    "subtitulo": ["% DOS NASCIMENTOS"],
+    "barras": [
+      {"rotulo": "ATÉ 24 ANOS", "valor": 34.6, "cor": "azul"}
+    ],
+    "destaque": ["A MAIORIA DAS MÃES", "TEM MAIS DE 24"]
+  },
+  {
+    "tipo": "fechamento",
+    "duracao": 10,
+    "negacao": ["NÃO É: MULHER", "PAROU DE QUERER?"],
+    "afirmacao": ["É: O CALENDÁRIO", "MUDOU"],
+    "reforco": ["A MAIORIA DOS JOVENS", "DIZ QUERER FILHOS"],
+    "pergunta": ["O QUE TORNARIA", "O CALENDÁRIO VIÁVEL?"]
+  }
+]

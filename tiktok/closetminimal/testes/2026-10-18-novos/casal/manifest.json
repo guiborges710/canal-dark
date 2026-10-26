@@ -1,0 +1,45 @@
+{
+  "status": "versao_cta_agendada",
+  "theme": "casal",
+  "publication_authorized_now": true,
+  "tool": "imagegen integrado",
+  "assets": [
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\testes\\2026-10-18-novos\\casal\\01.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "2cdb6ead5936a3925b5d36a09d8622b809e6636663d1b645db43734a6c8cfc14"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\testes\\2026-10-18-novos\\casal\\02.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "3856f29757db9c80e268d13d5666552aeeabf277c09bf8e92bc43069e26e6c24"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\testes\\2026-10-18-novos\\casal\\03.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "1c12f27a04958b972c4f55772a92552f7004d9e1012d3821c403f90ee8da9192"
+    }
+  ],
+  "qa": {
+    "every_final_inspected": true,
+    "central_3_4_crop": "texto, rostos, mãos e CTA dentro do recorte central",
+    "ui_overlap_review": "bordas externas com fundo desfocado; conteúdo principal centralizado",
+    "anatomy": "braços e mãos coerentes com posições; sem comparação ambígua de mãos",
+    "on_image_ai_text": false,
+    "native_mobile_preview": "não realizada: sem upload neste pedido",
+    "native_ai_label_required_if_published": true
+  },
+  "prompt_set": "Fotos originais de adultos fictícios, uma cena por slide, tipografia branca sans-serif, frases curtas em português; casal andando, sentado e de costas; mulher olhando café, vitrine e livro. Revisão imagegen: reduzir fotografia e textos em conjunto para região central de 70%, fundo externo desfocado, CTA acima de 73% da altura, sem aviso textual de IA.",
+  "tiktok_id": "7698083157718879506",
+  "scheduled_at": "2026-10-18T18:00:00-03:00",
+  "final_manifest": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-18\\1800-teste-cta\\manifest.json"
+}

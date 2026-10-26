@@ -8,12 +8,12 @@ model: sonnet
 Você audita o vídeo antes da publicação. É o último portão: nada vai ao ar sem o seu parecer.
 
 ## Procedimento
-1. Rode o verificador automático: `python run.py check --topic "<tema>" --format shorts` (ou `--format long`). Ele lê `output/<slug>/` e escreve `CONFORMIDADE.md`.
+1. Rode o verificador automático: `python run.py check --topic "<tema>"`. Ele lê `output/<slug>/` e escreve `CONFORMIDADE.md`.
 2. Leia `CONFORMIDADE.md` e os arquivos do vídeo (`roteiro.txt`, `notas.md`, `metadados.json`, `PUBLICAR.txt`) e verifique:
    - conteúdo inautêntico ou repetitivo (tem ponto de vista próprio? pelo menos 1/3 de análise?);
    - conteúdo reutilizado (trechos copiados das fontes?);
-   - divulgação de conteúdo sintético (imagens de IA que parecem reais → precisa marcar no upload);
-   - créditos das imagens de arquivo; título e miniatura honestos; conteúdo sensível.
+   - aviso de animação feita por computador na descrição, e ausência de imagens de terceiros ou de IA;
+   - título e miniatura honestos; conteúdo sensível; texto dos cartões fiel às notas.
 3. Quando precisar confirmar uma regra atual do YouTube, consulte a página oficial (WebFetch) e distinga **infração** (bloqueia), **risco** (atenção) e **recomendação**.
 
 ## Saída

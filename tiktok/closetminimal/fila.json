@@ -1,0 +1,1289 @@
+{
+  "timezone": "America/Sao_Paulo",
+  "account": "@closetminimal",
+  "brand_id": "7402524",
+  "posts": [
+    {
+      "id": "casal-poses-naturais-2026-10-13",
+      "local_dir": "posts/2026-10-14/1000",
+      "slot": "2026-10-13T11:56:00-03:00",
+      "status": "publicado",
+      "remote_id": "395033276",
+      "remote_uuid": "-3082939542363026433",
+      "tiktok_id": "7696166494614342932",
+      "public_url": "https://www.tiktok.com/@closetminimal/video/7696166494614342932",
+      "provider_status_verified": "TikTok Studio: Todos; 575 views, 9 curtidas",
+      "verified_date": "2026-10-18",
+      "auto_publish": true,
+      "media_count": 3,
+      "asset_sha256": [
+        "9a9490130a46570ad6dc2ee4463cd7cf41913d95dedbfcca5524aa236250b015",
+        "e4d91e5dcd3d8d2e8d3d7dbf03c79cab874c1b77ceb54ebf54b82a77fff10842",
+        "2f1ec39982fa5c4b35d4c41ee451037ab1eb05c51cfeae1d855cc5e2a2addb42"
+      ],
+      "latest_metrics": {
+        "views": 575,
+        "likes": 9,
+        "comments": 0,
+        "observed_date": "2026-10-18"
+      }
+    },
+    {
+      "id": "sozinha-maos-2026-10-13",
+      "local_dir": "posts/2026-10-14/1400",
+      "slot": "2026-10-13T14:00:00-03:00",
+      "status": "publicado",
+      "remote_id": "395038892",
+      "remote_uuid": "-1597731828139736667",
+      "provider_status_verified": "TikTok Studio: Todos; 602 views, 6 curtidas",
+      "verified_date": "2026-10-18",
+      "auto_publish": true,
+      "media_count": 3,
+      "asset_sha256": [
+        "7be71dea8f4e0121918e8dd538576028882638ced2452cb9d66374b9f7bfd5d4",
+        "cdbd9670917f73dab14dc03604a32ceaa62a06c61a5d9a5aea17e6383f79d56e",
+        "0b86659170f6e05daade21583536072653a39cc51fdeaec63acff51e4c7bb173"
+      ],
+      "tiktok_id": "7696199868771028225",
+      "public_url": "https://www.tiktok.com/@closetminimal/video/7696199868771028225",
+      "latest_metrics": {
+        "views": 602,
+        "likes": 6,
+        "comments": 0,
+        "observed_date": "2026-10-18"
+      }
+    },
+    {
+      "id": "casal-sem-rosto",
+      "local_dir": "posts/rascunhos/casal-sem-rosto",
+      "slot": "2026-10-14T08:00:00-03:00",
+      "status": "publicado",
+      "remote_id": "7696396971141188871",
+      "tiktok_id": "7696396971141188871",
+      "url": "https://www.tiktok.com/@closetminimal/video/7696396971141188871",
+      "publication_route": "TikTok Studio browser",
+      "destination_verified": "@closetminimal",
+      "verified_date": "2026-10-18",
+      "media_count": 3,
+      "asset_sha256": [
+        "ebb85771115fab3e33a6e168201d7981eb47dc30fc1b06c7d253abd29382bc04",
+        "ff3a95f971cd4f5467a0f88b7bed57179ca64aabe5a9a0318245f6ceea0bfda0",
+        "f4b3a09540d8066d8d3c75d689cb2e1c19a9d318de20ce754527ee209c6d49d0"
+      ],
+      "replaced_remote_id": "7696306188425743623",
+      "old_post_status": "excluido_recuperavel_30_dias",
+      "provider_status_verified": "TikTok Studio: Todos; 855 views, 30 curtidas",
+      "layout_revision": "2026-10-14-square-safe",
+      "latest_metrics": {
+        "views": 855,
+        "likes": 30,
+        "comments": 0,
+        "observed_date": "2026-10-18"
+      }
+    },
+    {
+      "id": "sozinha-no-cafe",
+      "local_dir": "posts/rascunhos/sozinha-no-cafe",
+      "slot": "2026-10-14T12:00:00-03:00",
+      "status": "publicado",
+      "remote_id": "7696397559325134088",
+      "tiktok_id": "7696397559325134088",
+      "url": "https://www.tiktok.com/@closetminimal/video/7696397559325134088",
+      "publication_route": "TikTok Studio browser",
+      "destination_verified": "@closetminimal",
+      "verified_date": "2026-10-18",
+      "media_count": 3,
+      "asset_sha256": [
+        "28a0040b7ff127ee483ce83a0add06f3307ca7abb6be5e7a753bcb559395cf39",
+        "51f1539755838eddbb0b99d6eeed99fea528a7fee1a3e98bf1be67030f228bc6",
+        "c7b9df9e9b378b31b4f5c49c6726dd04078ee293eaad17c2b27a93fc45edbb70"
+      ],
+      "replaced_remote_id": "7696307374067436801",
+      "old_post_status": "excluido_recuperavel_30_dias",
+      "provider_status_verified": "TikTok Studio: Todos; 485 views, 6 curtidas",
+      "layout_revision": "2026-10-14-square-safe",
+      "latest_metrics": {
+        "views": 485,
+        "likes": 6,
+        "comments": 0,
+        "observed_date": "2026-10-18"
+      }
+    },
+    {
+      "id": "casal-no-jantar-2026-10-13",
+      "local_dir": "posts/2026-10-13/casal-no-jantar",
+      "status": "publicado",
+      "remote_id": "7696308052927974664",
+      "tiktok_id": "7696308052927974664",
+      "url": "https://www.tiktok.com/@closetminimal/video/7696308052927974664",
+      "publication_route": "TikTok Studio browser",
+      "destination_verified": "@closetminimal",
+      "requested_date": "2026-10-13",
+      "media_count": 3,
+      "asset_sha256": [
+        "ef28520597710f9c711f0a9097717c762ee516ad64511e14fb14fa404675d4b3",
+        "cd19aa80ed247d4d3fa7843c0bed8c4f0200deba993bf27ed455863e42e76176",
+        "ae3b93fe22a0c09711bb765540e575b3e3a487d5d4e8068d4a829814dd01a880"
+      ],
+      "provider_status_verified": "TikTok Studio: Todos; 767 views, 4 curtidas",
+      "public_url": "https://www.tiktok.com/@closetminimal/video/7696308052927974664",
+      "verified_date": "2026-10-18",
+      "latest_metrics": {
+        "views": 767,
+        "likes": 4,
+        "comments": 0,
+        "observed_date": "2026-10-18"
+      }
+    },
+    {
+      "id": "casal-espelho-2026-10-15",
+      "local_dir": "posts/2026-10-15/1000",
+      "slot": "2026-10-15T10:00:00-03:00",
+      "status": "publicado",
+      "media_count": 3,
+      "asset_sha256": [
+        "ba0bd3581976c3210eece719046e74600d32944c160fb552a383f5b2a3a1e0a0",
+        "25938f1ec6406801b12e58593b76184c8803a605a56803e243094fab11329ecf",
+        "6485a279e7ef4e79b9c53085e9a39d957ca89274abde6d3c1fa0ca7ea59dc4da"
+      ],
+      "remote_id": "7696765073129229574",
+      "tiktok_id": "7696765073129229574",
+      "url": "https://www.tiktok.com/@closetminimal/video/7696765073129229574",
+      "verified_date": "2026-10-18",
+      "destination_verified": "@closetminimal",
+      "provider_status_verified": "TikTok Studio: Todos; 603 views, 25 curtidas",
+      "latest_metrics": {
+        "views": 603,
+        "likes": 25,
+        "comments": 0,
+        "observed_date": "2026-10-18"
+      }
+    },
+    {
+      "id": "sozinha-caminhando-2026-10-15",
+      "local_dir": "posts/2026-10-15/1500",
+      "slot": "2026-10-15T15:00:00-03:00",
+      "status": "publicado",
+      "media_count": 3,
+      "asset_sha256": [
+        "66a9ff5087a1ebfb6320f1400938cd731af505a0cf26c10d6f62b2112fc047b7",
+        "cf61143c49ccbf16c0ebfb0e41b9852a47ad5289a70f429039687aaacb418c80",
+        "66f085dc5ec2bcf4cecd648af1b1bfdb3a5cb74d481d7eaafd21a2196a726935"
+      ],
+      "remote_id": "7696765908387187976",
+      "tiktok_id": "7696765908387187976",
+      "url": "https://www.tiktok.com/@closetminimal/video/7696765908387187976",
+      "verified_date": "2026-10-18",
+      "destination_verified": "@closetminimal",
+      "provider_status_verified": "TikTok Studio: Todos; 440 views, 7 curtidas",
+      "latest_metrics": {
+        "views": 440,
+        "likes": 7,
+        "comments": 0,
+        "observed_date": "2026-10-18"
+      }
+    },
+    {
+      "id": "casal-sentado-2026-10-16",
+      "local_dir": "posts/2026-10-16/1000",
+      "slot": "2026-10-16T10:00:00-03:00",
+      "status": "publicado",
+      "remote_id": "7697249626709085447",
+      "tiktok_id": "7697249626709085447",
+      "url": "https://www.tiktok.com/@closetminimal/photo/7697249626709085447",
+      "asset_sha256": [
+        "7be85180a97cae5caa66e77171a3d3364123a197307360f07e4e3652fced9359",
+        "f2b7a019bca6e65cd14892462418c03948346fbcb5a819858d7b2e7af719dd6d"
+      ],
+      "media_count": 2,
+      "provider_status_verified": "TikTok Studio: Todos; 582 views, 3 curtidas",
+      "destination_verified": "@closetminimal",
+      "verified_date": "2026-10-18",
+      "latest_metrics": {
+        "views": 582,
+        "likes": 3,
+        "comments": 0,
+        "observed_date": "2026-10-18"
+      }
+    },
+    {
+      "id": "casal-parque-2026-10-17",
+      "local_dir": "posts/2026-10-17/1000",
+      "slot": "2026-10-17T10:00:00-03:00",
+      "status": "publicado",
+      "remote_id": "7697476467810159890",
+      "tiktok_id": "7697476467810159890",
+      "url": "https://www.tiktok.com/@closetminimal/photo/7697476467810159890",
+      "media_count": 2,
+      "asset_sha256": [
+        "05bb0ca9de447f0768bc163d8475d5e1481dfa298a450a873666292b97f00ac7",
+        "1cb58bcb92cea0541e8169e225e1a4a0ee419a04ffe31141697ec12e29206fa9"
+      ],
+      "verified_date": "2026-10-18",
+      "destination_verified": "@closetminimal",
+      "provider_status_verified": "TikTok Studio: Todos; 248 views, 4 curtidas",
+      "latest_metrics": {
+        "views": 248,
+        "likes": 4,
+        "comments": 0,
+        "observed_date": "2026-10-18"
+      }
+    },
+    {
+      "id": "sozinha-olhar-2026-10-17",
+      "local_dir": "posts/2026-10-17/1500",
+      "slot": "2026-10-17T15:00:00-03:00",
+      "status": "publicado",
+      "remote_id": "7697477269769522440",
+      "tiktok_id": "7697477269769522440",
+      "url": "https://www.tiktok.com/@closetminimal/photo/7697477269769522440",
+      "media_count": 2,
+      "asset_sha256": [
+        "ba26d84b9d41a36e54bde31a105a3f910b5489f1d0b60cfd5a83e730bc237518",
+        "e902f8714dbeab22898da70678325d41e1f2e76a77278d8102efe23eefccd86d"
+      ],
+      "verified_date": "2026-10-18",
+      "destination_verified": "@closetminimal",
+      "provider_status_verified": "TikTok Studio: Todos; 394 views, 9 curtidas",
+      "latest_metrics": {
+        "views": 394,
+        "likes": 9,
+        "comments": 0,
+        "observed_date": "2026-10-18"
+      }
+    },
+    {
+      "id": "casal-selfie-2026-10-18",
+      "local_dir": "posts/2026-10-18/agora",
+      "slot": "2026-10-18T12:22:00-03:00",
+      "status": "publicado",
+      "tiktok_id": "7698028494801898768",
+      "remote_id": "7698028494801898768",
+      "public_url": "https://www.tiktok.com/@closetminimal/photo/7698028494801898768",
+      "media_count": 2,
+      "asset_sha256": [
+        "76a54b45dffd783f88f3db7dc9921f432cdfab6301198ed415981edd05560b9d",
+        "166165258846c5498ed2e067be1a0b52b976c7d56282d6ef5550198fa0fe71b1"
+      ],
+      "verified_date": "2026-10-18",
+      "provider_status_verified": "TikTok Studio: Todos; 19 views, 1 curtidas",
+      "destination_verified": "@closetminimal via menu Perfil antes de upload e ação final",
+      "publication_route": "TikTok Studio browser",
+      "layout_revision": "2026-10-18-square-safe",
+      "native_ai_label": true,
+      "latest_metrics": {
+        "views": 19,
+        "likes": 1,
+        "comments": 0,
+        "observed_date": "2026-10-18"
+      }
+    },
+    {
+      "id": "sozinha-escada-2026-10-18",
+      "local_dir": "posts/2026-10-18/1400",
+      "slot": "2026-10-18T14:00:00-03:00",
+      "status": "publicado",
+      "tiktok_id": "7698029145527192840",
+      "remote_id": "7698029145527192840",
+      "public_url": "https://www.tiktok.com/@closetminimal/photo/7698029145527192840",
+      "media_count": 2,
+      "asset_sha256": [
+        "5624c9ea1b685cc0c126d9513ba391447f816ea9ed559839d075f84391a65367",
+        "d3520ed75118bfccd616ce9af0ae56b37eb7b46e4bd318f343d915a5fe8757cb"
+      ],
+      "verified_date": "2026-10-18",
+      "provider_status_verified": "TikTok Studio: Todos; 3 views, 0 curtidas",
+      "destination_verified": "@closetminimal via menu Perfil antes de upload e ação final",
+      "publication_route": "TikTok Studio browser",
+      "layout_revision": "2026-10-18-square-safe",
+      "native_ai_label": true,
+      "latest_metrics": {
+        "views": 3,
+        "likes": 0,
+        "comments": 0,
+        "observed_date": "2026-10-18"
+      }
+    },
+    {
+      "id": "casal-looks-2026-10-18",
+      "local_dir": "posts/2026-10-18/1800",
+      "slot": "2026-10-18T18:00:00-03:00",
+      "status": "substituido_excluido_recuperavel",
+      "tiktok_id": "7698029651645435142",
+      "remote_id": "7698029651645435142",
+      "public_url": "https://www.tiktok.com/@closetminimal/photo/7698029651645435142",
+      "media_count": 2,
+      "asset_sha256": [
+        "a9051a82afab5e600f22251ef3192caf36414bea509483e2ee35fb5f3eeb77d8",
+        "ae2c78008abc3207da8e7bab7adaf52d320b0e637ba494ef347c9123e902ccb3"
+      ],
+      "verified_date": "2026-10-18",
+      "provider_status_verified": "Excluído via Studio; recuperável30dias; não restaurar",
+      "destination_verified": "@closetminimal via menu Perfil antes de upload e ação final",
+      "publication_route": "TikTok Studio browser",
+      "layout_revision": "2026-10-18-square-safe",
+      "native_ai_label": true,
+      "replaced_by": "7698083157718879506"
+    },
+    {
+      "id": "casal-teste-cta-2026-10-18",
+      "slot": "2026-10-18T18:00:00-03:00",
+      "status": "publicado",
+      "tiktok_id": "7698083157718879506",
+      "remote_id": "7698083157718879506",
+      "local_dir": "posts/2026-10-18/1800-teste-cta",
+      "public_url": "https://www.tiktok.com/@closetminimal/photo/7698083157718879506",
+      "media_count": 3,
+      "asset_sha256": [
+        "2cdb6ead5936a3925b5d36a09d8622b809e6636663d1b645db43734a6c8cfc14",
+        "3856f29757db9c80e268d13d5666552aeeabf277c09bf8e92bc43069e26e6c24",
+        "5af19b7f90b22255b8a4cdbf2b13b92467677104ffa5ee92137d6bae4274accf"
+      ],
+      "verified_date": "2026-10-19",
+      "provider_status_verified": "TikTok Studio:18/10 18h;Todos;106views,0curtidas,0comentários",
+      "destination_verified": "menu Perfil @closetminimal imediatamente antes de upload e agendamento",
+      "native_ai_label": true,
+      "on_image_ai_disclaimer": false,
+      "visual_cta": [
+        "Comenta 1, 2 ou 3",
+        "Curtiu? Deixa um coração.",
+        "Segue @closetminimal para mais ideias"
+      ],
+      "replaces_tiktok_id": "7698029651645435142",
+      "publication_route": "TikTok Studio browser",
+      "latest_metrics": {
+        "views": 106,
+        "likes": 0,
+        "comments": 0,
+        "observed_date": "2026-10-19"
+      }
+    },
+    {
+      "id": "casal-janela-2026-10-19",
+      "slot": "2026-10-19T10:00:00-03:00",
+      "status": "publicado",
+      "tiktok_id": "7698333806880656658",
+      "remote_id": "7698333806880656658",
+      "public_url": "https://www.tiktok.com/@closetminimal/photo/7698333806880656658",
+      "local_dir": "posts/2026-10-19/1000",
+      "media_count": 2,
+      "asset_sha256": [
+        "9a278d344f66482056454ab4dda94d0488119f16e53dc1970e3fa1c54531117a",
+        "eda8ad52f962ec8d1db95433a19926d4c6e3d3fea5b70cd5aae446040926b507"
+      ],
+      "verified_date": "2026-10-19",
+      "provider_status_verified": "TikTok Studio:19 de out;Todos;128views,0curtidas,0comentários",
+      "destination_verified": "Perfil do menu da sessão @closetminimal antes de upload e ação final",
+      "native_ai_label": true,
+      "on_image_ai_disclaimer": false,
+      "visual_cta": [
+        "comentário contextual",
+        "curtir",
+        "seguir @closetminimal"
+      ],
+      "reference_url": "https://www.tiktok.com/@closetminimal/photo/7583928005593025813",
+      "qa": {
+        "all_files_inspected": true,
+        "central_3_4_crop_reviewed": true,
+        "native_feed_preview_reviewed": true,
+        "anatomy_reviewed": true,
+        "uniform_square_dimensions": true
+      },
+      "publication_route": "TikTok Studio browser",
+      "latest_metrics": {
+        "views": 128,
+        "likes": 0,
+        "comments": 0,
+        "observed_date": "2026-10-19"
+      }
+    },
+    {
+      "id": "sozinha-look-inteiro-2026-10-19",
+      "slot": "2026-10-19T15:00:00-03:00",
+      "status": "publicado",
+      "tiktok_id": "7698334950075960583",
+      "remote_id": "7698334950075960583",
+      "public_url": "https://www.tiktok.com/@closetminimal/photo/7698334950075960583",
+      "local_dir": "posts/2026-10-19/1500",
+      "media_count": 2,
+      "asset_sha256": [
+        "1ec30deccce0ee0889bc2c95f3304e79861e5e9a77135a7ace731615c4b0a0b7",
+        "bd8ebbcbe6ce60a00a9366d4e0debd4ac6217470496ea91631a0bc605cc04dfb"
+      ],
+      "verified_date": "2026-10-19",
+      "provider_status_verified": "TikTok Studio:19 de out;Todos;88views,0curtidas,0comentários",
+      "destination_verified": "Perfil do menu da sessão @closetminimal antes de upload e ação final",
+      "native_ai_label": true,
+      "on_image_ai_disclaimer": false,
+      "visual_cta": [
+        "comentário contextual",
+        "curtir",
+        "seguir @closetminimal"
+      ],
+      "reference_url": "https://www.tiktok.com/@closetminimal/photo/7583616310253276436",
+      "qa": {
+        "all_files_inspected": true,
+        "central_3_4_crop_reviewed": true,
+        "native_feed_preview_reviewed": true,
+        "anatomy_reviewed": true,
+        "uniform_square_dimensions": true
+      },
+      "publication_route": "TikTok Studio browser",
+      "latest_metrics": {
+        "views": 88,
+        "likes": 0,
+        "comments": 0,
+        "observed_date": "2026-10-19"
+      }
+    },
+    {
+      "id": "casal-sem-beijo-2026-10-20",
+      "slot": "2026-10-20T10:00:00-03:00",
+      "status": "publicado",
+      "tiktok_id": "7698574727127878930",
+      "remote_id": "7698574727127878930",
+      "public_url": "https://www.tiktok.com/@closetminimal/photo/7698574727127878930",
+      "local_dir": "posts/2026-10-20/1000",
+      "media_count": 3,
+      "asset_sha256": [
+        "ed120c3c1ad44590115de6f8d4585416300a169d9e85417fb43b76befcee7bbc",
+        "d6d0b9f3f417f475dbd3fd30bace178cf06e6a69ca84f7d4742b0f1d3ba14fe1",
+        "ed103bbe52401c4f20634faaafdbf0d1b9ddf6ff954467eaddb6de472ecac026"
+      ],
+      "verified_date": "2026-10-21",
+      "provider_status_verified": "TikTok Studio: publicado, Todos, métricas presentes",
+      "destination_verified": "menu Perfil aponta @closetminimal imediatamente antes de cada upload e agendamento",
+      "native_ai_label": true,
+      "on_image_ai_disclaimer": false,
+      "visual_cta": [
+        "pergunta de comentário contextual",
+        "curtir",
+        "seguir @closetminimal"
+      ],
+      "reference_url": "https://www.tiktok.com/@victoriahui/video/7216417447207832837",
+      "publication_route": "TikTok Studio browser",
+      "qa": {
+        "all_final_files_visually_inspected": true,
+        "central_3_4_crop_reviewed": true,
+        "top_right_bottom_ui_overlap_reviewed": true,
+        "native_feed_preview_reviewed": true,
+        "anatomy_reviewed": true,
+        "uniform_square_dimensions": true
+      },
+      "latest_metrics": {
+        "views": 193,
+        "likes": 2,
+        "comments": 0,
+        "observed_date": "2026-10-21"
+      }
+    },
+    {
+      "id": "sozinha-sentada-2026-10-20",
+      "slot": "2026-10-20T15:00:00-03:00",
+      "status": "publicado",
+      "tiktok_id": "7698576377791925512",
+      "remote_id": "7698576377791925512",
+      "public_url": "https://www.tiktok.com/@closetminimal/photo/7698576377791925512",
+      "local_dir": "posts/2026-10-20/1500",
+      "media_count": 3,
+      "asset_sha256": [
+        "d442f6ac75d183ee3113537ef52459340dbd19cf7c2563edb96ae9e6a7097ec8",
+        "0fe26f00afccc0d6918cbd4556b2a32834952bddc0e2c59571622adcff286d38",
+        "9a5c766d231a99cce01e809d467daf5415fe2015b00af66d248774ccff3a689e"
+      ],
+      "verified_date": "2026-10-21",
+      "provider_status_verified": "TikTok Studio: publicado, Todos, métricas presentes",
+      "destination_verified": "menu Perfil aponta @closetminimal imediatamente antes de cada upload e agendamento",
+      "native_ai_label": true,
+      "on_image_ai_disclaimer": false,
+      "visual_cta": [
+        "pergunta de comentário contextual",
+        "curtir",
+        "seguir @closetminimal"
+      ],
+      "reference_url": "https://www.tiktok.com/@closetminimal/photo/7583616310253276436",
+      "publication_route": "TikTok Studio browser",
+      "qa": {
+        "all_final_files_visually_inspected": true,
+        "central_3_4_crop_reviewed": true,
+        "top_right_bottom_ui_overlap_reviewed": true,
+        "native_feed_preview_reviewed": true,
+        "anatomy_reviewed": true,
+        "uniform_square_dimensions": true
+      },
+      "latest_metrics": {
+        "views": 175,
+        "likes": 2,
+        "comments": 0,
+        "observed_date": "2026-10-21"
+      }
+    },
+    {
+      "id": "casal-ombros-risada-2026-10-21",
+      "slot": "2026-10-21T15:00:00-03:00",
+      "status": "publicado",
+      "assets": [
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-21\\1500\\001.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "1f0b3e0be5fa8bcab52e4aae838ea62e363fd079894f2b80da1c3c72a7dc38d8"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-21\\1500\\002.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "a4a9ec4cdb2f613cd3ed5d3d3787118dfe0a0eb19d4497c865813eadbb3dedba"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-21\\1500\\003.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "e3b41fd6c4c9f1719d1c3474ec1771822aa4dbc3d0843dcaeee54a290e29820b"
+        }
+      ],
+      "reference_url": "https://www.tiktok.com/@closetminimal/photo/7583928005593025813",
+      "native_ai_label_required": true,
+      "on_image_ai_disclaimer": false,
+      "tool": "imagegen integrado",
+      "prompt": "Casal adulto fictício, ombros próximos e conversa natural; tipografia serifada marrom, fundo creme. CTAs comentário, curtir e seguir. Revisão: reduzir toda composição70% e manter região central segura.",
+      "tiktok_id": "7699120259764161800",
+      "remote_id": "7699120259764161800",
+      "public_url": "https://www.tiktok.com/@closetminimal/photo/7699120259764161800",
+      "verified_date": "2026-10-21",
+      "provider_status_verified": "TikTok Studio21/10 às18h22:Todos habilitado,64views4curtidas0comentários",
+      "destination_verified": "Perfil do menu da sessão @closetminimal imediatamente antes do upload e agendamento",
+      "native_ai_label": true,
+      "qa": {
+        "all_final_files_visually_inspected": true,
+        "central_3_4_crop_reviewed": true,
+        "top_right_bottom_ui_overlap_reviewed": true,
+        "native_feed_preview_reviewed": true,
+        "anatomy_reviewed": true,
+        "uniform_square_dimensions": true
+      },
+      "sound": "Until I Found You - Ana Luise Fernandes Lima Miranda",
+      "latest_metrics": {
+        "views": 64,
+        "likes": 4,
+        "comments": 0,
+        "observed_date": "2026-10-21"
+      }
+    },
+    {
+      "id": "sozinha-costas-2026-10-21",
+      "slot": "2026-10-21T18:30:00-03:00",
+      "status": "publicado",
+      "tiktok_id": "7699236527779433735",
+      "remote_id": "7699236527779433735",
+      "public_url": "https://www.tiktok.com/@closetminimal/photo/7699236527779433735",
+      "assets": [
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-21\\agora-costas\\001.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "389a45a4e9bbe022a7bbeac711429ef5495e464de4cc02564c7f47c1d0d45f00"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-21\\agora-costas\\002.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "69a31876f104dcc68ce980df2da0d458745a6fb4756635f2a8e88f42e3ae0db3"
+        }
+      ],
+      "media_count": 2,
+      "local_dir": "posts/2026-10-21/agora-costas",
+      "verified_date": "2026-10-21",
+      "provider_status_verified": "TikTok Studio:Todos habilitado,21out18:30,4views",
+      "destination_verified": "menu Perfil @closetminimal imediatamente antes de cada upload e ação final",
+      "native_ai_label": true,
+      "on_image_ai_disclaimer": false,
+      "visual_cta": [
+        "pergunta contextual de comentário",
+        "curtir",
+        "seguir @closetminimal com benefício"
+      ],
+      "sound": "Suddenly I See - KT Tunstall",
+      "tool": "imagegen integrado",
+      "reference_url": "https://www.tiktok.com/@closetminimal/photo/7583616310253276436",
+      "prompt": "Adultas fictícias, fotografia natural, fonte serifada marrom, fundo creme; costas ou espelho. Texto em português e CTAs. Revisão via imagegen:reduzir toda composição75% e centralizar para margens generosas.",
+      "qa": {
+        "all_final_files_visually_inspected": true,
+        "central_3_4_crop_reviewed": true,
+        "top_right_bottom_ui_overlap_reviewed": true,
+        "native_feed_preview_reviewed": true,
+        "anatomy_reviewed": true,
+        "uniform_square_dimensions": true
+      },
+      "rights": "Imagens originais de adultas fictícias geradas por IA;som do catálogo nativo TikTok"
+    },
+    {
+      "id": "sozinha-espelho-2026-10-21",
+      "slot": "2026-10-21T20:00:00-03:00",
+      "status": "publicado",
+      "tiktok_id": "7699238252464885044",
+      "remote_id": "7699238252464885044",
+      "public_url": "https://www.tiktok.com/@closetminimal/photo/7699238252464885044",
+      "assets": [
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-21\\2000-espelho\\001.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "ce35fec3a2263384ebfed51a0846965514d2344ee6ea0639a935ee674bf374db"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-21\\2000-espelho\\002.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "e7cffa3a72b6df8846af13e145463bb25e6835aeeb59e9785d82a81994af44c5"
+        }
+      ],
+      "media_count": 2,
+      "local_dir": "posts/2026-10-21/2000-espelho",
+      "verified_date": "2026-10-22",
+      "provider_status_verified": "TikTok Studio:21out20h,Todos habilitado,93views1curtida0comentários",
+      "destination_verified": "menu Perfil @closetminimal imediatamente antes de cada upload e ação final",
+      "native_ai_label": true,
+      "on_image_ai_disclaimer": false,
+      "visual_cta": [
+        "pergunta contextual de comentário",
+        "curtir",
+        "seguir @closetminimal com benefício"
+      ],
+      "sound": "So Easy (To Fall In Love) - Olivia Dean",
+      "tool": "imagegen integrado",
+      "reference_url": "https://www.tiktok.com/@closetminimal/photo/7583616310253276436",
+      "prompt": "Adultas fictícias, fotografia natural, fonte serifada marrom, fundo creme; costas ou espelho. Texto em português e CTAs. Revisão via imagegen:reduzir toda composição75% e centralizar para margens generosas.",
+      "qa": {
+        "all_final_files_visually_inspected": true,
+        "central_3_4_crop_reviewed": true,
+        "top_right_bottom_ui_overlap_reviewed": true,
+        "native_feed_preview_reviewed": true,
+        "anatomy_reviewed": true,
+        "uniform_square_dimensions": true
+      },
+      "rights": "Imagens originais de adultas fictícias geradas por IA;som do catálogo nativo TikTok"
+    },
+    {
+      "id": "casal-detalhes-passeio-2026-10-22",
+      "status": "publicado",
+      "slot": "2026-10-22T10:00:00-03:00",
+      "assets": [
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1000\\001.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "cf0a7f63a358f42d271b2626c584f24dce4bf4aa31fa34e4b6cd79bbc7576417"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1000\\002.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "f610ae44c9c1c93de6a161454e98d177865e7c7d0df35e5cd7cc5da8de72f097"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1000\\003.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "ec78b6e95edf204504dae2a532f3ce7098afc8564f05228a7edfe9a6311c429c"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1000\\004.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "ada6845ae746117cff660ec27f6543724370d57c204aeebf258476596c1808e6"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1000\\005.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "2161d7f560688f9df211b75d58aaccd7a035533b511eae1e486623bd958ac0d0"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1000\\006.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "8e83d4e94b6b0af7fb6e08f3336fdeab928467f566a5c7c4268a32eef789c410"
+        }
+      ],
+      "media_count": 6,
+      "reference_url": "https://www.tiktok.com/@closetminimal/photo/7576732447551868181",
+      "native_ai_label_required": true,
+      "on_image_ai_disclaimer": false,
+      "tiktok_id": "7699450118033984776",
+      "remote_id": "7699450118033984776",
+      "public_url": "https://www.tiktok.com/@closetminimal/photo/7699450118033984776",
+      "verified_date": "2026-10-23",
+      "provider_status_verified": "Studio: publicado e público em22/10, botão Todos ativo; verificado23/10",
+      "native_ai_label": true,
+      "destination_verified": "Perfil @closetminimal imediatamente antes do upload e agendamento",
+      "qa": {
+        "all_final_files_visually_inspected": true,
+        "central_3_4_crop_reviewed": true,
+        "top_right_bottom_ui_overlap_reviewed": true,
+        "native_feed_preview_reviewed": true,
+        "anatomy_reviewed": true,
+        "uniform_square_dimensions": true
+      },
+      "tool": "imagegen integrado",
+      "prompt": "Fotografia original de adultos fictícios, fotos casal sem rosto:passos,sombras,paisagem,café. Sansserifmarromfundo creme;capadesenvolvimento4exemplosCTA;revisãoimagegenredução80%paraáreasegura.",
+      "sound": "Until I Found You - Ana Luise Fernandes Lima Miranda",
+      "metrics_observed_2026_10_23": {
+        "views": 225,
+        "likes": 9,
+        "comments": 0
+      }
+    },
+    {
+      "id": "sozinha-passeio-quatro-2026-10-22",
+      "status": "publicado",
+      "slot": "2026-10-22T15:00:00-03:00",
+      "assets": [
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1500\\001.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "cac767ebe5de25d5298ac40b3d14c7c7f1c3d624e74c78260da67437533bc3d0"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1500\\002.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "7e181a44fe34b0447b55af11cab6f3e608ee8c6abaeb1ba78cb7e0ec34a32347"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1500\\003.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "4656a53e61b4aea8a5f721fc7de8c070c40879289cf2b41ffbb2b4418f3a0422"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1500\\004.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "1fd43da3f6a8eb037e4afa264289aa1361da3f7a076fa25976b37dcc0de16230"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1500\\005.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "531618585da94c31b4aa2534ba8c3326cf8ec596dd37abbbde385a5c9319d462"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1500\\006.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "f1d0e5d1be3dd4c73b3368bc8df4fc1f9120c934caebcc91fc5c6d37dc3c7bba"
+        }
+      ],
+      "media_count": 6,
+      "reference_url": "https://www.tiktok.com/@closetminimal/photo/7583616310253276436",
+      "native_ai_label_required": true,
+      "on_image_ai_disclaimer": false,
+      "tiktok_id": "7699453870833011975",
+      "remote_id": "7699453870833011975",
+      "public_url": "https://www.tiktok.com/@closetminimal/photo/7699453870833011975",
+      "verified_date": "2026-10-23",
+      "provider_status_verified": "Studio: publicado e público em22/10, botão Todos ativo; verificado23/10",
+      "native_ai_label": true,
+      "destination_verified": "Perfil @closetminimal imediatamente antes do upload e agendamento",
+      "qa": {
+        "all_final_files_visually_inspected": true,
+        "central_3_4_crop_reviewed": true,
+        "top_right_bottom_ui_overlap_reviewed": true,
+        "native_feed_preview_reviewed": true,
+        "anatomy_reviewed": true,
+        "uniform_square_dimensions": true
+      },
+      "tool": "imagegen integrado",
+      "prompt": "Fotografia original de adultas fictícias,fotossozinhanopasseio:porta,janela,banco,caminhada. Sansserifmarromfundo creme;capadesenvolvimento4exemplosCTA;revisãoimagegenredução80%efinal90%em1,2,6paraáreasegura.",
+      "sound": "Suddenly I See - KT Tunstall",
+      "metrics_observed_2026_10_23": {
+        "views": 184,
+        "likes": 4,
+        "comments": 0
+      }
+    },
+    {
+      "id": "casal-em-casa-2026-10-23",
+      "status": "transferido_para_2026-10-25",
+      "slot": "2026-10-23T10:00:00-03:00",
+      "assets": [
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-23\\1000\\001.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "f69cda0245291e93bf53184f4e20d322edf2f7a92517b4ddc50db9300695ed70"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-23\\1000\\002.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "7c51188363b00a584dec931feec3488db46bea406d16dda9026d01dfb687ecca"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-23\\1000\\003.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "7c2f8671b7f831321b1f530bbcf7a6f21b28749e46beb39279543ffeb1131131"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-23\\1000\\004.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "5eaf5717d2d94617f5d3dd2ff08c5e928db0dd13bb3e7891fb647323a9d43d7c"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-23\\1000\\005.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "6ba7da15d64a1d5f0b07c38914abd9f84baa5f47902e07a34b93f1c44a370086"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-23\\1000\\006.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "7766aa1a9ac94521a76b2331a214d44d5ec8a5cc0ab53e8b9480149a04863a4b"
+        }
+      ],
+      "media_count": 6,
+      "reference_url": "https://www.tiktok.com/@closetminimal/photo/7576732447551868181",
+      "native_ai_label_required": true,
+      "on_image_ai_disclaimer": false,
+      "qa": {
+        "all_final_files_visually_inspected": true,
+        "central_3_4_crop_reviewed": true,
+        "top_right_bottom_ui_overlap_reviewed": true,
+        "native_feed_preview_reviewed": true,
+        "anatomy_reviewed": true,
+        "uniform_square_dimensions": true
+      },
+      "title": "4 ideias de fotos de casal em casa 🤍",
+      "caption": "Qual combina com vocês: sofá, café, chão da sala ou filme? Comenta 1, 2, 3 ou 4 🤍 Quatro ideias para fotografar juntos em casa, usando uma luz confortável e uma posição natural. Adaptem ao jeito de vocês. Curtiu? Deixa um coração e segue @closetminimal para mais ideias de fotos e looks fáceis. #fotodecasal #posesdecasal #fotosemcasa #ideiasdefotos #closetminimal",
+      "tool": "imagegen integrado",
+      "prompt": "6 slides originais: capa, lado a lado, café, chão da sala, filme, CTA. Área segura creme; correções de margem em2,5,6.",
+      "sound": "Until I Found You - Ana Luise Fernandes Lima Miranda",
+      "publication_note": "Sem publicação/agendamento. Studio exige15min antecedência; horário10h indisponível na conclusão. Revisão automática rejeitou troca paraAgora, nenhuma publicação feita. Upload descartado após tentativa de salvar rascunho sem confirmação; arquivos preservados localmente.",
+      "replacement_id": "casal-em-casa-2026-10-25"
+    },
+    {
+      "id": "sozinha-jaqueta-2026-10-23",
+      "status": "publicado",
+      "slot": "2026-10-23T15:00:00-03:00",
+      "assets": [
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-23\\1500\\001.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "f290a46de2f59e124273b2a7e93cf82f3a8f691aa75f8354e922846fc05ef8e4"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-23\\1500\\002.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "3391fac8e2f926fe1162227014cc838efa1674ab6b01a315dfe22ed065e0fa59"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-23\\1500\\003.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "daed033dfc612b8d2a1201896722e09cf8a7531cea72989b6aea45be0aeb566e"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-23\\1500\\004.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "df85637609fc9378cbb96c46d776a98efe51e65318a95e8f1da1c851573d5473"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-23\\1500\\005.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "b5f2842db8b70044cb4263843a8fb33f5a1bd778f148845fb594de527d30b821"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-23\\1500\\006.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "961efa2405e4353c07a2877d3564721da6bd46c22320ddfa3cac2d2ca30a0502"
+        }
+      ],
+      "media_count": 6,
+      "reference_url": "https://www.tiktok.com/@closetminimal/photo/7583616310253276436",
+      "native_ai_label_required": true,
+      "native_ai_label": true,
+      "on_image_ai_disclaimer": false,
+      "destination_verified": "Perfil @closetminimal antes do upload eAgendar",
+      "qa": {
+        "all_final_files_visually_inspected": true,
+        "central_3_4_crop_reviewed": true,
+        "top_right_bottom_ui_overlap_reviewed": true,
+        "native_feed_preview_reviewed": true,
+        "anatomy_reviewed": true,
+        "uniform_square_dimensions": true
+      },
+      "tool": "imagegen integrado",
+      "prompt": "6slides originais: capa, jaqueta no ombro, mãos nos bolsos, jaqueta no colo, caminhada, CTA. Correção imagem4mostra dois sapatos;6área segura ampliada.",
+      "sound": "Suddenly I See - KT Tunstall",
+      "rights": "Imagens originais de adulta fictícia; música catálogo nativo TikTok",
+      "tiktok_id": "7699847881708096786",
+      "remote_id": "7699847881708096786",
+      "public_url": "https://www.tiktok.com/@closetminimal/photo/7699847881708096786",
+      "verified_date": "2026-10-24",
+      "provider_status_verified": "Studio:23out15:00,Todosativo,225views5likes0comentários,verificado24out21h58",
+      "proof_note": "DOM nativo conferido; captura exibida na ferramenta. Persistência da captura bloqueada EPERM no navegador, não há PNG de confirmação salvo."
+    },
+    {
+      "id": "casal-em-casa-2026-10-25",
+      "status": "publicado",
+      "slot": "2026-10-25T10:00:00-03:00",
+      "assets": [
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-25\\1000\\001.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "f69cda0245291e93bf53184f4e20d322edf2f7a92517b4ddc50db9300695ed70"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-25\\1000\\002.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "7c51188363b00a584dec931feec3488db46bea406d16dda9026d01dfb687ecca"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-25\\1000\\003.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "7c2f8671b7f831321b1f530bbcf7a6f21b28749e46beb39279543ffeb1131131"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-25\\1000\\004.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "5eaf5717d2d94617f5d3dd2ff08c5e928db0dd13bb3e7891fb647323a9d43d7c"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-25\\1000\\005.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "6ba7da15d64a1d5f0b07c38914abd9f84baa5f47902e07a34b93f1c44a370086"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-25\\1000\\006.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "7766aa1a9ac94521a76b2331a214d44d5ec8a5cc0ab53e8b9480149a04863a4b"
+        }
+      ],
+      "media_count": 6,
+      "reference_url": "https://www.tiktok.com/@closetminimal/photo/7576732447551868181",
+      "native_ai_label_required": true,
+      "on_image_ai_disclaimer": false,
+      "qa": {
+        "all_final_files_visually_inspected": true,
+        "central_3_4_crop_reviewed": true,
+        "top_right_bottom_ui_overlap_reviewed": true,
+        "native_feed_preview_reviewed": true,
+        "anatomy_reviewed": true,
+        "uniform_square_dimensions": true
+      },
+      "title": "4 ideias de fotos de casal em casa 🤍",
+      "caption": "Qual combina com vocês: sofá, café, chão da sala ou filme? Comenta 1, 2, 3 ou 4 🤍 Quatro ideias para fotografar juntos em casa, usando uma luz confortável e uma posição natural. Adaptem ao jeito de vocês. Curtiu? Deixa um coração e segue @closetminimal para mais ideias de fotos e looks fáceis. #fotodecasal #posesdecasal #fotosemcasa #ideiasdefotos #closetminimal",
+      "tool": "imagegen integrado",
+      "prompt": "6 slides originais: capa, lado a lado, café, chão da sala, filme, CTA. Área segura creme; correções de margem em2,5,6.",
+      "sound": "Until I Found You - Ana Luise Fernandes Lima Miranda",
+      "publication_note": "Lote inédito originalmente preparado23/10 e nunca publicado; programado25/10 após fila nativa vazia e nova préviaFeed conferida.",
+      "tiktok_id": "7700559383473786130",
+      "remote_id": "7700559383473786130",
+      "public_url": "https://www.tiktok.com/@closetminimal/photo/7700559383473786130",
+      "verified_date": "2026-10-26",
+      "provider_status_verified": "Studio público,Todosativo,verificado26/10",
+      "native_ai_label": true,
+      "destination_verified": "Perfil da sessão @closetminimal antes deupload eAgendar"
+    },
+    {
+      "id": "sozinha-oculos-2026-10-25",
+      "status": "publicado",
+      "slot": "2026-10-25T15:00:00-03:00",
+      "assets": [
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-25\\1500\\001.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "d356c7258db324469cae41df1275d19fb15cb6e9e4a50aeba48bfc90153008f7"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-25\\1500\\002.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "3279e9bf7827588f7a04378ddd687288de01f706cb5ff2d6d3eec1ceb0f4ff55"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-25\\1500\\003.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "d373234f0b23bd97fbfdd1305635dbd2e2ca0ed465d4fbd307a025a9d11bcdb7"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-25\\1500\\004.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "4c2e347139e4e9679aed219c20119532775548df215b79f445ebd863cecd1bc4"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-25\\1500\\005.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "0b526690fb8883f38bd4e6a04c7eb83a7daf3819c416a2c5ec0ee41655e0f522"
+        }
+      ],
+      "media_count": 5,
+      "reference_url": "https://www.tiktok.com/@closetminimal/photo/7583616310253276436",
+      "native_ai_label_required": true,
+      "native_ai_label": true,
+      "on_image_ai_disclaimer": false,
+      "destination_verified": "Perfil da sessão @closetminimal imediatamente antes deupload eAgendar",
+      "qa": {
+        "all_final_files_visually_inspected": true,
+        "central_3_4_crop_reviewed": true,
+        "top_right_bottom_ui_overlap_reviewed": true,
+        "native_feed_preview_reviewed": true,
+        "anatomy_reviewed": true,
+        "uniform_square_dimensions": true
+      },
+      "tool": "imagegen integrado",
+      "prompt": "5slides originais: capa, olhar lado, banco, parede eCTA. Fotos de adulta fictícia, óculos, branco e bege; creme e sansmarrom; slides4e5reduzidos80%paraárea segura.",
+      "sound": "Suddenly I See - KT Tunstall",
+      "tiktok_id": "7700560729660755208",
+      "remote_id": "7700560729660755208",
+      "public_url": "https://www.tiktok.com/@closetminimal/photo/7700560729660755208",
+      "verified_date": "2026-10-26",
+      "provider_status_verified": "Studio público,Todosativo,verificado26/10",
+      "rights": "Fotos originais geradas adulta fictícia; som catálogoTikTok"
+    },
+    {
+      "id": "casal-cores-2026-10-26",
+      "status": "agendado",
+      "slot": "2026-10-26T10:00:00-03:00",
+      "assets": [
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-26\\1000\\001.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "3bb30915b1193cac7e04fcbe803ed52e294dae8fc8bbc6292ae35cb8c5359ee7"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-26\\1000\\002.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "6c640ae2cc5a2ba67fd4a9d68bd3e077b40b092df827bbee6449ef7c116cb240"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-26\\1000\\003.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "45006f164b14e273f919624966fde3d8bfd7f0f56a8e1915b7d419b141053307"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-26\\1000\\004.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "96d24af88d925d2c4d811c141f89a4505acd6a7feb29e7bc695373838438d6f2"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-26\\1000\\005.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "c4dc96a4dd888b04e05dc749f775e762ae13e4132e1113ad9e4c86b018a61a06"
+        }
+      ],
+      "media_count": 5,
+      "reference_url": "https://www.tiktok.com/@closetminimal/photo/7576732447551868181",
+      "native_ai_label_required": true,
+      "native_ai_label": true,
+      "on_image_ai_disclaimer": false,
+      "destination_verified": "Perfil da sessão @closetminimal imediatamente antes decada upload eAgendar",
+      "qa": {
+        "all_final_files_visually_inspected": true,
+        "central_3_4_crop_reviewed": true,
+        "top_right_bottom_ui_overlap_reviewed": true,
+        "native_feed_preview_reviewed": true,
+        "anatomy_reviewed": true,
+        "uniform_square_dimensions": true
+      },
+      "tool": "imagegen integrado",
+      "prompt": "Original,5slides:capa+3exemplos+CTA. Creme,sansmarrom,adultosfictícios,posesnaturais. CorreçãoIAparaafastarCTA/legenda.",
+      "sound": "Until I Found You - Ana Luise Fernandes Lima Miranda",
+      "tiktok_id": "7700933079648505096",
+      "remote_id": "7700933079648505096",
+      "public_url": "https://www.tiktok.com/@closetminimal/photo/7700933079648505096",
+      "verified_date": "2026-10-26",
+      "provider_status_verified": "Studio26out10:00;relógio;Todosdesativado;IDconfirmado",
+      "rights": "Imagens originais geradas de adultos fictícios;somcatálogoTikTok"
+    },
+    {
+      "id": "sozinha-bolsa-2026-10-26",
+      "status": "agendado",
+      "slot": "2026-10-26T15:00:00-03:00",
+      "assets": [
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-26\\1500\\001.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "a7c8ad72a7f5121c3e47cf51baad6c6db1ccb00e3c73bddad944d569158f4c69"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-26\\1500\\002.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "ed1d88711910c30cf27e6daea47b8d3aa47ae08c944c466f82362657494546cb"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-26\\1500\\003.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "677787b984abe86854d5696bddbc5fc580630807db7280b9a155c899ddee685c"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-26\\1500\\004.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "328c34cd64095cbb90f06f3a337952db5be2e9a63df76f5326183e22e78d88eb"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-26\\1500\\005.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "c3da5aff2f97738458cf4df2a2ae00220eb0163d749aea544c414c65ea7dd031"
+        }
+      ],
+      "media_count": 5,
+      "reference_url": "https://www.tiktok.com/@closetminimal/photo/7583616310253276436",
+      "native_ai_label_required": true,
+      "native_ai_label": true,
+      "on_image_ai_disclaimer": false,
+      "destination_verified": "Perfil da sessão @closetminimal imediatamente antes decada upload eAgendar",
+      "qa": {
+        "all_final_files_visually_inspected": true,
+        "central_3_4_crop_reviewed": true,
+        "top_right_bottom_ui_overlap_reviewed": true,
+        "native_feed_preview_reviewed": true,
+        "anatomy_reviewed": true,
+        "uniform_square_dimensions": true
+      },
+      "tool": "imagegen integrado",
+      "prompt": "Original,5slides:capa+3exemplos+CTA. Creme,sansmarrom,adultosfictícios,posesnaturais. CorreçãoIAparaafastarCTA/legenda.",
+      "sound": "Suddenly I See - KT Tunstall",
+      "tiktok_id": "7700934220943789330",
+      "remote_id": "7700934220943789330",
+      "public_url": "https://www.tiktok.com/@closetminimal/photo/7700934220943789330",
+      "verified_date": "2026-10-26",
+      "provider_status_verified": "Studio26out15:00;relógio;Todosdesativado;IDconfirmado",
+      "rights": "Imagens originais geradas de adultos fictícios;somcatálogoTikTok"
+    }
+  ]
+}

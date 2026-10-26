@@ -1,0 +1,45 @@
+{
+  "id": "sozinha-escada-2026-10-18",
+  "local_dir": "posts/2026-10-18/1400",
+  "slot": "2026-10-18T14:00:00-03:00",
+  "status": "agendado",
+  "tiktok_id": "7698029145527192840",
+  "remote_id": "7698029145527192840",
+  "public_url": "https://www.tiktok.com/@closetminimal/photo/7698029145527192840",
+  "media_count": 2,
+  "asset_sha256": [
+    "5624c9ea1b685cc0c126d9513ba391447f816ea9ed559839d075f84391a65367",
+    "d3520ed75118bfccd616ce9af0ae56b37eb7b46e4bd318f343d915a5fe8757cb"
+  ],
+  "verified_date": "2026-10-18",
+  "provider_status_verified": "TikTok Studio: 18 de out, 14:00; relógio de agendamento; Todos desativado",
+  "destination_verified": "@closetminimal via menu Perfil antes de upload e ação final",
+  "publication_route": "TikTok Studio browser",
+  "layout_revision": "2026-10-18-square-safe",
+  "native_ai_label": true,
+  "assets": [
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-18\\1400\\001.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "5624c9ea1b685cc0c126d9513ba391447f816ea9ed559839d075f84391a65367"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-18\\1400\\002.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "d3520ed75118bfccd616ce9af0ae56b37eb7b46e4bd318f343d915a5fe8757cb"
+    }
+  ],
+  "qa": {
+    "each_file_visually_reviewed": true,
+    "central_3_4_crop_and_ui_review": "conteúdo importante dentro do recorte central; rostos, mãos e texto livres de sobreposições na prévia nativa",
+    "native_feed_preview_reviewed": true,
+    "original_fictional_ai_images": true,
+    "sound": "Som original; catálogo nativo retornou Nenhum resultado"
+  }
+}

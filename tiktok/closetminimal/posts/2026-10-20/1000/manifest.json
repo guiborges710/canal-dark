@@ -1,0 +1,68 @@
+{
+  "id": "casal-sem-beijo-2026-10-20",
+  "slot": "2026-10-20T10:00:00-03:00",
+  "status": "agendado",
+  "tiktok_id": "7698574727127878930",
+  "remote_id": "7698574727127878930",
+  "public_url": "https://www.tiktok.com/@closetminimal/photo/7698574727127878930",
+  "local_dir": "posts/2026-10-20/1000",
+  "media_count": 3,
+  "asset_sha256": [
+    "ed120c3c1ad44590115de6f8d4585416300a169d9e85417fb43b76befcee7bbc",
+    "d6d0b9f3f417f475dbd3fd30bace178cf06e6a69ca84f7d4742b0f1d3ba14fe1",
+    "ed103bbe52401c4f20634faaafdbf0d1b9ddf6ff954467eaddb6de472ecac026"
+  ],
+  "verified_date": "2026-10-19",
+  "provider_status_verified": "TikTok Studio:20 de out,10:00;ícone relógio;Todos desativado",
+  "destination_verified": "menu Perfil aponta @closetminimal imediatamente antes de cada upload e agendamento",
+  "native_ai_label": true,
+  "on_image_ai_disclaimer": false,
+  "visual_cta": [
+    "pergunta de comentário contextual",
+    "curtir",
+    "seguir @closetminimal"
+  ],
+  "reference_url": "https://www.tiktok.com/@victoriahui/video/7216417447207832837",
+  "publication_route": "TikTok Studio browser",
+  "qa": {
+    "all_final_files_visually_inspected": true,
+    "central_3_4_crop_reviewed": true,
+    "top_right_bottom_ui_overlap_reviewed": true,
+    "native_feed_preview_reviewed": true,
+    "anatomy_reviewed": true,
+    "uniform_square_dimensions": true
+  },
+  "assets": [
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-20\\1000\\001.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "ed120c3c1ad44590115de6f8d4585416300a169d9e85417fb43b76befcee7bbc"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-20\\1000\\002.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "d6d0b9f3f417f475dbd3fd30bace178cf06e6a69ca84f7d4742b0f1d3ba14fe1"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-20\\1000\\003.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "ed103bbe52401c4f20634faaafdbf0d1b9ddf6ff954467eaddb6de472ecac026"
+    }
+  ],
+  "title": "Fotos de casal sem beijo: conexão nos detalhes 🤍",
+  "caption": "Olhando juntos ou rindo: qual combina com vocês? Comenta 🤍 Aproximem os ombros, olhem para o mesmo lado ou conversem até a risada aparecer. Adaptem as ideias ao conforto dos dois. Não precisa roupa igual: uma cor em comum já conecta os looks. Curtiu? Deixa um coração e segue @closetminimal para mais fotos e looks fáceis. #fotodecasal #posesdecasal #ideiasdefotos #lookdecasal #closetminimal",
+  "sound": "Until I Found You — Ana Luise Fernandes Lima Miranda",
+  "hypothesis": "Uma restrição específica cria identificação; exemplos simples e pergunta de escolha incentivam salvar e comentar.",
+  "rights": "Imagens originais geradas por IA de adultos fictícios; música selecionada no catálogo nativo TikTok",
+  "tool": "imagegen integrado",
+  "prompt": "Fotografia natural de adultos brasileiros fictícios; uma cena por slide; fonte branca sans-serif; área central com margens desfocadas; anatomia realista e mãos separadas; sem aviso de IA na imagem. Casal:lado a lado,olhando juntos,rindo. Sozinha:sentada de lado,inclinada de leve,apoio no café. CTAvisual contextual de comentário,curtir,seguir. Revisão dos finais CTA:zoom-out e reposicionamento do texto inferior."
+}

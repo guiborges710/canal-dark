@@ -1,0 +1,73 @@
+{
+  "id": "casal-sem-rosto",
+  "account": "@closetminimal",
+  "status": "publicado",
+  "created_date": "2026-10-13",
+  "requested_output": "carrossel de fotos",
+  "publication_authorized_now": true,
+  "scheduled_at": "2026-10-14T08:00:00-03:00",
+  "remote_id": "7696396971141188871",
+  "referencia_url": "https://www.tiktok.com/@closetminimal/photo/7583928005593025813",
+  "referencia_complementar": "https://www.tiktok.com/@closetminimal/photo/7576732447551868181",
+  "hipotese": "Variar o tema vencedor de poses de casal com uma restricao concreta: preservar o rosto. Mantem colagens 2x2 com exemplos praticos, acrescenta novas fotos e desenvolvimento.",
+  "titulo": "Fotos de casal sem mostrar o rosto 🤍",
+  "legenda": "Quer registrar vocês dois sem mostrar o rosto? 🤍 Experimentem uma foto de costas, um abraço de pertinho ou um detalhe do encontro. As mãos, os looks e até os sapatos podem contar a história. Para deixar o conjunto mais harmônico, escolham uma cor em comum ou tons que conversem. Não precisa usar roupa igual nem montar uma produção complicada. Qual ideia vocês fariam primeiro? Salva para o próximo encontro, manda para o seu par e segue @closetminimal para mais inspirações de fotos + looks fáceis. Imagens ilustrativas geradas por IA. #fotodecasal #fotossemrosto #posesdecasal #ideiasdefotos #closetminimal",
+  "slides": [
+    {
+      "file": "slides-safe/001.png",
+      "purpose": "gancho visual",
+      "title": "Foto de casal sem mostrar o rosto?",
+      "subtitle": "4 ideias para salvar agora"
+    },
+    {
+      "file": "slides-safe/002.png",
+      "purpose": "quatro exemplos novos",
+      "labels": [
+        "De costas, de mãos dadas",
+        "Um abraço de pertinho",
+        "Detalhes do encontro",
+        "Vocês + a paisagem"
+      ]
+    },
+    {
+      "file": "slides-safe/003.png",
+      "purpose": "fecho e interacao",
+      "title": "O detalhe também conta a história",
+      "subtitle": "Qual vocês vão testar: 1, 2, 3 ou 4?",
+      "cta": "Salva e manda para o seu par"
+    }
+  ],
+  "arquivos": [
+    "slides-safe/001.png",
+    "slides-safe/002.png",
+    "slides-safe/003.png"
+  ],
+  "direitos": "Imagens originais geradas por imagegen; pessoas adultas ficticias. Sem imagens baixadas dos posts de referencia.",
+  "ai_disclosure": "Imagens geradas por IA em cada slide; Imagens ilustrativas geradas por IA na legenda.",
+  "visual_check": "Seis arquivos finais revisados individualmente. Quadrado 1254x1254 com bordas livres; conteudo importante preservado em recorte central 3:4. Previa Feed nativa conferida antes de Agendar, sem corte do conteudo. Conta confirmada imediatamente antes do upload e agendamento.",
+  "dimensions": [
+    [
+      1254,
+      1254
+    ],
+    [
+      1254,
+      1254
+    ],
+    [
+      1254,
+      1254
+    ]
+  ],
+  "asset_sha256": [
+    "ebb85771115fab3e33a6e168201d7981eb47dc30fc1b06c7d253abd29382bc04",
+    "ff3a95f971cd4f5467a0f88b7bed57179ca64aabe5a9a0318245f6ceea0bfda0",
+    "f4b3a09540d8066d8d3c75d689cb2e1c19a9d318de20ce754527ee209c6d49d0"
+  ],
+  "publication_route": "TikTok Studio browser",
+  "platform_ai_label_enabled": true,
+  "music": "Until I Found You — Ana Luise Fernandes Lima Miranda",
+  "replaced_remote_id": "7696306188425743623",
+  "layout_revision": "2026-10-14-square-safe",
+  "publication_verified_date": "2026-10-15"
+}

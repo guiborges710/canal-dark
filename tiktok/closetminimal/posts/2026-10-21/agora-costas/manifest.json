@@ -1,0 +1,51 @@
+{
+  "id": "sozinha-costas-2026-10-21",
+  "slot": "2026-10-21T18:30:00-03:00",
+  "status": "publicado",
+  "tiktok_id": "7699236527779433735",
+  "remote_id": "7699236527779433735",
+  "public_url": "https://www.tiktok.com/@closetminimal/photo/7699236527779433735",
+  "assets": [
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-21\\agora-costas\\001.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "389a45a4e9bbe022a7bbeac711429ef5495e464de4cc02564c7f47c1d0d45f00"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-21\\agora-costas\\002.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "69a31876f104dcc68ce980df2da0d458745a6fb4756635f2a8e88f42e3ae0db3"
+    }
+  ],
+  "media_count": 2,
+  "local_dir": "posts/2026-10-21/agora-costas",
+  "verified_date": "2026-10-21",
+  "provider_status_verified": "TikTok Studio:Todos habilitado,21out18:30,4views",
+  "destination_verified": "menu Perfil @closetminimal imediatamente antes de cada upload e ação final",
+  "native_ai_label": true,
+  "on_image_ai_disclaimer": false,
+  "visual_cta": [
+    "pergunta contextual de comentário",
+    "curtir",
+    "seguir @closetminimal com benefício"
+  ],
+  "sound": "Suddenly I See - KT Tunstall",
+  "tool": "imagegen integrado",
+  "reference_url": "https://www.tiktok.com/@closetminimal/photo/7583616310253276436",
+  "prompt": "Adultas fictícias, fotografia natural, fonte serifada marrom, fundo creme; costas ou espelho. Texto em português e CTAs. Revisão via imagegen:reduzir toda composição75% e centralizar para margens generosas.",
+  "qa": {
+    "all_final_files_visually_inspected": true,
+    "central_3_4_crop_reviewed": true,
+    "top_right_bottom_ui_overlap_reviewed": true,
+    "native_feed_preview_reviewed": true,
+    "anatomy_reviewed": true,
+    "uniform_square_dimensions": true
+  },
+  "rights": "Imagens originais de adultas fictícias geradas por IA;som do catálogo nativo TikTok"
+}

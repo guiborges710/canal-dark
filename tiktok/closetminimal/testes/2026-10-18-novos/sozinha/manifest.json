@@ -1,0 +1,42 @@
+{
+  "status": "teste_local_nao_publicar_sem_autorizacao",
+  "theme": "sozinha",
+  "publication_authorized_now": false,
+  "tool": "imagegen integrado",
+  "assets": [
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\testes\\2026-10-18-novos\\sozinha\\01.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "073f438d8164350296e572dd65363e244c8a8a57eb4fab69a9fe3b1fe84a6f24"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\testes\\2026-10-18-novos\\sozinha\\02.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "20e5c3155a42339c0b256bf4dd78679144210d81d677cc59771cbe55e6a93b5b"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\testes\\2026-10-18-novos\\sozinha\\03.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "2e8be0732b1cb090b0feca149b542dc12a50d324555d2cdbbddd1113c9ddad63"
+    }
+  ],
+  "qa": {
+    "every_final_inspected": true,
+    "central_3_4_crop": "texto, rostos, mãos e CTA dentro do recorte central",
+    "ui_overlap_review": "bordas externas com fundo desfocado; conteúdo principal centralizado",
+    "anatomy": "braços e mãos coerentes com posições; sem comparação ambígua de mãos",
+    "on_image_ai_text": false,
+    "native_mobile_preview": "não realizada: sem upload neste pedido",
+    "native_ai_label_required_if_published": true
+  },
+  "prompt_set": "Fotos originais de adultos fictícios, uma cena por slide, tipografia branca sans-serif, frases curtas em português; casal andando, sentado e de costas; mulher olhando café, vitrine e livro. Revisão imagegen: reduzir fotografia e textos em conjunto para região central de 70%, fundo externo desfocado, CTA acima de 73% da altura, sem aviso textual de IA."
+}

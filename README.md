@@ -1,119 +1,86 @@
-# Canal dark — pipeline de vídeo semi-automatizado
+# Canal dark — pipeline de Shorts em animação
 
-Entrega, para cada vídeo, uma pasta com `video.mp4`, `thumbnail.jpg` e `PUBLICAR.txt`
-(título, descrição e tags prontos). **O upload no YouTube é manual.**
+Para cada Short, o pipeline entrega uma pasta `output/<slug>/` com `video.mp4`, `thumbnail.jpg`,
+`PUBLICAR.txt` (título, descrição e tags prontos), `CONFORMIDADE.md` e `custo.json`. **O upload é manual**
+(ou `python run.py publish`, que sobe como privado).
+
+O vídeo é uma **animação vetorial feita por código**: cartões de texto, barras que crescem e pergunta de volta,
+com efeitos sonoros gerados por código. Não há narração, não há imagens de IA e não há fotos de terceiros.
 
 ```
-tema → pesquisa (Claude + busca web) → roteiro (Sonnet) → revisão (Haiku)
-     → cenas + prompts de imagem (Haiku) → narração (Google TTS) → imagens (Flux)
-     → edição (FFmpeg: zoom, legendas, música com ducking, volume normalizado)
-     → título/descrição/tags/thumbnail → PUBLICAR.txt
+tema → pesquisa (squad + busca web) → ângulo → texto do vídeo → cenas animadas (cenas.json)
+     → render (Node + Chrome local, motor em render/) → sons por código (media/sfx.py)
+     → MP4 (ffmpeg, 1080×1920, 30 fps) → metadados → CONFORMIDADE.md
 ```
 
-## Instalação no Windows
+## Como rodar
 
-1. Instale o **Python** em python.org (marque "Add python.exe to PATH").
-2. Abra o terminal (PowerShell) e instale o **FFmpeg**: `winget install Gyan.FFmpeg`. Depois **feche e abra o terminal**.
-3. Extraia esta pasta e dê dois cliques em **`setup_windows.bat`** (cria o ambiente e instala tudo).
-4. Dê dois cliques em **`teste_simulado.bat`**: gera um vídeo de teste sem usar nenhuma chave nem gastar nada,
-   e abre a pasta com o resultado.
+Pré-requisitos: Python 3.10+, `ffmpeg`/`ffprobe` no PATH, Node.js e o Google Chrome instalado.
 
-Se preferir o terminal: `python -m venv .venv`, `.venv\Scripts\activate`, `pip install -r requirements.txt`,
-`copy .env.example .env`. Depois, os comandos abaixo funcionam com `python run.py ...`.
+```
+cd render && npm install && cd ..        # uma vez só
+python run.py video --topic "tema do Short"
+```
 
-No Mac: `brew install ffmpeg`, `python3 -m venv .venv && source .venv/bin/activate`, `pip install -r requirements.txt`.
+- Cada etapa grava seu arquivo em `output/<slug>/` e pula o que já existe.
+- `--mock` simula o texto (sem API). O render, o áudio e o MP4 são reais.
+- `--allow-paid` libera a geração de texto pela API da Anthropic, usada só quando a squad não entregou o arquivo.
+- Caminho do Chrome: variável `CHROME_PATH` (padrão: `C:/Program Files/Google/Chrome/Application/chrome.exe`).
+- Render direto, sem o `run.py`: `cd render && node render.mjs --spec ../output/<slug>/cenas.json --out ../output/<slug>`.
 
-Se a legenda der problema no seu FFmpeg, ponha `render.captions: false` no `config.yaml`.
+## Arquivos que a squad produz (`output/<slug>/`)
 
-## Monetização e políticas do YouTube (leia antes de publicar)
+| Arquivo | Quem escreve | Conteúdo |
+|---|---|---|
+| `notas.md` | Modric | Fatos com fonte (3+ sites) |
+| `angulo.md` | Messi / Neymar | Tese, pergunta e comentário próprio |
+| `roteiro.txt` | Neymar, revisado por Courtois | Texto do vídeo, sem markdown |
+| `cenas.json` | Olise | Lista de cenas animadas (ver abaixo) |
+| `metadados.json` | Mbappé | `titulo`, `descricao`, `tags`, `thumbnail_texto` |
 
-Ninguém garante monetização: quem decide é o YouTube, que revisa o canal. O que o projeto faz é reduzir risco.
-As regras abaixo vêm das páginas oficiais (links no fim do `CONFORMIDADE.md` de cada vídeo).
+### `cenas.json`
 
-- **Conteúdo inautêntico (julho de 2025):** vídeos intercambiáveis, em molde repetido, "apresentações de imagens com comentário
-  insignificante" ou conteúdo de IA genérico, sem ponto de vista próprio, não monetizam. **Este é o maior risco de um canal como este,
-  maior que a qualidade das imagens.** Por isso o pipeline gera um `angulo.md` (tese, pergunta, ideias que uma busca rápida não mostra,
-  comentário próprio) antes do roteiro, e o roteirista deve dedicar cerca de um terço do texto à análise.
-- **Conteúdo reutilizado:** nada de trechos de vídeo, áudio ou texto de terceiros sem transformação. Imagens vêm só de fontes com
-  licença livre, com crédito no `PUBLICAR.txt`; a trilha é sintética e própria.
-- **Conteúdo sintético:** cenas realistas de um evento real que não foi registrado exigem a divulgação no upload. Imagens reais de
-  arquivo e ilustrações claramente estilizadas evitam isso; geração por IA fotorrealista de eventos reais, não.
-- **Temas sensíveis:** história e tragédias podem monetizar em tom educativo, sem detalhes gráficos nem exploração. Evite miniaturas gráficas.
-- **Requisitos do canal:** 1.000 inscritos e 4.000 horas de exibição pública em vídeos longos em 12 meses (ou 10 milhões de visualizações
-  de Shorts em 90 dias), sem avisos ativos, verificação em duas etapas e AdSense. Atingir os números não garante aprovação.
-- **Cadência:** publicar em volume que uma equipe humana não faria é sinal de produção em massa. O verificador avisa acima de
-  `compliance.max_videos_per_day`.
+Cada cena tem `tipo` e `duracao` (segundos); o total fica entre 20 e 60 s.
 
-O `CONFORMIDADE.md` de cada vídeo reúne as verificações automáticas e a lista do que só você pode confirmar. A comparação de texto copiado
-usa só o `notas.md`, não as páginas originais: ela ajuda, mas não substitui a sua leitura.
+| tipo | duração | o que mostra |
+|---|---|---|
+| `gancho` | 4 s | Dois números grandes, a explicação e a pergunta com tremor |
+| `barras` | 4 a 6 s | Até 3 barras verticais que crescem, com contador e rótulo |
+| `barras_horizontais` | 6 s | Até 2 barras horizontais (0 a 100), com destaque e conclusão |
+| `fechamento` | 8 a 10 s | O rótulo riscado, a pergunta de volta e o convite final |
 
-## Imagens reais de arquivo (Wikimedia Commons)
+Exemplo mínimo:
 
-Com `images.provider: commons`, cada cena busca uma imagem real usando as consultas do campo `search` do `cenas.json`
-(o agente de cenas as escreve). Só aceita domínio público, CC0 e CC BY; descarta NC, ND, marcadas como não livres, SVG e imagens pequenas,
-e não repete imagens no mesmo vídeo. O crédito de cada uma vai para o `PUBLICAR.txt`. Onde não achar nada, usa `images.fallback`
-(`local_art`, `cloudflare` ou `fal`). **Coloque o seu e-mail em `commons.user_agent` no `config.yaml`** (o Wikimedia pede um contato).
+```json
+[
+  {"tipo": "gancho", "duracao": 4, "numeros": ["3%", "15%"], "legenda": ["HOMENS SEM NENHUM", "AMIGO PRÓXIMO (EUA)"],
+   "pergunta": ["A CULPA É DA", "GERAÇÃO?"]},
+  {"tipo": "fechamento", "duracao": 10, "negacao": ["NÃO É: QUE GERAÇÃO", "É ESSA?"],
+   "afirmacao": ["É: QUE LUGAR", "SUMIU?"], "reforco": ["E NINGUÉM COLOCOU", "OUTRO NO LUGAR?"],
+   "pergunta": ["QUAL LUGAR SUMIU", "NA SUA VIDA?"]}
+]
+```
 
-Limites desta versão: a lógica foi testada contra um servidor simulado, mas **não contra o Commons de verdade**, porque o ambiente onde
-desenvolvi bloqueia o acesso. As buscas do exemplo do Krakatoa são palpites razoáveis e podem trazer pouca coisa; ajuste-as conforme
-o que o Commons realmente tiver. O adaptador da Cloudflare também não foi testado.
+Regras que o `run.py` confere antes de renderizar: tipo conhecido, campos obrigatórios, linhas de texto com no máximo
+26 caracteres, valores de barra dentro da escala, cores válidas. Um erro aponta a cena e o campo.
 
-## Modo 100% gratuito (sem nenhuma chave de API)
+## Estrutura do código
 
-O `config.yaml` já vem com os provedores gratuitos ligados:
+- `run.py`: orquestra as etapas (`video`, `check`, `ideas`, `publish`).
+- `render/`: motor de animação. `src/` tem cores, componentes (cartões, barras, mola, flash) e um módulo por tipo de cena;
+  `render.mjs` abre o `index.html` no Chrome e grava um PNG por frame e o `eventos.json` (momentos dos sons).
+- `media/motion.py`: valida o `cenas.json`, chama o motor, codifica o MP4 (H.264, yuv420p, faixa TV) e tira a miniatura de um frame.
+- `media/sfx.py`: impactos, dings e whooshes gerados por código a partir do `eventos.json`. Determinístico.
+- `compliance.py`: checagens antes do upload. **Não garante monetização.**
+- `agents/`: fallback pago (texto pela API), usado só com `--allow-paid` ou `--mock`.
+- `media/render.py`, `media/tts.py`, `media/captions.py`: são do fluxo de Reels (`reels/`), não do canal.
 
-- `tts.provider: kokoro`: voz local (Kokoro, em português do Brasil: `pf_dora`, `pm_alex`, `pm_santa`), roda no seu computador.
-- `images.provider: local_art`: arte gerada por código (`media/art.py`). **É uma demonstração**: silhuetas de vulcão, mar,
-  mapa, relógio etc., guiadas por palavras-chave no prompt da cena. Não tem a qualidade nem a variedade do Flux.
-- Pesquisa, roteiro, revisão, prompts de cena e metadados: neste modo, quem escreve é o Claude **no chat**, e os arquivos
-  vão para a pasta do vídeo (`notas.md`, `roteiro.txt`, `cenas.json`, `metadados.json`). O pipeline reaproveita o que já existe.
-- Trilha: `music/ambient.mp3` (ambiente sintético original, gerado com FFmpeg).
+## Políticas que o pipeline respeita
 
-Para ver funcionando no Windows: instale com `setup_windows.bat` e dê dois cliques em **`video_gratis_exemplo.bat`**
-(instala a voz local, baixa o modelo de ~120 MB e gera o vídeo de exemplo em `exemplo/`). A primeira geração leva alguns minutos.
+- **Conteúdo original:** animação própria, sem foto, sem imagem de IA e sem trilha de terceiros.
+- **Sem voz sintética:** o vídeo não tem narração; a descrição diz que é animação feita por computador.
+- **Fontes:** a descrição precisa ter "Fontes:" com os sites usados.
+- **Ângulo próprio:** `angulo.md` é obrigatório e o `compliance.py` confere se ele existe.
+- **Publicação:** `python run.py publish` só roda com `auditoria.md` aprovada pelo Vini.
 
-Para voltar aos serviços pagos, troque `tts.provider` para `google` e `images.provider` para `fal` e preencha o `.env`.
-A voz local fala um pouco rápido; se quiser mais calma, reduza `tts.speaking_rate` (por exemplo, 0.92).
-
-## Chaves de API (no arquivo .env, nunca no chat)
-
-| Variável | Onde obter |
-|---|---|
-| `ANTHROPIC_API_KEY` | console da Anthropic (cobrança por uso, separada da assinatura Pro) |
-| `GOOGLE_TTS_API_KEY` | Google Cloud: ative "Cloud Text-to-Speech API" e crie uma chave de API |
-| `YOUTUBE_API_KEY` | Google Cloud: ative "YouTube Data API v3" e crie uma chave (só para o comando `ideas`) |
-| `FAL_KEY` | painel do fal.ai |
-
-Restrinja cada chave de API ao serviço correspondente e defina um limite de gasto nos painéis.
-
-## Ordem recomendada
-
-1. **Teste sem custo:** `teste_simulado.bat` (ou `python run.py video --topic "teste" --mock`)
-   Roda tudo com dados falsos e confirma que o FFmpeg e o encanamento funcionam na sua máquina.
-2. **Escolha a voz:** `python run.py voices` lista as vozes do idioma. Ajuste `tts.voice` no `config.yaml`
-   e ouça uma amostra antes de decidir. **Qualidade da voz é o fator que mais pesa na retenção.**
-3. **Primeiro vídeo real, curto:** no `config.yaml` use `channel.minutes: 2` e rode
-   `python run.py video --topic "seu tema"`. Confira o `custo.json` gerado.
-4. **Ideias de pauta:** preencha `channel.niche` e `research.youtube_queries`, depois `python run.py ideas`.
-
-Cada etapa salva seu resultado na pasta do vídeo. Se algo falhar, rode o mesmo comando de novo:
-o que já foi gerado é reaproveitado (e não cobrado outra vez). Para refazer uma etapa, apague o arquivo dela.
-
-## Onde ajustar
-
-- `config.yaml`: nicho, idioma, duração, estilo visual, modelo de cada agente, voz, música, legendas.
-- `prompts/*.md`: instruções de cada agente (pesquisa, roteiro, revisão, cenas, metadados).
-
-## Limites desta versão (MVP)
-
-- **Testado só no modo simulado.** As chamadas reais (Claude com busca web, Google TTS, fal.ai, YouTube Data API)
-  seguem a documentação dos serviços, mas ainda não foram executadas. Espere pequenos ajustes no primeiro uso real.
-- Legendas com tempo proporcional por cena (sem Whisper); funcionam bem, mas não são palavra a palavra.
-- Thumbnail sem texto sobreposto (o texto sugerido vai no `PUBLICAR.txt`).
-- Uma imagem por cena; sem clipes de vídeo por IA.
-- O roteiro depende da qualidade das notas: leia o `roteiro.txt` antes de publicar.
-
-## Antes de publicar (checkpoint humano)
-
-Assista ao vídeo, confira fatos importantes e marque a divulgação de conteúdo alterado/sintético
-no YouTube Studio quando for exigida.
+Revise sempre o vídeo inteiro e confira os fatos contra `notas.md` antes de subir.

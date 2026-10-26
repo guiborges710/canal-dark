@@ -1,0 +1,77 @@
+{
+  "id": "casal-detalhes-passeio-2026-10-22",
+  "status": "agendado",
+  "slot": "2026-10-22T10:00:00-03:00",
+  "assets": [
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1000\\001.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "cf0a7f63a358f42d271b2626c584f24dce4bf4aa31fa34e4b6cd79bbc7576417"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1000\\002.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "f610ae44c9c1c93de6a161454e98d177865e7c7d0df35e5cd7cc5da8de72f097"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1000\\003.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "ec78b6e95edf204504dae2a532f3ce7098afc8564f05228a7edfe9a6311c429c"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1000\\004.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "ada6845ae746117cff660ec27f6543724370d57c204aeebf258476596c1808e6"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1000\\005.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "2161d7f560688f9df211b75d58aaccd7a035533b511eae1e486623bd958ac0d0"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-22\\1000\\006.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "8e83d4e94b6b0af7fb6e08f3336fdeab928467f566a5c7c4268a32eef789c410"
+    }
+  ],
+  "media_count": 6,
+  "reference_url": "https://www.tiktok.com/@closetminimal/photo/7576732447551868181",
+  "native_ai_label_required": true,
+  "on_image_ai_disclaimer": false,
+  "tiktok_id": "7699450118033984776",
+  "remote_id": "7699450118033984776",
+  "public_url": "https://www.tiktok.com/@closetminimal/photo/7699450118033984776",
+  "verified_date": "2026-10-22",
+  "provider_status_verified": "Studio22out10:00;relógio;Todosdesativado",
+  "native_ai_label": true,
+  "destination_verified": "Perfil @closetminimal imediatamente antes do upload e agendamento",
+  "qa": {
+    "all_final_files_visually_inspected": true,
+    "central_3_4_crop_reviewed": true,
+    "top_right_bottom_ui_overlap_reviewed": true,
+    "native_feed_preview_reviewed": true,
+    "anatomy_reviewed": true,
+    "uniform_square_dimensions": true
+  },
+  "tool": "imagegen integrado",
+  "prompt": "Fotografia original de adultos fictícios, fotos casal sem rosto:passos,sombras,paisagem,café. Sansserifmarromfundo creme;capadesenvolvimento4exemplosCTA;revisãoimagegenredução80%paraáreasegura.",
+  "sound": "Until I Found You - Ana Luise Fernandes Lima Miranda"
+}

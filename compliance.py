@@ -15,7 +15,7 @@ OK, WARN, MISS = "OK", "ATENÇÃO", "FALTA"
 CLICKBAIT = ["você não vai acreditar", "chocante", "ninguém te conta", "vai te chocar", "bomba", "urgente",
              "o que não querem que você saiba", "segredo proibido"]
 SENSITIVE = ["morto", "mortos", "morte", "cadáver", "cadáveres", "massacre", "corpos", "sangue", "gore", "tragédia"]
-DISCLOSURE = re.compile(r"sint[eé]tic|gerad[ao]s? por (computador|ia)|inteligência artificial|\bIA\b", re.I)
+DISCLOSURE = re.compile(r"sint[eé]tic|(gerad|feit)[ao]s? por (computador|ia)|animação|inteligência artificial|\bIA\b", re.I)
 
 LINKS = [
     ("Monetização e conteúdo inautêntico/reutilizado", "https://support.google.com/youtube/answer/1311392"),
@@ -111,28 +111,22 @@ def check(out, cfg):
         add(WARN, "Cadência alta", f"{len(recent) + 1} vídeos nas últimas 24 h (limite sugerido: {limit}). "
             "Uploads em volume que uma equipe humana não faria são um sinal de produção em massa.")
 
-    # 5. Imagens: reais, créditos e divulgação
-    real = len(list((out / "images").glob("*.json")))
+    # 5. Animação: cenas válidas, sem imagens de terceiros nem de IA, sem voz sintética
     n = len(scenes)
-    provider = cfg["images"].get("provider")
-    fallback = cfg["images"].get("fallback") if provider == "commons" else provider
-    if provider == "commons" and n:
-        if real / n >= 0.5:
-            add(OK, "Imagens reais de arquivo", f"{real} de {n} cenas.")
-        else:
-            add(WARN, "Poucas imagens reais", f"{real} de {n} cenas. Melhore as buscas ou use fontes de arquivo adicionais.")
-    if real:
-        if "CRÉDITOS" in publicar:
-            add(OK, "Créditos das imagens", "Estão no PUBLICAR.txt; cole-os no fim da descrição.")
-        else:
-            add(WARN, "Créditos das imagens ausentes", "Licenças como CC BY exigem atribuição.")
-    if n and real < n:
-        if fallback in ("fal", "cloudflare"):
-            add(WARN, "Imagens geradas por IA em cenas sem registro",
-                "Se parecerem reais (cena de um evento que não foi fotografado), é preciso marcar conteúdo sintético no upload. "
-                "Prefira ilustração claramente estilizada.")
-        else:
-            add(OK, "Ilustrações estilizadas nas cenas sem registro", "Diga na descrição que são ilustrações geradas por computador.")
+    if scenes:
+        try:
+            from media.motion import validate, SpecErro
+            total = validate(scenes)
+            add(OK, "Cenas válidas", f"{n} cenas, {total:.0f} s de animação desenhadas por código.")
+        except SpecErro as e:
+            add(MISS, "Cenas inválidas", str(e))
+    else:
+        add(MISS, "Sem cenas (cenas.json)", "O vídeo precisa do cenas.json da squad.")
+    if (out / "images").exists():
+        add(WARN, "Pasta de imagens antiga", "Este estilo não usa imagens. Apague images/ para não confundir a revisão.")
+    add(OK, "Sem imagens de terceiros nem de IA",
+        "Todo o visual é desenhado por código (cartões, barras e fundo). Não há foto de arquivo nem imagem gerada.")
+    add(OK, "Sem narração sintética", "O vídeo não tem voz; o texto está nos cartões e os sons são efeitos gerados por código.")
 
     # 6. Metadados
     title = meta.get("titulo", "")
@@ -154,16 +148,14 @@ def check(out, cfg):
         add(WARN, "Conteúdo sensível no título ou na miniatura", f"Termos: {', '.join(hits)}. Tragédias podem monetizar em contexto educativo, "
             "mas miniaturas gráficas ou tom explorador limitam os anúncios.")
     desc = meta.get("descricao", "")
-    add(OK if DISCLOSURE.search(desc) else WARN, "Aviso de voz/ilustração sintética na descrição",
-        "Presente." if DISCLOSURE.search(desc) else "Acrescente que a narração é sintética e que há ilustrações geradas por computador.")
+    add(OK if DISCLOSURE.search(desc) else WARN, "Aviso de animação gerada por computador na descrição",
+        "Presente." if DISCLOSURE.search(desc) else "Acrescente que o vídeo é uma animação feita por computador, sem voz.")
     add(OK if re.search(r"fontes?:", desc, re.I) else WARN, "Fontes na descrição",
         "Presente." if re.search(r"fontes?:", desc, re.I) else "Liste as fontes usadas na descrição.")
 
     # 7. Música
-    music = cfg["render"].get("music_file")
-    add(OK if music else WARN, "Trilha sonora",
-        "Trilha sintética própria do projeto (sem direitos de terceiros). Se trocar, use só música com licença clara." if music
-        else "Sem trilha configurada.")
+    add(OK, "Sons",
+        "Efeitos sonoros gerados por código (media/sfx.py). Sem música de terceiros.")
 
     counts = {k: sum(1 for r in res if r[0] == k) for k in (OK, WARN, MISS)}
     icon = {OK: "[OK]    ", WARN: "[ATENÇÃO]", MISS: "[FALTA] "}
@@ -180,7 +172,6 @@ def check(out, cfg):
               "- [ ] No upload, respondi a pergunta de conteúdo alterado ou sintético conforme a regra atual.",
               "- [ ] O vídeo tem ponto de vista e pesquisa próprios, não é só um resumo de outras fontes.",
               "- [ ] Não usei trechos de vídeo, áudio ou imagem de terceiros fora das licenças registradas.",
-              "- [ ] Confirmei a licença de uso comercial da voz sintética (modelo) que estou usando.",
               "- [ ] Marquei que o vídeo NÃO é feito para crianças, se for o caso.",
               "- [ ] Mantenho uma cadência de publicação plausível para uma pessoa ou equipe pequena.",
               "", "## Requisitos do canal para monetizar (fonte oficial)", "",

@@ -1,0 +1,51 @@
+{
+  "id": "sozinha-espelho-2026-10-21",
+  "slot": "2026-10-21T20:00:00-03:00",
+  "status": "agendado",
+  "tiktok_id": "7699238252464885044",
+  "remote_id": "7699238252464885044",
+  "public_url": "https://www.tiktok.com/@closetminimal/photo/7699238252464885044",
+  "assets": [
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-21\\2000-espelho\\001.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "ce35fec3a2263384ebfed51a0846965514d2344ee6ea0639a935ee674bf374db"
+    },
+    {
+      "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-21\\2000-espelho\\002.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "e7cffa3a72b6df8846af13e145463bb25e6835aeeb59e9785d82a81994af44c5"
+    }
+  ],
+  "media_count": 2,
+  "local_dir": "posts/2026-10-21/2000-espelho",
+  "verified_date": "2026-10-21",
+  "provider_status_verified": "TikTok Studio:21out20:00,ícone relógio,Todos desativado",
+  "destination_verified": "menu Perfil @closetminimal imediatamente antes de cada upload e ação final",
+  "native_ai_label": true,
+  "on_image_ai_disclaimer": false,
+  "visual_cta": [
+    "pergunta contextual de comentário",
+    "curtir",
+    "seguir @closetminimal com benefício"
+  ],
+  "sound": "So Easy (To Fall In Love) - Olivia Dean",
+  "tool": "imagegen integrado",
+  "reference_url": "https://www.tiktok.com/@closetminimal/photo/7583616310253276436",
+  "prompt": "Adultas fictícias, fotografia natural, fonte serifada marrom, fundo creme; costas ou espelho. Texto em português e CTAs. Revisão via imagegen:reduzir toda composição75% e centralizar para margens generosas.",
+  "qa": {
+    "all_final_files_visually_inspected": true,
+    "central_3_4_crop_reviewed": true,
+    "top_right_bottom_ui_overlap_reviewed": true,
+    "native_feed_preview_reviewed": true,
+    "anatomy_reviewed": true,
+    "uniform_square_dimensions": true
+  },
+  "rights": "Imagens originais de adultas fictícias geradas por IA;som do catálogo nativo TikTok"
+}

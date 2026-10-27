@@ -1,0 +1,35 @@
+Pasta do vídeo: C:\Users\Guilherme\Documents\canal-dark\output\geracao-z-nao-quer-filhos-ou-nao-pode-ter
+
+▶ 1/6 Pesquisando o tema
+
+▶ 2/6 Escrevendo e revisando o texto
+
+▶ 3/6 Montando as cenas da animação
+   4 cenas, 26 s
+
+▶ 4/6 Renderizando a animação
+   narrando as cenas (Chatterbox, CPU; leva alguns minutos)...
+Falha na narração (Chatterbox), código 1:
+le "C:\Users\Guilherme\Documents\canal-dark\media\voz_worker.py", line 22, in <lambda>
+    torch.load = lambda *a, **k: _load(*a, **{**k, "map_location": torch.device("cpu")})
+                                 ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Guilherme\Documents\canal-dark\.venv-voz\Lib\site-packages\torch\serialization.py", line 1462, in load
+    return _load(
+        opened_zipfile,
+    ...<3 lines>...
+        **pickle_load_args,
+    )
+  File "C:\Users\Guilherme\Documents\canal-dark\.venv-voz\Lib\site-packages\torch\serialization.py", line 1964, in _load
+    result = unpickler.load()
+  File "C:\Users\Guilherme\Documents\canal-dark\.venv-voz\Lib\site-packages\torch\_weights_only_unpickler.py", line 512, in load
+    self.append(self.persistent_load(pid))
+                ~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Guilherme\Documents\canal-dark\.venv-voz\Lib\site-packages\torch\serialization.py", line 1928, in persistent_load
+    typed_storage = load_tensor(
+        dtype, nbytes, key, _maybe_decode_ascii(location)
+    )
+  File "C:\Users\Guilherme\Documents\canal-dark\.venv-voz\Lib\site-packages\torch\serialization.py", line 1888, in load_tensor
+    zip_file.get_storage_from_record(name, numel, torch.UntypedStorage)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: [enforce fail at alloc_cpu.cpp:115] data. DefaultCPUAllocator: not enough memory: you tried to allocate 1048576 bytes.
+

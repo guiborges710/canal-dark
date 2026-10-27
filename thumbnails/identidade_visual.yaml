@@ -1,0 +1,55 @@
+formato:
+  largura: 1080
+  altura: 1920
+  proporcao: '9:16'
+  orientacao: vertical
+  arquivo: PNG
+  idioma_textos: pt-BR
+areas_seguras:
+  topo_livre: cerca de 15% da altura (a interface do YouTube cobre)
+  base_livre: cerca de 20% da altura
+  elemento_principal: centro, grande e reconhecível
+estilo:
+  tipo: ilustração vetorial 2D educativa, moderna e original
+  contornos: grafite, definidos e limpos
+  sombras: discretas, sólidas
+  fundo: com contraste; faixas ou formas geométricas leves, sem poluição
+  personagens: simples, expressivos; sem rostos de pessoas reais
+  referencias_principios:
+  - 'The Infographics Show: objetos grandes, contraste forte, perguntas visuais'
+  - 'Psych2Go: emoção clara, composições simples'
+  - 'Simple History: cenas narrativas simplificadas'
+  - 'History Matters: poucos elementos por cena'
+  proibido_copiar: personagens, layouts distintivos, logotipos ou elementos protegidos
+    desses canais
+paleta:
+  azul: '#2563EB'
+  azul_claro: '#38BDF8'
+  amarelo: '#FACC15'
+  laranja: '#FB923C'
+  branco: '#FFFFFF'
+  grafite: '#1F2937'
+  ajuste: pode variar quando o assunto exigir, mantendo uma assinatura visual reconhecível
+tipografia:
+  familia: 'sans-serif pesada (ex.: Arial Black, Montserrat Black)'
+  texto_max_palavras: 5
+  texto_min_palavras: 2
+  contraste: 'alto: branco sobre azul/grafite, grafite sobre amarelo'
+  regra: texto exato, com acentos; sem texto extra; sem parágrafos
+regras_gerais:
+- Um elemento visual dominante por thumbnail
+- 'Fidelidade ao vídeo: sem personagens, fatos ou números que o vídeo não tenha'
+- Metáforas visuais permitidas quando claramente ilustrativas
+- Sem clickbait falso
+- Sem marca d'água nem logotipo de terceiros
+historico_decisoes:
+- data: '2026-10-26'
+  decisao: 'Identidade inicial adotada: vetorial 2D, paleta do canal, 9:16, texto
+    de 2 a 5 palavras.'
+  motivo: Alinha as thumbnails ao estilo dos vídeos já produzidos (animação vetorial
+    com cartões grafite).
+- data: '2026-10-26'
+  decisao: 'Exceção: miniatura 16:9 (1280x720) para upload do YouTube, quando a vertical
+    não aparece como miniatura de vídeo. A vertical 9:16 continua como padrão.'
+  motivo: A API aceitou a miniatura vertical, mas o vídeo mostrou o frame gerado pelo
+    YouTube em 16:9.

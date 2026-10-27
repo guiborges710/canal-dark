@@ -1,0 +1,39 @@
+C:\Users\Guilherme\Documents\canal-dark\.venv-voz\Lib\site-packages\perth\perth_net\__init__.py:1: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_filename
+Fetching 6 files:   0%|          | 0/6 [00:00<?, ?it/s]Fetching 6 files: 100%|##########| 6/6 [00:00<00:00, 1712.31it/s]
+C:\Users\Guilherme\Documents\canal-dark\.venv-voz\Lib\site-packages\diffusers\models\lora.py:393: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+Traceback (most recent call last):
+  File "C:\Users\Guilherme\Documents\canal-dark\media\voz_worker.py", line 74, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Guilherme\Documents\canal-dark\media\voz_worker.py", line 52, in main
+    model = ChatterboxMultilingualTTS.from_pretrained(device=torch.device("cpu"))
+  File "C:\Users\Guilherme\Documents\canal-dark\.venv-voz\Lib\site-packages\chatterbox\mtl_tts.py", line 220, in from_pretrained
+    return cls.from_local(ckpt_dir, device)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Guilherme\Documents\canal-dark\.venv-voz\Lib\site-packages\chatterbox\mtl_tts.py", line 187, in from_local
+    torch.load(ckpt_dir / "s3gen.pt", map_location=map_location, weights_only=True)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Guilherme\Documents\canal-dark\media\voz_worker.py", line 19, in <lambda>
+    torch.load = lambda *a, **k: _load(*a, **{**k, "map_location": torch.device("cpu")})
+                                 ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Guilherme\Documents\canal-dark\.venv-voz\Lib\site-packages\torch\serialization.py", line 1462, in load
+    return _load(
+        opened_zipfile,
+    ...<3 lines>...
+        **pickle_load_args,
+    )
+  File "C:\Users\Guilherme\Documents\canal-dark\.venv-voz\Lib\site-packages\torch\serialization.py", line 1964, in _load
+    result = unpickler.load()
+  File "C:\Users\Guilherme\Documents\canal-dark\.venv-voz\Lib\site-packages\torch\_weights_only_unpickler.py", line 512, in load
+    self.append(self.persistent_load(pid))
+                ~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Guilherme\Documents\canal-dark\.venv-voz\Lib\site-packages\torch\serialization.py", line 1928, in persistent_load
+    typed_storage = load_tensor(
+        dtype, nbytes, key, _maybe_decode_ascii(location)
+    )
+  File "C:\Users\Guilherme\Documents\canal-dark\.venv-voz\Lib\site-packages\torch\serialization.py", line 1888, in load_tensor
+    zip_file.get_storage_from_record(name, numel, torch.UntypedStorage)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: [enforce fail at alloc_cpu.cpp:115] data. DefaultCPUAllocator: not enough memory: you tried to allocate 524288 bytes.

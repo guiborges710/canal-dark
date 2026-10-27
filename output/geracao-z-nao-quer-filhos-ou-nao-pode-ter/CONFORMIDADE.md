@@ -2,17 +2,18 @@
 
 Verificação automática de problemas comuns. **Não garante monetização**: a decisão é do YouTube, que também revisa o canal.
 
-Resultado: 11 ok, 0 atenção, 0 faltando.
+Resultado: 10 ok, 2 atenção, 0 faltando.
 
 ## Verificações automáticas
 
+- [ATENÇÃO] **Cadência alta**: 3 vídeos nas últimas 24 h (limite sugerido: 2). Uploads em volume que uma equipe humana não faria são um sinal de produção em massa.
+- [ATENÇÃO] **Voz sintética (narração gerada por IA)**: O vídeo tem narração gerada por computador. Marque 'conteúdo alterado ou sintético' no upload (a voz soa como uma pessoa real) e diga isso na descrição.
 - [OK]     **Pesquisa com várias fontes**: 4 sites distintos em notas.md.
 - [OK]     **Ângulo editorial definido**: Tese, pergunta e comentário próprio registrados em angulo.md.
 - [OK]     **Texto próprio**: Só 4% das sequências de 7 palavras coincidem com as notas.
 - [OK]     **Abertura e fecho variados**: Comparado com 10 outro(s) vídeo(s) do canal.
 - [OK]     **Cenas válidas**: 4 cenas, 26 s de animação desenhadas por código.
 - [OK]     **Sem imagens de terceiros nem de IA**: Todo o visual é desenhado por código (cartões, barras e fundo). Não há foto de arquivo nem imagem gerada.
-- [OK]     **Sem narração sintética**: O vídeo não tem voz; o texto está nos cartões e os sons são efeitos gerados por código.
 - [OK]     **Título honesto**: Sem isca nem exagero visível. Confirme que o vídeo entrega o que o título promete.
 - [OK]     **Aviso de animação gerada por computador na descrição**: Presente.
 - [OK]     **Fontes na descrição**: Presente.

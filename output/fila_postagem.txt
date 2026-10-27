@@ -1,0 +1,4 @@
+# Fila de upload automático (privado). Um slug por linha, na ordem de envio. Um vídeo sobe por execução.
+# Só sobe o que tiver auditoria.md APROVADA pelo Vini.
+geracao-z-nao-quer-filhos-ou-nao-pode-ter
+mulheres-nao-pararam-de-ter-filhos-adiaram

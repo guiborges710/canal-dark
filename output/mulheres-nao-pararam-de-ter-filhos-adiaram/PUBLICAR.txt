@@ -1,8 +1,8 @@
 TÍTULO:
-Mulheres não pararam de ter filhos: elas adiaram
+Mulheres não pararam de ter filhos? Ou adiaram?
 
 DESCRIÇÃO:
-Os nascimentos caíram 5,8% no Brasil em 2024. Mas a idade média da mãe ao ter filhos subiu de 26,4 anos (2010) para 27,7 (2022), segundo o Censo. Análise própria: o que mudou foi o calendário, e o que empurra esse calendário para depois merece a conversa. Os dados vêm de fontes diferentes e um recorte de um ano só, então é tendência e leitura, não medida exata. Animação feita por computador, sem voz. Fontes: IBGE, Registro Civil 2024 e Censo 2022 (via reportagens); UNFPA (2026).
+Os nascimentos caíram 5,8% no Brasil em 2024. Mas a idade média da mãe ao ter filhos subiu de 26,4 anos (2010) para 27,7 (2022), segundo o Censo. Análise própria: o que mudou foi o calendário, e o que empurra esse calendário para depois merece a conversa. Os dados vêm de fontes diferentes e um recorte de um ano só, então é tendência e leitura, não medida exata. Animação feita por computador, com narração gerada por IA a partir da voz do autor. Inscreva-se para acompanhar as próximas análises. Fontes: IBGE, Registro Civil 2024 e Censo 2022 (via reportagens); UNFPA (2026).
 
 TAGS (separadas por vírgula):
 natalidade, maternidade, IBGE, comportamento social, Brasil, rótulo, contexto, análise
@@ -12,5 +12,5 @@ ARQUIVOS: video.mp4 e thumbnail.jpg
 
 ANTES DE PUBLICAR:
 - Assista ao vídeo inteiro e confira os fatos principais contra as fontes em notas.md.
-- A descrição já diz que é animação feita por computador, sem voz. Não há imagem de IA nem foto de terceiros.
+- A descrição já diz que é animação feita por computador, com narração gerada por IA. Não há imagem de IA nem foto de terceiros. Marque 'conteúdo sintético' no upload.
 - A política de conteúdo inautêntico pesa contra vídeos em molde repetido e sem comentário próprio: o roteiro precisa ter ponto de vista e pesquisa originais.

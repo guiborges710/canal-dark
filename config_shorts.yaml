@@ -39,7 +39,13 @@ research:
   days_back: 180
   max_results: 25
 
-# Vídeo: animação vetorial (render/) com efeitos sonoros por código. Sem narração, sem imagens.
+# Narração (opcional): cada cena com o campo "fala" é narrada com o Chatterbox (MIT, roda em CPU).
+# amostra = áudio da SUA voz para clonar (10 s a 2 min, em português, sem ruído). Vazio = voz padrão do modelo.
+voz:
+  amostra: "voz/amostra.wav"
+  threads: 8
+
+# Vídeo: animação vetorial (render/) com efeitos sonoros por código. Sem imagens.
 render:
   width: 1080
   height: 1920

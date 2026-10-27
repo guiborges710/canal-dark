@@ -1,43 +1,103 @@
 [
-  {
-    "tipo": "gancho",
-    "duracao": 4,
-    "numeros": ["88%", "87%"],
-    "cores": ["azul", "laranja"],
-    "legenda": ["SEGURANÇA FINANCEIRA", "E EMPREGO ESTÁVEL"],
-    "pergunta": ["NÃO QUEREM?", "OU NÃO PODEM?"],
-    "rodape": ["73 PAÍSES, UNFPA 2026"]
-  },
-  {
-    "tipo": "barras_horizontais",
-    "duracao": 6,
-    "titulo": ["O QUE PRECISA", "ANTES DO FILHO?"],
-    "subtitulo": ["% QUE CITARAM CADA FATOR"],
-    "barras": [
-      {"rotulo": "SEGURANÇA FINANCEIRA", "valor": 88, "cor": "azul"},
-      {"rotulo": "EMPREGO ESTÁVEL", "valor": 87, "cor": "laranja"}
-    ],
-    "destaque": ["ISSO É CONDIÇÃO,", "NÃO CARÁTER"]
-  },
-  {
-    "tipo": "barras",
-    "duracao": 6,
-    "titulo": ["NÃO PODEM PAGAR", "(EUA, SEM FILHOS)"],
-    "escala_max": 40,
-    "unidade": "%",
-    "barras": [
-      {"rotulo": "MENOS DE 50", "valor": 36, "cor": "laranja"},
-      {"rotulo": "50 OU MAIS", "valor": 12, "cor": "azul"}
-    ],
-    "rodape": ["MAS O MAIS CITADO:", "NÃO QUER TER FILHOS"],
-    "rodape_cor": "amarelo"
-  },
-  {
-    "tipo": "fechamento",
-    "duracao": 10,
-    "negacao": ["NÃO É SÓ: É DA", "GERAÇÃO?"],
-    "afirmacao": ["É: QUERER OU", "PODER?"],
-    "reforco": ["E QUEM DECIDE", "AS CONDIÇÕES?"],
-    "pergunta": ["O QUE FALTA", "PARA VOCÊ DECIDIR?"]
-  }
+ {
+  "tipo": "gancho",
+  "duracao": 4,
+  "numeros": [
+   "88%",
+   "87%"
+  ],
+  "cores": [
+   "azul",
+   "laranja"
+  ],
+  "legenda": [
+   "SEGURANÇA FINANCEIRA",
+   "E EMPREGO ESTÁVEL"
+  ],
+  "pergunta": [
+   "NÃO QUEREM?",
+   "OU NÃO PODEM?"
+  ],
+  "rodape": [
+   "73 PAÍSES, UNFPA 2026"
+  ],
+  "fala": "Não querem, ou não podem? A frase, a nova geração não quer filhos, mistura duas coisas."
+ },
+ {
+  "tipo": "barras_horizontais",
+  "duracao": 6,
+  "titulo": [
+   "O QUE PRECISA",
+   "ANTES DO FILHO?"
+  ],
+  "subtitulo": [
+   "% QUE CITARAM CADA FATOR"
+  ],
+  "barras": [
+   {
+    "rotulo": "SEGURANÇA FINANCEIRA",
+    "valor": 88,
+    "cor": "azul"
+   },
+   {
+    "rotulo": "EMPREGO ESTÁVEL",
+    "valor": 87,
+    "cor": "laranja"
+   }
+  ],
+  "destaque": [
+   "ISSO É CONDIÇÃO,",
+   "NÃO CARÁTER"
+  ],
+  "fala": "Numa pesquisa com jovens de setenta e três países, oitenta e oito por cento citam a segurança financeira como condição para se sentirem prontos. Oitenta e sete por cento citam o emprego estável."
+ },
+ {
+  "tipo": "barras",
+  "duracao": 6,
+  "titulo": [
+   "NÃO PODEM PAGAR",
+   "(EUA, SEM FILHOS)"
+  ],
+  "escala_max": 40,
+  "unidade": "%",
+  "barras": [
+   {
+    "rotulo": "MENOS DE 50",
+    "valor": 36,
+    "cor": "laranja"
+   },
+   {
+    "rotulo": "50 OU MAIS",
+    "valor": 12,
+    "cor": "azul"
+   }
+  ],
+  "rodape": [
+   "MAS O MAIS CITADO:",
+   "NÃO QUER TER FILHOS"
+  ],
+  "rodape_cor": "amarelo",
+  "fala": "Nos Estados Unidos, trinta e seis por cento dos adultos com menos de cinquenta anos, sem filhos, dizem que não podem pagar. Mas o motivo mais citado é outro: não querer."
+ },
+ {
+  "tipo": "fechamento",
+  "duracao": 10,
+  "negacao": [
+   "NÃO É SÓ: É DA",
+   "GERAÇÃO?"
+  ],
+  "afirmacao": [
+   "É: QUERER OU",
+   "PODER?"
+  ],
+  "reforco": [
+   "E QUEM DECIDE",
+   "AS CONDIÇÕES?"
+  ],
+  "pergunta": [
+   "O QUE FALTA",
+   "PARA VOCÊ DECIDIR?"
+  ],
+  "fala": "Nossa leitura: a condição pesa, e a frase não quer esconde isso. E você? O que falta para decidir?"
+ }
 ]

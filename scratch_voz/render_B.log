@@ -1,0 +1,26 @@
+Pasta do vídeo: C:\Users\Guilherme\Documents\canal-dark\output\mulheres-nao-pararam-de-ter-filhos-adiaram
+
+▶ 1/6 Pesquisando o tema
+
+▶ 2/6 Escrevendo e revisando o texto
+
+▶ 3/6 Montando as cenas da animação
+   4 cenas, 26 s
+
+▶ 4/6 Renderizando a animação
+   narrando as cenas (Chatterbox, CPU; leva alguns minutos)...
+loaded PerthNet (Implicit) at step 250,000
+   fala 1: 8.7 s
+   fala 2: 10.4 s
+   fala 3: 11.2 s
+   fala 4: 15.6 s
+   vídeo: video.mp4 (48 s, 1449 frames, 30 fps, com narração)
+
+▶ 5/6 Criando título, descrição e tags
+
+▶ 6/6 Conformidade e custo
+   Conformidade: 10 ok, 2 atenção, 0 faltando (veja CONFORMIDADE.md)
+   {'claude_usd': 0.0, 'voz_usd': 0, 'imagens_usd': 0, 'total_usd': 0.0}
+
+✔ Pronto: C:\Users\Guilherme\Documents\canal-dark\output\mulheres-nao-pararam-de-ter-filhos-adiaram\video.mp4. Suba manualmente usando C:\Users\Guilherme\Documents\canal-dark\output\mulheres-nao-pararam-de-ter-filhos-adiaram\PUBLICAR.txt
+B_EXIT=0

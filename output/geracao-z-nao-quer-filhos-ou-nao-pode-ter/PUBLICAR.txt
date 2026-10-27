@@ -2,15 +2,15 @@ TÍTULO:
 Geração Z não quer filhos ou não pode ter?
 
 DESCRIÇÃO:
-A frase 'a nova geração não quer filhos' mistura duas coisas: querer e poder. Pesquisas com jovens de 73 países mostram que segurança financeira e emprego estável vêm antes da decisão; nos EUA, o motivo mais citado por quem não tem filhos é justamente não querer. Análise própria: a condição pesa, e o rótulo esconde isso. Os levantamentos são de países e anos diferentes, então é tendência, não medida exata. Animação feita por computador, sem voz. Fontes: UNFPA (2026); Pew Research Center (2024).
+A frase 'a nova geração não quer filhos' mistura duas coisas: querer e poder. Pesquisas com jovens de 73 países mostram que segurança financeira e emprego estável vêm antes da decisão; nos EUA, o motivo mais citado por quem não tem filhos é justamente não querer. Análise própria: a condição pesa, e o rótulo esconde isso. Os levantamentos são de países e anos diferentes, então é tendência, não medida exata. Animação feita por computador, com narração gerada por IA a partir da voz do autor. Inscreva-se para acompanhar as próximas análises. Fontes: UNFPA (2026); Pew Research Center (2024).
 
 TAGS (separadas por vírgula):
 Geração Z, natalidade, filhos, comportamento social, economia, rótulo, contexto, análise
 
-TEXTO SUGERIDO PARA A THUMBNAIL: NÃO QUEREM OU NÃO PODEM?
+TEXTO SUGERIDO PARA A THUMBNAIL: QUERER OU PODER?
 ARQUIVOS: video.mp4 e thumbnail.jpg
 
 ANTES DE PUBLICAR:
 - Assista ao vídeo inteiro e confira os fatos principais contra as fontes em notas.md.
-- A descrição já diz que é animação feita por computador, sem voz. Não há imagem de IA nem foto de terceiros.
+- A descrição já diz que é animação feita por computador, com narração gerada por IA. Não há imagem de IA nem foto de terceiros. Marque 'conteúdo sintético' no upload.
 - A política de conteúdo inautêntico pesa contra vídeos em molde repetido e sem comentário próprio: o roteiro precisa ter ponto de vista e pesquisa originais.

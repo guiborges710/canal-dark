@@ -8,7 +8,7 @@ import shutil
 import subprocess
 from pathlib import Path
 
-from . import sfx
+from . import sfx, voz
 from .util import run
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -60,7 +60,7 @@ def validate(cenas):
         for campo in regra["campos"]:
             if campo not in c:
                 raise SpecErro(f"{onde} ({tipo}): falta o campo '{campo}'")
-        permitidos = set(regra["campos"]) | set(regra["opcionais"]) | {"tipo", "duracao"}
+        permitidos = set(regra["campos"]) | set(regra["opcionais"]) | {"tipo", "duracao", "fala"}
         extras = set(c) - permitidos
         if extras:
             raise SpecErro(f"{onde} ({tipo}): campos que este tipo não usa: {sorted(extras)}")
@@ -102,18 +102,40 @@ def validate(cenas):
     return total
 
 
-def render(out, cenas_path=None):
-    """Renderiza frames, gera o áudio e codifica out/video.mp4. Devolve o caminho do vídeo."""
+def render(out, cenas_path=None, voz_cfg=None):
+    """Narra (se houver campo 'fala'), renderiza frames, gera o áudio e codifica out/video.mp4.
+    A duração de cada cena passa a ser a da fala quando ela é maior que a duracao escrita."""
     cenas_path = Path(cenas_path or out / "cenas.json")
     cenas = json.loads(cenas_path.read_text(encoding="utf-8"))
-    total_s = validate(cenas)
-    _node_render(cenas_path, out)
+    validate(cenas)
+
+    falas = {}
+    if voz.tem_falas(cenas):
+        print("   narrando as cenas (Chatterbox, CPU; leva alguns minutos)...", flush=True)
+        falas = voz.gerar(out, cenas_path, voz_cfg)
+    spec = []
+    for i, c in enumerate(cenas):
+        d = float(c["duracao"])
+        if str(i) in falas:
+            d = max(d, falas[str(i)]["dur"] + 0.6)  # 0,6 s de respiro depois da fala
+        spec.append({**c, "duracao": round(d, 3)})
+    total_s = validate(spec)
+    spec_path = out / "cenas_render.json"
+    spec_path.write_text(json.dumps(spec, ensure_ascii=False, indent=1), encoding="utf-8")
+
+    _node_render(spec_path, out)
     eventos = json.loads((out / "eventos.json").read_text(encoding="utf-8"))
-    sfx.build(eventos["eventos"], eventos["total"], eventos["fps"], out / "audio.wav")
+    inicios, t = [], 0.0
+    for c in spec:
+        inicios.append(t)
+        t += c["duracao"]
+    falas_mix = [(inicios[int(k)] + 0.3, v["wav"]) for k, v in falas.items()]
+    sfx.build(eventos["eventos"], eventos["total"], eventos["fps"], out / "audio.wav", falas=falas_mix)
     video = _encode(out, eventos["total"], eventos["fps"])
     _thumbnail(out)
     shutil.rmtree(out / "frames", ignore_errors=True)  # os PNGs ocupam muito espaço; o MP4 é o que importa
-    print(f"   vídeo: {video.name} ({total_s:.0f} s, {eventos['total']} frames, {eventos['fps']} fps)")
+    print(f"   vídeo: {video.name} ({total_s:.0f} s, {eventos['total']} frames, {eventos['fps']} fps"
+          f"{', com narração' if falas else ''})")
     return video
 
 

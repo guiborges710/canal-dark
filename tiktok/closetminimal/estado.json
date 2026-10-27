@@ -13,8 +13,7 @@
   "blockers": [],
   "limitations": [],
   "scheduled_posts": [
-    "7700933079648505096",
-    "7700934220943789330"
+    "7701336982294760711"
   ],
   "published_posts": [
     "7696166494614342932",
@@ -41,22 +40,24 @@
     "7699453870833011975",
     "7699847881708096786",
     "7700559383473786130",
-    "7700560729660755208"
+    "7700560729660755208",
+    "7700933079648505096",
+    "7700934220943789330",
+    "7701336311122234676"
   ],
   "next_slots": [
-    "2026-10-26T10:00:00-03:00",
-    "2026-10-26T15:00:00-03:00"
+    "2026-10-27T15:00:00-03:00"
   ],
   "next_day_posts_already_scheduled": false,
-  "last_cycle_date": "2026-10-26",
+  "last_cycle_date": "2026-10-27",
   "browser_session": "authenticated_as_closetminimal",
   "publication_route": "TikTok Studio browser",
   "native_upload_verified": true,
   "native_scheduling_verified": true,
-  "last_native_publication_verified": "7699847881708096786",
+  "last_native_publication_verified": "7701336311122234676",
   "last_layout_fix_date": "2026-10-14",
   "layout_qa_required": true,
-  "last_reconciliation_date": "2026-10-26",
+  "last_reconciliation_date": "2026-10-27",
   "last_schedule_replacement": {
     "date": "2026-10-18",
     "old": "7698029651645435142",
@@ -65,6 +66,6 @@
   },
   "next_day_scheduled_date": "2026-10-20",
   "missed_slot": "2026-10-24T10:00:00-03:00 e2026-10-24T15:00:00-03:00; execução21h57BRT, horários passados.",
-  "today_extra_posts_authorized": "Pedido21/10:um agora e outro20h;15h jápublicado,usuárioinformado",
-  "today_slots_filled_note": "26/10:10hcasal-cores7700933079648505096 e15hsozinha-bolsa7700934220943789330 confirmadosStudio;5slidescada;nãoduplicar."
+  "today_extra_posts_authorized": "27/10 usuário autorizou primeiro assim que pronto e segundo15h",
+  "today_slots_filled_note": "27/10 concluído: reteste campeão publicado10h18 ID7701336311122234676; vestido agendado15h ID7701336982294760711. Não duplicar. Praia cancelado sem envio."
 }

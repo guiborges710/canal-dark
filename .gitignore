@@ -19,3 +19,9 @@ reels/projetos/*/captions.srt
 referencias/capas/
 referencias/transcricoes/
 referencias/videos/
+
+# Voz do canal: sua amostra gravada e as falas geradas. Dados pessoais (sua voz): nunca versionar.
+voz/*.wav
+voz/*.mp3
+voz/*.m4a
+output/*/falas/

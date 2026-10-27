@@ -103,7 +103,7 @@ def make_video(cfg, topic, mock, allow_paid=False):
 
     # 4. Render: animação + efeitos sonoros + MP4 + miniatura (sem imagens, sem voz)
     step("4/6 Renderizando a animação")
-    video = motion.render(out, cenas_path=f)
+    video = motion.render(out, cenas_path=f, voz_cfg=cfg.get("voz"))
 
     # 5. Metadados e publicação
     step("5/6 Criando título, descrição e tags")

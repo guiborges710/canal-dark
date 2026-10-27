@@ -46,8 +46,20 @@ def _whoosh(rng):
 SONS = {"impact": _impacto, "ding": _ding, "whoosh": _whoosh}
 
 
-def build(eventos, total_frames, fps, out_wav):
-    """Mistura os eventos num WAV estéreo de 16 bits com a duração do vídeo."""
+VOLUME_SFX = 0.6  # efeitos ficam abaixo da narração
+VOLUME_VOZ = 1.0
+
+
+def _ler_wav_48k(caminho):
+    with wave.open(str(caminho), "rb") as w:
+        assert w.getframerate() == SR and w.getnchannels() == 1 and w.getsampwidth() == 2
+        pcm = np.frombuffer(w.readframes(w.getnframes()), dtype="<i2")
+    return pcm.astype(np.float64) / 32767
+
+
+def build(eventos, total_frames, fps, out_wav, falas=None):
+    """Mistura os eventos (efeitos) e, se houver, as falas (narração) num WAV estéreo de 16 bits.
+    falas: lista de (inicio_em_segundos, caminho_do_wav_48k_mono)."""
     rng = np.random.default_rng(SEED)
     total = int(round(total_frames / fps * SR))
     mix = np.zeros(total)
@@ -59,7 +71,14 @@ def build(eventos, total_frames, fps, out_wav):
         som = SONS[kind](rng)
         end = min(total, start + len(som))
         mix[start:end] += som[: end - start]
-    mix = np.tanh(mix * 0.9) * 0.85  # limitador suave, evita estouro
+    mix = np.tanh(mix * 0.9) * 0.85 * VOLUME_SFX  # limitador suave, evita estouro
+    voz = np.zeros(total)
+    for inicio, caminho in (falas or []):
+        fala = _ler_wav_48k(caminho) * VOLUME_VOZ
+        s = int(inicio * SR)
+        e = min(total, s + len(fala))
+        voz[s:e] += fala[: e - s]
+    mix = np.clip(mix + voz, -0.98, 0.98)
     estereo = np.stack([mix, mix], axis=1)
     pcm = (np.clip(estereo, -1, 1) * 32767).astype("<i2")
     with wave.open(str(out_wav), "wb") as w:

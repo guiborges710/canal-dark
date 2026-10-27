@@ -126,7 +126,13 @@ def check(out, cfg):
         add(WARN, "Pasta de imagens antiga", "Este estilo não usa imagens. Apague images/ para não confundir a revisão.")
     add(OK, "Sem imagens de terceiros nem de IA",
         "Todo o visual é desenhado por código (cartões, barras e fundo). Não há foto de arquivo nem imagem gerada.")
-    add(OK, "Sem narração sintética", "O vídeo não tem voz; o texto está nos cartões e os sons são efeitos gerados por código.")
+    falas = [c for c in scenes if (c.get("fala") or "").strip()]
+    if falas:
+        add(WARN, "Voz sintética (narração gerada por IA)",
+            "O vídeo tem narração gerada por computador. Marque 'conteúdo alterado ou sintético' no upload "
+            "(a voz soa como uma pessoa real) e diga isso na descrição.")
+    else:
+        add(OK, "Sem narração sintética", "O vídeo não tem voz; o texto está nos cartões e os sons são efeitos gerados por código.")
 
     # 6. Metadados
     title = meta.get("titulo", "")

@@ -1,0 +1,19 @@
+Pasta do vídeo: C:\Users\Guilherme\Documents\canal-dark\output\geracao-z-nao-quer-filhos-ou-nao-pode-ter
+
+▶ 1/6 Pesquisando o tema
+
+▶ 2/6 Escrevendo e revisando o texto
+
+▶ 3/6 Montando as cenas da animação
+   4 cenas, 26 s
+
+▶ 4/6 Renderizando a animação
+   narrando as cenas (Chatterbox, CPU; leva alguns minutos)...
+Falha na narração (Chatterbox), código 3221225477:
+C:\Users\Guilherme\Documents\canal-dark\.venv-voz\Lib\site-packages\perth\perth_net\__init__.py:1: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_filename
+
+Fetching 6 files:   0%|          | 0/6 [00:00<?, ?it/s]
+Fetching 6 files: 100%|##########| 6/6 [00:00<00:00, 1634.25it/s]
+
+

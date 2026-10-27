@@ -1,0 +1,98 @@
+[
+ {
+  "tipo": "gancho",
+  "duracao": 9.33,
+  "numeros": [
+   "-5,8%",
+   "27,7"
+  ],
+  "cores": [
+   "azul",
+   "laranja"
+  ],
+  "legenda": [
+   "NASCIMENTOS EM 2024",
+   "IDADE DA MÃE EM 2022"
+  ],
+  "pergunta": [
+   "É FALTA DE",
+   "VONTADE?"
+  ],
+  "rodape": [
+   "O CALENDÁRIO MUDOU"
+  ],
+  "fala": "Os nascimentos caíram cinco vírgula oito por cento no Brasil, em dois mil e vinte e quatro. É falta de vontade?"
+ },
+ {
+  "tipo": "barras",
+  "duracao": 11.0,
+  "titulo": [
+   "IDADE MÉDIA DA MÃE",
+   "AO TER FILHOS (BR)"
+  ],
+  "escala_max": 30,
+  "unidade": "",
+  "barras": [
+   {
+    "rotulo": "2010",
+    "valor": 26.4,
+    "cor": "azul"
+   },
+   {
+    "rotulo": "2022",
+    "valor": 27.7,
+    "cor": "laranja"
+   }
+  ],
+  "rodape": [
+   "SUBIU 1,3 ANO",
+   "EM DOIS CENSOS"
+  ],
+  "rodape_cor": "amarelo",
+  "fala": "A idade média da mãe ao ter filhos subiu de vinte e seis vírgula quatro anos, em dois mil e dez, para vinte e sete vírgula sete, em dois mil e vinte e dois, segundo o Censo."
+ },
+ {
+  "tipo": "barras_horizontais",
+  "duracao": 11.81,
+  "titulo": [
+   "MÃES DE ATÉ 24 ANOS",
+   "EM 2024"
+  ],
+  "subtitulo": [
+   "% DOS NASCIMENTOS"
+  ],
+  "barras": [
+   {
+    "rotulo": "ATÉ 24 ANOS",
+    "valor": 34.6,
+    "cor": "azul"
+   }
+  ],
+  "destaque": [
+   "A MAIORIA DAS MÃES",
+   "TEM MAIS DE 24"
+  ],
+  "fala": "Em dois mil e vinte e quatro, trinta e quatro vírgula seis por cento das mães tinham até vinte e quatro anos. Ou seja: a maioria já tinha mais de vinte e quatro."
+ },
+ {
+  "tipo": "fechamento",
+  "duracao": 16.16,
+  "negacao": [
+   "NÃO É: MULHER",
+   "PAROU DE QUERER?"
+  ],
+  "afirmacao": [
+   "É: O CALENDÁRIO",
+   "MUDOU"
+  ],
+  "reforco": [
+   "A MAIORIA DOS JOVENS",
+   "DIZ QUERER FILHOS"
+  ],
+  "pergunta": [
+   "O QUE TORNARIA",
+   "O CALENDÁRIO VIÁVEL?"
+  ],
+  "fala": "Nossa leitura: a maternidade não parou. Ela foi para depois. A maioria dos jovens, nas pesquisas, diz que quer ter filhos. Então o que tornaria o calendário viável? E para você?"
+ }
+]

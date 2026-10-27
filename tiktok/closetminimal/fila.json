@@ -1147,7 +1147,7 @@
     },
     {
       "id": "casal-cores-2026-10-26",
-      "status": "agendado",
+      "status": "publicado",
       "slot": "2026-10-26T10:00:00-03:00",
       "assets": [
         {
@@ -1211,13 +1211,13 @@
       "tiktok_id": "7700933079648505096",
       "remote_id": "7700933079648505096",
       "public_url": "https://www.tiktok.com/@closetminimal/photo/7700933079648505096",
-      "verified_date": "2026-10-26",
-      "provider_status_verified": "Studio26out10:00;relógio;Todosdesativado;IDconfirmado",
+      "verified_date": "2026-10-27",
+      "provider_status_verified": "Studio público;Todosativo;verificado27/10",
       "rights": "Imagens originais geradas de adultos fictícios;somcatálogoTikTok"
     },
     {
       "id": "sozinha-bolsa-2026-10-26",
-      "status": "agendado",
+      "status": "publicado",
       "slot": "2026-10-26T15:00:00-03:00",
       "assets": [
         {
@@ -1281,9 +1281,161 @@
       "tiktok_id": "7700934220943789330",
       "remote_id": "7700934220943789330",
       "public_url": "https://www.tiktok.com/@closetminimal/photo/7700934220943789330",
-      "verified_date": "2026-10-26",
-      "provider_status_verified": "Studio26out15:00;relógio;Todosdesativado;IDconfirmado",
+      "verified_date": "2026-10-27",
+      "provider_status_verified": "Studio público;Todosativo;verificado27/10",
       "rights": "Imagens originais geradas de adultos fictícios;somcatálogoTikTok"
+    },
+    {
+      "id": "casal-reteste-viral-2026-10-27",
+      "tiktok_id": "7701336311122234676",
+      "remote_id": "7701336311122234676",
+      "slot": "2026-10-27T10:18:00-03:00",
+      "status": "publicado",
+      "title": "Ideias para fotos em casal",
+      "sound": "Mega Hair (Ao Vivo) - Netto Brito & Luan Pereira",
+      "assets": [
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-27\\agora-teste-viral\\001.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "fe4c8ee852415660047b3fb15c725e2692814b503eec577c7f489f81552a9886"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-27\\agora-teste-viral\\002.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "5172986a73c9c774631061d7a7e7fd2c11247ca2bdec48548a61303e7e0b98d7"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-27\\agora-teste-viral\\003.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "fbd346c75f057fe36058d9768813375ba00786b7e7b6ed24f34e0e0bb18031ea"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-27\\agora-teste-viral\\004.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "a0b156a56591d9946085f3a11908cf52835f352b2c41575920c10cad567e8744"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-27\\agora-teste-viral\\005.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "ff7963a949b8c2debd46165dbf31d8c98484f04a3e80f96a74034e2b9e32eafa"
+        }
+      ],
+      "media_count": 5,
+      "public_url": "https://www.tiktok.com/@closetminimal/photo/7701336311122234676",
+      "native_ai_label": true,
+      "on_image_ai_disclaimer": false,
+      "qa": {
+        "all_final_files_visually_inspected": true,
+        "central_3_4_crop_reviewed": true,
+        "top_right_bottom_ui_overlap_reviewed": true,
+        "native_feed_preview_reviewed": true,
+        "anatomy_reviewed": true,
+        "uniform_square_dimensions": true
+      },
+      "destination_verified": "Perfil da sessão @closetminimal imediatamente antes de cada upload e Publicar/Agendar",
+      "verified_date": "2026-10-27",
+      "provider_status_verified": "Studio: data/hora e Todos ativo, público",
+      "rights": "Imagens novas de adultos fictícios geradas com imagegen; música catálogo nativo TikTok",
+      "proof": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-27\\comprovante-studio.png",
+      "reference_url": "https://www.tiktok.com/@closetminimal/photo/7583928005593025813",
+      "reference_likes_displayed": "46K",
+      "hashtags": [
+        "viraltiktok",
+        "modafeminina",
+        "viral"
+      ],
+      "test": "Nova versão fiel à sequência de 5 slides e colagens do campeão, com fotos novas e CTA. Sem promessa de viralização.",
+      "music_research": {
+        "source": "https://trendingtiktoksongs.com/songs/mega-hair-ao-vivo-7683606509889341441",
+        "date": "2026-10-27",
+        "viral_rank": 3,
+        "popular_rank": 2,
+        "reported_videos": 250824,
+        "source_type": "independent ranking; availability confirmed native"
+      }
+    },
+    {
+      "id": "sozinha-vestido-2026-10-27",
+      "tiktok_id": "7701336982294760711",
+      "remote_id": "7701336982294760711",
+      "slot": "2026-10-27T15:00:00-03:00",
+      "status": "agendado",
+      "title": "Foto com vestido? 3 poses para testar",
+      "sound": "Suddenly I See - KT Tunstall",
+      "assets": [
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-27\\1500\\001.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "4699cfecde72470579de2ac084fb8a1caf88bcdf6427bc361b8876cf13961367"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-27\\1500\\002.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "40e485542b284b1cc9520d301385ee8e65a397b807afc820142776103db0382d"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-27\\1500\\003.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "760d69ff85ae46d0a6330c2a6908841b5582d19554667e2c27744c0f196ee149"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-27\\1500\\004.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "0021b37dd652dd1cdac803be8e0f68c276037cb030cbed93e6197124af4353ee"
+        },
+        {
+          "path": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-27\\1500\\005.png",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "sha256": "683c3dbfdecb5974f291077896995ed452741ca56752940fd9d326380e1de09b"
+        }
+      ],
+      "media_count": 5,
+      "public_url": "https://www.tiktok.com/@closetminimal/photo/7701336982294760711",
+      "native_ai_label": true,
+      "on_image_ai_disclaimer": false,
+      "qa": {
+        "all_final_files_visually_inspected": true,
+        "central_3_4_crop_reviewed": true,
+        "top_right_bottom_ui_overlap_reviewed": true,
+        "native_feed_preview_reviewed": true,
+        "anatomy_reviewed": true,
+        "uniform_square_dimensions": true
+      },
+      "destination_verified": "Perfil da sessão @closetminimal imediatamente antes de cada upload e Publicar/Agendar",
+      "verified_date": "2026-10-27",
+      "provider_status_verified": "Studio: data/hora e Todos desativado, programado",
+      "rights": "Imagens novas de adultos fictícios geradas com imagegen; música catálogo nativo TikTok",
+      "proof": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-10-27\\comprovante-studio.png"
     }
   ]
 }

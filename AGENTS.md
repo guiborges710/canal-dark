@@ -20,12 +20,12 @@ Objetivo: canal sem rosto, automatizado ao máximo, **monetizável**. Seguir TOD
 - Cada vídeo precisa de ângulo próprio (angulo.md) e pelo menos 1/3 de comentário original. Nunca só resumir fontes.
 - Fatos só das notas (3+ fontes). Tom respeitoso com vítimas. Sem sensacionalismo.
 - Números e datas no texto dos cartões precisam estar nas notas, com fonte citada na descrição.
-- Publicar poucos shorts por semana. Só o upload é manual.
+- Publicar poucos shorts por semana. O upload é automático como **privado** (`postar_pendentes.py`, um vídeo por execução, só com auditoria APROVADA do Vini). Tornar público é sempre manual, no Studio.
 - Chaves de API ficam só no `.env`. Nunca em chat ou código.
 
 ## Fluxo (agentes em .codex/agents; debruyne-orquestrador coordena de ponta a ponta)
 **Fluxo ENXUTO (padrão diário de SHORTS, 5 passos + render):**
-modric-pesquisador-tema → neymar-roteirista (ângulo + texto de 30-60s + direcao_viral.md, num passe) → courtois-revisor-fatos → olise-diretor-arte (cenas animadas, lendo direcao_viral.md) → mbappe-editor-metadados → **python run.py video --topic "..."** (render da animação + sons + conformidade) → vini-auditor-conformidade → upload manual (Memphis).
+modric-pesquisador-tema → neymar-roteirista (ângulo + texto de 30-60s + direcao_viral.md, num passe) → courtois-revisor-fatos → olise-diretor-arte (cenas animadas, lendo direcao_viral.md) → mbappe-editor-metadados → **python run.py video --topic "..."** (render da animação + sons + conformidade) → vini-auditor-conformidade → **sidorf-thumbnail-estrategista** (prompt da thumbnail para o ChatGPT; não gera imagem) → upload manual (Memphis).
 
 **Agentes sob-demanda (fora do fluxo diário):**
 - memphis-social-media → referencias_virais.md: rodar **~1x por semana**; o neymar reusa o arquivo existente.
@@ -48,6 +48,7 @@ Ao **mencionar** outro agente em mensagens, updates de progresso, handoffs e rel
 | **Haaland** | haaland-pesquisador-nicho | **Mbappé** | mbappe-editor-metadados |
 | **De Bruyne** | debruyne-orquestrador | **Cristiano** | cristiano-otimizador-viral |
 | **Memphis** | memphis-social-media | | |
+| **Sidorf** | sidorf-thumbnail-estrategista | | |
 
 ## Contrato de arquivos (a squad produz, o run.py consome) — em output/<slug>/
 - `notas.md`: fatos com fonte (3+ sites).
@@ -68,7 +69,7 @@ Pedir "produza um vídeo sobre X" autoriza todo o fluxo com recursos **gratuitos
 - **Ferramentas:** squad (Codex) escreve o conteúdo de graça; `run.py` renderiza (Node + Chrome local, ffmpeg) e gera os sons por código. Custo zero no render.
 - **Orçamento:** `budget.max_usd_per_video: 0` (nada pago); `max_retries_per_step: 2`. O único gasto possível é o texto pela API da Anthropic, só com `--allow-paid`.
 - **Destino:** `output/<slug>/` (video.mp4, thumbnail.jpg, PUBLICAR.txt, CONFORMIDADE.md, custo.json, cenas.json, eventos.json).
-- **Publicação:** `python run.py publish` sobe como **PRIVADO** via OAuth (credenciais em `client_secret.json` + `.youtube_token.json`, ambos gitignored; nunca versionar). Exige `auditoria.md` APROVADA. Tornar público é passo manual no Studio. **Memphis** é o responsável pela postagem.
+- **Publicação:** `postar_pendentes.py` sobe, um por execução, o próximo slug de `output/fila_postagem.txt` como **PRIVADO**; `python run.py publish` faz o mesmo para um slug específico. Ambos usam OAuth (credenciais em `client_secret.json` + `.youtube_token.json`, ambos gitignored; nunca versionar). Exige `auditoria.md` APROVADA. Tornar público é passo manual no Studio. **Memphis** é o responsável pela postagem.
 
 ## Comandos
 - `python run.py video --topic "..."`: gera o SHORT. Cada etapa guarda em `output/<slug>/` e pula o que já existe. `--mock` simula o texto (o render é real). `--allow-paid` libera a geração de texto pela API.

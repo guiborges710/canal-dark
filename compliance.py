@@ -127,12 +127,13 @@ def check(out, cfg):
     add(OK, "Sem imagens de terceiros nem de IA",
         "Todo o visual é desenhado por código (cartões, barras e fundo). Não há foto de arquivo nem imagem gerada.")
     falas = [c for c in scenes if (c.get("fala") or "").strip()]
-    if falas:
+    if falas and len(falas) == len(scenes):
         add(WARN, "Voz sintética (narração gerada por IA)",
-            "O vídeo tem narração gerada por computador. Marque 'conteúdo alterado ou sintético' no upload "
-            "(a voz soa como uma pessoa real) e diga isso na descrição.")
+            "O vídeo tem narração gerada por computador, com a voz do autor. Marque 'conteúdo alterado ou sintético' "
+            "no upload (a voz soa como uma pessoa real) e diga isso na descrição.")
     else:
-        add(OK, "Sem narração sintética", "O vídeo não tem voz; o texto está nos cartões e os sons são efeitos gerados por código.")
+        add(MISS, "Narração incompleta",
+            f"Narração obrigatória em todo vídeo: {len(falas)} de {len(scenes)} cenas têm 'fala'. Preencha 'fala' em cada cena.")
 
     # 6. Metadados
     title = meta.get("titulo", "")
@@ -155,7 +156,7 @@ def check(out, cfg):
             "mas miniaturas gráficas ou tom explorador limitam os anúncios.")
     desc = meta.get("descricao", "")
     add(OK if DISCLOSURE.search(desc) else WARN, "Aviso de animação gerada por computador na descrição",
-        "Presente." if DISCLOSURE.search(desc) else "Acrescente que o vídeo é uma animação feita por computador, sem voz.")
+        "Presente." if DISCLOSURE.search(desc) else "Acrescente que o vídeo é uma animação feita por computador, com narração por IA a partir da voz do autor.")
     add(OK if re.search(r"fontes?:", desc, re.I) else WARN, "Fontes na descrição",
         "Presente." if re.search(r"fontes?:", desc, re.I) else "Liste as fontes usadas na descrição.")
 

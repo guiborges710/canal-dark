@@ -20,7 +20,7 @@ Sempre em `output/{SLUG}/`. Contrato de arquivos que o `run.py` consome: `notas.
 4. `@courtois-revisor-fatos Confira o roteiro contra as notas; corrija output/{SLUG}/roteiro.txt e liste em revisao.md`
 5. `@cristiano-otimizador-viral Deixe output/{SLUG}/roteiro.txt premium; gere roteiro_notas.md e direcao_viral.md`
 6. `@olise-diretor-arte Monte as cenas animadas lendo direcao_viral.md e salve output/{SLUG}/cenas.json`
-7. `@mbappe-editor-metadados Crie output/{SLUG}/metadados.json (titulo, descricao com Fontes: e aviso de animação feita por computador, sem voz, tags, thumbnail_texto)`
+7. `@mbappe-editor-metadados Crie output/{SLUG}/metadados.json (titulo, descricao), thumbnail_texto)`
 8. Renderizar (gratuito): `python run.py video --topic "{TEMA}"`
 9. `@vini-auditor-conformidade Audite o SHORT e salve output/{SLUG}/auditoria.md (APROVADO/BLOQUEADO)`
 

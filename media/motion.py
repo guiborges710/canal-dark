@@ -64,6 +64,8 @@ def validate(cenas):
         extras = set(c) - permitidos
         if extras:
             raise SpecErro(f"{onde} ({tipo}): campos que este tipo não usa: {sorted(extras)}")
+        if not isinstance(c.get("fala"), str) or not c["fala"].strip():
+            raise SpecErro(f"{onde} ({tipo}): falta a 'fala' (a narração é obrigatória em todo vídeo)")
         for campo in regra["campos"] + regra["opcionais"]:
             if campo in TEXTOS and campo in c:
                 _linhas(c[campo], f"{onde}.{campo}")

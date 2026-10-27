@@ -1,0 +1,73 @@
+[
+ {
+  "tipo": "gancho",
+  "duracao": 6.25,
+  "numeros": [
+   "SALA",
+   "TOTAL"
+  ],
+  "cores": [
+   "azul",
+   "laranja"
+  ],
+  "legenda": [
+   "NA SALA, O USO CAI;",
+   "NO TOTAL, NÃO CAI"
+  ],
+  "pergunta": [
+   "PROIBIR CELULAR",
+   "FUNCIONA?"
+  ],
+  "rodape": [
+   "DEPENDE DO QUE VOCÊ MEDE"
+  ],
+  "fala": "Proibir celular na escola funciona? Depende do que você mede."
+ },
+ {
+  "tipo": "barras",
+  "duracao": 19.14,
+  "titulo": [
+   "30 ESCOLAS, 20 COM",
+   "REGRA RESTRITIVA"
+  ],
+  "escala_max": 30,
+  "unidade": "",
+  "barras": [
+   {
+    "rotulo": "RESTRITIVA",
+    "valor": 20,
+    "cor": "laranja"
+   },
+   {
+    "rotulo": "PERMISSIVA",
+    "valor": 10,
+    "cor": "azul"
+   }
+  ],
+  "rodape": [
+   "MENOS USO SÓ NA AULA"
+  ],
+  "rodape_cor": "amarelo",
+  "fala": "Na sala de aula, o uso cai. Num estudo com mil duzentos e vinte e sete alunos de doze a quinze anos, na Inglaterra, as escolas com regra restritiva tiveram menos uso durante o horário escolar. Fora dela, o uso total não caiu, nem nos dias de semana nem no fim de semana."
+ },
+ {
+  "tipo": "fechamento",
+  "duracao": 28.13,
+  "negacao": [
+   "NÃO TIRA O CELULAR",
+   "DA VIDA DO ALUNO"
+  ],
+  "afirmacao": [
+   "SÓ LIMPA A SALA"
+  ],
+  "reforco": [
+   "O USO TOTAL",
+   "NÃO CAIU"
+  ],
+  "pergunta": [
+   "O QUE A ESCOLA",
+   "DEVERIA ENSINAR?"
+  ],
+  "fala": "Nos Estados Unidos, o efeito depende da idade: um efeito positivo pequeno em matemática no ensino médio, e um efeito negativo pequeno no fundamental. Sobre bem-estar mental, os estudos não encontraram melhora com a regra restritiva. Nossa leitura: a regra limpa a sala. Ela não tira o celular da vida do adolescente. E você? O que a escola deveria ensinar quando o celular sai da sala?"
+ }
+]

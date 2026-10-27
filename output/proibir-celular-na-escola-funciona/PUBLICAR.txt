@@ -1,0 +1,16 @@
+TÍTULO:
+Proibir celular na escola funciona? Depende do que você mede
+
+DESCRIÇÃO:
+A proibição de celular na sala reduz o uso durante a aula, mas não o uso total. Num estudo britânico com 1.227 alunos, as escolas restritivas não mostraram melhora de bem-estar mental. Nos EUA, o efeito varia entre ensino médio e fundamental. Análise própria: a regra limpa a sala, mas não tira o celular da vida do adolescente. Os estudos têm desenhos e países diferentes; trate como tendência, não como medida exata. Animação feita por computador, com narração por IA a partir da voz do autor. Fontes: SMART Schools, Lancet Regional Health Europe (2025); Stanford, Allcott et al. (2026, working paper); Lei 15.100/2025 (Brasil).
+
+TAGS (separadas por vírgula):
+celular na escola, proibição de celular, comportamento social, adolescentes, educação, gerações, análise
+
+TEXTO SUGERIDO PARA A THUMBNAIL: DEPENDE DO QUE VOCÊ MEDE
+ARQUIVOS: video.mp4 e thumbnail.jpg
+
+ANTES DE PUBLICAR:
+- Assista ao vídeo inteiro e confira os fatos principais contra as fontes em notas.md.
+- A descrição já diz que é animação feita por computador, com narração por IA a partir da voz do autor. Não há imagem de IA nem foto de terceiros.
+- A política de conteúdo inautêntico pesa contra vídeos em molde repetido e sem comentário próprio: o roteiro precisa ter ponto de vista e pesquisa originais.

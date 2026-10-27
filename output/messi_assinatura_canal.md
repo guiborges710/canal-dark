@@ -1,8 +1,8 @@
 # Assinatura do canal: Análise de Comportamento Social e Gerações
 
-Status: proposta do estrategista de ângulo (messi). Nicho informado pelo Guilherme; falta ele confirmar e atualizar o CLAUDE.md (hoje ainda diz "não escolhido").
+Status: proposta do estrategista de ângulo (messi).
 
-Legenda: [FATO] = só pode entrar no vídeo se estiver em notas.md de 3+ fontes. [INTERPRETAÇÃO] = posição editorial do canal, deve ser dita como opinião ("na nossa leitura", "uma hipótese é"). Este documento não contém fatos externos; tudo abaixo é posição editorial ou regra de método.
+Legenda: [FATO] = só pode entrar no vídeo se estiver em notas.md de 3+ fontes. [INTERPRETAÇÃO] = posição editorial do canal, deve ser dita como opinião ("na nossa leitura", "uma hipótese é"). Não colocar fontes e nem explicações de como o video foi feito, isso só é exibido internamente. Este documento não contém fatos externos; tudo abaixo é posição editorial ou regra de método.
 
 ## 1. Tese central
 
@@ -19,11 +19,11 @@ Cada vídeo deve sustentar a tese com dados das notas. Se as notas contradissere
 
 ## 2. Tom
 
-- **Acessível e didático**, sem jargão; termo técnico só com explicação em uma frase.
+- **Acessível e didático**, passa informações coerente, mas fala de um jeito leve e natural (nativo e informal as vezes).
 - **Crítico com ideias, respeitoso com pessoas**: criticamos o estereótipo, nunca uma geração ou grupo. Sem "fulanos são preguiçosos/mimados".
-- **Calmo e sóbrio**: sem sensacionalismo, sem clickbait de guerra de gerações, sem tom de sermão.
+- **Calmo e sóbrio**: pode usar sensacionalismo, pode usar clickbait, pode ter tom de sermão. Mas sempre será coerente relacionado as informações, o sensacionalismo, clickbait e sermão podem ser usados nos 5 primeiros segundos e na thumbnail.
 - **Honesto sobre incerteza**: separa em voz o que os dados mostram do que é nossa leitura ("os dados indicam..." vs. "nossa interpretação é...").
-- Narração em pt-BR, frases curtas, exemplos concretos do cotidiano.
+- Narração em pt-BR, frases curtas, exemplos REAIS do cotidiano.
 
 ## 3. O que nos diferencia de resumos
 
@@ -43,28 +43,7 @@ Assinatura de marca: toda edição termina com a "pergunta de volta" (uma pergun
 
 ## 4. Público-alvo primário
 
-- **Adultos brasileiros de ~22 a 45 anos**, curiosos e escolarizados, que consomem conteúdo explicativo longo e se sentem "encaixotados" em rótulos geracionais ou vivem atritos entre gerações no trabalho e na família. [INTERPRETAÇÃO: hipótese de público, validar com analytics após os primeiros vídeos.]
-- Por que assistem: entender atritos do dia a dia (trabalho, família, dinheiro, tecnologia) sem cair em briga de geração; ganhar argumentos e vocabulário; sentir que alguém os trata como adultos inteligentes.
-- Público secundário: pais, gestores e professores que lidam com gerações diferentes.
-- Evitar: público infantil (política "feito para crianças"), foco em grupos vulneráveis de forma estigmatizante.
-
-## 5. Formato padrão de vídeo
-
-Duração-alvo: 8 a 12 minutos (ajustar após dados de retenção). Poucos vídeos por semana.
-
-| Bloco | Tempo aprox. | Conteúdo |
-|---|---|---|
-| 1. Gancho | 0:00 a 0:30 | Cena ou frase comum ("a geração X não aguenta nada") e a pergunta que prende, sem entregar a resposta. |
-| 2. Promessa | 0:30 a 1:00 | O que o espectador vai conseguir enxergar ao final, e aviso de que vamos testar o rótulo. |
-| 3. Contexto (fatos) | 1:00 a 4:00 | Dados e fatos das notas.md, com fonte dita na fala ou na tela. Neutro e verificável. |
-| 4. Análise própria | 4:00 a 8:00 | Aplicação das ideias 1, 2 e/ou 3. Sinalizar claramente a interpretação. Aqui fica o 1/3 original ou mais. |
-| 5. Contraexemplo e limites | 8:00 a 9:30 | Onde a nossa leitura falha ou tem exceções; o que as fontes não respondem. |
-| 6. Conclusão e pergunta de volta | 9:30 a fim | Resumo em 2 frases, a tese aplicada ao caso, pergunta de reflexão. CTA leve. |
-
-Regras de produção:
-- Visuais sem rosto: infográficos, gráficos simples, imagens de arquivo livre quando existirem, senão geradas (Flux) em estilo fotorrealista consistente, marcando conteúdo sintético no upload quando parecer real.
-- Não usar imagem de pessoas reais identificáveis associadas a afirmações negativas.
-- Títulos e miniaturas sem guerra de gerações nem exagero; prometer só o que o vídeo entrega.
+- **Adultos brasileiros de ~22 a 45 anos**
 
 ## Riscos e cuidados
 

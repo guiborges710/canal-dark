@@ -120,7 +120,7 @@ def make_video(cfg, topic, mock, allow_paid=False):
         f"ARQUIVOS: video.mp4 e thumbnail.jpg\n\n"
         "ANTES DE PUBLICAR:\n"
         "- Assista ao vídeo inteiro e confira os fatos principais contra as fontes em notas.md.\n"
-        "- A descrição já diz que é animação feita por computador, sem voz. Não há imagem de IA nem foto de terceiros.\n"
+        "- A descrição já diz que é animação feita por computador, com narração por IA a partir da voz do autor. Não há imagem de IA nem foto de terceiros.\n"
         "- A política de conteúdo inautêntico pesa contra vídeos em molde repetido e sem comentário próprio: "
         "o roteiro precisa ter ponto de vista e pesquisa originais.\n",
         encoding="utf-8")

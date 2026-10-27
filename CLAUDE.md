@@ -13,21 +13,22 @@ Objetivo: canal sem rosto, automatizado ao máximo, **monetizável**. Seguir TOD
 - Estrutura: gancho (4 s, a ideia mais forte já no frame 0) → desenvolvimento em 1 a 3 blocos com números e texto-chave → contraexemplo → pergunta de volta (fechamento, sem resposta pronta).
 - Cada short é um vídeo completo e independente.
 - **Estilo visual: animação vetorial feita por código** (SVG). Cartões de texto com contorno grafite, sombra sólida e entrada por mola; barras que crescem; movimento em todo o vídeo; flash branco entre cenas. Cores: azul, azul-claro, amarelo, laranja, branco e grafite.
-- **Sem voz e sem narração.** Os sons são efeitos gerados por código (impactos, dings, whooshes).
-- **Sem imagens de IA e sem fotos de terceiros.** Todo o visual é desenhado pelo motor em `render/`.
+- **Sons** Os sons são efeitos gerados por código (impactos, dings, whooshes).
 
 ## Regras do canal
 - Cada vídeo precisa de ângulo próprio (angulo.md) e pelo menos 1/3 de comentário original. Nunca só resumir fontes.
-- Fatos só das notas (3+ fontes). Tom respeitoso com vítimas. Sem sensacionalismo.
-- Números e datas no texto dos cartões precisam estar nas notas, com fonte citada na descrição.
-- Publicar poucos shorts por semana. O upload é automático como **privado** (`postar_pendentes.py`, um vídeo por execução, só com auditoria APROVADA do Vini). Tornar público é sempre manual, no Studio.
+- Fatos só das notas (3+ fontes). Tom respeitoso com vítimas. Sensacionalismo permitido no começo do canal (gancho, miniatura, títulos), desde que: (a) o tema seja o do próprio vídeo, sem isca de assunto alheio (nada de título ou miniatura sobre um tema e conteúdo sobre outro); (b) nada seja falso ou não confirmado pelas notas; (c) o vídeo entregue o que o gancho promete. Revisar esse tom quando o canal tiver inscritos e volume, e voltar a um tom mais sério. Decisão do dono (2026-10-27).
+
+<!-- CRIAR UM ARQUIVO PARA DEIXAR EXPLICITO A CADENCIA DE POSTAGEM -->
+<!-- - Publicar poucos shorts por semana. O upload é automático como **privado** (`postar_pendentes.py`, um vídeo por execução, só com auditoria APROVADA do Vini). Tornar público é sempre manual, no Studio. -->
+
 - Chaves de API ficam só no `.env`. Nunca em chat ou código.
 
 ## Fluxo (agentes em .claude/agents; debruyne-orquestrador coordena de ponta a ponta)
 **Fluxo ENXUTO (padrão diário de SHORTS, com auditoria de texto antes do render):**
 modric-pesquisador-tema → neymar-roteirista (ângulo + texto de 30-60s + direcao_viral.md, num passe) → courtois-revisor-fatos → **vini-auditor-conformidade, modo TEXTO** (valida roteiro.txt, notas e metadados ANTES de qualquer render; grava `auditoria_texto.md`) → olise-diretor-arte (cenas animadas, lendo direcao_viral.md) → mbappe-editor-metadados → **python run.py video --topic "..."** (render da animação + sons + conformidade) → vini-auditor-conformidade, modo FINAL (só imagem, som, animação e miniatura; grava `auditoria.md`, que libera o publish) → **sidorf-thumbnail-estrategista** (prompt da thumbnail para o ChatGPT; não gera imagem) → upload manual (Memphis).
 
-**Regra do texto:** nenhum vídeo entra no render sem `auditoria_texto.md` APROVADO. Problema de texto depois do render não é corrigido refazendo o vídeo: é tratado no texto, antes do render. A auditoria final só revisa o que o render produziu (imagem, som, animação, miniatura).
+**Regra do texto:** nenhum vídeo entra no render sem `auditoria_texto.md` APROVADO. Problema de texto depois do render não é corrigido refazendo o vídeo: é tratado no texto, antes do render. A auditoria final só revisa o que o render produziu (imagem, som, animação, narração).
 
 **Agentes sob-demanda (fora do fluxo diário):**
 - memphis-social-media → referencias_virais.md: rodar **~1x por semana**; o neymar reusa o arquivo existente.
@@ -42,32 +43,37 @@ modric-pesquisador-tema → neymar-roteirista (ângulo + texto de 30-60s + direc
 ## Comunicação entre agentes (nomes)
 Ao **mencionar** outro agente em mensagens, updates de progresso, handoffs e relatórios, use o nome do craque com inicial maiúscula e em **negrito**: **Courtois**, **Vini**, **Modric**, **Haaland**, **De Bruyne**, **Messi**, **Olise**, **Neymar**, **Mbappé**, **Cristiano**, **Memphis**. Ex.: "**Modric** concluiu a pesquisa e passou as fontes para **Courtois** revisar." Preserve os **identificadores técnicos** (ids, `@nome-do-agente`, nomes de arquivo, listas de ferramentas) em código, arquivos e configurações.
 
-| Craque | id técnico | Craque | id técnico |
-|---|---|---|---|
-| **Courtois** | courtois-revisor-fatos | **Messi** | messi-estrategista-angulo |
-| **Vini** | vini-auditor-conformidade | **Olise** | olise-diretor-arte |
-| **Modric** | modric-pesquisador-tema | **Neymar** | neymar-roteirista |
-| **Haaland** | haaland-pesquisador-nicho | **Mbappé** | mbappe-editor-metadados |
-| **De Bruyne** | debruyne-orquestrador | **Cristiano** | cristiano-otimizador-viral |
-| **Memphis** | memphis-social-media | | |
-| **Sidorf** | sidorf-thumbnail-estrategista | | |
+| Craque | id técnico |
+|---|---|
+| **Courtois** | courtois-revisor-fatos 
+| **Messi** | messi-estrategista-angulo
+| **Vini** | vini-auditor-conformidade 
+| **Olise** | olise-diretor-arte
+| **Modric** | modric-pesquisador-tema 
+| **Neymar** | neymar-roteirista
+| **Haaland** | haaland-pesquisador-nicho 
+| **Mbappé** | mbappe-editor-metadados
+| **De Bruyne** | debruyne-orquestrador 
+| **Cristiano** | cristiano-otimizador-viral
+| **Memphis** | memphis-social-media
+| **Sidorf** | sidorf-thumbnail-estrategista
 
 ## Contrato de arquivos (a squad produz, o run.py consome) — em output/<slug>/
 - `notas.md`: fatos com fonte (3+ sites).
 - `angulo.md`: tese, pergunta e comentário próprio.
 - `roteiro.txt`: **texto do vídeo, sem markdown e sem rubricas**, na ordem em que aparece. Serve de base para os cartões e para a conformidade (texto próprio, abertura e fecho). Não é narração.
 - `cenas.json`: lista de cenas animadas (tipo, duracao e textos). Contrato completo em `.claude/agents/olise-diretor-arte.md`. O `run.py` valida o arquivo antes de renderizar.
-- `metadados.json`: `titulo`, `descricao` (com "Fontes:" e "Animação feita por computador, sem voz"), `tags`, `thumbnail_texto`.
+- `metadados.json`: `titulo`, `descricao`, `tags`, `thumbnail_texto`.
 - Notas humanas ficam em arquivos à parte: `revisao.md`, `roteiro_notas.md`, `direcao_viral.md`, `auditoria.md`. **Não** salve `roteiro.md`, `cenas.md` nem `metadados.md`: o run.py não os lê.
 
 ## Autonomia
 Pedir "produza um vídeo sobre X" autoriza todo o fluxo com recursos **gratuitos** e dentro do `budget`. Não pergunte "posso continuar?"/"aprova o roteiro?" a cada passo: decida o rotineiro pelo briefing e registre as suposições. Pare só por falta de informação indispensável, conflito editorial, gasto acima do orçamento (`--allow-paid`) ou publicação no YouTube.
 
 ## Configuração persistente do canal (reutilizar; não reperguntar)
-- **Idioma/público:** pt-BR; brasileiros 18-45 que querem entender comportamento e gerações com nuance.
-- **Identidade editorial:** `output/messi_assinatura_canal.md` ("Geração é rótulo; contexto é explicação"). Tom respeitoso, analítico, sem sensacionalismo nem partido.
+- **Idioma/público:** pt-BR; brasileiros 18-45.
+- **Identidade editorial:** `output/messi_assinatura_canal.md`.
 - **Formato padrão:** SHORT 9:16, 30-60s, 1080×1920, 30 fps, H.264 yuv420p com faixa TV (config_shorts.yaml).
-- **Visual:** animação vetorial por código (render/). Sem imagens de IA, sem fotos de terceiros, sem voz.
+- **Visual:** animação vetorial por código (render/).
 - **Ferramentas:** squad (Claude Code) escreve o conteúdo de graça; `run.py` renderiza (Node + Chrome local, ffmpeg) e gera os sons por código. Custo zero no render.
 - **Orçamento:** `budget.max_usd_per_video: 0` (nada pago); `max_retries_per_step: 2`. O único gasto possível é o texto pela API da Anthropic, só com `--allow-paid`.
 - **Destino:** `output/<slug>/` (video.mp4, thumbnail.jpg, PUBLICAR.txt, CONFORMIDADE.md, custo.json, cenas.json, eventos.json).
@@ -90,7 +96,7 @@ Duas camadas distintas: a **squad** são os subagentes do Claude Code em [.claud
 2. `angulo.md` ← `make_angle` (ponto de vista próprio, antes do texto)
 3. `roteiro.txt` ← [agents/script.py](agents/script.py) `write_script`+`review_script` (só com `--allow-paid`; a squad escreve normalmente)
 4. `cenas.json` ← a squad (olise). Com `--mock`, usa [agents/mocks.py](agents/mocks.py) `CENAS`.
-5. render → `video.mp4`, `thumbnail.jpg` (um frame do próprio vídeo), `eventos.json` e `audio.wav` ← [media/motion.py](media/motion.py) (valida o cenas.json, chama `render/render.mjs`, gera o áudio com [media/sfx.py](media/sfx.py) e codifica com ffmpeg)
+5. render → `video.mp4`, `prompt_thumbnail.txt` (feito pelo Sidorf), `eventos.json` e `audio.wav` ← [media/motion.py](media/motion.py) (valida o cenas.json, chama `render/render.mjs`, gera o áudio com [media/sfx.py](media/sfx.py) e codifica com ffmpeg)
 6. `metadados.json` ← a squad (mbappe); `PUBLICAR.txt`; [compliance.py](compliance.py) → `CONFORMIDADE.md`; `custo.json`
 
 **Módulos-chave:**

@@ -17,7 +17,19 @@ Você escreve roteiros em português do Brasil para um canal de **Análise de Co
 - Tom respeitoso, sem sensacionalismo, sem atacar geração nem vítima. Números em algarismos (ex.: 15%). Frases curtas, de fácil leitura na tela.
 - Varie abertura e fecho em relação aos outros vídeos do canal (olhe os outros `output/*/roteiro.txt`).
 
+## Narração (obrigatória em todo vídeo)
+Todo vídeo tem narração com a voz do autor. Você define o que é falado e como é falado. A narração é o pilar do vídeo: sem ela o vídeo não passa no `run.py`.
+
+- O texto narrado é o mesmo de `roteiro.txt`, sem acréscimos. Cada trecho vai para a cena certa: o gancho é a fala da cena `gancho`, o insight e o contraexemplo vão para `barras` ou `barras_horizontais`, e a pergunta de volta vai para `fechamento`.
+- Em `output/<slug>/direcao_viral.md`, escreva uma seção `## Narração` com:
+  - **Tom:** calmo e direto, de quem explica. Sem ironia sobre pessoas ou gerações, sem gritar.
+  - **Ritmo:** cerca de 2,5 palavras por segundo. Pausa curta depois de cada número e depois da pergunta de volta.
+  - **Ênfases:** as palavras que carregam a tese (ex.: "não", "só", "depende"), com a marcação `*palavra*`.
+  - **Falas por cena:** uma linha por cena, na ordem do `cenas.json`, com o texto exato que vai no campo `fala`.
+- Na fala, números por extenso ("mil duzentos e vinte e sete", "doze a quinze anos") para o TTS ler certo. Em `roteiro.txt` e na tela, seguem em algarismos.
+- A **Olise** copia as falas dessa seção para o campo `fala` de cada cena. Não reescreva nada na Olise.
+
 ## Saída (contrato — importante)
 Salve **só o texto do vídeo**, sem títulos de markdown, sem rubricas e sem notas de produção, em `output/<slug>/roteiro.txt`.
 A **Olise** transforma esse texto em cenas animadas: qualquer coisa que não seja texto do vídeo vira texto na tela indevido.
-Se quiser registrar observações, escreva-as na sua resposta do chat, não no arquivo.
+O tom, o ritmo e as falas por cena vão em `output/<slug>/direcao_viral.md`, não no `roteiro.txt`.

@@ -1,4 +1,0 @@
-Browser tab: 1, Title: "(21)Closet Minimal | Moda & Acessó (@closetminimal) | TikTok", URL: "https://www.tiktok.com/@closetminimal".
-The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
-~1 AXWebArea (21)Closet Minimal | Moda & Acessó (@closetminimal) | TikTok, URL: tiktok.com/@closetminimal
-The focused UI element is 1 AXWebArea (21)Closet Minimal | Moda & Acessó (@closetminimal) | TikTok, URL: tiktok.com/@closetminimal

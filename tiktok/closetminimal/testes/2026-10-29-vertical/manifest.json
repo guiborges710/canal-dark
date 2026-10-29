@@ -1,0 +1,59 @@
+{
+  "status": "LOCAL_REVIEW_ONLY_NOT_AUTHORIZED_TO_PUBLISH",
+  "date": "2026-10-29",
+  "tool": "built-in imagegen",
+  "format": "9:16, 1080x1920",
+  "assets": [
+    {
+      "file": "001.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "sha256": "b8f8d39b0b09004a0737954cf74159a8a163031e1d8c377d19bd941a134ebf65"
+    },
+    {
+      "file": "002.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "sha256": "088ec5bb823eb122deea490cc72f042d4779c659dcc5369d3b6ff163fcfd5d5b"
+    },
+    {
+      "file": "003.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "sha256": "2590a579b81055c285b4a9abe9edabdef4cfb2da6054dfa18340b29a3e63cd0d"
+    },
+    {
+      "file": "004.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "sha256": "cdcd190a0442eab41f57805dadc9212e408d76d6aac9a59a7182b41808006890"
+    },
+    {
+      "file": "005.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "sha256": "7bdff80da6801b5f0f8c51eafbf4329764c68e6f4c85ff54e8b04a509261a9d7"
+    },
+    {
+      "file": "006.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "sha256": "eac83e1a343d02cb3a76ae5dd9cbf7fa8190830e0b3940603b4337386397bf9b"
+    }
+  ],
+  "native_preview": "not performed; user requested local review only",
+  "visual_review": "all six inspected; UI and central3:4 simulations are estimates, native validation required before posting",
+  "export": "Uniform dimensional export requested by user; no crop, no white borders."
+}

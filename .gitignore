@@ -25,3 +25,23 @@ voz/*.wav
 voz/*.mp3
 voz/*.m4a
 output/*/falas/
+
+# produtividade: estado local dos avisos
+produtividade/.estado_avisos.json
+produtividade/.ronaldo*
+produtividade/.feitos.json
+produtividade/.trello_quadro.json
+produtividade/.kanban.bak.md
+produtividade/.google_pessoal_token.json
+produtividade/.google_agenda_estado.json
+# produtividade: dados pessoais (agenda, lembretes, tarefas, horas, acessos, Kanban, posts)
+produtividade/agenda.json
+produtividade/agenda.md
+produtividade/lembretes.json
+produtividade/tarefas.md
+produtividade/horas.md
+produtividade/acessos.md
+produtividade/kanban.md
+produtividade/linkedin/
+.google_pessoal_token.json
+financas/planilha/

@@ -97,8 +97,18 @@ def listar_projetos() -> dict:
                 "slug": slug,
                 "titulo": fonte.get("titulo", "Sem título"),
                 "fonte_url": fonte.get("url", ""),
+                "fonte": {
+                    "criador": fonte.get("autor", "Desconhecido"),
+                    "url": fonte.get("url", "")
+                },
                 "status": status_geral,
                 "nota_rivaldo": nota_rivaldo,
+                "notas": {
+                    "rivaldo": nota_rivaldo
+                },
+                "tempo_inicio": datetime.fromtimestamp(
+                    (pasta / "estado.json").stat().st_mtime
+                ).isoformat() if (pasta / "estado.json").exists() else "",
                 "agentes": agentes_lista,
                 "data_criacao": datetime.fromtimestamp(
                     (pasta / "estado.json").stat().st_mtime

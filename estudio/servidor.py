@@ -5,7 +5,7 @@ import re
 import threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from urllib.parse import parse_qs, urlparse
+from urllib.parse import parse_qs, unquote, urlparse
 
 from media import estilos
 
@@ -81,6 +81,44 @@ class Manipulador(BaseHTTPRequestHandler):
             self.wfile.write(corpo)
             return False
         return self._recusar("Entre com a senha.", 401)
+
+    def _so_computador(self):
+        """O painel só abre no computador: IP local E Host 127.0.0.1/localhost (a rede e o DNS rebinding levam 403). True = segue."""
+        host = (self.headers.get("Host") or "").split(":")[0]
+        if acesso.e_local(self.client_address[0]) and host in ("127.0.0.1", "localhost"):
+            return True
+        self._erro("O painel só abre no computador.", 403)
+        return False
+
+    def _arquivo_app(self, caminho_url):
+        """Serve arquivos da casca, depois de decodificar e confinar o caminho."""
+        try:
+            rel = unquote(caminho_url, errors="strict")
+        except (UnicodeDecodeError, ValueError):
+            return self._erro("Caminho inválido.", 400)
+        if "%" in rel or "\\" in rel or "\x00" in rel or any(p in (".", "..") for p in rel.split("/")):
+            return self._erro("Caminho inválido.", 400)
+        raiz = (REPO / "ecossistema" / "app").resolve()
+        destino = (raiz / (rel or "index.html")).resolve()
+        if destino != raiz and raiz not in destino.parents:
+            return self._erro("Caminho inválido.", 400)
+        return self._arquivo(destino)
+
+    def _sistema_get(self, chave):
+        """Dispatch fechado de recursos públicos; a chave nunca é um caminho."""
+        recursos = {
+            "setores": lambda: {"setores": central.SETORES},
+            "sprint-ativa": central.sprint_ativa,
+            "quadro": central.quadro,
+            "agentes": lambda: {"agentes": central.agentes()},
+        }
+        recurso = recursos.get(chave)
+        if recurso is None:
+            return self._erro("Recurso do sistema não encontrado.", 404)
+        try:
+            return self._json(recurso())
+        except Exception:
+            return self._erro("Não foi possível carregar este recurso.", 500)
 
     def _recusar(self, motivo, codigo):
         self.close_connection = True  # um POST recusado não teve o corpo lido: reaproveitar a conexão corromperia o próximo pedido
@@ -158,8 +196,8 @@ class Manipulador(BaseHTTPRequestHandler):
             self._erro(r.motivos, r.codigo)
         except FileNotFoundError:
             self._erro("Arquivo não encontrado.", 404)
-        except Exception as e:  # noqa: BLE001
-            self._erro(f"Erro interno: {e}", 500)
+        except Exception:  # noqa: BLE001
+            self._erro("Erro interno. Tente novamente.", 500)
 
     def do_POST(self):
         if not self._porteiro("POST"):
@@ -173,22 +211,36 @@ class Manipulador(BaseHTTPRequestHandler):
             self.close_connection = True
         except fluxo.Recusado as r:
             self._erro(r.motivos, r.codigo)
-        except Exception as e:  # noqa: BLE001
-            self._erro(f"Erro interno: {e}", 500)
+        except Exception:  # noqa: BLE001
+            self._erro("Erro interno. Tente novamente.", 500)
         return None
 
     def _rota_get(self):
         u = urlparse(self.path)
         q = {k: v[0] for k, v in parse_qs(u.query).items()}
         c = u.path
+        if c == "/financas" or c.startswith("/financas/"):
+            if not self._so_computador():
+                return
+            rel = c[len("/financas/"):] if c.startswith("/financas/") else "index.html"
+            return self._arquivo_app(rel)
         if c == "/" or c.startswith(("/producao/", "/estudio/", "/editor/", "/agentes", "/fluxos")):
             return self._arquivo(WEB / "index.html", "text/html; charset=utf-8")
         if c == "/central":
             return self._arquivo(WEB / "central.html", "text/html; charset=utf-8")
-        if c == "/painel":
+        if c == "/painel" or c.startswith("/painel/"):
+            if not self._so_computador():
+                return
             return self._arquivo(WEB / "painel.html", "text/html; charset=utf-8")
         if c.startswith("/api/painel/"):
+            if not self._so_computador():
+                return
             return self._painel_get(c[len("/api/painel/"):], q)
+        m = re.fullmatch(r"/api/sistema/([a-z][a-z0-9-]{0,31})", c)
+        if m:
+            if not self._so_computador():
+                return
+            return self._sistema_get(m.group(1))
         if c == "/api/central/setores":
             return self._json({"setores": central.SETORES})
         if c == "/api/sprints/ativa":
@@ -283,6 +335,11 @@ class Manipulador(BaseHTTPRequestHandler):
         m = re.fullmatch(r"/api/jobs/(\d+)/log", c)
         if m:
             return self._json({"log": trabalhos.ler_log(int(m.group(1)))})
+        if c == "/api/clipes":
+            from . import clipes_routes
+            return self._json(clipes_routes.listar_projetos())
+        if c == "/api/eventos":
+            return self._sse()
         return self._erro("Rota não encontrada.", 404)
 
     def _painel_get(self, rota, q):
@@ -305,6 +362,32 @@ class Manipulador(BaseHTTPRequestHandler):
     def _rota_post(self):
         u = urlparse(self.path)
         c = u.path
+        if c == "/api/financas/movimentos/editar":
+            if not self._so_computador():
+                return
+            n = int(self.headers.get("Content-Length") or 0)
+            if n <= 0 or n > 16_384:
+                if n > 16_384:
+                    self.close_connection = True  # o corpo não foi consumido; não reutilizar a conexão com bytes pendentes
+                return self._erro("Pedido vazio ou grande demais.", 413 if n > 16_384 else 400)
+            d = json.loads(self.rfile.read(n).decode("utf-8"))
+            from . import financas_edicao
+            with financas_edicao.TRAVA:
+                try:
+                    editado = financas_edicao.editar(d)
+                except financas_edicao.EdicaoRecusada as e:
+                    return self._erro(str(e), e.codigo)
+                try:
+                    from .dados import gerar_financas
+                    dados = gerar_financas.gerar(REPO / "financas")
+                    gerar_financas.gravar(dados, REPO / "ecossistema" / "app" / "dados")
+                except Exception:
+                    try:
+                        financas_edicao.restaurar_backup(editado["backup"], editado["sha256"])
+                    except financas_edicao.EdicaoRecusada as erro:
+                        return self._erro(str(erro), erro.codigo)
+                    return self._erro("Não consegui atualizar o dashboard; o lançamento original foi restaurado.", 500)
+            return self._json({"ok": True, "gerado_em": dados["gerado_em"]})
         m = re.fullmatch(r"/api/producoes/([\w.-]+)/enviar/(asset|componente|thumbnail)", c)
         if m:
             return self._upload(m.group(1), m.group(2), {k: v[0] for k, v in parse_qs(u.query).items()})
@@ -410,7 +493,67 @@ class Manipulador(BaseHTTPRequestHandler):
             if acao == "dispensar":
                 fluxo.dispensar_falha(job_id)
                 return self._json({"ok": True})
+        if c == "/api/clipes/novo":
+            from . import clipes_routes
+            return self._json(clipes_routes.iniciar_projeto(
+                d.get("url", ""),
+                d.get("autor", ""),
+                d.get("autorizacao", ""),
+                d.get("perfil", "geral")
+            ), 201)
+        m = re.fullmatch(r"/api/clipes/ajustar/([\w.-]+)/(\d+)", c)
+        if m:
+            from . import clipes_routes
+            return self._json(clipes_routes.ajustar_corte(
+                m.group(1),
+                int(m.group(2)),
+                d.get("ini", 0.0),
+                d.get("fim", 0.0),
+                d.get("layout", "borrado")
+            ), 201)
         return self._erro("Rota não encontrada.", 404)
+
+    def _sse(self):
+        """GET /api/eventos: Server-Sent Events com atualizações de projetos de clipes."""
+        from . import clipes_routes
+
+        self.send_response(200)
+        self.send_header("Content-Type", "text/event-stream; charset=utf-8")
+        self.send_header("Cache-Control", "no-cache")
+        self.send_header("Connection", "keep-alive")
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.end_headers()
+
+        # Enviar heart-beat inicial
+        try:
+            self.wfile.write(b": SSE conectado\n\n")
+            self.wfile.flush()
+        except ERROS_DE_CONEXAO:
+            return
+
+        # Criar cliente SSE e registrar
+        cliente = clipes_routes.ClienteSSE(self.wfile.write)
+        clipes_routes.registrar_sse(cliente)
+
+        try:
+            # Manter a conexão aberta; cliente será notificado por notificar_sse()
+            # Enviar heart-beat a cada 30s para manter a conexão
+            import time
+            ultima_pulsacao = time.time()
+            while True:
+                time.sleep(5)
+                now = time.time()
+                if now - ultima_pulsacao > 30:
+                    try:
+                        self.wfile.write(b": heart-beat\n\n")
+                        self.wfile.flush()
+                        ultima_pulsacao = now
+                    except ERROS_DE_CONEXAO:
+                        break
+        except ERROS_DE_CONEXAO:
+            pass
+        finally:
+            clipes_routes.remover_sse(cliente)
 
     def _upload(self, slug, destino, q):
         n = int(self.headers.get("Content-Length") or 0)

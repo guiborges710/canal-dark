@@ -1,0 +1,183 @@
+<title>Ecossistema — Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+:root {
+  --bg: #f9f9f7;
+  --sf: #fcfcfb;
+  --ink: #0b0b0b;
+  --ink2: #52514e;
+  --azul: #2a78d6;
+  --grade: #e1e0d9;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d0d0d;
+    --sf: #1a1a19;
+    --ink: #f0efec;
+    --ink2: #c3c2b7;
+    --azul: #3987e5;
+    --grade: #2c2c2a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d0d0d;
+  --sf: #1a1a19;
+  --ink: #f0efec;
+  --ink2: #c3c2b7;
+  --azul: #3987e5;
+  --grade: #2c2c2a;
+  color-scheme: dark;
+}
+body {
+  background: var(--bg);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+.container {
+  width: 100%;
+  max-width: 360px;
+  background: var(--sf);
+  border: 1px solid var(--grade);
+  border-radius: 12px;
+  padding: 32px;
+}
+h1 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.subtitle {
+  color: var(--ink2);
+  margin-bottom: 28px;
+  font-size: 14px;
+}
+.form-group {
+  margin-bottom: 16px;
+}
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink2);
+  margin-bottom: 6px;
+}
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--grade);
+  border-radius: 6px;
+  font-size: 14px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: inherit;
+}
+input:focus {
+  outline: none;
+  border-color: var(--azul);
+  box-shadow: 0 0 0 2px rgba(42, 120, 214, 0.1);
+}
+button {
+  width: 100%;
+  padding: 12px;
+  background: var(--azul);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+button:hover {
+  opacity: 0.9;
+}
+.error {
+  background: #e66767;
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 16px;
+  display: none;
+}
+.error.show {
+  display: block;
+}
+</style>
+
+<body>
+<div class="container">
+  <h1>Ecossistema</h1>
+  <p class="subtitle">Painel de controle do Guilherme</p>
+
+  <div class="error" id="erro"></div>
+
+  <form id="loginForm">
+    <div class="form-group">
+      <label for="usuario">Usuário</label>
+      <input type="text" id="usuario" placeholder="Digite seu usuário" required autocomplete="username">
+    </div>
+    <div class="form-group">
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" placeholder="Digite sua senha" required autocomplete="current-password">
+    </div>
+    <button type="submit">Entrar</button>
+  </form>
+</div>
+
+<script>
+const CREDENCIAIS = {
+  usuario: "guilherme",
+  senha: "ecossistema123"
+};
+
+document.getElementById("loginForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const usuario = document.getElementById("usuario").value;
+  const senha = document.getElementById("senha").value;
+
+  const erroEl = document.getElementById("erro");
+
+  if (usuario === CREDENCIAIS.usuario && senha === CREDENCIAIS.senha) {
+    try {
+      localStorage.setItem("ecossistema_auth", JSON.stringify({
+        logado: true,
+        timestamp: Date.now()
+      }));
+      window.location.href = "index.html";
+    } catch (e) {
+      erroEl.textContent = "Erro ao salvar sessão";
+      erroEl.classList.add("show");
+    }
+  } else {
+    erroEl.textContent = "Usuário ou senha incorretos";
+    erroEl.classList.add("show");
+    document.getElementById("senha").value = "";
+    document.getElementById("senha").focus();
+  }
+});
+
+// Se já está logado, vai direto
+try {
+  const auth = JSON.parse(localStorage.getItem("ecossistema_auth"));
+  if (auth && auth.logado) {
+    window.location.href = "index.html";
+  }
+} catch (e) {}
+</script>
+</body>

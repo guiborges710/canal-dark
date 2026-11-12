@@ -1,0 +1,115 @@
+[
+ {
+  "tipo": "sketch",
+  "desenho": "cena_0",
+  "duracao": 4.068,
+  "fala": "Dizem que a Gen Z parou de beber. Mas a queda não é só dela.",
+  "rotulos": [
+   "Gen Z parou de beber?"
+  ],
+  "sons": []
+ },
+ {
+  "tipo": "sketch",
+  "desenho": "cena_1",
+  "duracao": 11.32,
+  "fala": "Nos Estados Unidos, sessenta e dois por cento dos adultos bebiam em dois mil e vinte e três. Em dois mil e vinte e cinco, cinquenta e quatro. O menor número desde mil novecentos e trinta e nove.",
+  "rotulos": [
+   "Adultos nos EUA que bebem",
+   "62%",
+   "58%",
+   "54%"
+  ],
+  "sons": [
+   {
+    "t": 0.9,
+    "tipo": "ding"
+   },
+   {
+    "t": 2.8,
+    "tipo": "ding"
+   }
+  ]
+ },
+ {
+  "tipo": "sketch",
+  "desenho": "cena_2",
+  "duracao": 5.124,
+  "fala": "No mesmo período, entre adultos jovens, foi de cinquenta e nove para cinquenta por cento.",
+  "rotulos": [
+   "Adultos jovens: 59% → 50%",
+   "59%",
+   "50%"
+  ],
+  "sons": [
+   {
+    "t": 0.9,
+    "tipo": "ding"
+   },
+   {
+    "t": 1.9,
+    "tipo": "impact"
+   }
+  ]
+ },
+ {
+  "tipo": "sketch",
+  "desenho": "cena_3",
+  "duracao": 8.862,
+  "fala": "A pesquisa associa isso à saúde: cinquenta e três por cento achavam que até beber com moderação faz mal. Nossa leitura: a informação parece pesar mais que o caráter de uma geração.",
+  "rotulos": [
+   "53%: moderação faz mal"
+  ],
+  "sons": [
+   {
+    "t": 1.0,
+    "tipo": "ding"
+   }
+  ]
+ },
+ {
+  "tipo": "sketch",
+  "desenho": "cena_4",
+  "duracao": 8.197,
+  "fala": "Mas a queda aparece em todas as idades. E a bebida mudou, não sumiu: entre jovens adultos, destilado já empata com cerveja.",
+  "rotulos": [
+   "Queda em todas as idades"
+  ],
+  "sons": [
+   {
+    "t": 1.4,
+    "tipo": "impact"
+   }
+  ]
+ },
+ {
+  "tipo": "sketch",
+  "desenho": "cena_5",
+  "duracao": 4.519,
+  "fala": "No Brasil, as pesquisas sobre consumo pesado divergem: cada uma mede uma coisa.",
+  "rotulos": [
+   "Brasil: sem número único"
+  ],
+  "sons": [
+   {
+    "t": 1.2,
+    "tipo": "ding"
+   }
+  ]
+ },
+ {
+  "tipo": "sketch",
+  "desenho": "cena_6",
+  "duracao": 4.692,
+  "fala": "Se a queda aparece em todas as idades, ainda faz sentido chamar de coisa de uma geração?",
+  "rotulos": [
+   "Coisa de uma geração?"
+  ],
+  "sons": [
+   {
+    "t": 0.4,
+    "tipo": "impact"
+   }
+  ]
+ }
+]

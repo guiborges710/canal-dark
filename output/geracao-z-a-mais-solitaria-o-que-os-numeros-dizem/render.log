@@ -1,0 +1,40 @@
+Pasta do vídeo: C:\Users\Guilherme\Documents\canal-dark\output\geracao-z-a-mais-solitaria-o-que-os-numeros-dizem
+
+▶ 1/6 Pesquisando o tema
+
+▶ 2/6 Escrevendo e revisando o texto
+
+▶ 3/6 Montando as cenas da animação
+   9 cenas, 90 s
+
+▶ 4/6 Renderizando a animação
+   narrando as cenas (Chatterbox, CPU; leva alguns minutos)...
+loaded PerthNet (Implicit) at step 250,000
+   fala 1: 10.4 s (3.0 palavras/s)
+   fala 2: 14.7 s (2.7 palavras/s)
+   fala 3: 9.3 s (2.7 palavras/s)
+   fala 4: 11.2 s (3.0 palavras/s)
+   fala 5: 10.3 s (3.3 palavras/s)
+   fala 6: 9.7 s (2.7 palavras/s)
+   fala 7: 7.2 s (2.8 palavras/s)
+   fala 8: 9.1 s (3.4 palavras/s)
+   fala 9: 12.0 s (3.4 palavras/s)
+   desenhando 2986 quadros (99.5 s, 30 fps)...
+   300/2986
+   600/2986
+   900/2986
+   1200/2986
+   1500/2986
+   1800/2986
+   2100/2986
+   2400/2986
+   2700/2986
+   vídeo: video.mp4 (100 s, 2986 frames, 30 fps, com narração)
+
+▶ 5/6 Criando título, descrição e tags
+
+▶ 6/6 Conformidade e custo
+   Conformidade: 10 ok, 1 atenção, 0 faltando (veja CONFORMIDADE.md)
+   {'claude_usd': 0.0, 'voz_usd': 0, 'imagens_usd': 0, 'total_usd': 0.0}
+
+✔ Pronto: C:\Users\Guilherme\Documents\canal-dark\output\geracao-z-a-mais-solitaria-o-que-os-numeros-dizem\video.mp4. Suba manualmente usando C:\Users\Guilherme\Documents\canal-dark\output\geracao-z-a-mais-solitaria-o-que-os-numeros-dizem\PUBLICAR.txt

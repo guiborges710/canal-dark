@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; background: #000; overflow: hidden; }
+  #c { display: block; width: 1080px; height: 1920px; }
+  #leg {
+    position: absolute; left: 0; width: 1080px; top: 1255px; text-align: center;
+    font-family: 'Arial Black', 'Segoe UI Black', Arial, sans-serif; font-weight: 900;
+    font-size: 66px; line-height: 1.22; color: #fff; text-transform: uppercase; letter-spacing: 1px;
+  }
+  #leg .l { display: block; white-space: nowrap; }
+  #leg .t { -webkit-text-stroke: 14px #07070c; paint-order: stroke fill; text-shadow: 0 6px 0 rgba(0,0,0,.35); }
+  #leg .d { background: #e5202e; border-radius: 14px; padding: 0 14px; margin: 0 2px; -webkit-text-stroke: 0; text-shadow: none; box-shadow: 0 5px 0 rgba(0,0,0,.35); }
+</style>
+</head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<div id="leg"></div>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js"}}</script>
+<script type="module" src="./engine.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relatório do ciclo 2 · Contexto Explica</title>
+<style>
+  :root { --bg:#f6f5f1; --card:#fff; --ink:#1d1d1b; --muted:#5f5f58; --line:#dcdad2; --accent:#1f5fa8; --warn:#a14b00; --ok:#2e7d4f; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#151513; --card:#1f1f1c; --ink:#ecebe6; --muted:#a3a29a; --line:#3a3a35; --accent:#7fb2ea; --warn:#e8a15c; --ok:#78c79a; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:980px; margin:0 auto; padding:32px 16px 64px; }
+  header h1 { font-size:28px; margin:0 0 6px; }
+  header p { margin:0; color:var(--muted); }
+  section { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px 22px; margin-top:20px; }
+  h2 { font-size:20px; margin:0 0 12px; }
+  p, li { margin:6px 0; }
+  ul, ol { padding-left:22px; margin:6px 0; }
+  .tag { display:inline-block; font-size:12px; padding:2px 8px; border-radius:999px; border:1px solid var(--line); color:var(--muted); margin-right:4px; }
+  .fato { color:var(--ok); border-color:var(--ok); }
+  .hip { color:var(--warn); border-color:var(--warn); }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-top:8px; }
+  .kpi { border:1px solid var(--line); border-radius:10px; padding:12px; }
+  .kpi b { display:block; font-size:24px; }
+  .kpi span { color:var(--muted); font-size:13px; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th, td { text-align:left; padding:8px 6px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--muted); font-weight:600; }
+  .scroll { overflow-x:auto; }
+  .aviso { border-left:4px solid var(--warn); padding:8px 12px; }
+  code { font-size:13px; }
+  footer { color:var(--muted); font-size:13px; margin-top:24px; }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Relatório do ciclo 2 · Setor de inteligência</h1>
+  <p>Contexto Explica · 31 de outubro de 2026 · Consolidado por Vitinho · Canal: análise de comportamento social e gerações (Shorts)</p>
+</header>
+
+<section>
+  <h2>Resumo em seis linhas</h2>
+  <ul>
+    <li><b>Ainda é cedo.</b> 21 vídeos, maior marca 71 views. Nada aqui vira regra.</li>
+    <li><b>O que mudou:</b> 2 vídeos novos (ambos privados, 0 view por construção), o primeiro comentário do canal e, pela primeira vez, uma curva (2 coletas em dias diferentes).</li>
+    <li><b>Confirmado:</b> o vídeo nº 1 (filhos) desacelerou de cerca de 64 views/dia para 2,3/dia. Era impulso de vídeo novo, não cauda que retém.</li>
+    <li><b>Rota nova:</b> primeiro vídeo fora do eixo "gerações" (esquema de pirâmide). Pode ter busca mais ampla, mas é hipótese.</li>
+    <li><b>Sem resposta ao "por quê":</b> falta o escopo OAuth <code>yt-analytics.readonly</code> (retenção, CTR, tráfego).</li>
+    <li><b>Duas decisões suas</b> travam o próximo ciclo (abaixo).</li>
+  </ul>
+  <div class="kpis">
+    <div class="kpi"><b>21</b><span>vídeos no canal (eram 19)</span></div>
+    <div class="kpi"><b>71</b><span>views do vídeo nº 1</span></div>
+    <div class="kpi"><b>~2,3</b><span>views/dia do nº 1 (era ~64)</span></div>
+    <div class="kpi"><b>1</b><span>comentário (o primeiro)</span></div>
+    <div class="kpi"><b>11</b><span>canais catalogados (+4)</span></div>
+    <div class="kpi"><b>2</b><span>vídeos privados</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Decisões que dependem de você</h2>
+  <ol>
+    <li><b>Liberar <code>yt-analytics.readonly</code></b> (novo consentimento OAuth, só leitura). Sem isso, nenhum ciclo responde "por quê". Risco baixo.</li>
+    <li><b>Destino dos 2 vídeos privados</b> (pirâmide e solidão): tornar públicos para medir, ou confirmar que ficam privados.</li>
+    <li><b>Formato (longo x Short):</b> o nicho vive do longo, o canal é só Short. Recomendação: adiar até ter retenção.</li>
+    <li><b>Thumbnail da pirâmide:</b> conceito novo mais aderente ao nicho; validar como teste quando houver analytics.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Métricas do canal próprio <span class="tag fato">Fato</span></h2>
+  <p>Fonte: <code>metricas/canal_2026-10-31.md</code> e <code>videos.csv</code> (Yuri Alberto).</p>
+  <ul>
+    <li>Nº 1: "Geração Z não quer filhos ou não pode ter?" com 71 views (64 no 1º dia, +7 em 3 dias).</li>
+    <li>"Celular na escola" e "cérebro podre" crescem devagar. "Toda geração acha a próxima mimada" tem 0 views em 23 dias (o pior).</li>
+    <li>Vídeos novos: <code>esquema-de-piramide</code> (60 s) e o de solidão (<b>100 s</b>, acima da janela de Short). Ambos <code>private</code> no <code>upload.json</code>.</li>
+    <li>Retenção, CTR, impressões, tráfego e inscritos seguem indisponíveis.</li>
+    <li>A maioria dos vídeos no CSV segue sem slug.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Mercado: o que a rodada trouxe</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Área</th><th>Fato</th><th>Hipótese</th></tr></thead>
+    <tbody>
+      <tr><td><b>Canais</b> (Hugo Souza)</td><td>4 fichas novas: Rascunhos Econômicos, Canal do Por Quê?, Segundo a Psicologia, Animated Finance. Só 2 das 11 estão no nicho "gerações". Nenhum canal dark pt-BR de Shorts sobre golpe/pirâmide em caderno.</td><td>O recorte "golpe em sketch, Short" pode estar vago no mercado.</td></tr>
+      <tr><td><b>Rascunhos Econômicos</b></td><td>Vizinho visual mais próximo do nosso sketch: papel, caneta preta e vermelha, mão do autor. Longo (19-24 min), diário, 6-40 mil views. Conteúdo recente puxa para política.</td><td>Mostra que o estilo rascunho tem público; formato é o oposto do nosso.</td></tr>
+      <tr><td><b>Títulos</b> (Fagner)</td><td>Padrão dominante: pergunta de causa. Nossos títulos: "dois tempos" (42-64 caracteres). O da pirâmide nomeia o tema real e cumpre a sua regra.</td><td>A provocação fica no fim do título e pode ser cortada no feed.</td></tr>
+      <tr><td><b>Thumbnails</b> (André Carrillo)</td><td>Combo do nicho: fundo escuro + amarelo/branco + palavra-isca vermelha. Texto curto em caixa-alta.</td><td>"PIRÂMIDE / VOCÊ É A BASE" é mais forte que a frase anterior. Sem CTR para provar.</td></tr>
+      <tr><td><b>Produção</b> (Raniele)</td><td>Animação/ilustração é o recurso mais comum (36%, ~45% com rascunho em papel). 7 de 11 canais são longos. Nenhum usa rosto.</td><td>O Short é porta de entrada; o watch time está no longo.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2>Hipóteses <span class="tag hip">Não são fatos</span></h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>#</th><th>Hipótese</th><th>O que falta para confirmar</th></tr></thead>
+    <tbody>
+      <tr><td>H1</td><td>Tema golpe/dinheiro (pirâmide) tem busca mais ampla que "geração".</td><td>Vídeo público + views e tráfego.</td></tr>
+      <tr><td>H2</td><td>"Gente esperta cai nessa" / "VOCÊ É A BASE" gera mais clique por desafiar a autoimagem.</td><td>CTR.</td></tr>
+      <tr><td>H3</td><td>Repetir tema que rendeu pouco (solidão) rende pouco de novo.</td><td>CTR para separar tema de embalagem.</td></tr>
+      <tr><td>H4</td><td>100 s prejudica o alcance em formato Short.</td><td>Só 1 vídeo, privado.</td></tr>
+      <tr><td>H5</td><td>Título em "dois tempos" funciona por unir curiosidade e concretude.</td><td>CTR por estrutura.</td></tr>
+      <tr><td>H6</td><td>Nomes de casos nas tags (TelexFree, Avestruz) capturam busca que "geração" não captura.</td><td>Analytics de busca.</td></tr>
+      <tr><td>H7</td><td>O pico de 64 views foi impulso de vídeo novo.</td><td>Reforçada pela curva; falta origem de tráfego.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2>Contradições não resolvidas</h2>
+  <ul>
+    <li><b>Pergunta no título garante alcance?</b> Canal do Por Quê? usa quase só pergunta e tem views baixas (130-1.600). Rascunhos usa afirmação em caixa-alta e tem 6-40 mil. A diferença pode ser idade, tema ou thumbnail, não o título.</li>
+    <li><b>Longo x Short:</b> concorrentes ganham no longo; o canal é só Short. Decisão de formato é sua.</li>
+    <li><b>Caixa-alta no título:</b> o nicho adjacente abusa; nós restringimos à thumbnail. É tom, não prova de eficácia.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Lacunas</h2>
+  <ol>
+    <li>Retenção, CTR, tráfego e inscritos (falta o escopo OAuth).</li>
+    <li>Os 2 vídeos privados não podem ser medidos.</li>
+    <li>Descrição, tags e hashtags de terceiros: não coletados pelo 3º ciclo seguido.</li>
+    <li>Quantos caracteres do título aparecem no feed de Shorts no celular: não medido.</li>
+    <li>Áudio de terceiros (voz, trilha, cortes por minuto, gancho em segundos): nada ouvido nem cronometrado.</li>
+    <li>Slug ausente na maioria dos vídeos do CSV.</li>
+    <li>Curva ainda rasa (2 pontos). Precisa de coleta diária.</li>
+    <li>Amostra pequena: views de 0 a 71.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Recomendações para o setor de ação</h2>
+  <p class="aviso">Todas de medição e método. Nenhuma altera conteúdo e nenhuma sugere copiar canal.</p>
+  <ol>
+    <li>Liberar <code>yt-analytics.readonly</code>.</li>
+    <li>Tornar públicos (ou confirmar privados) os 2 vídeos novos.</li>
+    <li>Rodar o coletor todo dia, em horário fixo.</li>
+    <li>Preencher slug e <code>upload.json</code> de todo vídeo.</li>
+    <li>Coletar descrição, tags e hashtags de 5 vídeos de terceiros (sem chave em arquivo do setor).</li>
+    <li>Medir no celular quantos caracteres do título aparecem no feed de Shorts.</li>
+    <li>Ouvir e cronometrar 2-3 vídeos de Rascunhos Econômicos, Canal do Por Quê? e Futuro Econômico.</li>
+    <li>Só com dados (curva + CTR): testar uma variável por vez (título, fundo claro x escuro, tema golpe x geração).</li>
+  </ol>
+  <p>Ordem: 1 a 4 agora; 5 a 7 no próximo ciclo; 8 só com dados.</p>
+</section>
+
+<footer>
+  Revisar com 30+ Shorts comparáveis, ou quando os vídeos passarem de algumas centenas de views. Relatório completo em <code>inteligencia/relatorios/semana_2026-10-31.md</code>.
+</footer>
+</main>
+</body>
+</html>

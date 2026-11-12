@@ -1,0 +1,24 @@
+PROMPT ALTERNATIVO PARA O CHATGPT (colar e gerar, sem perguntas)
+Slug: esquema-de-piramide | Formato: 9:16 vertical, 1080 x 1920, PNG
+Conceito: CURIOSIDADE / TRAICAO -- "O convite veio de quem voce confia" (sensacionalista)
+
+Gere uma imagem de thumbnail vertical (proporcao 9:16, EXATAMENTE 1080 x 1920 pixels, PNG) para um Short de YouTube de um canal educativo brasileiro de analise de comportamento social. Estilo de desenho a mao (sketch) com clima de alerta e suspense, alto contraste.
+
+FUNDO: fundo escuro grafite (#1A1A1A) com vinheta amarelo-ambar quente (#F2B13C) suave no centro e um toque vermelho (#B91C1C) nas bordas, dando tensao. O desenho a giz branco salta sobre o fundo escuro.
+
+ESTILO DE DESENHO: ilustracao a mao, tracos de giz/marcador branco com leve tremido, contornos definidos, preenchimentos chapados. Nada de 3D, foto ou realismo. Bonecos de palito com cabeca de circulo e expressoes exageradas.
+
+ELEMENTO DOMINANTE (centro): em PRIMEIRO PLANO, dois bonecos de palito desenhados a mao: um sorrindo largo (o "amigo" recrutador) estende a mao oferecendo uma MOEDA grande amarela (#FACC15) com "R$" em grafite e uma pequena piramide desenhada dentro dela; o outro boneco (voce) estende a mao para pegar, confiante, sem perceber. ATRAS/ACIMA, meio translucida como uma sombra de alerta, surge uma PIRAMIDE triangular de bonecos com GRANDES SETAS VERMELHAS (#DC2626) de dinheiro subindo para o topo -- a armadilha por tras do convite amigavel. Um grande ponto de interrogacao vermelho ou um "!" de alerta pode aparecer sobre a cabeca do boneco "voce". Composicao central e teatral.
+
+TEXTO (tipografia manuscrita MUITO pesada, estilo marcador grosso, acentos corretos):
+- Linha principal, terco superior do miolo (abaixo do topo livre): "É PIRÂMIDE?" em AMARELO forte (#FACC15) com contorno grafite grosso, caixa alta, grande, ocupando a largura util.
+- Logo abaixo, menor: "DISFARÇADA DE AMIGO" em VERMELHO de marcador (#DC2626) com leve contorno branco.
+- Sem nenhum outro texto. Sem numeros. Sem legenda na base.
+
+PALETA: fundo escuro grafite com vinheta ambar/vermelha; linhas em branco/giz; moeda amarelo (#FACC15); setas e alerta vermelho (#DC2626); "É PIRÂMIDE?" amarelo e "DISFARÇADA DE AMIGO" vermelho. Alto contraste.
+
+COMPOSICAO E AREAS SEGURAS: 15% do topo e 20% da base relativamente livres (so fundo, sem elemento nem texto importante), pois a interface do YouTube cobre. Texto no terco superior do miolo; cena dos bonecos no centro.
+
+PROIBIDO: pessoas reais ou rostos realistas; fotos; logotipos, marcas ou nomes de empresas reais (TelexFree, Avestruz, Farao dos Bitcoins etc.); bandeiras; marca d'agua; emojis; texto extra; acusar empresa legal de ser pirâmide.
+
+CRITERIOS DE QUALIDADE: texto nitido e sem erros, acento em "PIRÂMIDE" e cedilha em "DISFARÇADA"; um elemento dominante (o convite amigavel com a pirâmide escondida atras); leitura instantanea do tema; clima de alerta/traicao; proporcao 9:16 EXATA, 1080 x 1920 pixels.

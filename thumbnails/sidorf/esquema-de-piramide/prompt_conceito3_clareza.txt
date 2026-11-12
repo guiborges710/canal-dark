@@ -1,0 +1,24 @@
+PROMPT CONCEITO 3 (CLAREZA/CHOQUE) PARA O CHATGPT (colar e gerar, sem perguntas)
+Slug: esquema-de-piramide | Formato: 9:16 vertical, 1080 x 1920, PNG
+Conceito: CLAREZA + CHOQUE -- "A pirâmide desaba" (tema obvio em um olhar)
+
+Gere uma imagem de thumbnail vertical (proporcao 9:16, EXATAMENTE 1080 x 1920 pixels, PNG) para um Short de YouTube de um canal educativo brasileiro de analise de comportamento social. Estilo de desenho a mao (sketch), dramatico, alto contraste.
+
+FUNDO: fundo escuro grafite (#141414) com vinheta vermelho-escura (#7F1D1D) de alerta. Desenho a giz branco salta sobre o fundo escuro.
+
+ESTILO DE DESENHO: ilustracao a mao, tracos de giz/marcador branco com leve tremido, contornos definidos, preenchimentos chapados. Nada de 3D, foto ou realismo. Bonecos de palito com cabeca de circulo e expressoes exageradas.
+
+ELEMENTO DOMINANTE (centro): uma PIRAMIDE geometrica grande e nitida desenhada a mao (um triangulo tipo piramide do Egito, com blocos/tijolos marcados), feita de MOEDAS amarelas (#FACC15) com "R$" em grafite empilhadas. A piramide esta RACHANDO e DESABANDO: uma grande fenda vermelha (#DC2626) corta do topo ate a base, blocos/moedas caindo e se espatifando para os lados, moedas rolando para fora. No topo, um boneco de palito pequeno e gordo foge levando um saco de dinheiro (sorrindo). Na base, varios bonecos de palito magros em desespero (olhos em X, bracos para cima, gritando) sendo soterrados pelos blocos que caem. Grande seta vermelha curva mostrando as moedas escorrendo do topo para longe. Composicao centralizada e teatral.
+
+TEXTO (tipografia manuscrita MUITO pesada, estilo marcador grosso, acentos corretos):
+- Palavra-chave bem grande, terco superior do miolo (abaixo do topo livre): "PIRÂMIDE" em AMARELO forte (#FACC15) com contorno grafite grosso, caixa alta, ocupando quase toda a largura util.
+- Logo abaixo, menor porem forte: "TODOS PERDEM" em VERMELHO de marcador (#DC2626) com leve contorno branco.
+- Sem nenhum outro texto. Sem numeros. Sem legenda na base.
+
+PALETA: fundo preto-grafite com vinheta vermelho-escura; linhas em branco/giz; moedas amarelo (#FACC15); fenda, setas e alerta vermelho (#DC2626); "PIRÂMIDE" amarelo e "TODOS PERDEM" vermelho. Contraste altissimo.
+
+COMPOSICAO E AREAS SEGURAS: 15% do topo e 20% da base relativamente livres (so fundo escuro, sem elemento nem texto importante), pois a interface do YouTube cobre. Texto "PIRÂMIDE" no terco superior do miolo; a piramide desabando ocupa o centro.
+
+PROIBIDO: pessoas reais ou rostos realistas; fotos; logotipos, marcas ou nomes de empresas reais (TelexFree, Avestruz, Farao dos Bitcoins etc.); bandeiras; marca d'agua; emojis; texto extra; acusar empresa legal de ser pirâmide.
+
+CRITERIOS DE QUALIDADE: texto nitido e sem erros, acento em "PIRÂMIDE"; um elemento dominante (a piramide de dinheiro desabando); leitura instantanea do tema (esquema de piramide que desaba e todos perdem); clima de colapso/alerta; proporcao 9:16 EXATA, 1080 x 1920 pixels.

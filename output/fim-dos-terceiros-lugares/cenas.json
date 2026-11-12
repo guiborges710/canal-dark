@@ -1,0 +1,62 @@
+[
+  {
+    "tipo": "sketch", "desenho": "cena_0", "duracao": 3,
+    "fala": "Seu terceiro lugar sumiu, e você nem percebeu.",
+    "rotulos": ["seu 3º lugar sumiu"],
+    "sons": [{"t": 0.2, "tipo": "impact"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_1", "duracao": 6,
+    "fala": "É o espaço fora de casa e do trabalho aonde você ia sem marcar nada: café, bar, livraria. O nome vem do sociólogo Ray Oldenburg.",
+    "rotulos": ["o terceiro lugar", "1º casa", "2º trabalho", "3º", "café", "bar", "livraria", "sociólogo Ray Oldenburg"],
+    "sons": [{"t": 3.6, "tipo": "ding"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_2", "duracao": 5,
+    "fala": "Nos Estados Unidos, o tempo semanal com amigos ficou em quase 7 horas até 2013. Em 2021, menos de 3.",
+    "rotulos": ["EUA (pesquisa ATUS)", "horas/semana com amigos", "quase 7 h", "até 2013", "menos de 3 h", "2021"],
+    "sons": [{"t": 3.4, "tipo": "ding"}, {"t": 5.4, "tipo": "ding"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_3", "duracao": 2.5,
+    "fala": "Para o Brasil, não encontramos essa medida.",
+    "rotulos": ["e no Brasil?", "?", "sem essa medida"],
+    "sons": []
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_4", "duracao": 6,
+    "fala": "O que existe é consumo: no 1º trimestre de 2026, as saídas caíram 7,1%. O gasto por saída subiu 28,3%.",
+    "rotulos": ["Brasil: consumo", "1º tri 2026 x 1º tri 2025", "-7,1%", "saídas", "+28,3%", "gasto por saída", "R$"],
+    "sons": [{"t": 3.1, "tipo": "ding"}, {"t": 6.1, "tipo": "ding"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_5", "duracao": 5,
+    "fala": "Nossa leitura: se o lugar de graça some, ver amigo vira item de orçamento. É hipótese, não prova.",
+    "rotulos": ["nossa leitura", "grátis", "orçamento", "aluguel", "mercado", "ver amigo", "R$", "hipótese, não prova"],
+    "sons": [{"t": 4.6, "tipo": "impact"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_6", "duracao": 7,
+    "fala": "O economista Bryce Ward, que analisou os dados americanos, aponta outra causa: as telas. O tempo sozinho cresceu, com TV, celular e streaming.",
+    "rotulos": ["e as telas?", "economista Bryce Ward", "continuar", "assistindo?", "próximo", "em 5 s", "tempo sozinho cresceu"],
+    "sons": [{"t": 0.1, "tipo": "impact"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_7", "duracao": 2.5,
+    "fala": "Pode ser uma mistura.",
+    "rotulos": ["pode ser uma mistura", "lugar e", "custo", "telas"],
+    "sons": [{"t": 1.5, "tipo": "ding"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_8", "duracao": 4,
+    "fala": "E nos Estados Unidos a queda foi forte entre os jovens, mas não parece ser só deles.",
+    "rotulos": ["EUA: queda forte", "jovens", "não parece ser só deles"],
+    "sons": [{"t": 2.0, "tipo": "ding"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_9", "duracao": 4,
+    "fala": "Qual encontro com amigos você deixou de fazer sem nunca ter decidido isso?",
+    "rotulos": ["qual encontro você", "deixou de fazer?"],
+    "sons": [{"t": 0.5, "tipo": "ding"}]
+  }
+]

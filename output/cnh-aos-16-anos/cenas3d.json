@@ -1,0 +1,1114 @@
+[
+ {
+  "env": "sala",
+  "camera": {
+   "pos": [
+    0,
+    2.35,
+    5.4
+   ],
+   "look": [
+    0,
+    2.1,
+    0
+   ],
+   "fov": 35,
+   "push": 0.07
+  },
+  "duracao": 2.0,
+  "atores": [
+   {
+    "quem": "jovem",
+    "pos": [
+     0,
+     0,
+     0
+    ],
+    "pose": [
+     [
+      0,
+      "volante"
+     ]
+    ],
+    "expr": [
+     [
+      0,
+      "feliz"
+     ],
+     [
+      2.0,
+      "triste"
+     ]
+    ],
+    "fala": true
+   }
+  ],
+  "objetos": [
+   {
+    "tipo": "volante",
+    "pos": [
+     0,
+     1.65,
+     0.75
+    ],
+    "rot": [
+     -0.4,
+     0,
+     0
+    ],
+    "esc": 0.9
+   },
+   {
+    "tipo": "placa",
+    "pos": [
+     0.0,
+     3.3,
+     0.4
+    ],
+    "rot": [
+     0,
+     0,
+     -0.12
+    ],
+    "w": 1.7,
+    "h": 0.5,
+    "linhas": [
+     "NÃO APROVADA"
+    ],
+    "bg": "#e5202e",
+    "fg": "#ffffff",
+    "moldura": 9047833,
+    "esc": 0.95,
+    "entra": 0.0
+   }
+  ],
+  "sons": [
+   {
+    "t": 0.05,
+    "tipo": "impact"
+   }
+  ],
+  "fala": "Dirigir aos dezesseis anos? A proposta existe, mas não foi aprovada.",
+  "legenda": "Dirigir aos 16 anos? A proposta existe, mas *não foi aprovada.*"
+ },
+ {
+  "env": "sala",
+  "camera": {
+   "pos": [
+    0,
+    2.6,
+    8.6
+   ],
+   "look": [
+    0,
+    2.3,
+    0
+   ],
+   "fov": 35,
+   "push": 0.05
+  },
+  "duracao": 2.0,
+  "atores": [
+   {
+    "quem": "jovem",
+    "pos": [
+     -0.85,
+     0,
+     0
+    ],
+    "rotY": 0.3,
+    "pose": "mostra",
+    "expr": "feliz",
+    "fala": true
+   },
+   {
+    "quem": "pai",
+    "pos": [
+     0.85,
+     0,
+     0
+    ],
+    "rotY": -0.3,
+    "pose": "neutro",
+    "expr": "cansado",
+    "olhar": [
+     0.5,
+     0
+    ]
+   }
+  ],
+  "objetos": [
+   {
+    "tipo": "chave",
+    "pos": [
+     0.0,
+     2.0,
+     0.9
+    ],
+    "rot": [
+     0,
+     0.3,
+     0
+    ],
+    "esc": 1.1,
+    "entra": 0.3,
+    "balanca": 0.05
+   }
+  ],
+  "fala": "Você, dezesseis anos, pede a chave do carro.",
+  "legenda": "Você, 16 anos, pede a *chave* do carro.",
+  "sons": []
+ },
+ {
+  "env": "sala",
+  "camera": {
+   "pos": [
+    0,
+    2.6,
+    8.6
+   ],
+   "look": [
+    0,
+    2.3,
+    0
+   ],
+   "fov": 35,
+   "push": 0.05
+  },
+  "duracao": 2.0,
+  "atores": [
+   {
+    "quem": "jovem",
+    "pos": [
+     -0.85,
+     0,
+     0
+    ],
+    "rotY": 0.3,
+    "pose": "neutro",
+    "expr": [
+     [
+      0,
+      "neutro"
+     ],
+     [
+      1.5,
+      "triste"
+     ]
+    ]
+   },
+   {
+    "quem": "pai",
+    "pos": [
+     0.85,
+     0,
+     0
+    ],
+    "rotY": -0.3,
+    "pose": "quadril",
+    "expr": "feliz",
+    "fala": true,
+    "salta": true
+   }
+  ],
+  "objetos": [
+   {
+    "tipo": "placa",
+    "pos": [
+     0,
+     4.0,
+     0.6
+    ],
+    "w": 2.5,
+    "h": 0.8,
+    "linhas": [
+     "PERMISSÃO",
+     "PARA DIRIGIR"
+    ],
+    "bg": "#2f6fe0",
+    "fg": "#ffffff",
+    "moldura": 1455994,
+    "entra": 1.6
+   }
+  ],
+  "fala": "Seu pai ri, mas o projeto tem nome: Permissão para Dirigir.",
+  "legenda": "Seu pai ri, mas o projeto tem nome: *Permissão para Dirigir.*",
+  "sons": []
+ },
+ {
+  "env": "rua",
+  "camera": {
+   "pos": [
+    4.0,
+    2.0,
+    3.4
+   ],
+   "look": [
+    0,
+    1.25,
+    0
+   ],
+   "fov": 36,
+   "push": 0.08
+  },
+  "duracao": 2.0,
+  "atores": [
+   {
+    "quem": "jovem",
+    "pos": [
+     -0.05,
+     0.95,
+     0.28
+    ],
+    "rotY": 1.25,
+    "sentado": true,
+    "esc": 0.62,
+    "pose": "volante",
+    "expr": "feliz",
+    "fala": true
+   },
+   {
+    "quem": "pai",
+    "pos": [
+     -0.05,
+     0.95,
+     -0.28
+    ],
+    "rotY": 1.25,
+    "sentado": true,
+    "esc": 0.62,
+    "pose": "segura",
+    "expr": "surpreso"
+   }
+  ],
+  "objetos": [
+   {
+    "tipo": "carro",
+    "aberto": true,
+    "pos": [
+     0,
+     0,
+     0
+    ],
+    "cor": 3108832
+   },
+   {
+    "tipo": "placa",
+    "pos": [
+     1.2,
+     2.3,
+     -2.2
+    ],
+    "w": 1.7,
+    "h": 0.9,
+    "linhas": [
+     "16 a 18",
+     "anos"
+    ],
+    "bg": "#ffffff",
+    "poste": 2.3,
+    "entra": 0.8
+   }
+  ],
+  "fala": "Na proposta, dos dezesseis aos dezoito: só na cidade, com adulto habilitado ao lado.",
+  "legenda": "Na proposta, dos 16 aos 18: só na cidade, com *adulto* habilitado ao lado.",
+  "sons": []
+ },
+ {
+  "env": "sala",
+  "camera": {
+   "pos": [
+    0,
+    2.6,
+    8.6
+   ],
+   "look": [
+    0,
+    2.3,
+    0
+   ],
+   "fov": 35,
+   "push": 0.05
+  },
+  "duracao": 2.0,
+  "atores": [
+   {
+    "quem": "jovem",
+    "pos": [
+     -0.85,
+     0,
+     0
+    ],
+    "rotY": 0.3,
+    "pose": "cruzado",
+    "expr": [
+     [
+      0,
+      "bravo"
+     ],
+     [
+      2.4,
+      "duvida"
+     ]
+    ],
+    "fala": true
+   },
+   {
+    "quem": "pai",
+    "pos": [
+     0.85,
+     0,
+     0
+    ],
+    "rotY": -0.3,
+    "pose": "aponta",
+    "expr": "duvida"
+   }
+  ],
+  "objetos": [
+   {
+    "tipo": "placa",
+    "pos": [
+     0,
+     3.95,
+     0.5
+    ],
+    "w": 2.4,
+    "h": 0.8,
+    "linhas": [
+     "JOVEM DESISTIU?"
+    ],
+    "bg": "#f2c230",
+    "fg": "#222",
+    "entra": 0.2,
+    "sai": 2.8
+   },
+   {
+    "tipo": "placa",
+    "pos": [
+     0,
+     3.95,
+     0.5
+    ],
+    "w": 2.4,
+    "h": 0.8,
+    "linhas": [
+     "A CONTA PESA"
+    ],
+    "bg": "#ffffff",
+    "fg": "#2f6fe0",
+    "entra": 2.8
+   }
+  ],
+  "sons": [
+   {
+    "t": 2.8,
+    "tipo": "ding"
+   }
+  ],
+  "fala": "O rótulo diz: jovem desistiu de dirigir. Nossa leitura: a conta pesa.",
+  "legenda": "O *rótulo* diz: jovem desistiu de dirigir. Nossa leitura: a conta pesa."
+ },
+ {
+  "env": "sala",
+  "camera": {
+   "pos": [
+    0,
+    2.6,
+    8.6
+   ],
+   "look": [
+    0,
+    2.3,
+    0
+   ],
+   "fov": 35,
+   "push": 0.05
+  },
+  "duracao": 2.0,
+  "atores": [
+   {
+    "quem": "jovem",
+    "pos": [
+     -0.85,
+     0,
+     0
+    ],
+    "rotY": 0.3,
+    "pose": "encolhe",
+    "expr": "surpreso"
+   },
+   {
+    "quem": "pai",
+    "pos": [
+     0.85,
+     0,
+     0
+    ],
+    "rotY": -0.3,
+    "pose": "neutro",
+    "expr": "surpreso",
+    "fala": true
+   }
+  ],
+  "objetos": [
+   {
+    "tipo": "placa",
+    "pos": [
+     0,
+     3.9,
+     0.7
+    ],
+    "w": 2.4,
+    "h": 0.9,
+    "linhas": [
+     "R$ 3.200"
+    ],
+    "bg": "#e5202e",
+    "fg": "#ffffff",
+    "moldura": 9047833,
+    "entra": 0.3,
+    "kf": [
+     [
+      0,
+      [
+       0,
+       7.5,
+       0.7
+      ]
+     ],
+     [
+      0.7,
+      [
+       0,
+       3.9,
+       0.7
+      ]
+     ]
+    ]
+   }
+  ],
+  "sons": [
+   {
+    "t": 0.9,
+    "tipo": "impact"
+   }
+  ],
+  "fala": "Antes, a carteira custava cerca de três mil e duzentos reais em média, segundo a Senatran.",
+  "legenda": "Antes, a CNH custava cerca de *R$ 3.200* em média, segundo a Senatran."
+ },
+ {
+  "env": "estudio",
+  "camera": {
+   "pos": [
+    0,
+    1.1,
+    9.5
+   ],
+   "look": [
+    0,
+    0.8,
+    0
+   ],
+   "fov": 36,
+   "push": 0.04
+  },
+  "duracao": 2.0,
+  "atores": [
+   {
+    "quem": "jovem",
+    "pos": [
+     1.5,
+     0,
+     -0.9
+    ],
+    "rotY": -0.35,
+    "esc": 0.8,
+    "pose": "relax",
+    "expr": "feliz",
+    "fala": true
+   }
+  ],
+  "objetos": [
+   {
+    "tipo": "barra",
+    "pos": [
+     -0.75,
+     0,
+     0.2
+    ],
+    "h": 2.6,
+    "cor": 9417970,
+    "entra": 0.2,
+    "w": 0.8,
+    "d": 0.8
+   },
+   {
+    "tipo": "rotulo",
+    "pos": [
+     -0.75,
+     2.98,
+     0.4
+    ],
+    "linhas": [
+     "20",
+     "horas-aula"
+    ],
+    "w": 1.5,
+    "hpx": 230,
+    "entra": 0.5
+   },
+   {
+    "tipo": "barra",
+    "pos": [
+     0.4,
+     0,
+     0.2
+    ],
+    "h": 0.26,
+    "cor": 15909424,
+    "entra": 1.4,
+    "w": 0.8,
+    "d": 0.8
+   },
+   {
+    "tipo": "rotulo",
+    "pos": [
+     0.4,
+     0.64,
+     0.4
+    ],
+    "linhas": [
+     "2",
+     "horas-aula"
+    ],
+    "w": 1.5,
+    "hpx": 230,
+    "entra": 1.7
+   }
+  ],
+  "sons": [
+   {
+    "t": 1.4,
+    "tipo": "ding"
+   }
+  ],
+  "fala": "Dezembro de dois mil e vinte e cinco: o Contran baixou a prática mínima de vinte para duas horas-aula.",
+  "legenda": "Dez. de 2025: o Contran baixou a prática mínima de 20 para *2* horas-aula."
+ },
+ {
+  "env": "estudio",
+  "camera": {
+   "pos": [
+    0,
+    1.1,
+    9.5
+   ],
+   "look": [
+    0,
+    0.8,
+    0
+   ],
+   "fov": 36,
+   "push": 0.04
+  },
+  "duracao": 2.0,
+  "atores": [
+   {
+    "quem": "jovem",
+    "pos": [
+     1.5,
+     0,
+     -0.9
+    ],
+    "rotY": -0.35,
+    "esc": 0.8,
+    "pose": "comemora",
+    "expr": "feliz",
+    "salta": true,
+    "fala": true
+   }
+  ],
+  "objetos": [
+   {
+    "tipo": "barra",
+    "pos": [
+     -0.75,
+     0,
+     0.2
+    ],
+    "h": 0.82,
+    "cor": 9417970,
+    "entra": 0.2,
+    "w": 0.8,
+    "d": 0.8
+   },
+   {
+    "tipo": "rotulo",
+    "pos": [
+     -0.75,
+     1.2,
+     0.4
+    ],
+    "linhas": [
+     "2,3 mi"
+    ],
+    "w": 1.5,
+    "hpx": 160,
+    "entra": 0.5
+   },
+   {
+    "tipo": "barra",
+    "pos": [
+     0.4,
+     0,
+     0.2
+    ],
+    "h": 2.6,
+    "cor": 3120750,
+    "entra": 1.3,
+    "w": 0.8,
+    "d": 0.8
+   },
+   {
+    "tipo": "rotulo",
+    "pos": [
+     0.4,
+     2.98,
+     0.4
+    ],
+    "linhas": [
+     "7,3 mi"
+    ],
+    "w": 1.5,
+    "hpx": 160,
+    "entra": 1.6
+   },
+   {
+    "tipo": "rotulo",
+    "pos": [
+     -0.2,
+     4.0,
+     0.3
+    ],
+    "linhas": [
+     "jan-ago 2025 → 2026"
+    ],
+    "w": 2.4,
+    "hpx": 120,
+    "entra": 0.3,
+    "fg": "#dbe7ff"
+   }
+  ],
+  "sons": [
+   {
+    "t": 1.3,
+    "tipo": "ding"
+   }
+  ],
+  "fala": "Até agosto, pedidos de primeira carteira: de dois vírgula três para sete vírgula três milhões, diz o governo.",
+  "legenda": "Até agosto, pedidos de primeira CNH: de 2,3 para *7,3 milhões,* diz o governo."
+ },
+ {
+  "env": "estudio",
+  "camera": {
+   "pos": [
+    0,
+    1.1,
+    9.5
+   ],
+   "look": [
+    0,
+    0.8,
+    0
+   ],
+   "fov": 36,
+   "push": 0.04
+  },
+  "duracao": 2.0,
+  "atores": [
+   {
+    "quem": "jovem",
+    "pos": [
+     1.5,
+     0,
+     -0.9
+    ],
+    "rotY": -0.35,
+    "esc": 0.8,
+    "pose": "cabeca",
+    "expr": "duvida",
+    "fala": true
+   }
+  ],
+  "objetos": [
+   {
+    "tipo": "barra",
+    "pos": [
+     -0.75,
+     0,
+     0.2
+    ],
+    "h": 2.6,
+    "cor": 3120750,
+    "entra": 0.2,
+    "w": 0.8,
+    "d": 0.8
+   },
+   {
+    "tipo": "rotulo",
+    "pos": [
+     -0.75,
+     2.98,
+     0.4
+    ],
+    "linhas": [
+     "pedidos",
+     "+216%"
+    ],
+    "w": 1.5,
+    "hpx": 230,
+    "entra": 0.5
+   },
+   {
+    "tipo": "barra",
+    "pos": [
+     0.4,
+     0,
+     0.2
+    ],
+    "h": 0.21,
+    "cor": 15015982,
+    "entra": 1.2,
+    "w": 0.8,
+    "d": 0.8
+   },
+   {
+    "tipo": "rotulo",
+    "pos": [
+     0.4,
+     0.59,
+     0.4
+    ],
+    "linhas": [
+     "emitidas",
+     "+17,1%"
+    ],
+    "w": 1.5,
+    "hpx": 230,
+    "entra": 1.5
+   },
+   {
+    "tipo": "rotulo",
+    "pos": [
+     1.4,
+     3.6,
+     0.3
+    ],
+    "linhas": [
+     "?"
+    ],
+    "w": 0.8,
+    "hpx": 220,
+    "entra": 2.4
+   }
+  ],
+  "fala": "Pedido não é carteira: no período, emitidas subiram dezessete vírgula um por cento. Isso não prova causa.",
+  "legenda": "Pedido não é carteira: no período, emitidas subiram 17,1%. Isso não prova *causa.*",
+  "sons": []
+ },
+ {
+  "env": "sala",
+  "camera": {
+   "pos": [
+    0,
+    2.6,
+    8.6
+   ],
+   "look": [
+    0,
+    2.3,
+    0
+   ],
+   "fov": 35,
+   "push": 0.05
+  },
+  "duracao": 2.0,
+  "atores": [
+   {
+    "quem": "jovem",
+    "pos": [
+     -0.85,
+     0,
+     0
+    ],
+    "rotY": 0.3,
+    "pose": "neutro",
+    "expr": "neutro"
+   },
+   {
+    "quem": "pai",
+    "pos": [
+     0.85,
+     0,
+     0
+    ],
+    "rotY": -0.3,
+    "pose": "cruzado",
+    "expr": "neutro",
+    "fala": true
+   }
+  ],
+  "objetos": [
+   {
+    "tipo": "placa",
+    "pos": [
+     0,
+     4.0,
+     0.5
+    ],
+    "w": 2.5,
+    "h": 0.8,
+    "linhas": [
+     "PREÇO NÃO É TUDO"
+    ],
+    "bg": "#ffffff",
+    "fg": "#14141a",
+    "entra": 0.3
+   },
+   {
+    "tipo": "carro",
+    "pos": [
+     0,
+     0,
+     1.0
+    ],
+    "esc": 0.4,
+    "cor": 15015982,
+    "rot": [
+     0,
+     0.6,
+     0
+    ],
+    "entra": 0.8
+   }
+  ],
+  "fala": "Preço não é tudo: segurança também é contexto. Nos Estados Unidos, um instituto comparou idades:",
+  "legenda": "Preço não é tudo: *segurança* também é contexto. Nos EUA, um instituto comparou idades:",
+  "sons": []
+ },
+ {
+  "env": "estudio",
+  "camera": {
+   "pos": [
+    0,
+    1.1,
+    9.5
+   ],
+   "look": [
+    0,
+    0.8,
+    0
+   ],
+   "fov": 36,
+   "push": 0.04
+  },
+  "duracao": 2.0,
+  "atores": [
+   {
+    "quem": "pai",
+    "pos": [
+     1.5,
+     0,
+     -0.9
+    ],
+    "rotY": -0.35,
+    "esc": 0.8,
+    "pose": "neutro",
+    "expr": "neutro",
+    "fala": true
+   }
+  ],
+  "objetos": [
+   {
+    "tipo": "barra",
+    "pos": [
+     -0.75,
+     0,
+     0.2
+    ],
+    "h": 0.87,
+    "cor": 9417970,
+    "entra": 0.2,
+    "w": 0.8,
+    "d": 0.8
+   },
+   {
+    "tipo": "rotulo",
+    "pos": [
+     -0.75,
+     1.25,
+     0.4
+    ],
+    "linhas": [
+     "20 ou mais",
+     "1x"
+    ],
+    "w": 1.5,
+    "hpx": 230,
+    "entra": 0.5
+   },
+   {
+    "tipo": "barra",
+    "pos": [
+     0.4,
+     0,
+     0.2
+    ],
+    "h": 2.6,
+    "cor": 15015982,
+    "entra": 1.3,
+    "w": 0.8,
+    "d": 0.8
+   },
+   {
+    "tipo": "rotulo",
+    "pos": [
+     0.4,
+     2.98,
+     0.4
+    ],
+    "linhas": [
+     "16 a 19",
+     "3x"
+    ],
+    "w": 1.5,
+    "hpx": 230,
+    "entra": 1.6
+   },
+   {
+    "tipo": "rotulo",
+    "pos": [
+     -0.2,
+     3.9,
+     0.3
+    ],
+    "linhas": [
+     "EUA · acidente fatal por milha"
+    ],
+    "w": 2.4,
+    "hpx": 120,
+    "entra": 2.6,
+    "fg": "#dbe7ff"
+   }
+  ],
+  "sons": [
+   {
+    "t": 1.3,
+    "tipo": "impact"
+   }
+  ],
+  "fala": "Aos dezesseis a dezenove, acidente fatal por milha é cerca de três vezes o de vinte ou mais.",
+  "legenda": "Aos 16-19, acidente fatal por milha é cerca de *3 vezes* o de 20+."
+ },
+ {
+  "env": "sala",
+  "camera": {
+   "pos": [
+    0,
+    2.6,
+    8.6
+   ],
+   "look": [
+    0,
+    2.3,
+    0
+   ],
+   "fov": 35,
+   "push": 0.05
+  },
+  "duracao": 2.0,
+  "atores": [
+   {
+    "quem": "jovem",
+    "pos": [
+     -0.85,
+     0,
+     0
+    ],
+    "rotY": 0.3,
+    "pose": "pensa",
+    "expr": "duvida",
+    "olhar": [
+     -0.2,
+     0.1
+    ]
+   },
+   {
+    "quem": "pai",
+    "pos": [
+     0.85,
+     0,
+     0
+    ],
+    "rotY": -0.3,
+    "pose": "pensa",
+    "expr": "duvida",
+    "olhar": [
+     0.2,
+     0.1
+    ],
+    "fala": false
+   }
+  ],
+  "objetos": [
+   {
+    "tipo": "carro",
+    "pos": [
+     -1.0,
+     0,
+     1.0
+    ],
+    "esc": 0.4,
+    "cor": 3108832,
+    "rot": [
+     0,
+     0.5,
+     0
+    ]
+   },
+   {
+    "tipo": "moto",
+    "pos": [
+     1.0,
+     0,
+     1.0
+    ],
+    "esc": 0.55,
+    "cor": 15015982,
+    "rot": [
+     0,
+     -0.5,
+     0
+    ]
+   },
+   {
+    "tipo": "rotulo",
+    "pos": [
+     0,
+     4.1,
+     0.4
+    ],
+    "linhas": [
+     "?"
+    ],
+    "w": 1.0,
+    "hpx": 260,
+    "entra": 0.6
+   }
+  ],
+  "fala": "Se o problema era o preço, mexer na idade resolve?",
+  "legenda": "Se o problema era o preço, mexer na *idade* resolve?",
+  "sons": []
+ }
+]

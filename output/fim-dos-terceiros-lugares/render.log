@@ -1,0 +1,38 @@
+Pasta do vídeo: C:\Users\Guilherme\Documents\canal-dark\output\fim-dos-terceiros-lugares
+
+▶ 1/6 Pesquisando o tema
+
+▶ 2/6 Escrevendo e revisando o texto
+
+▶ 3/6 Montando as cenas da animação
+   10 cenas, 45 s
+
+▶ 4/6 Renderizando a animação
+   narrando as cenas (Chatterbox, CPU; leva alguns minutos)...
+loaded PerthNet (Implicit) at step 250,000
+   fala 1: 2.8 s (2.8 palavras/s)
+   fala 2: 9.0 s (2.8 palavras/s)
+   fala 3: 7.9 s (2.5 palavras/s)
+   fala 4: 2.9 s (2.4 palavras/s)
+   fala 5: 8.9 s (2.2 palavras/s)
+   fala 6: 6.7 s (2.7 palavras/s)
+   fala 7: 9.0 s (2.6 palavras/s)
+   fala 8: 1.7 s (2.3 palavras/s)
+   fala 9: 4.4 s (3.9 palavras/s)
+   fala 10: 4.2 s (3.1 palavras/s)
+   desenhando 1797 quadros (59.9 s, 30 fps)...
+   300/1797
+   600/1797
+   900/1797
+   1200/1797
+   1500/1797
+   vídeo: video.mp4 (60 s, 1797 frames, 30 fps, com narração)
+
+▶ 5/6 Criando título, descrição e tags
+
+▶ 6/6 Conformidade e custo
+   Conformidade: 10 ok, 2 atenção, 0 faltando (veja CONFORMIDADE.md)
+   {'claude_usd': 0.0, 'voz_usd': 0, 'imagens_usd': 0, 'total_usd': 0.0}
+
+✔ Pronto: C:\Users\Guilherme\Documents\canal-dark\output\fim-dos-terceiros-lugares\video.mp4. Suba manualmente usando C:\Users\Guilherme\Documents\canal-dark\output\fim-dos-terceiros-lugares\PUBLICAR.txt
+exit 0

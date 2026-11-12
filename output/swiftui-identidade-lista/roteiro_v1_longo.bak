@@ -1,0 +1,15 @@
+Removi um item da lista, e o check pulou para outra linha.
+
+Quem navega pergunta: como a lista identifica cada linha?
+
+Quem digita responde: ForEach sobre os índices, com id ponto self.
+
+Aí o índice vira a identidade. E o estado da linha fica preso a essa identidade. Então, ao remover, o check fica no lugar, não no item. Isso é hipótese nossa, coerente com a documentação.
+
+Quem digita testa um id único, criado junto com o item, uma vez só. Pode ser Identifiable, com let id igual a UUID, ou o id do banco.
+
+Minha leitura: identidade deve acompanhar o item, nunca o lugar.
+
+Mas isso é só uma causa possível. Se o array só cresce no fim, o índice pode até funcionar. E o problema pode estar em outro ponto, que eu não verifiquei.
+
+Como vocês investigam problemas parecidos?

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR" data-tema="claro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Finanças: Contexto Explica</title>
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="estilo.css">
+<link rel="stylesheet" href="financas.css">
+</head>
+<body class="fin">
+<script>
+// Verifica autenticação antes de carregar qualquer coisa
+try {
+  const auth = JSON.parse(localStorage.getItem("ecossistema_auth"));
+  if (!auth || !auth.logado) {
+    window.location.href = "login.html";
+  }
+} catch (e) {
+  window.location.href = "login.html";
+}
+</script>
+<a class="pular" href="#principal">Pular para o conteúdo</a>
+<div id="app"></div>
+<div id="toast" class="toasts" role="status" aria-live="polite"></div>
+<!-- dados_demo.js: só o catálogo de nomes que base.js exige (agentes, menu). Nenhum dado financeiro. Some com a casca completa. -->
+<script src="dados_demo.js"></script>
+<script src="base.js"></script>
+<script src="comum_gh.js"></script>
+<!-- financas.js carrega dados/financas.js sozinho (gerado por estudio/dados/gerar_financas.py) -->
+<script src="financas.js"></script>
+
+<script>
+// Botão de logout
+document.addEventListener("DOMContentLoaded", () => {
+  const btnLogout = document.createElement("button");
+  btnLogout.textContent = "Sair";
+  btnLogout.style.cssText = `
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    padding: 8px 12px;
+    background: #d03b3b;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    z-index: 9999;
+    font-weight: 600;
+  `;
+  btnLogout.onclick = () => {
+    localStorage.removeItem("ecossistema_auth");
+    window.location.href = "login.html";
+  };
+  document.body.appendChild(btnLogout);
+});
+</script>
+
+</body>
+</html>

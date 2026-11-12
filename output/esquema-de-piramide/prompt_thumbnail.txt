@@ -1,0 +1,24 @@
+PROMPT DEFINITIVO PARA O CHATGPT (colar e gerar, sem perguntas)
+Slug: esquema-de-piramide | Formato: 9:16 vertical, 1080 x 1920, PNG
+Conceito: IMPACTO -- "A base perde tudo" (sensacionalista, alto choque)
+
+Gere uma imagem de thumbnail vertical (proporcao 9:16, EXATAMENTE 1080 x 1920 pixels, PNG) para um Short de YouTube de um canal educativo brasileiro de analise de comportamento social. Estilo de desenho a mao (sketch), mas com clima DRAMATICO e sensacionalista, alto contraste, para parar o dedo na rolagem.
+
+FUNDO: fundo PRETO-GRAFITE escuro (#141414) com um leve brilho/vinheta vermelho-escuro (#7F1D1D) irradiando do centro, dando ar de alerta e tensao. Nada de papel bege calmo aqui: o fundo escuro faz o desenho e o dinheiro saltarem. Textura leve de giz/marcador branco, sem brilho fotografico.
+
+ESTILO DE DESENHO: ilustracao a mao, tracos de marcador branco e colorido com leve tremido (giz sobre quadro escuro), contornos claros e definidos, preenchimentos chapados e simples. Nada de 3D, nada de foto, nada de realismo. Bonecos de palito (stick figures) com cabeca de circulo e expressoes EXAGERADAS (boca aberta, olhos em X, gotas de desespero).
+
+ELEMENTO DOMINANTE (centro, grande, reconhecivel de longe): uma PIRAMIDE triangular nitida formada por bonecos de palito desenhados a giz branco. 1 boneco no TOPO, 2 na linha de baixo, 3 na seguinte, 4 na BASE. O boneco do TOPO e gordo/sorridente (ganancioso), de bracos erguidos, sentado sobre uma PILHA de dinheiro: varias moedas grandes amarelas (#FACC15) e maços de cedulas, com simbolos "R$" em grafite escuro nelas. GRANDES SETAS VERMELHAS (#DC2626) grossas, desenhadas a mao, sobem da base em direcao ao topo, mostrando o dinheiro escorrendo para cima. Os bonecos da BASE estao em DESESPERO: olhos em X, boca aberta gritando, bracos para cima, algumas moedas amareladas caindo/escorrendo para longe deles; um deles de joelhos. A base pode ter uma rachadura/fenda vermelha comecando a desabar sob eles. Composicao centralizada e teatral.
+
+TEXTO (tipografia manuscrita MUITO pesada, estilo marcador grosso, com acentos corretos do portugues):
+- Palavra-chave do tema, bem grande, no terco superior do miolo (abaixo da area de topo livre): "PIRÂMIDE" em AMARELO forte (#FACC15) com contorno grafite grosso, caixa alta, ocupando quase toda a largura util. Tem que ler de longe.
+- Logo abaixo, menor porem ainda forte: "VOCÊ É A BASE" em VERMELHO de marcador (#DC2626) com leve contorno branco para destacar sobre o fundo escuro.
+- Sem nenhum outro texto. Sem numeros. Sem legenda na base da imagem.
+
+PALETA: fundo preto-grafite com vinheta vermelho-escura; linhas do desenho em branco/giz; dinheiro em amarelo (#FACC15); setas e alerta em vermelho forte (#DC2626); texto "PIRÂMIDE" amarelo e "VOCÊ É A BASE" vermelho. Contraste altissimo entre texto/desenho e fundo.
+
+COMPOSICAO E AREAS SEGURAS: deixe os 15% do TOPO e os 20% da BASE da imagem relativamente livres (so o fundo escuro, sem elemento importante nem texto), porque a interface do YouTube cobre essas regioes. O texto "PIRÂMIDE" fica no terco superior do miolo; a piramide de bonecos com o dinheiro subindo ocupa o centro.
+
+PROIBIDO: pessoas reais ou rostos realistas; fotos; logotipos, marcas ou nomes de empresas reais (nada de TelexFree, Avestruz Master, Farao dos Bitcoins ou qualquer empresa); bandeiras; marca d'agua; emojis; texto extra alem do indicado; qualquer elemento que acuse uma empresa legitima e legal de ser pirâmide.
+
+CRITERIOS DE QUALIDADE: texto nitido e sem erros, com acento correto em "PIRÂMIDE" e cedilha/til em "VOCÊ É A BASE"; um unico elemento dominante (a piramide de bonecos com dinheiro subindo e a base em desespero); leitura instantanea do tema (esquema de piramide: dinheiro sobe, base perde tudo); clima de alerta/choque evidente; proporcao 9:16 EXATA, 1080 x 1920 pixels.

@@ -1,0 +1,9 @@
+Pair programming não é só resolver o problema mais rápido.
+
+É o momento em que quem ensina organiza o que sabe,
+e quem aprende vê o raciocínio acontecendo em tempo real.
+
+O conhecimento não espera uma reunião ou um documento:
+ele se transfere na hora, no código, no erro que aparece.
+
+É uma das formas mais eficientes de onboarding que existem.

@@ -1,0 +1,44 @@
+[
+  {
+    "tipo": "sketch", "desenho": "cena_0", "duracao": 3,
+    "fala": "Você sabe o que é esquema de pirâmide?",
+    "rotulos": ["o que é", "esquema de pirâmide?"],
+    "sons": [{"t": 0.3, "tipo": "whoosh"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_1", "duracao": 6,
+    "fala": "É quando o dinheiro não vem de um produto real. Vem da entrada de quem foi recrutado depois de você. Enquanto entra gente, parece mágica. Quando para, a base perde tudo.",
+    "rotulos": ["quando para de entrar", "a base perde tudo"],
+    "sons": [{"t": 3.5, "tipo": "impact"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_2", "duracao": 6,
+    "fala": "A diferença que quase ninguém olha: No multinível legal, o dinheiro vem da venda real. Na pirâmide, vem só da adesão. Mesmo discurso, origens opostas.",
+    "rotulos": ["de onde vem o dinheiro", "multinível: venda real", "pirâmide: só adesão"],
+    "sons": [{"t": 0.8, "tipo": "ding"}, {"t": 3.2, "tipo": "ding"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_3", "duracao": 6,
+    "fala": "No Brasil isso pega, e não por culpa de uma geração. Pega porque o convite vem de quem você confia. A confiança no mensageiro desarma a desconfiança no negócio.",
+    "rotulos": ["o convite vem de quem", "você confia"],
+    "sons": [{"t": 1.0, "tipo": "ding"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_4", "duracao": 10,
+    "fala": "Avestruz Master caiu em dois mil e cinco: dirigentes condenados. TelexFree caiu em dois mil e treze: sócios condenados. E o Faraó dos Bitcoins, que segundo a acusação movimentou bilhões, condenado em dois mil e vinte e cinco por organização criminosa.",
+    "rotulos": ["Avestruz Master", "2005", "TelexFree", "2013", "Faraó dos Bitcoins", "2025", "condenados", "bilhões"],
+    "sons": [{"t": 2.5, "tipo": "impact"}, {"t": 5.5, "tipo": "impact"}, {"t": 8.5, "tipo": "impact"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_5", "duracao": 4,
+    "fala": "Muda a fachada: gado, avestruz, bitcoin. A mecânica se repete.",
+    "rotulos": ["muda a fachada", "a mecânica se repete"],
+    "sons": [{"t": 0.5, "tipo": "ding"}, {"t": 1.1, "tipo": "ding"}, {"t": 1.7, "tipo": "ding"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_6", "duracao": 6,
+    "fala": "Quando a oportunidade chega pela pessoa em quem você confia, o que você confere: a pessoa, ou de onde sai o dinheiro?",
+    "rotulos": ["o que você confere?", "a pessoa", "ou o dinheiro"],
+    "sons": [{"t": 0.3, "tipo": "whoosh"}]
+  }
+]

@@ -1,0 +1,23 @@
+﻿   reaproveitando a narração já gerada (as falas não mudaram)
+   desenhando 1753 quadros 3D (58.4 s, 30 fps)...
+quadros: 1753 de 1753 (58.4 s)
+  100/1753
+  200/1753
+  300/1753
+  400/1753
+  500/1753
+  600/1753
+  700/1753
+  800/1753
+  900/1753
+  1000/1753
+  1100/1753
+  1200/1753
+  1300/1753
+  1400/1753
+  1500/1753
+  1600/1753
+  1700/1753
+ok
+   vídeo: video.mp4 (58 s, 1753 quadros, com narração)
+FIM codigo=0

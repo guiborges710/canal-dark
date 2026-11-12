@@ -1,0 +1,38 @@
+[
+  {
+    "tipo": "sketch", "desenho": "cena_0", "duracao": 3,
+    "fala": "Morar com os pais depois dos vinte e cinco é preguiça? Os dados apontam outra explicação.",
+    "rotulos": ["preguiça?", "?"],
+    "sons": [{"t": 3.2, "tipo": "impact"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_1", "duracao": 3,
+    "fala": "No Brasil, vinte por cento dos jovens viviam com a família em dois mil e dois. Em dois mil e doze, vinte e quatro por cento. Dado do IBGE, via imprensa, o último que achamos. Não vale para hoje.",
+    "rotulos": ["Brasil", "jovens de 25 a 34 anos", "2002", "2012", "20%", "24%", "via imprensa", "hoje", "?"],
+    "sons": [{"t": 1.0, "tipo": "ding"}, {"t": 6.3, "tipo": "ding"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_2", "duracao": 3,
+    "fala": "Na União Europeia, a idade média de saída de casa foi vinte e seis vírgula dois em dois mil e vinte e quatro. Na Finlândia, vinte e um vírgula quatro. Na Itália, trinta vírgula um.",
+    "rotulos": ["idade ao sair de casa", "em 2024", "26,2", "média UE", "21,4", "Finlândia", "30,1", "Itália"],
+    "sons": [{"t": 3.7, "tipo": "ding"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_3", "duracao": 3,
+    "fala": "Nossa leitura: mesma época, países diferentes, idades diferentes. O rótulo não explica. O contexto explica.",
+    "rotulos": ["nossa leitura", "21,4", "26,2", "30,1", "rótulo", "o contexto explica"],
+    "sons": [{"t": 4.6, "tipo": "impact"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_4", "duracao": 3,
+    "fala": "Só que contexto não é só dinheiro. Nos Estados Unidos, em dois mil e catorze, trinta e dois vírgula um por cento dos jovens moravam com os pais. O Pew Research apontou o casamento adiado como principal motor.",
+    "rotulos": ["não é só dinheiro", "R$", "+", "?", "moravam com os pais", "jovens de 18 a 34 anos", "32,1%", "EUA, 2014", "casamento adiado"],
+    "sons": [{"t": 0.1, "tipo": "impact"}, {"t": 5.4, "tipo": "ding"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_5", "duracao": 3,
+    "fala": "Se você morasse com seus pais hoje, seria escolha ou a única conta que fecha?",
+    "rotulos": ["escolha ou conta?", "escolha", "conta"],
+    "sons": []
+  }
+]

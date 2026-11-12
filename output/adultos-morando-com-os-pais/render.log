@@ -1,0 +1,34 @@
+Pasta do vídeo: C:\Users\Guilherme\Documents\canal-dark\output\adultos-morando-com-os-pais
+
+▶ 1/6 Pesquisando o tema
+
+▶ 2/6 Escrevendo e revisando o texto
+
+▶ 3/6 Montando as cenas da animação
+   6 cenas, 18 s
+
+▶ 4/6 Renderizando a animação
+   narrando as cenas (Chatterbox, CPU; leva alguns minutos)...
+loaded PerthNet (Implicit) at step 250,000
+   fala 1: 5.7 s (2.8 palavras/s)
+   fala 2: 12.1 s (3.2 palavras/s)
+   fala 3: 10.9 s (3.2 palavras/s)
+   fala 4: 8.0 s (1.9 palavras/s)
+   fala 5: 12.3 s (3.1 palavras/s)
+   fala 6: 4.9 s (3.1 palavras/s)
+   desenhando 1646 quadros (54.9 s, 30 fps)...
+   300/1646
+   600/1646
+   900/1646
+   1200/1646
+   1500/1646
+   vídeo: video.mp4 (55 s, 1646 frames, 30 fps, com narração)
+
+▶ 5/6 Criando título, descrição e tags
+
+▶ 6/6 Conformidade e custo
+   Conformidade: 10 ok, 2 atenção, 0 faltando (veja CONFORMIDADE.md)
+   {'claude_usd': 0.0, 'voz_usd': 0, 'imagens_usd': 0, 'total_usd': 0.0}
+
+✔ Pronto: C:\Users\Guilherme\Documents\canal-dark\output\adultos-morando-com-os-pais\video.mp4. Suba manualmente usando C:\Users\Guilherme\Documents\canal-dark\output\adultos-morando-com-os-pais\PUBLICAR.txt
+exit 0

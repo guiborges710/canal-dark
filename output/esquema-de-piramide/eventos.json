@@ -1,0 +1,78 @@
+{
+ "total": 1796,
+ "fps": 30,
+ "eventos": [
+  {
+   "frame": 9,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 90,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 195,
+   "kind": "impact"
+  },
+  {
+   "frame": 420,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 444,
+   "kind": "ding"
+  },
+  {
+   "frame": 516,
+   "kind": "ding"
+  },
+  {
+   "frame": 714,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 744,
+   "kind": "ding"
+  },
+  {
+   "frame": 1011,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 1086,
+   "kind": "impact"
+  },
+  {
+   "frame": 1176,
+   "kind": "impact"
+  },
+  {
+   "frame": 1266,
+   "kind": "impact"
+  },
+  {
+   "frame": 1455,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 1470,
+   "kind": "ding"
+  },
+  {
+   "frame": 1488,
+   "kind": "ding"
+  },
+  {
+   "frame": 1506,
+   "kind": "ding"
+  },
+  {
+   "frame": 1604,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 1613,
+   "kind": "whoosh"
+  }
+ ]
+}

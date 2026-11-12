@@ -1,0 +1,6 @@
+{
+  "titulo": "SwiftUI: por que o check pula de linha ao remover um item?",
+  "descricao": "Ao remover um item de uma lista no SwiftUI, o check de outra linha pode mudar de lugar. Neste short, uma hipótese para investigar: se a identidade da linha é o índice, o estado fica preso à posição, e não ao item. É uma causa possível, não a explicação de todo caso, e o vídeo mostra como testar.\n\nSe quiser mais análises curtas como esta, inscreva-se no canal.\n\nFontes: Apple, documentação de ForEach (developer.apple.com/documentation/swiftui/foreach); Apple WWDC21, Demystify SwiftUI (developer.apple.com/videos/play/wwdc2021/10022/); Swift by Sundell, Bindable SwiftUI list elements (swiftbysundell.com/articles/bindable-swiftui-list-elements); Hacking with Swift, Why does self work for ForEach (hackingwithswift.com); Nil Coalescing, The SwiftUI Way (books.nilcoalescing.com).\n\nAnimação feita por computador, com narração sintética: a voz é gerada por IA a partir da voz do autor. Sem pessoa aparecendo na tela.",
+  "tags": ["SwiftUI", "iOS", "Swift", "ForEach", "Identifiable", "desenvolvimento iOS", "depuração"],
+  "thumbnail_texto": "O check foi para outra linha?"
+}

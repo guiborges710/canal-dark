@@ -1,0 +1,15 @@
+Removi um item da lista, e o check pulou para outra linha.
+
+Quem navega pergunta: como a lista identifica cada linha?
+
+Quem digita responde: ForEach sobre os índices, com id ponto self.
+
+Aí o índice vira a identidade, e o estado fica preso a ela. Ao remover, o check fica no lugar, não no item. Hipótese nossa, coerente com a documentação.
+
+Teste: um id único, criado junto com o item. Pode ser Identifiable com UUID, ou o id do banco.
+
+Minha leitura: identidade acompanha o item, não o lugar.
+
+Mas é só uma causa possível. Pode haver outras, que eu não verifiquei.
+
+Como vocês investigam problemas parecidos?

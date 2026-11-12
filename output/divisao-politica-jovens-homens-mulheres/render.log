@@ -1,0 +1,37 @@
+Pasta do vídeo: C:\Users\Guilherme\Documents\canal-dark\output\divisao-politica-jovens-homens-mulheres
+
+▶ 1/6 Pesquisando o tema
+
+▶ 2/6 Escrevendo e revisando o texto
+
+▶ 3/6 Montando as cenas da animação
+   9 cenas, 49 s
+
+▶ 4/6 Renderizando a animação
+   narrando as cenas (Chatterbox, CPU; leva alguns minutos)...
+loaded PerthNet (Implicit) at step 250,000
+   fala 1: 7.6 s (2.8 palavras/s)
+   fala 2: 14.6 s (3.5 palavras/s)
+   fala 3: 3.3 s (2.4 palavras/s)
+   fala 4: 5.3 s (2.3 palavras/s)
+   fala 5: 11.9 s (3.0 palavras/s)
+   fala 6: 3.0 s (2.0 palavras/s)
+   fala 7: 2.6 s (2.7 palavras/s)
+   fala 8: 3.5 s (3.1 palavras/s)
+   fala 9: 3.9 s (3.6 palavras/s)
+   desenhando 1774 quadros (59.1 s, 30 fps)...
+   300/1774
+   600/1774
+   900/1774
+   1200/1774
+   1500/1774
+   vídeo: video.mp4 (59 s, 1774 frames, 30 fps, com narração)
+
+▶ 5/6 Criando título, descrição e tags
+
+▶ 6/6 Conformidade e custo
+   Conformidade: 10 ok, 1 atenção, 0 faltando (veja CONFORMIDADE.md)
+   {'claude_usd': 0.0, 'voz_usd': 0, 'imagens_usd': 0, 'total_usd': 0.0}
+
+✔ Pronto: C:\Users\Guilherme\Documents\canal-dark\output\divisao-politica-jovens-homens-mulheres\video.mp4. Suba manualmente usando C:\Users\Guilherme\Documents\canal-dark\output\divisao-politica-jovens-homens-mulheres\PUBLICAR.txt
+exit 0

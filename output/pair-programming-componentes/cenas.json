@@ -1,0 +1,44 @@
+[
+  {
+    "tipo": "sketch", "desenho": "cena_0", "duracao": 3.5,
+    "fala": "Pair programming não são duas pessoas olhando para a mesma tela.",
+    "rotulos": ["pair programming", "não é isso"],
+    "sons": [{"t": 1.5, "tipo": "impact"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_1", "duracao": 4.5,
+    "fala": "É duas pessoas no mesmo problema, discutindo alternativas e fazendo perguntas.",
+    "rotulos": ["o mesmo problema", "e se a gente tentar isso?", "por que assim?"],
+    "sons": []
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_2", "duracao": 4,
+    "fala": "Uma escreve o código. A outra revisa e sugere caminhos.",
+    "rotulos": ["escreve", "revisa e sugere"],
+    "sons": [{"t": 1.2, "tipo": "ding"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_3", "duracao": 4.5,
+    "fala": "Aí elas trocam de lugar. As duas raciocinam. As duas contribuem.",
+    "rotulos": ["troca de papel", "escreve", "revisa e sugere"],
+    "sons": [{"t": 1.0, "tipo": "whoosh"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_4", "duracao": 4,
+    "fala": "No meio da conversa, a solução vai sendo construída em colaboração.",
+    "rotulos": ["solução em conjunto"],
+    "sons": [{"t": 2.6, "tipo": "ding"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_5", "duracao": 6,
+    "fala": "É uma forma de compartilhar contexto, trocar conhecimento e tomar decisões técnicas em conjunto.",
+    "rotulos": ["pair programming é:", "contexto", "conhecimento", "decisão"],
+    "sons": [{"t": 0.9, "tipo": "ding"}, {"t": 2.4, "tipo": "ding"}, {"t": 4.0, "tipo": "ding"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_6", "duracao": 5,
+    "fala": "E você, já fez pair programming? O que aprendeu com a experiência?",
+    "rotulos": ["já fez pair programming?", "o que você aprendeu?"],
+    "sons": [{"t": 0.3, "tipo": "ding"}]
+  }
+]

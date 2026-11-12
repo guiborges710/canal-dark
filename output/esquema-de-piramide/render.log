@@ -1,0 +1,34 @@
+Pasta do vídeo: C:\Users\Guilherme\Documents\canal-dark\output\esquema-de-piramide
+
+▶ 1/6 Pesquisando o tema
+
+▶ 2/6 Escrevendo e revisando o texto
+
+▶ 3/6 Montando as cenas da animação
+   7 cenas, 41 s
+
+▶ 4/6 Renderizando a animação
+   narrando as cenas (Chatterbox, CPU; leva alguns minutos)...
+loaded PerthNet (Implicit) at step 250,000
+   fala 1: 2.5 s (3.2 palavras/s)
+   fala 2: 10.8 s (2.9 palavras/s)
+   fala 3: 9.6 s (2.6 palavras/s)
+   fala 4: 9.7 s (3.0 palavras/s)
+   fala 5: 14.6 s (2.8 palavras/s)
+   fala 6: 4.8 s (2.1 palavras/s)
+   fala 7: 6.2 s (3.5 palavras/s)
+   desenhando 1796 quadros (59.9 s, 30 fps)...
+   300/1796
+   600/1796
+   900/1796
+   1200/1796
+   1500/1796
+   vídeo: video.mp4 (60 s, 1796 frames, 30 fps, com narração)
+
+▶ 5/6 Criando título, descrição e tags
+
+▶ 6/6 Conformidade e custo
+   Conformidade: 10 ok, 2 atenção, 0 faltando (veja CONFORMIDADE.md)
+   {'claude_usd': 0.0, 'voz_usd': 0, 'imagens_usd': 0, 'total_usd': 0.0}
+
+✔ Pronto: C:\Users\Guilherme\Documents\canal-dark\output\esquema-de-piramide\video.mp4. Suba manualmente usando C:\Users\Guilherme\Documents\canal-dark\output\esquema-de-piramide\PUBLICAR.txt

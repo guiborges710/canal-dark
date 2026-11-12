@@ -1,0 +1,14 @@
+# Perfil do vídeo horizontal (16:9, vídeo longo, estilo sketch). Sobrepõe só os blocos `channel` e `render` de
+# config_shorts.yaml; o resto (voz, publicação, custo, compliance) vem do config_shorts.yaml.
+# Uso: python run.py video --formato horizontal --topic "..."
+
+channel:
+  minutes: 2.0               # alvo de texto (~150 palavras/min): ~300 palavras para um vídeo de 2 min
+
+render:
+  formato: horizontal
+  width: 1920
+  height: 1080
+  fps: 30
+  duracao_min_s: 90          # 1,5 min; o formato horizontal não tem a limitação de 60 s do Short
+  duracao_max_s: 180         # 3 min (ver CLAUDE.md: vídeos longos ainda em teste)

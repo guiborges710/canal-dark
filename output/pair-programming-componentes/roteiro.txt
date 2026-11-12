@@ -1,0 +1,13 @@
+Pair programming não são duas pessoas olhando para a mesma tela.
+
+É duas pessoas no mesmo problema, discutindo alternativas e fazendo perguntas.
+
+Uma escreve o código. A outra revisa e sugere caminhos.
+
+Aí elas trocam de lugar. As duas raciocinam. As duas contribuem.
+
+No meio da conversa, a solução vai sendo construída em colaboração.
+
+É uma forma de compartilhar contexto, trocar conhecimento e tomar decisões técnicas em conjunto.
+
+E você, já fez pair programming? O que aprendeu com a experiência?

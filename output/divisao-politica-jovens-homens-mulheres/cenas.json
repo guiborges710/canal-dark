@@ -1,0 +1,58 @@
+[
+  {
+    "tipo": "sketch", "desenho": "cena_0", "duracao": 5,
+    "fala": "Nos Estados Unidos, jovens mulheres e jovens homens estão cada vez mais distantes na política? Depende de qual pesquisa você abre.",
+    "rotulos": ["Mais distantes?", "jovens dos EUA", "depende da pesquisa"],
+    "sons": [{"t": 0.1, "tipo": "impact"}, {"t": 4.6, "tipo": "ding"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_1", "duracao": 12,
+    "fala": "Uma série da Gallup mede quem se diz liberal entre dezoito e vinte e nove anos, em três períodos entre dois mil e um e dois mil e vinte e quatro. Mulheres: vinte e oito por cento, trinta e dois, quarenta. Homens: vinte e cinco, vinte e sete, vinte e cinco.",
+    "rotulos": ["liberal", "18 a 29 anos, EUA", "3 períodos, 2001 a 2024", "01-07", "08-16", "17-24",
+                "elas", "eles", "28%", "32%", "40%", "25%", "27%"],
+    "sons": [{"t": 10.0, "tipo": "ding"}, {"t": 13.2, "tipo": "ding"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_2", "duracao": 3.5,
+    "fala": "A diferença foi de três pontos para quinze.",
+    "rotulos": ["a diferença", "3 pontos", "15 pontos", "2001-07", "2017-24", "elas", "eles"],
+    "sons": [{"t": 1.2, "tipo": "ding"}, {"t": 2.3, "tipo": "impact"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_3", "duracao": 4,
+    "fala": "Repare: no rótulo liberal, quem se mexeu foram elas. Eles ficaram parados.",
+    "rotulos": ["Quem se mexeu?", "liberal", "28%", "32%", "40%", "25%", "27%",
+                "2001-07", "2008-16", "2017-24", "elas subiram", "eles, parados"],
+    "sons": [{"t": 2.4, "tipo": "ding"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_4", "duracao": 9,
+    "fala": "Mas outras duas análises, com outras bases, contam outra história. Numa, a diferença ficou perto de sete pontos em dois mil e vinte e dois, sem alta. Na outra, não há evidência de que esteja crescendo.",
+    "rotulos": ["outras bases: linha plana", "7", "2022", "perto de 7 pontos, 2022", "sem evidência de alta"],
+    "sons": [{"t": 5.0, "tipo": "ding"}, {"t": 8.8, "tipo": "ding"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_5", "duracao": 3,
+    "fala": "E o porquê? Nenhuma delas prova.",
+    "rotulos": ["E o porquê?", "?", "nenhuma delas prova"],
+    "sons": []
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_6", "duracao": 3.2,
+    "fala": "Nossa leitura: a manchete depende da régua,",
+    "rotulos": ["nossa leitura", "notícias", "diferença", "cresce", "estável", "depende da régua"],
+    "sons": [{"t": 2.0, "tipo": "ding"}]
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_7", "duracao": 3.5,
+    "fala": "e geração junta dois grupos que podem andar em ritmos diferentes.",
+    "rotulos": ["\"geração\"", "dois grupos, dois ritmos"],
+    "sons": []
+  },
+  {
+    "tipo": "sketch", "desenho": "cena_8", "duracao": 5.5,
+    "fala": "Quando a conclusão muda com a base de dados, o que você perguntaria primeiro?",
+    "rotulos": ["Qual é a régua?", "?"],
+    "sons": [{"t": 0.3, "tipo": "whoosh"}]
+  }
+]

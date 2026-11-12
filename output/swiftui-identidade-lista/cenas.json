@@ -1,0 +1,10 @@
+[
+ {"tipo": "sketch", "desenho": "cena_0", "duracao": 3.5, "fala": "Removi um item da lista, e o check pulou para outra linha.", "rotulos": ["O check pulou", "Tarefas", "Comprar pão", "Pagar conta", "Ligar p/ mãe"], "sons": [{"t": 0.9, "tipo": "impact"}, {"t": 1.5, "tipo": "ding"}]},
+ {"tipo": "sketch", "desenho": "cena_1", "duracao": 3.5, "fala": "Quem navega pergunta: como a lista identifica cada linha?", "rotulos": ["Como identifica", "cada linha?", "navegador", "piloto", "List {", "ForEach(...)"], "sons": []},
+ {"tipo": "sketch", "desenho": "cena_2", "duracao": 4, "fala": "Quem digita responde: ForEach sobre os índices, com id ponto self.", "rotulos": ["id: \\.self", "ForEach(items.indices,", "id: \\.self) { i in", "Linha(item: items[i])"], "sons": [{"t": 2.4, "tipo": "ding"}]},
+ {"tipo": "sketch", "desenho": "cena_3", "duracao": 6, "fala": "Aí o índice vira a identidade, e o estado fica preso a ela. Ao remover, o check fica no lugar, não no item. Hipótese nossa, coerente com a documentação.", "rotulos": ["índice = identidade", "check fica no lugar", "Hipótese nossa"], "sons": [{"t": 7.5, "tipo": "impact"}]},
+ {"tipo": "sketch", "desenho": "cena_4", "duracao": 5, "fala": "Teste: um id único, criado junto com o item. Pode ser Identifiable com UUID, ou o id do banco.", "rotulos": ["id: \\.self -> id: \\.id", "struct Item: Identifiable", "let id = UUID()", "check segue o item"], "sons": [{"t": 5.3, "tipo": "ding"}]},
+ {"tipo": "sketch", "desenho": "cena_5", "duracao": 3.5, "fala": "Minha leitura: identidade acompanha o item, não o lugar.", "rotulos": ["Minha leitura", "id acompanha o item", "item", "lugar"], "sons": [{"t": 1.0, "tipo": "ding"}]},
+ {"tipo": "sketch", "desenho": "cena_6", "duracao": 4, "fala": "Mas é só uma causa possível. Pode haver outras, que eu não verifiquei.", "rotulos": ["Uma causa possível", "índice como id", "pode haver outras causas", "não verificado"], "sons": [{"t": 0.3, "tipo": "impact"}]},
+ {"tipo": "sketch", "desenho": "cena_7", "duracao": 3, "fala": "Como vocês investigam problemas parecidos?", "rotulos": ["Como você", "investiga?", "// check pulou", "// 1: índice?", "// 2: ?"], "sons": []}
+]

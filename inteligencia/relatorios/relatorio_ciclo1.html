@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relatório do ciclo 1 · Contexto Explica</title>
+<style>
+  :root {
+    --bg: #f6f5f1; --card: #ffffff; --ink: #1d1d1b; --muted: #5f5f58;
+    --line: #dcdad2; --accent: #1f5fa8; --warn: #a14b00; --ok: #2e7d4f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #151513; --card: #1f1f1c; --ink: #ecebe6; --muted: #a3a29a;
+      --line: #3a3a35; --accent: #7fb2ea; --warn: #e8a15c; --ok: #78c79a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #151513; --card: #1f1f1c; --ink: #ecebe6; --muted: #a3a29a;
+    --line: #3a3a35; --accent: #7fb2ea; --warn: #e8a15c; --ok: #78c79a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 980px; margin: 0 auto; padding: 32px 16px 64px; }
+  header h1 { font-size: 28px; margin: 0 0 6px; }
+  header p { margin: 0; color: var(--muted); }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; margin-top: 20px; }
+  h2 { font-size: 20px; margin: 0 0 12px; }
+  h3 { font-size: 16px; margin: 18px 0 6px; }
+  p, li { margin: 6px 0; }
+  ul { padding-left: 20px; margin: 6px 0; }
+  .tag { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); margin-right: 4px; }
+  .forte { color: var(--ok); border-color: var(--ok); }
+  .media { color: var(--accent); border-color: var(--accent); }
+  .fraca { color: var(--warn); border-color: var(--warn); }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 8px; }
+  .kpi { border: 1px solid var(--line); border-radius: 10px; padding: 12px; }
+  .kpi b { display: block; font-size: 24px; }
+  .kpi span { color: var(--muted); font-size: 13px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; }
+  .scroll { overflow-x: auto; }
+  .aviso { border-left: 4px solid var(--warn); padding: 8px 12px; background: transparent; }
+  code { font-size: 13px; }
+  footer { color: var(--muted); font-size: 13px; margin-top: 24px; }
+  @media (max-width: 600px) { header h1 { font-size: 23px; } }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Relatório do ciclo 1 · Setor de inteligência</h1>
+  <p>Contexto Explica · 29 de outubro de 2026 · Canal: análise de comportamento social e gerações (Shorts)</p>
+</header>
+
+<section>
+  <h2>Resumo em cinco linhas</h2>
+  <ul>
+    <li>O canal tem <b>19 vídeos</b> em 21 dias e <b>129 views</b> no total. É cedo demais para qualquer regra de desempenho.</li>
+    <li>O ciclo não descobriu o que funciona. Descobriu o que falta medir: <b>retenção, CTR, origem de tráfego, voz e som</b> dos concorrentes.</li>
+    <li>Um vídeo (64 views em 1 dia) puxa a média. Sem ele, a mediana do canal fica em cerca de 0,2 view por dia.</li>
+    <li>Os concorrentes mais fortes do nicho ganham com vídeo longo. O canal é só Shorts. <b>Isso ainda não está resolvido.</b></li>
+    <li>Nenhuma recomendação de conteúdo tem evidência suficiente. As ações de agora são de medição.</li>
+  </ul>
+  <div class="kpis">
+    <div class="kpi"><b>19</b><span>vídeos no canal</span></div>
+    <div class="kpi"><b>129</b><span>views no total</span></div>
+    <div class="kpi"><b>2</b><span>mediana de views por vídeo</span></div>
+    <div class="kpi"><b>0</b><span>comentários</span></div>
+    <div class="kpi"><b>3</b><span>vídeos longos (fora do formato)</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Onde estamos</h2>
+  <p>Números do coletor, <code>inteligencia/metricas/videos.csv</code>, coleta de 29/10 às 20h.</p>
+  <ul>
+    <li>Maior alcance: <i>"Geração Z não quer filhos ou não pode ter?"</i>, com 64 views em 1 dia de vida. Segundo: o longo sobre filhos, com 17 views em 13 dias. Terceiro: <i>"Proibir celular na escola basta?"</i>, com 11 views em 14 dias.</li>
+    <li>Quatro vídeos seguem com 0 views, incluindo o mais antigo e o de hoje.</li>
+    <li>Três vídeos são longos (578, 812 e 825 s), o que foge do <i>"Shorts apenas"</i> do <code>CLAUDE.md</code>.</li>
+    <li>Só 4 dos 19 vídeos estão ligados a uma pasta de <code>output/</code>. Os outros 15 precisam de slug.</li>
+    <li>Não existe curva ainda: as duas coletas são do mesmo dia.</li>
+    <li>Curtidas: o CSV soma 5 e o resumo de <b>Yuri Alberto</b> diz 8. Divergência registrada, uso 5 (o que o CSV mostra).</li>
+  </ul>
+  <p><span class="tag">Fato</span> Retenção, CTR, impressões, origem de tráfego e inscritos ganhos <b>não estão disponíveis</b>. Falta o escopo <code>yt-analytics.readonly</code>.</p>
+</section>
+
+<section>
+  <h2>Para onde queremos ir</h2>
+  <p>Tirado de <code>output/messi_assinatura_canal.md</code> e do <code>CLAUDE.md</code>. Não há meta numérica nova.</p>
+  <ul>
+    <li><b>Tese:</b> "Geração é rótulo; contexto é explicação." Três lentes: contexto material, fase da vida, incentivos e instituições.</li>
+    <li><b>Formato:</b> Shorts apenas, 30 a 60 s, 1080×1920, 30 fps. Gancho de 4 s, 1 a 3 blocos com números, contraexemplo e pergunta de volta. Estilo visual: sketch.</li>
+    <li><b>Tom:</b> acessível e didático, crítico com as ideias e respeitoso com as pessoas, honesto sobre a incerteza.</li>
+    <li><b>Objetivo:</b> canal automatizado, sem rosto, <b>monetizável</b>, dentro das políticas do YouTube.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Referências e inspirações</h2>
+  <p>Catalogadas por <b>Hugo Souza</b>. Cada canal serve de modelo para um aspecto, nunca como cópia.</p>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Aspecto</th><th>Canal</th><th>Por que serve</th><th>O que evitar</th></tr></thead>
+    <tbody>
+      <tr><td>Formato (Short geracional)</td><td>WebPedia</td><td>Um Short geracional com 105 mil views. Tema geracional curto pode render.</td><td>Recortes de terceiros; ocorrência isolada.</td></tr>
+      <tr><td>Tema e abordagem</td><td>Futuro Econômico</td><td>Mesma tese do nicho: fato, dado e contexto. Pergunta de causa no título.</td><td>Duração longa (fora do formato).</td></tr>
+      <tr><td>Tom</td><td>ipe</td><td>Ensaio reflexivo sobre a Geração Z, com miniatura de uma palavra.</td><td>Arte de anime de terceiros; erro de acento.</td></tr>
+      <tr><td>Miniatura</td><td>Productive Peter</td><td>Boneco de palito, fundo claro, uma metáfora e 2 a 3 palavras. O mais próximo do nosso sketch.</td><td>Shorts acima de 60 s; texto longo.</td></tr>
+      <tr><td>Miniatura (texto)</td><td>Futuro Econômico</td><td>Texto-manchete diferente do título, em 2 linhas.</td><td>Rosto real (o canal é sem rosto).</td></tr>
+      <tr><td>Título</td><td>Futuro Econômico e ipe</td><td>Pergunta de causa e afirmação sobre a geração são as estruturas dominantes (17 de 27).</td><td>Alarme em caixa alta (Show de Informações).</td></tr>
+      <tr><td>Produção</td><td>Productive Peter e Psicología Animada</td><td>Animação 2D sem rosto, boneco ou personagens expressivos.</td><td>Repetir tema em dias seguidos.</td></tr>
+      <tr><td>O que não fazer</td><td>Minutos Psi</td><td>Cadência de 2 a 3 por semana com promessa de revelação não gerou tração (4 a 71 views).</td><td>Miniatura de colagem com 9 a 10 palavras.</td></tr>
+      <tr><td>Fora do modelo</td><td>Show de Informações</td><td>Só como exemplo do que evitar.</td><td>Todo o tom de alarme e a isca com pessoa em situação de vulnerabilidade.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2>O que o nicho faz (com as fontes)</h2>
+  <ul>
+    <li><b>Títulos (Fagner):</b> 27 títulos em 7 canais. Pergunta de causa (9) e afirmação sobre a geração (8). Faixa de 25 a 85 caracteres, centro em 45 a 60. A amostra é pequena e quase toda de vídeo longo.</li>
+    <li><b>Miniaturas (André Carrillo):</b> 27 analisadas, todas pela imagem. Padrão mais repetido: um elemento dominante e 1 a 5 palavras, em geral diferentes do título. Nos Shorts, a imagem é um quadro do vídeo, não uma miniatura desenhada (hipótese).</li>
+    <li><b>Produção (Raniele):</b> animação 2D em 3 de 7 canais. Voz, som, ritmo e ferramentas <b>não verificados</b>: nenhum áudio foi ouvido.</li>
+    <li><b>Duração:</b> os dois canais do nicho com mais alcance são longos (até 773 mil views no Futuro Econômico; 205 mil no ipe). O único Short do Futuro Econômico tem 2 mil.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Recomendações para o setor de ação</h2>
+  <p>Todas são de medição e de método. Nenhuma altera o conteúdo do vídeo.</p>
+  <table>
+    <thead><tr><th>#</th><th>O que fazer</th><th>Evidência</th><th>Nível</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Liberar o escopo <code>yt-analytics.readonly</code> (novo consentimento OAuth, decisão do Guilherme).</td><td>Sem isso, nenhum "por quê" tem resposta.</td><td><span class="tag forte">forte</span></td></tr>
+      <tr><td>2</td><td>Rodar o coletor todo dia, no mesmo horário, para ver a curva de views.</td><td>Não há curva ainda.</td><td><span class="tag forte">forte</span></td></tr>
+      <tr><td>3</td><td>Gravar slug e <code>upload.json</code> em todo vídeo publicado, e completar os 15 que faltam.</td><td>Sem a ligação, não se compara gancho e miniatura com resultado.</td><td><span class="tag forte">forte</span></td></tr>
+      <tr><td>4</td><td>Preencher <code>YOUTUBE_API_KEY</code> no <code>.env</code> (hoje vazia) e coletar descrição e tags de 5 vídeos por canal.</td><td>Campos ainda não coletados em nenhum concorrente.</td><td><span class="tag media">média</span></td></tr>
+      <tr><td>5</td><td>Assistir e ouvir 2 ou 3 vídeos de Productive Peter, WebPedia e Futuro Econômico, anotando voz, gancho, cortes e som.</td><td>0 de 7 canais com voz, ritmo e som documentados.</td><td><span class="tag media">média</span></td></tr>
+      <tr><td>6</td><td><b>Decisão do dono:</b> destino dos 3 vídeos longos e do formato (só Shorts, ou também longo).</td><td>Concorrentes de maior alcance são longos. Decidir depois da ação 1.</td><td><span class="tag">decisão</span></td></tr>
+      <tr><td>7</td><td>Testar, quando houver curva e CTR: título em pergunta de causa contra dilema, e miniatura com fundo claro contra escuro.</td><td>Hipóteses, não regra.</td><td><span class="tag fraca">fraca</span></td></tr>
+    </tbody>
+  </table>
+  <p><b>Ordem sugerida:</b> 1, 2 e 3 nesta semana; 4 e 5 no próximo ciclo; 6 quando o dono puder; 7 só com dados.</p>
+</section>
+
+<section>
+  <h2>Contradições e hipóteses (não são fatos)</h2>
+  <ul>
+    <li><b>Longo contra Short:</b> o nicho ganha no longo, mas o canal é só Shorts e já tem 3 longos. Não dá para dizer qual formato rende mais.</li>
+    <li><b>Título em dilema:</b> um vídeo com esse formato teve 64 views em 1 dia; outro, 1 view em 3 dias. Indício fraco e contra-indício.</li>
+    <li><b>Hipótese do tema "filhos":</b> pode atrair mais clique. Falta curva e CTR.</li>
+    <li><b>Hipótese da miniatura de palito e fundo claro:</b> pode ler melhor no celular. Sem CTR de ninguém para confirmar.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Lacunas e limites</h2>
+  <div class="aviso">
+    <ul>
+      <li><b>YOUTUBE_API_KEY vazia no <code>.env</code>:</b> a Data API não foi usada. Os dados dos concorrentes vieram de páginas públicas e feeds RSS, com leitura pontual.</li>
+      <li><b>Amostra pequena:</b> 19 vídeos, 7 canais de referência (3 fora do nicho, 2 em outras línguas). Nenhum percentual deste relatório é regra.</li>
+      <li><b>Sem voz nem som verificados:</b> nenhum áudio dos 7 canais foi ouvido.</li>
+      <li><b>Sem descrição, tags nem duração de Short</b> dos concorrentes.</li>
+      <li><b>Status de privacidade</b> dos vídeos do canal não é informado pelo coletor.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  Fontes e arquivos completos: <code>inteligencia/</code> (README, <code>metricas/</code>, <code>canais/</code>, <code>titulos/</code>, <code>thumbnails/</code>, <code>producao/</code>, <code>relatorios/semana_2026-10-29.md</code>, <code>briefing_acao.md</code>).
+  Revisar com 30 ou mais Shorts comparáveis, ou quando cada vídeo passar de algumas centenas de views.
+</footer>
+
+</main>
+</body>
+</html>

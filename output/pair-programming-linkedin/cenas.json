@@ -1,0 +1,34 @@
+[
+  {
+    "tipo": "sketch",
+    "desenho": "cena_0",
+    "duracao": 3,
+    "fala": "Pair programming não é só resolver o problema mais rápido.",
+    "rotulos": ["pair programming"],
+    "sons": [{"t": 0.3, "tipo": "ding"}]
+  },
+  {
+    "tipo": "sketch",
+    "desenho": "cena_1",
+    "duracao": 4,
+    "fala": "É o momento em que quem ensina organiza o que sabe, e quem aprende vê o raciocínio acontecendo em tempo real.",
+    "rotulos": ["ensina ↔ aprende"],
+    "sons": []
+  },
+  {
+    "tipo": "sketch",
+    "desenho": "cena_2",
+    "duracao": 4,
+    "fala": "O conhecimento não espera uma reunião ou um documento: ele se transfere na hora, no código, no erro que aparece.",
+    "rotulos": ["knowledge transfer"],
+    "sons": [{"t": 1.0, "tipo": "whoosh"}]
+  },
+  {
+    "tipo": "sketch",
+    "desenho": "cena_3",
+    "duracao": 3,
+    "fala": "É uma das formas mais eficientes de onboarding que existem.",
+    "rotulos": ["onboarding"],
+    "sons": [{"t": 0.5, "tipo": "ding"}]
+  }
+]

@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ronaldo · Central de Controle</title>
+<style>
+:root{
+  --fundo:#03060b; --vidro:rgba(9,22,38,.74); --vidro2:rgba(14,34,56,.62);
+  --borda:rgba(72,200,255,.22); --borda-forte:rgba(72,214,255,.55);
+  --ciano:#38d6ff; --azul:#3b82f6; --roxo:#a78bfa; --ambar:#f5b942; --vermelho:#ff6b78; --verde:#3ee08f;
+  --texto:#dcefff; --mudo:#8aa6bd; --apagado:#5b7388;
+  --fonte:"Bahnschrift","Segoe UI",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html,body{min-height:100%}
+body{
+  font-family:var(--fonte); color:var(--texto); background:var(--fundo); font-size:14px; line-height:1.35;
+  background-image:
+    radial-gradient(1100px 600px at 70% -10%, rgba(56,120,255,.16), transparent 60%),
+    radial-gradient(900px 700px at 0% 110%, rgba(56,214,255,.10), transparent 60%),
+    linear-gradient(rgba(72,200,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(72,200,255,.035) 1px, transparent 1px);
+  background-size:auto,auto,44px 44px,44px 44px;
+  padding:16px;
+}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--ciano);outline-offset:2px}
+
+.tela{
+  width:100%;margin:0;border-radius:22px;padding:16px 18px 18px;
+  border:1.5px solid var(--borda-forte);
+  background:linear-gradient(160deg,rgba(8,20,36,.80),rgba(4,10,20,.88));
+  box-shadow:0 0 0 1px rgba(56,214,255,.10),0 0 38px rgba(56,214,255,.28),inset 0 0 60px rgba(56,214,255,.06);
+}
+
+/* cabeçalho */
+header{display:flex;align-items:center;gap:14px;margin-bottom:14px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:12px}
+.logo svg{width:44px;height:44px;filter:drop-shadow(0 0 8px rgba(56,214,255,.7))}
+.marca{font-size:26px;font-weight:700;letter-spacing:.08em;color:var(--ciano);text-shadow:0 0 14px rgba(56,214,255,.55)}
+.sub{font-size:13px;letter-spacing:.16em;color:var(--mudo);padding-left:14px;border-left:1px solid var(--borda);text-transform:uppercase}
+.topo-dir{margin-left:auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:7px;font-size:12px;color:var(--mudo);letter-spacing:.06em;text-transform:uppercase}
+.ponto{width:8px;height:8px;border-radius:50%;background:var(--apagado);flex:none}
+.ponto.ok{background:var(--verde);box-shadow:0 0 8px var(--verde)}
+.ponto.atencao{background:var(--ambar);box-shadow:0 0 8px var(--ambar)}
+.ponto.offline{background:var(--vermelho);box-shadow:0 0 8px var(--vermelho)}
+.relogio{text-align:right;line-height:1.05}
+.relogio b{display:block;font-size:30px;font-weight:600;letter-spacing:.04em;text-shadow:0 0 12px rgba(56,214,255,.4)}
+.relogio span{font-size:11px;letter-spacing:.14em;color:var(--mudo);text-transform:uppercase}
+
+/* grade */
+.grade{display:grid;gap:14px;grid-template-columns:285px 305px minmax(380px,1fr) 275px;align-items:start}
+.col{display:flex;flex-direction:column;gap:14px;min-width:0}
+.card{
+  background:var(--vidro);border:1px solid var(--borda);border-radius:14px;padding:12px 14px 14px;
+  backdrop-filter:blur(6px);box-shadow:inset 0 0 22px rgba(56,214,255,.05);min-width:0;
+}
+.card h2{
+  font-size:12px;font-weight:600;letter-spacing:.14em;color:#bfe9ff;text-transform:uppercase;
+  display:flex;align-items:center;gap:8px;margin-bottom:10px;
+}
+.card h2 svg{width:16px;height:16px;stroke:var(--ciano);fill:none;stroke-width:1.7;flex:none}
+.card h2 .dir{margin-left:auto;font-weight:400;letter-spacing:.06em;color:var(--mudo);font-size:11px;text-transform:none}
+.vazio{color:var(--apagado);font-size:13px;padding:4px 0}
+.sec{font-size:11px;letter-spacing:.12em;color:var(--apagado);text-transform:uppercase;margin:10px 0 5px}
+
+/* botões */
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tile{
+  background:var(--vidro2);border:1px solid var(--borda);border-radius:11px;padding:10px 6px;text-align:center;
+  font-size:12px;letter-spacing:.07em;text-transform:uppercase;transition:.15s;display:flex;flex-direction:column;align-items:center;gap:5px;
+}
+.tile svg{width:22px;height:22px;stroke:var(--ciano);fill:none;stroke-width:1.6}
+.tile:hover{border-color:var(--ciano);box-shadow:0 0 14px rgba(56,214,255,.25);background:rgba(20,50,80,.7)}
+.rapidas{display:flex;flex-direction:column;gap:6px}
+.rapida{
+  text-align:left;background:transparent;border:1px solid var(--borda);border-radius:9px;padding:7px 10px;font-size:13px;
+  display:flex;align-items:center;gap:8px;transition:.15s;
+}
+.rapida small{margin-left:auto;color:var(--apagado);font-size:11px;letter-spacing:.05em}
+.rapida:hover:not(:disabled){border-color:var(--ciano);background:rgba(56,214,255,.08)}
+button:disabled{opacity:.45;cursor:not-allowed}
+
+/* agentes */
+.agentes{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.ag{
+  background:var(--vidro2);border:1px solid var(--borda);border-radius:9px;padding:6px 8px;font-size:13px;text-align:left;
+  display:flex;align-items:center;gap:7px;transition:.15s;
+}
+.ag:hover{border-color:var(--ciano)}
+.ag.ativo{border-color:var(--ambar);box-shadow:0 0 12px rgba(245,185,66,.35)}
+.ag.ativo .ponto{background:var(--ambar);box-shadow:0 0 8px var(--ambar);animation:pulsa 1s infinite}
+
+/* listas */
+.linha{display:flex;align-items:baseline;gap:8px;padding:5px 0;border-bottom:1px solid rgba(72,200,255,.09)}
+.linha:last-child{border-bottom:0}
+.linha .h{color:var(--ciano);font-variant-numeric:tabular-nums;min-width:44px;font-size:13px;white-space:nowrap}
+.linha .h .dt{color:var(--mudo);font-size:12px}
+.linha .h .dt::after{content:" ·"}
+.linha .h:has(.dt){min-width:92px}
+.linha .t{flex:1;min-width:0;overflow-wrap:anywhere}
+.linha .m{color:var(--mudo);font-size:12px;white-space:nowrap}
+.linha .t .m{white-space:normal;overflow-wrap:anywhere}
+.linha.passou{opacity:.55}
+.linha.feito .t{color:var(--apagado);text-decoration:line-through}
+.linha.atrasada .t{color:#ffb3ba}
+.tag{font-size:10px;letter-spacing:.1em;text-transform:uppercase;border:1px solid;border-radius:6px;padding:1px 5px;white-space:nowrap}
+.tag.pri{color:var(--ambar);border-color:rgba(245,185,66,.55)}
+.tag.atr{color:var(--vermelho);border-color:rgba(255,107,120,.55)}
+.chk{appearance:none;width:17px;height:17px;border:1.5px solid var(--borda-forte);border-radius:5px;flex:none;align-self:center;cursor:pointer;background:transparent;position:relative}
+.chk:checked{background:rgba(62,224,143,.25);border-color:var(--verde)}
+.chk:checked::after{content:"";position:absolute;left:4px;top:0;width:4px;height:9px;border:solid var(--verde);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.prox{
+  background:linear-gradient(90deg,rgba(56,214,255,.14),transparent);border-left:3px solid var(--ciano);
+  padding:6px 10px;border-radius:0 9px 9px 0;margin-bottom:8px;font-size:13px;
+}
+.prox b{color:var(--ciano);font-weight:600}
+
+/* conexões */
+.conx{display:flex;align-items:center;gap:8px;padding:4px 0;font-size:13px}
+.conx .d{margin-left:auto;font-size:12px;color:var(--mudo);text-align:right}
+.conx.nc{color:var(--apagado)}
+.conx.nc .d{letter-spacing:.06em;font-size:11px}
+
+/* gráficos */
+.num{font-size:26px;font-weight:600;letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.duo small{display:block;font-size:11px;letter-spacing:.1em;color:var(--mudo);text-transform:uppercase}
+.duo b{font-size:15px;font-weight:600}
+svg.graf{width:100%;height:56px;display:block;margin-top:6px}
+.barra{display:grid;grid-template-columns:62px 1fr 22px;gap:8px;align-items:center;font-size:12px;margin:4px 0}
+.barra i{display:block;height:8px;border-radius:5px;background:rgba(72,200,255,.10);overflow:hidden}
+.barra i s{display:block;height:100%;border-radius:5px;background:linear-gradient(90deg,var(--azul),var(--ciano))}
+.barra.am i s{background:linear-gradient(90deg,#b7791f,var(--ambar))}
+.barra.vd i s{background:linear-gradient(90deg,#1c9d63,var(--verde))}
+.barra b{text-align:right;font-weight:600}
+.cols7{display:flex;align-items:flex-end;gap:6px;height:54px;margin-top:8px}
+.cols7 div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:3px;height:100%;font-size:10px;color:var(--apagado)}
+.cols7 span{width:100%;border-radius:4px 4px 0 0;background:linear-gradient(180deg,var(--ciano),var(--azul));min-height:2px}
+
+/* clima */
+.clima-topo{display:flex;align-items:center;gap:12px}
+.clima-topo .ico{font-size:40px;line-height:1}
+.clima-topo .grau{font-size:40px;font-weight:600;line-height:1;text-shadow:0 0 14px rgba(56,214,255,.45)}
+.clima-topo .cond{font-size:13px;color:var(--mudo);line-height:1.3}
+.clima-topo .cond b{display:block;color:var(--texto);font-weight:600;font-size:14px}
+.horas{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin-top:10px;text-align:center}
+.horas div{background:var(--vidro2);border:1px solid rgba(72,200,255,.14);border-radius:8px;padding:5px 0;font-size:11px;color:var(--mudo)}
+.horas b{display:block;font-size:13px;color:var(--texto);font-weight:600}
+.horas i{font-style:normal;display:block;font-size:14px}
+.horas em{font-style:normal;color:var(--azul);font-size:10px}
+.fonte{font-size:11px;color:var(--apagado);margin-top:8px}
+
+/* centro */
+.centro{display:flex;flex-direction:column;align-items:center;min-width:0}
+.esfera{position:relative;width:100%;max-width:520px;aspect-ratio:1/1;margin:-6px auto -26px;container-type:size}
+.esfera canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.esfera .nucleo{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:23cqmin;height:23cqmin;border-radius:50%;
+  display:grid;place-items:center;background:radial-gradient(circle,rgba(4,16,30,.92) 58%,rgba(56,214,255,.28) 100%);
+  border:2px solid rgba(56,214,255,.75);box-shadow:0 0 28px rgba(56,214,255,.6),inset 0 0 20px rgba(167,139,250,.35);
+}
+.esfera .nucleo svg{width:62%;height:62%}
+.estado{text-align:center;margin-bottom:10px}
+.estado b{display:block;font-size:19px;letter-spacing:.22em;color:var(--ciano);text-shadow:0 0 14px rgba(56,214,255,.6)}
+.estado span{font-size:13px;color:var(--mudo)}
+.estado.busy b{color:var(--ambar);text-shadow:0 0 14px rgba(245,185,66,.6)}
+.console{
+  width:100%;max-width:640px;height:230px;overflow-y:auto;border:1px solid var(--borda);border-radius:14px;padding:10px 12px;
+  background:rgba(4,12,24,.7);display:flex;flex-direction:column;gap:9px;scroll-behavior:smooth;
+}
+.msg{max-width:92%;padding:8px 11px;border-radius:11px;font-size:13.5px;white-space:pre-wrap;overflow-wrap:anywhere}
+.msg small{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:3px;opacity:.75}
+.msg.eu{align-self:flex-end;background:rgba(59,130,246,.22);border:1px solid rgba(59,130,246,.45)}
+.msg.ro{align-self:flex-start;background:rgba(56,214,255,.08);border:1px solid var(--borda)}
+.msg.erro{border-color:rgba(255,107,120,.6);background:rgba(255,107,120,.10)}
+.msg.pensa::after{content:"…";display:inline-block;animation:pisca 1s infinite}
+.cmd{width:100%;max-width:640px;display:flex;gap:8px;margin-top:10px}
+.cmd input{
+  flex:1;min-width:0;background:rgba(4,12,24,.85);border:1px solid var(--borda-forte);border-radius:12px;padding:12px 14px;font-size:15px;
+}
+.cmd input::placeholder{color:var(--apagado)}
+.cmd button{
+  border:1px solid var(--ciano);background:linear-gradient(180deg,rgba(56,214,255,.28),rgba(59,130,246,.22));border-radius:12px;
+  padding:0 20px;letter-spacing:.12em;text-transform:uppercase;font-size:12px;font-weight:600;
+}
+.cmd button:hover:not(:disabled){box-shadow:0 0 16px rgba(56,214,255,.5)}
+.dica{width:100%;max-width:640px;font-size:12px;color:var(--apagado);margin-top:7px;text-align:center}
+
+/* diálogo */
+dialog{
+  margin:auto;border:1px solid var(--borda-forte);border-radius:16px;background:#071423;color:var(--texto);padding:18px 20px;width:min(420px,92vw);
+  box-shadow:0 0 40px rgba(56,214,255,.35);
+}
+dialog::backdrop{background:rgba(1,4,9,.72)}
+dialog h3{font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--ciano);margin-bottom:12px}
+label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mudo);margin:10px 0 4px}
+dialog input,dialog select{width:100%;background:rgba(4,12,24,.9);border:1px solid var(--borda-forte);border-radius:9px;padding:9px 10px;color-scheme:dark}
+.l2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.erro-form{color:var(--vermelho);font-size:13px;min-height:18px;margin-top:10px}
+.acoes{display:flex;gap:8px;justify-content:flex-end;margin-top:6px}
+.acoes button{border:1px solid var(--borda-forte);background:transparent;border-radius:9px;padding:8px 16px;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.acoes button.pri{border-color:var(--ciano);background:rgba(56,214,255,.2)}
+
+/* computador: tudo cabe numa tela, sem rolar a página. Só lista muito longa rola dentro do próprio cartão */
+@media (min-width:1331px){
+  body{padding:10px}
+  .tela{height:calc(100vh - 20px);min-height:600px;display:flex;flex-direction:column;padding:10px 14px 12px}
+  header{margin-bottom:10px;flex:none}
+  .logo svg{width:36px;height:36px}.marca{font-size:23px}
+  .relogio b{font-size:26px}
+  .grade{flex:1;min-height:0;align-items:stretch;gap:10px;grid-template-columns:minmax(270px,.9fr) minmax(290px,1fr) minmax(380px,1.5fr) minmax(260px,.9fr)}
+  .col{gap:10px;min-height:0;height:100%}
+  .card{padding:8px 12px 10px;min-height:0;overflow-y:auto;flex:0 1 auto;scrollbar-width:thin;scrollbar-color:rgba(56,214,255,.35) transparent}
+  .card h2{margin-bottom:6px}
+  .grade>.col:first-child .card,.grade>.col:last-child .card{flex:1 1 auto}
+  .col.c2 .card:nth-child(1){flex:1.5 1 0}
+  .col.c2 .card:nth-child(2){flex:1.6 1 0}
+  .col.c2 .card:nth-child(3){flex:.4 1 0}
+  .sec{margin:6px 0 3px}
+  .linha{padding:3px 0}
+  /* coluna 1 */
+  .card{display:flex;flex-direction:column}
+  .card>*{flex-shrink:0}
+  .grade>.col:first-child .card:first-child{flex:1.8 1 auto}
+  .tiles{gap:8px;flex:1 1 auto;min-height:140px;grid-template-rows:1fr 1fr}
+  .tile{justify-content:center;gap:7px;padding:8px;font-size:12px;line-height:1.15;border-color:var(--borda-forte)}
+  .tile svg{width:30px;height:30px}
+  .rapidas{gap:4px}
+  .rapida{padding:4px 9px;font-size:12px}
+  .agentes{gap:5px;flex:1 1 auto;grid-auto-rows:1fr}
+  .ag{padding:4px 8px;font-size:12px}
+  #conexoes{flex:1 1 auto;display:flex;flex-direction:column;justify-content:space-evenly}
+  .conx{padding:2px 0;font-size:12px}
+  /* coluna 4 */
+  .clima-topo .ico,.clima-topo .grau{font-size:32px}
+  .duo{margin-top:5px;gap:6px}
+  .duo.quatro{grid-template-columns:repeat(4,1fr)}
+  .duo.quatro b{font-size:13px}.duo.quatro small{font-size:9px;letter-spacing:.05em}
+  .horas{margin-top:6px}.horas div{padding:3px 0}
+  .fonte{margin-top:5px}
+  .num{font-size:22px}
+  svg.graf{height:38px;margin-top:2px}
+  .barra{margin:2px 0;font-size:11px}.barra i{height:6px}
+  .cols7{height:34px;margin-top:4px}
+  /* centro: a esfera ocupa o que sobrar */
+  .centro{height:100%;min-height:0}
+  .esfera{flex:1 1 0;min-height:150px;aspect-ratio:auto;max-width:none;margin:0}
+  .estado{margin-bottom:6px}.estado b{font-size:16px}.estado span{font-size:12px}
+  .console{height:clamp(96px,19vh,200px);flex:none;padding:8px 10px}
+  .msg{font-size:13px;padding:6px 10px}
+  .cmd{margin-top:8px}.cmd input{padding:10px 13px;font-size:14px}
+  .dica{font-size:11px;margin-top:5px}
+}
+@media (min-width:1331px) and (max-height:860px){
+  .dica{display:none}
+  .horas div:nth-child(n+5){display:none}.horas{grid-template-columns:repeat(4,1fr)}
+  .rapida small{display:none}
+  .tiles{min-height:96px}
+  .tile{flex-direction:row;justify-content:flex-start;gap:8px;padding:6px 9px;font-size:11px;text-align:left}
+  .tile svg{width:18px;height:18px;flex:none}
+}
+@keyframes pulsa{50%{opacity:.35}}
+@keyframes pisca{50%{opacity:.2}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+
+/* telas menores */
+@media (max-width:1330px){
+  .grade{grid-template-columns:1fr 1fr 1fr}
+  .centro{grid-column:1/-1;order:-1}
+  .esfera{max-width:400px}
+}
+@media (max-width:880px){
+  .grade{grid-template-columns:1fr 1fr}
+}
+@media (max-width:620px){
+  body{padding:8px}.tela{padding:12px}
+  .grade{grid-template-columns:1fr}
+  .sub{display:none}.topo-dir{margin-left:0}
+  .console{height:210px}
+}
+</style>
+</head>
+<body>
+<div class="tela">
+  <header>
+    <div class="logo">
+      <svg viewBox="0 0 48 48" fill="none" stroke="#38d6ff" stroke-width="2" aria-hidden="true">
+        <circle cx="24" cy="24" r="21"/><circle cx="24" cy="24" r="14" stroke-opacity=".5"/>
+        <path d="M24 12v8M24 28v8M12 24h8M28 24h8M16 16l5 5M27 27l5 5M32 16l-5 5M21 27l-5 5" stroke-linecap="round"/>
+        <circle cx="24" cy="24" r="3.4" fill="#38d6ff"/>
+      </svg>
+      <span class="marca">RONALDO</span>
+    </div>
+    <span class="sub">Assistente pessoal · Central de controle</span>
+    <div class="topo-dir">
+      <span class="chip" id="chipPainel"><i class="ponto"></i><span>painel</span></span>
+      <span class="chip" id="chipTelegram"><i class="ponto"></i><span>telegram</span></span>
+      <div class="relogio"><b id="hora">--:--</b><span id="data">&nbsp;</span></div>
+    </div>
+  </header>
+
+  <main class="grade">
+    <!-- coluna 1 -->
+    <section class="col">
+      <div class="card">
+        <h2><svg viewBox="0 0 24 24"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>Central de controle</h2>
+        <div class="tiles">
+          <button class="tile" id="btResumo"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Resumo do dia</button>
+          <button class="tile" data-novo="tarefa"><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>Nova tarefa</button>
+          <button class="tile" data-novo="compromisso"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Novo compromisso</button>
+          <button class="tile" data-novo="lembrete"><svg viewBox="0 0 24 24"><path d="M6 17V11a6 6 0 0112 0v6l2 2H4z"/><path d="M10 21h4"/></svg>Novo lembrete</button>
+        </div>
+        <div class="sec">Ordens rápidas</div>
+        <div class="rapidas" id="rapidas"></div>
+      </div>
+
+      <div class="card">
+        <h2><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M16 5.5a3 3 0 010 5.5M18 14.5c2 .8 3 2.6 3 5.5"/></svg>Agentes <span class="dir">toque para chamar</span></h2>
+        <div class="agentes" id="agentes"></div>
+      </div>
+
+      <div class="card">
+        <h2><svg viewBox="0 0 24 24"><path d="M5 12a10 10 0 0114 0M8.5 15.5a5 5 0 017 0"/><circle cx="12" cy="19" r="1.2"/></svg>Conexões</h2>
+        <div id="conexoes"></div>
+      </div>
+    </section>
+
+    <!-- coluna 2 -->
+    <section class="col c2">
+      <div class="card">
+        <h2><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Agenda <span class="dir" id="agendaDia"></span></h2>
+        <div id="agenda"></div>
+      </div>
+      <div class="card">
+        <h2><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>Tarefas e lembretes</h2>
+        <div id="tarefas"></div>
+        <div class="sec">Próximos avisos</div>
+        <div id="avisos"></div>
+      </div>
+      <div class="card">
+        <h2><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Recentes</h2>
+        <div id="recentes"></div>
+      </div>
+    </section>
+
+    <!-- centro -->
+    <section class="centro">
+      <div class="esfera">
+        <canvas id="orb" aria-hidden="true"></canvas>
+        <div class="nucleo">
+          <svg viewBox="0 0 48 48" fill="none" stroke="#7fe3ff" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <path d="M24 9c-3-3-8-2-9 2-4 0-6 4-4 7-2 3 0 7 4 7 1 4 6 5 9 2 3 3 8 2 9-2 4 0 6-4 4-7 2-3 0-7-4-7-1-4-6-5-9-2z" stroke="#a78bfa"/>
+            <path d="M24 9v30M16 18l8 6 8-6M16 30l8-6 8 6"/>
+            <circle cx="16" cy="18" r="1.6" fill="#7fe3ff"/><circle cx="32" cy="18" r="1.6" fill="#7fe3ff"/><circle cx="16" cy="30" r="1.6" fill="#7fe3ff"/><circle cx="32" cy="30" r="1.6" fill="#7fe3ff"/>
+          </svg>
+        </div>
+      </div>
+      <div class="estado" id="estado"><b>RONALDO ATIVO</b><span>Aguardando comando…</span></div>
+      <div class="console" id="console" aria-live="polite"></div>
+      <form class="cmd" id="form" autocomplete="off">
+        <input id="entrada" type="text" maxlength="1500" placeholder="Fale com o Ronaldo…  ex.: @Pedri o que está parado?" aria-label="Ordem para o Ronaldo">
+        <button id="enviar" type="submit">Enviar</button>
+      </form>
+      <div class="dica">Comece pelo nome para chamar outro agente: Pedri, Rodri, Kroos, Lamine, Casemiro, Guardiola, Luiz Henrique. Cada ordem gasta uma chamada do Claude, igual ao Telegram.</div>
+    </section>
+
+    <!-- coluna 4 -->
+    <section class="col">
+      <div class="card">
+        <h2><svg viewBox="0 0 24 24"><path d="M7 18a4 4 0 010-8 5.5 5.5 0 0110.6 1.2A3.4 3.4 0 0117 18z"/></svg>Clima <span class="dir" id="climaLocal"></span></h2>
+        <div id="clima"></div>
+      </div>
+      <div class="card">
+        <h2><svg viewBox="0 0 24 24"><path d="M3 17l5-6 4 3 8-9"/><path d="M3 21h18"/></svg>Finanças <span class="dir" id="finAtu"></span></h2>
+        <div id="financas"></div>
+      </div>
+      <div class="card">
+        <h2><svg viewBox="0 0 24 24"><rect x="4" y="4" width="4.5" height="16" rx="1"/><rect x="10" y="4" width="4.5" height="10" rx="1"/><rect x="16" y="4" width="4.5" height="13" rx="1"/></svg>Programação <span class="dir" id="progSprint"></span></h2>
+        <div id="programacao"></div>
+      </div>
+      <div class="card">
+        <h2><svg viewBox="0 0 24 24"><path d="M3 17l5-6 4 3 8-9"/></svg>Consumo do Ronaldo</h2>
+        <div id="consumo"></div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<dialog id="dlg">
+  <form id="formNovo" method="dialog" autocomplete="off">
+    <h3 id="dlgTitulo">Novo</h3>
+    <label for="fTipo">Tipo</label>
+    <select id="fTipo"><option value="tarefa">Tarefa</option><option value="compromisso">Compromisso</option><option value="lembrete">Lembrete (aviso no Telegram)</option></select>
+    <label for="fTitulo">Título</label>
+    <input id="fTitulo" maxlength="140" required>
+    <div class="l2">
+      <div><label for="fData">Data</label><input id="fData" type="date"></div>
+      <div><label for="fHora">Hora <span id="fHoraOpc">(opcional)</span></label><input id="fHora" type="time"></div>
+    </div>
+    <div id="fExtraBox"><label for="fExtra" id="fExtraRot">Local</label><input id="fExtra" maxlength="140"></div>
+    <div class="erro-form" id="fErro" role="alert"></div>
+    <div class="acoes"><button type="button" id="fCancelar">Cancelar</button><button type="submit" class="pri">Salvar</button></div>
+  </form>
+</dialog>
+
+<script>
+"use strict";
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const brl = (v) => "R$ " + Number(v).toLocaleString("pt-BR", {minimumFractionDigits: 2, maximumFractionDigits: 2});
+const usd = (v) => "US$ " + Number(v).toLocaleString("pt-BR", {minimumFractionDigits: 2, maximumFractionDigits: v < 1 ? 3 : 2});
+const dm = (iso) => iso.slice(8, 10) + "/" + iso.slice(5, 7);
+const hm = (iso) => iso.slice(11, 16);
+// data + hora, sempre juntas: "04/11 10:30" (sem hora: o texto de `vazio`)
+const quando = (data, hora, vazio = "") => `<span class="h"><span class="dt">${dm(data)}</span> ${esc(hora || vazio)}</span>`;
+
+let E = null;          // último estado
+let ocupado = false;   // ordem em andamento neste navegador
+let semConexao = false;
+
+/* ---------- rede ---------- */
+async function api(rota, corpo) {
+  const opc = corpo === undefined ? {} : {method: "POST", headers: {"Content-Type": "application/json", "X-Painel": "1"}, body: JSON.stringify(corpo)};
+  const r = await fetch(rota, opc);
+  let dados = {};
+  try { dados = await r.json(); } catch (e) { /* corpo vazio */ }
+  if (!r.ok) throw new Error(dados.erro || ("Erro " + r.status));
+  return dados;
+}
+
+async function carregar() {
+  try {
+    E = await api("/api/estado");
+    semConexao = false;
+  } catch (e) {
+    semConexao = true;
+  }
+  desenhar();
+}
+
+/* ---------- topo ---------- */
+function relogio() {
+  const d = new Date();
+  $("hora").textContent = d.toLocaleTimeString("pt-BR", {hour: "2-digit", minute: "2-digit"});
+  $("data").textContent = d.toLocaleDateString("pt-BR", {weekday: "long", day: "numeric", month: "long", year: "numeric"});
+  if (E && E.agenda) contagem();
+}
+
+function contagem() {
+  const el = $("proxima");
+  if (!el || !E.agenda.proxima) return;
+  const falta = (new Date(E.agenda.proxima.quando) - new Date()) / 60000;
+  let txt;
+  if (falta <= 0) txt = "agora";
+  else if (falta < 60) txt = "em " + Math.ceil(falta) + " min";
+  else if (falta < 1440) txt = "em " + Math.floor(falta / 60) + "h" + String(Math.floor(falta % 60)).padStart(2, "0");
+  else txt = "em " + Math.floor(falta / 1440) + " d";
+  el.textContent = txt;
+}
+
+/* ---------- desenho ---------- */
+function desenhar() {
+  const cp = $("chipPainel");
+  cp.innerHTML = `<i class="ponto ${semConexao ? "offline" : "ok"}"></i><span>${semConexao ? "painel sem conexão" : "painel online"}</span>`;
+  if (!E) return;
+  const tg = (E.conexoes || []).find((c) => c.id === "telegram");
+  $("chipTelegram").innerHTML = `<i class="ponto ${tg ? tg.estado : "offline"}"></i><span>telegram ${tg && tg.estado === "ok" ? "ligado" : "fora"}</span>`;
+
+  // rápidas, agentes
+  const bloqueado = ocupado || (E.ocupado && E.ocupado.agente);
+  $("rapidas").innerHTML = RAPIDAS.map((r, i) =>
+    `<button class="rapida" data-r="${i}" ${bloqueado && r.ordem ? "disabled" : ""}>${esc(r.rotulo)}<small>${r.ordem ? "claude" : "grátis"}</small></button>`).join("");
+  $("agentes").innerHTML = E.agentes.map((a) => {
+    const ativo = E.ocupado && E.ocupado.agente === a.nome;
+    return `<button class="ag ${ativo ? "ativo" : ""}" data-ag="${esc(a.nome)}" title="${a.segundo_plano ? "Trabalha pelo Claude Remote" : "Chamar " + esc(a.nome)}"><i class="ponto ${a.segundo_plano ? "" : "ok"}"></i>${esc(a.nome)}</button>`;
+  }).join("");
+
+  // conexões
+  $("conexoes").innerHTML =
+    E.conexoes.map((c) => `<div class="conx"><i class="ponto ${c.estado}"></i>${esc(c.nome)}<span class="d">${c.estado === "offline" ? "OFFLINE · " : ""}${esc(c.detalhe)}</span></div>`).join("") +
+    E.nao_conectado.map((c) => `<div class="conx nc"><i class="ponto"></i>${esc(c.nome)}<span class="d">NÃO CONECTADO</span></div>`).join("");
+
+  // agenda
+  const a = E.agenda;
+  $("agendaDia").textContent = (E.dia_semana || "") + ", " + dm(E.agora);
+  let h = "";
+  if (a.proxima) h += `<div class="prox">PRÓXIMO · <b>${esc(a.proxima.titulo)}</b> <b id="proxima"></b> (${hm(a.proxima.quando)})</div>`;
+  h += a.hoje.length ? a.hoje.map((c) => itemAgenda(c, false)).join("") : `<div class="vazio">Nada marcado hoje.</div>`;
+  if (a.proximos.length) h += `<div class="sec">Próximos dias</div>` + a.proximos.map((c) => itemAgenda(c, true)).join("");
+  $("agenda").innerHTML = h;
+
+  // tarefas
+  const t = E.tarefas;
+  let ht = t.itens.length ? t.itens.map((x) => `
+    <div class="linha ${x.feito ? "feito" : ""} ${x.atrasada ? "atrasada" : ""}">
+      <input type="checkbox" class="chk" data-tipo="tarefa" data-id="${esc(x.id)}" ${x.feito ? "checked" : ""} aria-label="Marcar como feita: ${esc(x.titulo)}">
+      ${quando(x.data, x.hora, "sem hora")}
+      <span class="t">${esc(x.emoji)} ${esc(x.titulo)}${x.obs ? `<br><span class="m">${esc(x.obs)}</span>` : ""}</span>
+      ${x.atrasada ? `<span class="tag atr">atrasada</span>` : x.prioridade ? `<span class="tag pri">hoje</span>` : ""}
+    </div>`).join("") : `<div class="vazio">Nenhuma tarefa pendente.</div>`;
+  if (t.depois) ht += `<div class="vazio">+ ${t.depois} para depois de 7 dias</div>`;
+  $("tarefas").innerHTML = ht;
+  const l = E.lembretes;
+  $("avisos").innerHTML = l.proximos.length ? l.proximos.slice(0, 4).map((x) => `
+    <div class="linha">${quando(x.quando.slice(0, 10), hm(x.quando))}<span class="t">${esc(x.texto)}</span><span class="m">${esc(x.agente)}</span></div>`).join("")
+    + `<div class="vazio">${l.total} lembretes · ${l.recorrentes} recorrentes</div>` : `<div class="vazio">Nenhum aviso agendado.</div>`;
+
+  // recentes
+  $("recentes").innerHTML = E.recentes.length ? E.recentes.slice(0, 5).map((o) => `
+    <div class="linha" title="${esc(o.resposta)}">${quando(o.quando.slice(0, 10), hm(o.quando))}<span class="t"><b>${esc(o.agente)}</b>: ${esc(o.pedido)}</span><span class="m">${o.ok ? "✓" : "falhou"}</span></div>`).join("")
+    : `<div class="vazio">Nenhuma ordem dada por este painel ainda.</div>`;
+
+  desenharDireita();
+  estadoOrb();
+  contagem();
+}
+
+function itemAgenda(c, comData) {
+  const passou = !comData && !c.feito && c.hora && c.hora < hm(new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString());
+  return `<div class="linha ${c.feito ? "feito" : ""} ${passou ? "passou" : ""}">
+    <input type="checkbox" class="chk" data-tipo="compromisso" data-id="${esc(c.id)}" ${c.feito ? "checked" : ""} aria-label="Marcar como feito: ${esc(c.titulo)}">
+    ${quando(c.data, c.hora, "dia todo")}
+    <span class="t">${esc(c.emoji)} ${esc(c.titulo)}${c.local ? `<br><span class="m">📍 ${esc(c.local)}</span>` : ""}</span>
+  </div>`;
+}
+
+function spark(vals, w, h) {
+  const max = Math.max(...vals, 1), passo = w / (vals.length - 1);
+  const p = vals.map((v, i) => [(i * passo).toFixed(1), (h - 4 - (v / max) * (h - 10)).toFixed(1)]);
+  const linha = "M" + p.map((q) => q.join(",")).join("L");
+  return `<svg class="graf" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true">
+    <defs><linearGradient id="gf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#38d6ff" stop-opacity=".45"/><stop offset="1" stop-color="#38d6ff" stop-opacity="0"/></linearGradient></defs>
+    <path d="${linha}L${w},${h}L0,${h}Z" fill="url(#gf)"/><path d="${linha}" fill="none" stroke="#38d6ff" stroke-width="1.8" vector-effect="non-scaling-stroke"/></svg>`;
+}
+
+function desenharClima() {
+  const c = E.clima || {};
+  $("climaLocal").textContent = c.local || "";
+  if (c.estado === "carregando") { $("clima").innerHTML = `<div class="vazio">Buscando a previsão…</div>`; return; }
+  if (c.estado !== "ok") { $("clima").innerHTML = `<div class="vazio">OFFLINE · ${esc(c.detalhe || "sem dados")}</div>`; return; }
+  const chuvaAlta = c.chuva_amanha >= 60;
+  $("clima").innerHTML = `
+    <div class="clima-topo"><span class="ico">${c.emoji}</span><span class="grau">${c.temp}°</span>
+      <span class="cond"><b>${esc(c.condicao)}</b>sensação ${c.sensacao}° · máx ${c.max}° · mín ${c.min}°</span></div>
+    <div class="duo quatro"><div><small>Umidade</small><b>${c.umidade}%</b></div><div><small>Vento</small><b>${c.vento} km/h</b></div>
+      <div><small>Chuva hoje</small><b>${c.chuva_hoje}%</b></div><div><small>Amanhã</small><b style="color:${chuvaAlta ? "var(--ambar)" : "inherit"}">${c.chuva_amanha}%</b></div></div>
+    <div class="horas">${c.horas.map((h) => `<div>${h.h}<i>${h.emoji}</i><b>${h.temp}°</b><em>${h.chuva}%</em></div>`).join("")}</div>
+    <div class="fonte">Open-Meteo · atualizado ${esc(c.atualizado)} · sol ${esc(c.nascer)}–${esc(c.por)}${c.desatualizado ? " · <span style='color:var(--ambar)'>DESATUALIZADO</span>" : ""}</div>`;
+}
+
+function desenharDireita() {
+  desenharClima();
+  const f = E.financas;
+  $("finAtu").textContent = f.atualizado ? "dados " + f.atualizado : "";
+  if (f.estado !== "ok") {
+    $("financas").innerHTML = `<div class="vazio">OFFLINE · ${esc(f.detalhe || "")}</div>`;
+  } else {
+    const c = f.contas[0];
+    $("financas").innerHTML = `
+      <small style="font-size:11px;letter-spacing:.1em;color:var(--mudo)">A PAGAR</small>
+      <div class="num" style="color:${f.a_pagar > 0 ? "var(--ambar)" : "var(--verde)"}">${brl(f.a_pagar)}</div>
+      <div class="m" style="color:var(--mudo);font-size:12px">${c ? esc(c.descricao) + " · vence " + dm(c.data) : "nenhuma conta a pagar"}</div>
+      ${spark(f.serie_gasto_30d, 240, 56)}
+      <div class="duo"><div><small>Recebido · 30 d</small><b style="color:var(--verde)">${brl(f.recebido_30d)}</b></div><div><small>Gasto · 30 d</small><b>${brl(f.gasto_30d)}</b></div></div>`;
+  }
+  const p = E.programacao;
+  $("progSprint").textContent = p.sprint || "";
+  if (p.estado === "offline") {
+    $("programacao").innerHTML = `<div class="vazio">OFFLINE · ${esc(p.detalhe || "")}</div>`;
+  } else {
+    const max = Math.max(1, ...p.colunas.map((c) => c.n));
+    $("programacao").innerHTML = p.colunas.map((c) => {
+      const cl = c.rotulo === "Bloqueado" && c.n ? "am" : c.rotulo === "Feito" ? "vd" : "";
+      return `<div class="barra ${cl}"><span>${esc(c.rotulo)}</span><i><s style="width:${(c.n / max) * 100}%"></s></i><b>${c.n}</b></div>`;
+    }).join("") + (p.bloqueados.length ? `<div class="sec">Bloqueado</div>` + p.bloqueados.map((b) => `<div class="linha"><span class="h" style="color:var(--ambar)">${esc(b.id)}</span><span class="t">${esc(b.titulo)}</span></div>`).join("") : "");
+  }
+  const k = E.consumo, mx = Math.max(...k.serie_7d, 0.0001), dias = [];
+  for (let i = 6; i >= 0; i--) dias.push(new Date(Date.now() - i * 86400000).toLocaleDateString("pt-BR", {weekday: "narrow"}).toUpperCase());
+  $("consumo").innerHTML = `
+    <div class="duo" style="margin-top:0"><div><small>Hoje</small><b>${usd(k.hoje_usd)}</b></div><div><small>No mês</small><b>${usd(k.mes_usd)}</b></div></div>
+    <div class="cols7">${k.serie_7d.map((v, i) => `<div title="${usd(v)}"><span style="height:${Math.max(4, (v / mx) * 100)}%"></span>${dias[i]}</div>`).join("")}</div>
+    <div class="vazio">${k.mensagens_hoje} mensagem${k.mensagens_hoje === 1 ? "" : "s"} ao Ronaldo hoje (Telegram e painel) · custo medido por mensagem</div>`;
+}
+
+/* ---------- console e ordens ---------- */
+const RAPIDAS = [
+  {rotulo: "Resumo do dia", resumo: true},
+  {rotulo: "Pedri: o que está parado?", ordem: "Pedri, o que está parado?"},
+  {rotulo: "Guardiola: o que priorizar?", ordem: "Guardiola, o que devo priorizar agora?"},
+  {rotulo: "Casemiro: como estão as finanças?", ordem: "Casemiro, como estão minhas finanças?"},
+  {rotulo: "Kroos: o que vence?", ordem: "Kroos, o que vence nos próximos dias?"},
+  {rotulo: "Rodri: fechamento da semana", ordem: "Rodri, como está minha semana de horas?"},
+];
+
+function msg(classe, nome, texto, extra = "") {
+  const d = document.createElement("div");
+  d.className = "msg " + classe + " " + extra;
+  d.innerHTML = `<small>${esc(nome)}</small>`;
+  d.appendChild(document.createTextNode(texto));
+  const c = $("console");
+  c.appendChild(d);
+  c.scrollTop = c.scrollHeight;
+  return d;
+}
+
+function estadoOrb() {
+  const busy = ocupado || (E && E.ocupado && E.ocupado.agente);
+  const el = $("estado");
+  el.className = "estado" + (busy ? " busy" : "");
+  const quem = ocupado ? pendente : (E && E.ocupado && E.ocupado.agente);
+  el.innerHTML = busy ? `<b>PROCESSANDO</b><span>${esc(quem || "Ronaldo")} está trabalhando na ordem…</span>` : `<b>RONALDO ATIVO</b><span>Aguardando comando…</span>`;
+}
+
+let pendente = "";
+async function ordem(texto) {
+  texto = texto.trim();
+  if (!texto || ocupado) return;
+  ocupado = true;
+  pendente = "Ronaldo";
+  $("entrada").value = "";
+  $("enviar").disabled = true;
+  msg("eu", "Guilherme", texto);
+  const espera = msg("ro pensa", "Ronaldo", "Processando (pode levar de 10 a 60 segundos)");
+  estadoOrb();
+  try {
+    const r = await api("/api/ordem", {texto});
+    espera.remove();
+    msg("ro" + (r.ok === false ? " erro" : ""), r.agente + (r.segundos ? ` · ${r.segundos}s` : ""), r.resposta);
+  } catch (e) {
+    espera.remove();
+    msg("ro erro", "Painel", e.message);
+  } finally {
+    ocupado = false;
+    $("enviar").disabled = false;
+    $("entrada").focus();
+    await carregar();
+  }
+}
+
+async function resumo() {
+  try {
+    const r = await api("/api/resumo");
+    msg("ro", "Ronaldo · resumo do dia", r.resposta);
+  } catch (e) {
+    msg("ro erro", "Painel", e.message);
+  }
+}
+
+/* ---------- eventos ---------- */
+document.addEventListener("click", (ev) => {
+  const t = ev.target.closest("button");
+  if (!t) return;
+  if (t.id === "btResumo") return resumo();
+  if (t.dataset.novo) return abrirNovo(t.dataset.novo);
+  if (t.dataset.r !== undefined) {
+    const r = RAPIDAS[+t.dataset.r];
+    return r.resumo ? resumo() : ordem(r.ordem);
+  }
+  if (t.dataset.ag) {
+    const a = E.agentes.find((x) => x.nome === t.dataset.ag);
+    if (a && a.segundo_plano) return msg("ro", "Painel", `${a.nome} trabalha pelo Claude Remote (app do Claude no celular, sessão "Ecossistema"), não por aqui.`);
+    $("entrada").value = `@${t.dataset.ag} `;
+    $("entrada").focus();
+  }
+});
+
+document.addEventListener("change", async (ev) => {
+  const c = ev.target;
+  if (!c.classList.contains("chk")) return;
+  try {
+    await api("/api/feito", {tipo: c.dataset.tipo, id: c.dataset.id, feito: c.checked});
+  } catch (e) {
+    msg("ro erro", "Painel", e.message);
+  }
+  carregar();
+});
+
+$("form").addEventListener("submit", (ev) => { ev.preventDefault(); ordem($("entrada").value); });
+
+/* novo item */
+function ajustarForm() {
+  const tipo = $("fTipo").value;
+  $("fHoraOpc").textContent = tipo === "lembrete" ? "(obrigatória)" : "(opcional)";
+  $("fExtraBox").style.display = tipo === "lembrete" ? "none" : "";
+  $("fExtraRot").textContent = tipo === "compromisso" ? "Local (opcional)" : "Observação (opcional)";
+  $("dlgTitulo").textContent = {tarefa: "Nova tarefa", compromisso: "Novo compromisso", lembrete: "Novo lembrete"}[tipo];
+}
+function abrirNovo(tipo) {
+  $("fTipo").value = tipo;
+  $("fTitulo").value = ""; $("fHora").value = ""; $("fExtra").value = ""; $("fErro").textContent = "";
+  const d = new Date(); $("fData").value = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  ajustarForm();
+  $("dlg").showModal();
+  $("fTitulo").focus();
+}
+$("fTipo").addEventListener("change", ajustarForm);
+$("fCancelar").addEventListener("click", () => $("dlg").close());
+$("formNovo").addEventListener("submit", async (ev) => {
+  ev.preventDefault();
+  const tipo = $("fTipo").value;
+  const corpo = {tipo, titulo: $("fTitulo").value, data: $("fData").value, hora: $("fHora").value};
+  if (tipo === "compromisso") corpo.local = $("fExtra").value;
+  if (tipo === "tarefa") corpo.obs = $("fExtra").value;
+  try {
+    await api("/api/adicionar", corpo);
+    $("dlg").close();
+    msg("ro", "Ronaldo", `${{tarefa: "Tarefa", compromisso: "Compromisso", lembrete: "Lembrete"}[tipo]} registrado: ${corpo.titulo} (${corpo.data}${corpo.hora ? " " + corpo.hora : ""}) ✅` +
+        (tipo === "compromisso" && corpo.hora ? "\nO aviso de 1 hora antes e o Google Agenda acontecem sozinhos." : ""));
+    carregar();
+  } catch (e) {
+    $("fErro").textContent = e.message;
+  }
+});
+
+/* ---------- esfera ---------- */
+(function () {
+  const cv = $("orb"), cx = cv.getContext("2d");
+  const calmo = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const N = 1100, pts = [];
+  for (let i = 0; i < N; i++) {
+    const y = 1 - (i / (N - 1)) * 2, r = Math.sqrt(1 - y * y), th = Math.PI * (3 - Math.sqrt(5)) * i;
+    const x = Math.cos(th) * r, z = Math.sin(th) * r;
+    pts.push([x, y, z, 0.5 + 0.5 * Math.sin(3.1 * x + 2 * y) * Math.sin(4.2 * z + 1.3)]);
+  }
+  let ang = 0, aneis = 0;
+  function ajusta() {
+    const d = devicePixelRatio || 1, r = cv.getBoundingClientRect();
+    cv.width = Math.round(r.width * d); cv.height = Math.round(r.height * d);
+  }
+  addEventListener("resize", ajusta); ajusta();
+  if (window.ResizeObserver) new ResizeObserver(ajusta).observe(cv.parentElement);
+  function quadro() {
+    const W = cv.width, H = cv.height, R = Math.min(W, H) * 0.30, c = W / 2, m = H / 2, d = devicePixelRatio || 1;
+    const busy = ocupado || (E && E.ocupado && E.ocupado.agente);
+    cx.clearRect(0, 0, W, H);
+    const g = cx.createRadialGradient(c, m, R * 0.2, c, m, R * 1.9);
+    g.addColorStop(0, busy ? "rgba(245,185,66,.20)" : "rgba(56,160,255,.22)"); g.addColorStop(1, "rgba(0,0,0,0)");
+    cx.fillStyle = g; cx.fillRect(0, 0, W, H);
+    // anéis
+    cx.lineWidth = 2 * d;
+    [[1.28, "56,214,255", .55, 0.9, 1], [1.42, "167,139,250", .45, 0.6, -1.4], [1.14, "56,214,255", .35, 1.7, 2]].forEach(([k, rgb, al, vel, sent], i) => {
+      cx.strokeStyle = `rgba(${rgb},${al})`;
+      cx.setLineDash([R * 0.9 * k, R * 0.35 * k, R * 0.2, R * 0.3]);
+      cx.lineDashOffset = -aneis * vel * sent * 60;
+      cx.beginPath(); cx.arc(c, m, R * k, 0, Math.PI * 2); cx.stroke();
+    });
+    cx.setLineDash([]);
+    // esfera de pontos
+    const ca = Math.cos(ang), sa = Math.sin(ang), ct = Math.cos(0.42), st = Math.sin(0.42);
+    for (const [px, py, pz, br] of pts) {
+      const x1 = px * ca + pz * sa, z1 = -px * sa + pz * ca;
+      const y2 = py * ct - z1 * st, z2 = py * st + z1 * ct;
+      const prof = (z2 + 1) / 2;
+      const al = (0.10 + 0.9 * prof) * (0.45 + 0.55 * br);
+      const s = (0.9 + prof * 1.7) * d;
+      cx.fillStyle = busy ? `rgba(255,${190 + 40 * br},${90 + 60 * prof},${al})` : `rgba(${60 + 90 * br},${190 + 40 * br},255,${al})`;
+      cx.fillRect(c + x1 * R - s / 2, m + y2 * R - s / 2, s, s);
+    }
+    cx.strokeStyle = busy ? "rgba(245,185,66,.55)" : "rgba(80,210,255,.5)"; cx.lineWidth = 1.5 * d;
+    cx.beginPath(); cx.arc(c, m, R * 1.015, 0, Math.PI * 2); cx.stroke();
+    ang += calmo ? 0.0008 : busy ? 0.014 : 0.0035;
+    aneis += calmo ? 0 : busy ? 0.016 : 0.004;
+    requestAnimationFrame(quadro);
+  }
+  quadro();
+})();
+
+/* ---------- partida ---------- */
+setInterval(relogio, 1000); relogio();
+carregar().then(() => {
+  if (E) {
+    const nc = E.agenda.hoje.filter((c) => !c.feito).length, nt = E.tarefas.itens.filter((x) => !x.feito).length;
+    msg("ro", "Ronaldo", `Painel ativo. Hoje: ${nc} compromisso${nc === 1 ? "" : "s"} pela frente e ${nt} tarefa${nt === 1 ? "" : "s"} pendente${nt === 1 ? "" : "s"}.\nCasa, segurança, Slack e e-mail estão NÃO CONECTADOS, então não mostro nada deles.`);
+  } else {
+    msg("ro erro", "Painel", "Não consegui ler o estado. O servidor do painel está rodando?");
+  }
+});
+setInterval(() => { if (!document.hidden && !ocupado) carregar(); }, 6000);
+</script>
+</body>
+</html>

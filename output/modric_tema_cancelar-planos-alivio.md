@@ -1,0 +1,20 @@
+# Tema: Cancelaram o rolê e você sentiu alívio. Por quê?
+
+**Descrição:** O vídeo parte da cena em que o amigo cancela de última hora e você, no fundo, agradece. Explica o que a pesquisa diz sobre esse alívio (JOMO) e sobre quem cancela, e mostra que o rótulo "geração que não se compromete" esconde duas coisas: cancelar ficou fácil (uma mensagem, sem encarar ninguém) e, em parte, o alívio vem de ansiedade social, não de preguiça.
+
+**Por que agora:** Fim de ano é a época de maior excesso de convites (confraternizações, amigo secreto), e o assunto de "cancelar rolê" volta todo ano. Há também levantamento recente (março de 2026) indicando que a Gen Z relata mais "JOMO" que as gerações mais velhas. Ângulo ainda pouco coberto no canal: o hábito do cancelamento, não a solidão em si.
+
+**Fontes:**
+- [PsyPost, sobre Müller, Stolze e Brand (2021), Personality and Individual Differences, vol. 168](https://www.psypost.org/dark-personality-traits-linked-to-social-zapping-new-study-examines-people-who-cancel-plans-at-the-last-minute): 190 participantes de 17 a 30 anos. O maior preditor de cancelar em cima da hora foi maquiavelismo, mas o medo de ficar de fora (FOMO) previu o contrário. Os próprios autores pedem mais pesquisa. Registro do artigo original: [catálogo da Academia de Ciências da República Tcheca](https://katalog.lib.cas.cz/KNAV/EdsRecord/edselp,S0191886920305250).
+- [Psychology Today (Andrea Bonior, mar/2023)](https://psychologytoday.com/gb/blog/friendship-20/202303/the-realities-of-jomo-versus-fomo): sobre estudo de Barry et al. (2023), Telematics and Informatics Reports. Só cerca de 10% de quem diz sentir JOMO não relatou ansiedade social; mesmo nesse grupo houve sinais de solidão. Amostra de plataforma online (MTurk), possível viés para mais ansiedade; o tamanho da amostra não aparece na página.
+- [RNZ (2 dez 2024)](https://www.rnz.co.nz/life/wellbeing/have-we-got-too-good-at-cancelling-plans): texto de opinião com um psicólogo clínico. Cancelar ficou mais fácil porque basta uma mensagem ou trocar "sim" por "não" no convite; o alívio seria uma pequena dose de dopamina, e isso não prova que a decisão foi certa. Não traz dados.
+- [HuffPost UK](https://huffingtonpost.co.uk/entry/our-flaking-habit-has-gotten-out-of-hand-just-say-yes-or-no-to-social-plans_uk_5e4fa22cc5b629695f58aa2c): cita pesquisa britânica (cerca de 2020, sem metodologia) segundo a qual mais de um quarto dos adultos já aceitou convite sem intenção de ir. Fonte fraca; usar só como contexto ou descartar.
+- [Thriveworks](https://thriveworks.com/help-with/research/jomo): cita levantamento Wakefield Research de março de 2026 em que 61% da Gen Z diz sentir JOMO, mais que gerações mais velhas. Não consegui abrir a página nem o levantamento original; **Courtois deve conferir antes de usar**.
+
+**Divergências e cuidados:**
+- A imprensa popular resumiu o estudo de Müller como "quem cancela é narcisista/maquiavélico". O artigo é de amostra pequena e jovem (17 a 30), correlacional, e o FOMO aparece com efeito oposto. Não afirmar que quem cancela tem traço sombrio.
+- Barry sugere que JOMO pode ser desde solitude escolhida até alívio de ansiedade social. Não é um diagnóstico, e o vídeo não deve dizer "se você sente alívio, tem ansiedade".
+- Os dados são em maioria dos EUA e do Reino Unido; não achei dado brasileiro sobre cancelamento de rolê. Dizer isso no vídeo, ou não generalizar para o Brasil.
+- Número mais surpreendente (se couber): só cerca de 1 em cada 10 pessoas que sentem JOMO não relatou ansiedade social.
+
+**Direção de ângulo:** Tipo sugerido: "Não é o que dizem" ou "Cena do dia a dia". Abrir na cena: o grupo marcou, alguém cancelou e o alívio bateu. O rótulo é "geração sem compromisso/preguiçosa". Na leitura do canal (interpretação), o contexto é duplo: cancelar custa quase nada (uma mensagem, sem ligar) e boa parte do alívio parece vir de cansaço e ansiedade social, não de desprezo pelos amigos. Fechar com a volta à cena. Ressalva honesta: o estudo de Müller mostra que existe um grupo que cancela por impulsividade e procrastinação, então o contexto não explica tudo.

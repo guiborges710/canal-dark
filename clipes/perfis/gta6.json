@@ -1,0 +1,105 @@
+{
+  "id": "gta6",
+  "versao": 1,
+  "arquivado": false,
+  "atualizado_em": 1794327351,
+  "nome": "GTA 6",
+  "descricao": "Cortes de lives, reacts e análises de GTA 6 (perfil original do setor, migrado das regras fixas da V1).",
+  "publico": "Gamers brasileiros 16-35 que acompanham o lançamento de GTA 6",
+  "idioma": "pt-BR",
+  "idioma_fala": "auto",
+  "objetivo": "Cortes curtos de descobertas, novidades e reações fortes para Reels e TikTok",
+  "temas": [
+    "GTA 6",
+    "Rockstar Games",
+    "lançamento",
+    "trailer",
+    "gameplay"
+  ],
+  "palavras_chave": [
+    "gta",
+    "gta6",
+    "gta 6",
+    "trailer",
+    "olha",
+    "meu deus",
+    "caramba",
+    "absurdo",
+    "inacreditável",
+    "inacreditavel",
+    "impossível",
+    "impossivel",
+    "insano",
+    "louco",
+    "incrível",
+    "incrivel",
+    "wow",
+    "no way",
+    "omg",
+    "oh my god",
+    "insane",
+    "crazy",
+    "unreal"
+  ],
+  "entidades": [
+    "rockstar",
+    "vice city",
+    "lucia",
+    "jason"
+  ],
+  "termos_tecnicos": [],
+  "assuntos_desejados": [
+    "descobertas no mapa ou no trailer",
+    "novidades confirmadas",
+    "momentos relevantes de gameplay",
+    "reação forte do streamer"
+  ],
+  "assuntos_excluir": [],
+  "selecao": {
+    "pesos": {
+      "pico_audio": 1.0,
+      "palavras_chave": 0.8,
+      "abertura_forte": 0.5,
+      "densidade_fala": 0.6,
+      "assunto_excluido": -1.5
+    },
+    "limite_palavras": 4,
+    "criterios": [
+      "Descoberta ou novidade sobre GTA 6 explicada no trecho",
+      "Reação forte do criador (grito, surpresa, risada)",
+      "Momento de gameplay que se entende sem o resto do vídeo"
+    ]
+  },
+  "duracao": {
+    "min": 20.0,
+    "max": 55.0
+  },
+  "quantidade": 5,
+  "contexto": {
+    "antes": 0.0,
+    "depois": 0.0
+  },
+  "estilo_editorial": "Hype com fidelidade: gancho curto que o trecho cumpre; nada de vazamento ou spoiler.",
+  "formato": "9:16",
+  "preset_edicao": "borrado",
+  "estilo_legenda": "padrao",
+  "fontes": {
+    "tema_pesquisa": "GTA 6",
+    "canais": []
+  },
+  "hashtags": [
+    "#gta6",
+    "#gta",
+    "#games",
+    "#cortes",
+    "#gamer"
+  ],
+  "instrucoes_agentes": {
+    "kaka": "",
+    "zidane": "",
+    "figo": "Sem vazamento, spoiler, cutscene isolada ou trailer cru.",
+    "totti": "Tema quente (20%): GTA 6 e o momento do lançamento (19/11/2026) pesam; assunto frio pesa menos.",
+    "lewandowski": "",
+    "pirlo": "Tema padrão: GTA 6, vídeos de 20+ minutos."
+  }
+}

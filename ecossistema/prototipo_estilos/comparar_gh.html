@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comparar G e H: Contexto Explica</title>
+<style>
+  :root { --bg: #f2f3f6; --tx: #14181f; --mudo: #505a66; --linha: #d6dae1; --ac: #1d4ed8; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--tx); font: 16px/1.55 "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif; }
+  :focus-visible { outline: 3px solid var(--ac); outline-offset: 3px; border-radius: 8px; }
+  main { max-width: 1400px; margin: 0 auto; padding: clamp(20px, 4vw, 52px) clamp(14px, 3vw, 36px) 56px; }
+  h1 { margin: 0 0 8px; font: 700 clamp(28px, 4vw, 40px)/1.1 "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif; letter-spacing: -.02em; }
+  .sub { color: var(--mudo); max-width: 70ch; margin: 0 0 28px; }
+  .duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: start; }
+  .c { background: #fff; border: 1px solid var(--linha); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; }
+  .foto { display: block; background: #ddd; aspect-ratio: 16 / 10; overflow: hidden; border-bottom: 1px solid var(--linha); }
+  .foto img { width: 100%; height: 100%; object-fit: cover; object-position: top left; display: block; }
+  .foto.m { aspect-ratio: 16 / 10; display: grid; place-items: center; background: #cfd5dd; } .foto.m img { width: auto; max-width: 100%; object-fit: contain; object-position: center; }
+  .mini { display: flex; gap: 8px; padding: 12px 16px 0; overflow-x: auto; }
+  .mini button { flex: none; width: 112px; padding: 0; border: 2px solid var(--linha); border-radius: 10px; background: #fff; overflow: hidden; cursor: pointer; }
+  .mini button[aria-pressed="true"] { border-color: var(--tx); }
+  .mini img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top left; }
+  .mini span { display: block; padding: 3px 4px 4px; font-size: 12.5px; font-weight: 600; text-align: center; }
+  .corpo { padding: 18px 22px 22px; display: grid; gap: 10px; }
+  h2 { margin: 0; font-size: 24px; letter-spacing: -.015em; line-height: 1.15; } h2 small { font-size: 15px; font-weight: 600; color: var(--mudo); margin-left: 8px; }
+  p { margin: 0; color: var(--mudo); } ul { margin: 0; padding-left: 18px; display: grid; gap: 3px; font-size: 15px; }
+  .ab { display: flex; gap: 8px; flex-wrap: wrap; padding-top: 6px; }
+  .ab a { min-height: 48px; padding: 0 16px; display: inline-flex; align-items: center; border-radius: 10px; text-decoration: none; font-weight: 650; border: 1.5px solid var(--tx); color: var(--tx); }
+  .ab a:first-child { background: var(--tx); color: #fff; } .ab a:hover { background: var(--ac); border-color: var(--ac); color: #fff; }
+  .g h2::before, .h h2::before { content: "G"; display: inline-block; width: 34px; height: 34px; line-height: 34px; text-align: center; border-radius: 9px; color: #fff; margin-right: 10px; background: #3347ff; }
+  .h h2::before { content: "H"; background: #0e1a24; }
+  .nota { margin-top: 26px; max-width: 90ch; color: var(--mudo); font-size: 15px; } .nota b { color: var(--tx); }
+  @media (max-width: 960px) { .duo { grid-template-columns: minmax(0, 1fr); } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Duas versões para escolher: G e H</h1>
+  <p class="sub">Mesmos dados, mesmas três telas (Espera você, Canal e Ecossistema &gt; Agentes), mesma legenda de 5 estados. Mudam a ideia de produto e a forma de trabalhar. Cada uma tem tema claro e escuro, e o botão "Ver slots de assets" para marcar onde as imagens entram.</p>
+  <div class="duo">
+    <article class="c g" data-v="g">
+      <a class="foto" href="g/index.html#/espera"><img id="gf" src="g/miniatura_espera.png" alt="G, tela Espera você"></a>
+      <div class="mini" role="group" aria-label="Telas da versão G">
+        <button type="button" aria-pressed="true" data-i="espera"><img src="g/miniatura_espera.png" alt=""><span>Espera você</span></button>
+        <button type="button" aria-pressed="false" data-i="canal"><img src="g/miniatura_canal.png" alt=""><span>Canal</span></button>
+        <button type="button" aria-pressed="false" data-i="agentes"><img src="g/miniatura_agentes.png" alt=""><span>Agentes</span></button>
+        <button type="button" aria-pressed="false" data-i="espera_escuro"><img src="g/miniatura_espera_escuro.png" alt=""><span>Escuro</span></button>
+        <button type="button" aria-pressed="false" data-i="slots"><img src="g/miniatura_slots.png" alt=""><span>Slots</span></button>
+        <button type="button" aria-pressed="false" data-i="mobile"><img src="g/miniatura_mobile.png" alt=""><span>Celular</span></button>
+      </div>
+      <div class="corpo">
+        <h2>Vitrine<small>bento vibrante + "mostrar o trabalho"</small></h2>
+        <p>Pensada para o print que vende. Cada decisão aparece como uma conversa com o agente que fez o trabalho, e o botão de aprovar ocupa a largura toda.</p>
+        <ul>
+          <li>Cartão de decisão com avatar quadrado, conversa e o trabalho entregue</li>
+          <li>Números de 170 px em cartões de cor chapada, borda grafite e sombra dura</li>
+          <li>Agentes em cartões com avatar quadrado e ficha com avatar retangular</li>
+          <li>Menu em pílulas; no celular vira dock fixo embaixo</li>
+        </ul>
+        <div class="ab"><a href="g/index.html#/espera">Abrir G</a><a href="g/index.html#/canal">Canal</a><a href="g/index.html#/ecossistema/agentes">Agentes</a><a href="g/index.html?slots=1#/espera">Ver slots</a></div>
+      </div>
+    </article>
+    <article class="c h" data-v="h">
+      <a class="foto" href="h/index.html#/espera"><img id="hf" src="h/miniatura_espera.png" alt="H, tela Espera você"></a>
+      <div class="mini" role="group" aria-label="Telas da versão H">
+        <button type="button" aria-pressed="true" data-i="espera"><img src="h/miniatura_espera.png" alt=""><span>Espera você</span></button>
+        <button type="button" aria-pressed="false" data-i="canal"><img src="h/miniatura_canal.png" alt=""><span>Canal</span></button>
+        <button type="button" aria-pressed="false" data-i="agentes"><img src="h/miniatura_agentes.png" alt=""><span>Agentes</span></button>
+        <button type="button" aria-pressed="false" data-i="espera_escuro"><img src="h/miniatura_espera_escuro.png" alt=""><span>Escuro</span></button>
+        <button type="button" aria-pressed="false" data-i="slots"><img src="h/miniatura_slots.png" alt=""><span>Slots</span></button>
+        <button type="button" aria-pressed="false" data-i="mobile"><img src="h/miniatura_mobile.png" alt=""><span>Celular</span></button>
+      </div>
+      <div class="corpo">
+        <h2>Profissional<small>ilha escura + metrô + teclado</small></h2>
+        <p>Pensada para uso diário intenso. Os números que importam ficam sempre no topo, o fluxo aparece como linha de metrô e quase tudo se faz sem mouse.</p>
+        <ul>
+          <li>Ilha escura fixa: esperam você, rodando, com erro e custo do dia</li>
+          <li>Estações de metrô mostram onde cada decisão parou o fluxo</li>
+          <li>Ctrl K busca agente, decisão e tela; J, K, A, R, 1 a 8 e "?" para a lista</li>
+          <li>Agentes em lista densa com avatar redondo e ficha lateral</li>
+        </ul>
+        <div class="ab"><a href="h/index.html#/espera">Abrir H</a><a href="h/index.html#/canal">Canal</a><a href="h/index.html#/ecossistema/agentes">Agentes</a><a href="h/index.html?slots=1#/espera">Ver slots</a></div>
+      </div>
+    </article>
+  </div>
+  <p class="nota"><b>Em uma linha:</b> G convence quem olha por 5 segundos; H aguenta quem usa o dia inteiro. Se o objetivo é vender, G no site e H como o produto de verdade não se excluem: a escolha define qual vai na tela principal.</p>
+</main>
+<script>
+  document.querySelectorAll(".c").forEach(function (c) {
+    var v = c.dataset.v, img = c.querySelector(".foto img"), foto = c.querySelector(".foto");
+    c.querySelectorAll(".mini button").forEach(function (b) {
+      b.onclick = function () {
+        c.querySelectorAll(".mini button").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+        img.src = v + "/miniatura_" + b.dataset.i + ".png"; img.alt = v.toUpperCase() + ", " + b.querySelector("span").textContent;
+        foto.classList.toggle("m", b.dataset.i === "mobile");
+      };
+    });
+  });
+</script>
+</body>
+</html>

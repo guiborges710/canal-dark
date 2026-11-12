@@ -25,6 +25,21 @@ LINKS = [
 ]
 
 
+def avisos_de_roteiro(out, cenas):
+    """Regra de prompts/tipos_de_roteiro.md. Só avisa, e o estilo Cartão fica de fora porque é feito de números."""
+    from media import estilos, roteiro
+    if estilos.das_cenas(cenas) == "cartoes":
+        return []
+    avisos = []
+    nums = roteiro.numeros(_read(out / "roteiro.txt"))
+    if len(nums) > roteiro.MAX_NUMEROS:
+        avisos.append(("Números demais no roteiro", f"{len(nums)} números (limite: {roteiro.MAX_NUMEROS}): {', '.join(nums[:8])}. O vídeo é sobre a situação; o dado só sustenta."))
+    graficos = roteiro.cenas_com_grafico(cenas, _read(out / "sketch_cenas.py"))
+    if graficos > roteiro.MAX_GRAFICOS:
+        avisos.append(("Gráficos demais", f"{graficos} cenas com gráfico (limite: {roteiro.MAX_GRAFICOS})."))
+    return avisos
+
+
 def _read(p):
     return p.read_text(encoding="utf-8") if p.exists() else ""
 
@@ -115,17 +130,24 @@ def check(out, cfg):
     n = len(scenes)
     if scenes:
         try:
-            from media.motion import validate, SpecErro
-            total = validate(scenes)
+            from media import estilos
+            if estilos.por_quadros(estilos.das_cenas(scenes)):
+                from media.sketch import validate, SpecErro, limites
+                total = validate(scenes, limites((cfg or {}).get("render")))
+            else:
+                from media.motion import validate, SpecErro
+                total = validate(scenes)
             add(OK, "Cenas válidas", f"{n} cenas, {total:.0f} s de animação desenhadas por código.")
         except SpecErro as e:
             add(MISS, "Cenas inválidas", str(e))
     else:
         add(MISS, "Sem cenas (cenas.json)", "O vídeo precisa do cenas.json da squad.")
+    for nome, texto in avisos_de_roteiro(out, scenes):
+        add(WARN, nome, texto)
     if (out / "images").exists():
         add(WARN, "Pasta de imagens antiga", "Este estilo não usa imagens. Apague images/ para não confundir a revisão.")
     add(OK, "Sem imagens de terceiros nem de IA",
-        "Todo o visual é desenhado por código (cartões, barras e fundo). Não há foto de arquivo nem imagem gerada.")
+        "Todo o visual é desenhado por código (cartões, barras, traços e fundo). Não há foto de arquivo nem imagem gerada.")
     falas = [c for c in scenes if (c.get("fala") or "").strip()]
     if falas and len(falas) == len(scenes):
         add(WARN, "Voz sintética (narração gerada por IA)",

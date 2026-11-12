@@ -9,6 +9,7 @@ rodada. Em conflito, vale o Trello.
 Garantias:
 - nunca apaga cartão no Trello (nem arquiva); nunca altera descrição, etiqueta, prazo
   ou comentário de cartão; só cria cartão novo e move coluna quando o agente pediu;
+- cartões [PROG-...] vêm do setor de programação (kanban_programacao.py): o título é fixo, o estado fino fica no texto;
 - nunca mexe em outro quadro da conta;
 - cartão arquivado/excluído no Trello sai do kanban.md e não é recriado.
 
@@ -29,6 +30,7 @@ import urllib.parse
 import urllib.request
 
 import avisar
+import kanban_programacao
 from avisar import PASTA
 
 KANBAN = PASTA / "kanban.md"
@@ -120,8 +122,10 @@ def main():
     nomes_fechados = {c["name"] for c in todos if c["closed"]}
     anterior = estado.get("cartoes", {})
     nomes_conhecidos = {v["titulo"] for v in anterior.values()}
+    ids_prog_no_trello = {kanban_programacao.id_do_titulo(c["name"]) for c in todos} - {None}  # aberto ou arquivado
 
     cabecalho, colunas_md, extras = ler_kanban()
+    estado_prog = kanban_programacao.mesclar(colunas_md, sim)  # cartões [PROG-...] do setor de programação
     md = {}  # titulo -> (coluna, desc)
     for col, cartoes in colunas_md.items():
         for titulo, desc in cartoes:
@@ -152,6 +156,9 @@ def main():
     for titulo, (col, desc) in md.items():
         if titulo in usados:
             continue
+        if kanban_programacao.id_do_titulo(titulo) in ids_prog_no_trello:
+            print(f"'{titulo}': já existe cartão com esse id PROG no Trello, não crio outro")
+            continue
         if titulo in nomes_conhecidos or titulo in nomes_fechados:
             print(f"'{titulo}' saiu do Trello (arquivado/excluído): sai do kanban.md, não será recriado")
             continue
@@ -171,6 +178,7 @@ def main():
     escrever_kanban(cabecalho, novo, extras)
     if KANBAN.read_text(encoding="utf-8") != antes:
         print("kanban.md atualizado a partir do Trello")
+    kanban_programacao.salvar_estado(estado_prog)
     estado["cartoes"] = novo_estado
     ESTADO.write_text(json.dumps(estado, indent=1), encoding="utf-8")
 

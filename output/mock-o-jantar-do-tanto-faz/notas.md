@@ -1,0 +1,3 @@
+- Fato simulado 1 (fonte: exemplo.com)
+- Fato simulado 2 (fonte: exemplo.com)
+- Fato simulado 3 (fonte: exemplo.com)

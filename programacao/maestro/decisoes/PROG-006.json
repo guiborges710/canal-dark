@@ -1,0 +1,9 @@
+{
+ "id": "PROG-006",
+ "acao": "manter",
+ "status": "O cartão está pronto e registrado nas notas de release da sprint: a tela agora mostra qual motor (Claude ou Codex) fez cada trabalho, e conferi de novo que os 29 testes passam.",
+ "motivo": "Já está em Feito e aceito pelo Guilherme; esta coluna não tem saída. Nada foi commitado: o commit fica para quando o Guilherme pedir.",
+ "criterios_ok": [],
+ "precisa_do_guilherme": false,
+ "pedido_ao_guilherme": ""
+}

@@ -1,0 +1,10 @@
+{
+ "titulo": "Título simulado do vídeo de teste",
+ "descricao": "Descrição simulada. Este vídeo foi gerado apenas para testar o pipeline.",
+ "tags": [
+  "teste",
+  "simulado",
+  "pipeline"
+ ],
+ "thumbnail_texto": "TESTE"
+}

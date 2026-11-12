@@ -1,0 +1,4 @@
+[
+ {"tipo": "sketch", "desenho": "cena_0", "duracao": 3.0, "fala": "Você marcou com os amigos e todo mundo cancelou.", "rotulos": ["todo mundo cancelou"], "sons": []},
+ {"tipo": "sketch", "desenho": "cena_1", "duracao": 3.0, "fala": "O tempo com amigos caiu de sete para três horas.", "rotulos": ["horas com amigos"], "sons": []}
+]

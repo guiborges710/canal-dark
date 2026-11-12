@@ -11,6 +11,6 @@ Regras de conteúdo:
 - Tom respeitoso com vítimas e tragédias: informativo e educativo, sem sensacionalismo, sem detalhes gráficos, sem explorar o sofrimento.
 - Não prometa no gancho algo que o vídeo não entrega.
 
-Estrutura: gancho forte nos primeiros 15 segundos (a pergunta do ângulo); desenvolvimento em blocos, com viradas para manter a retenção; fechamento curto com a conclusão e um convite para seguir o canal. Varie a abertura e o fechamento em relação a outros vídeos do canal.
+Estrutura: siga um dos tipos de prompts/tipos_de_roteiro.md. Situação concreta antes de dado, nunca abra com estatística, e use poucos números: só os que são a própria surpresa ou marcam um ponto da história. Varie a abertura e o fechamento em relação a outros vídeos do canal.
 
-Formato: APENAS o texto do vídeo, em parágrafos separados por uma linha em branco. Sem títulos, sem marcações de cena, sem emojis, sem markdown. Números em algarismos (ex.: 15%). Frases curtas, uma ideia por frase.
+Formato: APENAS o texto do vídeo, em parágrafos separados por uma linha em branco. Sem títulos, sem marcações de cena, sem emojis, sem markdown. Frases curtas, uma ideia por frase.

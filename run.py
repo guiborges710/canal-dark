@@ -19,8 +19,6 @@ import unicodedata
 import re
 from pathlib import Path
 
-import yaml
-
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
 
@@ -95,7 +93,10 @@ def make_video(cfg, topic, mock, allow_paid=False):
     if need_creative(f, "olise-diretor-arte", mock, allow_paid):
         if mock:
             from agents import mocks
-            f.write_text(json.dumps(mocks.CENAS, ensure_ascii=False, indent=1), encoding="utf-8")
+            from media import estilos
+            escolhido = (estilos.ler(out) or {}).get("estilo")
+            amostra = ROOT / "media" / "demos" / str(escolhido) / "cenas.json"
+            f.write_text(amostra.read_text(encoding="utf-8") if estilos.por_dados(escolhido) else json.dumps(mocks.CENAS, ensure_ascii=False, indent=1), encoding="utf-8")
         else:
             raise SystemExit("Geração de cenas pela API não existe neste estilo. Peça a @olise-diretor-arte.")
     cenas = json.loads(f.read_text(encoding="utf-8"))
@@ -103,7 +104,15 @@ def make_video(cfg, topic, mock, allow_paid=False):
 
     # 4. Render: animação + efeitos sonoros + MP4 + miniatura (sem imagens, sem voz)
     step("4/6 Renderizando a animação")
-    video = motion.render(out, cenas_path=f, voz_cfg=cfg.get("voz"))
+    from media import estilos
+    if estilos.por_quadros(estilos.das_cenas(cenas)):  # desenhado em Python (sketch, cartoon, colagem): media/sketch.py
+        from media import sketch
+        video = sketch.render(out, cenas_path=f, voz_cfg=cfg.get("voz"), fps=cfg["render"]["fps"],
+                              render_cfg=cfg["render"])
+    elif cfg["render"].get("formato") == "horizontal":
+        raise SystemExit("O formato horizontal só existe no estilo sketch. Peça ao Barcola as cenas sketch.")
+    else:
+        video = motion.render(out, cenas_path=f, voz_cfg=cfg.get("voz"))
 
     # 5. Metadados e publicação
     step("5/6 Criando título, descrição e tags")
@@ -160,7 +169,11 @@ def publish_video(cfg, a, root):
 
     from media import youtube
     step("Publicando no YouTube")
-    res = youtube.upload(cfg, out, root, privacy=a.privacy)
+    publish_at = None
+    if a.publish_at:
+        from datetime import datetime
+        publish_at = datetime.fromisoformat(a.publish_at)  # ex.: 2026-10-30T06:00:00-03:00
+    res = youtube.upload(cfg, out, root, privacy=a.privacy, publish_at=publish_at)
     print(f"\n✔ Enviado como {res['privacy']}.")
     print(f"   Assistir: {res['url']}")
     print(f"   Revisar/publicar no Studio: {res['studio_url']}")
@@ -179,11 +192,16 @@ def main():
     ap.add_argument("--slug", help="pasta do vídeo em output/ (alternativa ao --topic no publish)")
     ap.add_argument("--privacy", choices=["private", "unlisted", "public"], default=None,
                     help="visibilidade no publish; padrão = publish.privacy do config (private)")
+    ap.add_argument("--publish-at", dest="publish_at", default=None,
+                    help="agenda a publicação, com fuso (ex.: 2026-10-30T06:00:00-03:00); exige privacidade private")
     ap.add_argument("--mock", action="store_true", help="simula o texto (sem API); o render é real")
     ap.add_argument("--allow-paid", action="store_true", dest="allow_paid",
                     help="autoriza gerar texto pela API da Anthropic quando a squad não entregou")
+    ap.add_argument("--formato", choices=["vertical", "horizontal"], default="vertical",
+                    help="vertical = Short 9:16 (padrão); horizontal = vídeo 16:9 (config_horizontal.yaml)")
     a = ap.parse_args()
-    cfg = yaml.safe_load(open(ROOT / "config_shorts.yaml", encoding="utf-8"))
+    from media.sketch import carregar_config
+    cfg = carregar_config(a.formato)
 
     if a.command == "check":
         if not a.topic:

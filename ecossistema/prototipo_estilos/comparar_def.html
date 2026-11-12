@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comparar estilos D, E e F: Contexto Explica</title>
+<style>
+  :root { --bg: #f3f2f7; --tx: #17162b; --mudo: #55546d; --linha: #dedcea; --ac: #3d35c9; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--tx); font: 16px/1.55 "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif; }
+  :focus-visible { outline: 3px solid var(--ac); outline-offset: 3px; border-radius: 10px; }
+  main { max-width: 1280px; margin: 0 auto; padding: clamp(24px, 5vw, 64px) clamp(16px, 4vw, 40px); }
+  h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 42px); letter-spacing: -.03em; line-height: 1.1; }
+  .sub { color: var(--mudo); max-width: 62ch; margin: 0 0 32px; }
+  .tres { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .c { background: #fff; border: 1px solid var(--linha); border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; }
+  .c .foto { display: block; aspect-ratio: 16 / 10; overflow: hidden; border-bottom: 1px solid var(--linha); background: #ddd; }
+  .c img { width: 100%; height: 100%; object-fit: cover; object-position: top left; display: block; transition: transform .3s; }
+  .c .foto:hover img { transform: scale(1.03); }
+  .c .corpo { padding: 22px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+  .c h2 { margin: 0; font-size: 22px; letter-spacing: -.02em; line-height: 1.15; }
+  .c h2 span { display: inline-block; min-width: 34px; height: 34px; line-height: 34px; text-align: center; border-radius: 10px; color: #fff; margin-right: 10px; font-size: 18px; }
+  .d h2 span { background: #5b5cf0; } .e h2 span { background: #c4488f; } .f h2 span { background: #2a48f0; }
+  .c p { margin: 0; color: var(--mudo); }
+  .c ul { margin: 0; padding-left: 18px; color: var(--tx); display: grid; gap: 4px; font-size: 15px; }
+  .ab { margin-top: auto; display: flex; gap: 8px; flex-wrap: wrap; padding-top: 6px; }
+  .ab a { min-height: 48px; padding: 0 18px; display: inline-flex; align-items: center; border-radius: 99px; text-decoration: none; font-weight: 650; border: 1.5px solid var(--tx); color: var(--tx); }
+  .ab a:first-child { background: var(--tx); color: #fff; }
+  .ab a:hover { border-color: var(--ac); background: var(--ac); color: #fff; }
+  .nota { margin-top: 28px; color: var(--mudo); font-size: 14.5px; max-width: 80ch; }
+  @media (max-width: 960px) { .tres { grid-template-columns: minmax(0, 1fr); } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Três estilos novos: D, E e F</h1>
+  <p class="sub">Cada um refaz as telas Espera você e Canal com os mesmos dados. Abra no computador e no celular. O que muda é a ideia de produto, não só a cor.</p>
+  <div class="tres">
+    <article class="c d">
+      <a class="foto" href="d/index.html#/espera" tabindex="-1" aria-hidden="true"><img src="d/miniatura.png" alt=""></a>
+      <div class="corpo">
+        <h2><span>D</span>Command center</h2>
+        <p>Escuro, calmo e feito para o teclado. Parece uma ferramenta de quem trabalha o dia inteiro nela.</p>
+        <ul><li>Ctrl K abre uma paleta que navega, abre decisões e aprova</li><li>J e K percorrem a fila; A aprova; R pede ajuste</li><li>Números em mono, densidade alta, tema claro opcional</li><li>Canal com consumo de tokens e custo por job</li></ul>
+        <div class="ab"><a href="d/index.html#/espera">Espera você</a><a href="d/index.html#/canal">Canal</a></div>
+      </div>
+    </article>
+    <article class="c e">
+      <a class="foto" href="e/index.html#/espera" tabindex="-1" aria-hidden="true"><img src="e/miniatura.png" alt=""></a>
+      <div class="corpo">
+        <h2><span>E</span>Action center</h2>
+        <p>Uma decisão por vez, com o trabalho do agente à mostra e uma conversa embutida no rodapé.</p>
+        <ul><li>"Mostrar o trabalho": fontes, confiança, custo e o que mudou</li><li>Aprovar sempre em verde, no mesmo lugar</li><li>Linha do tempo dos agentes e botão para pausar</li><li>Barra de conversa com o De Bruyne, sem balão flutuante</li></ul>
+        <div class="ab"><a href="e/index.html#/espera">Espera você</a><a href="e/index.html#/canal">Canal</a></div>
+      </div>
+    </article>
+    <article class="c f">
+      <a class="foto" href="f/index.html#/espera" tabindex="-1" aria-hidden="true"><img src="f/miniatura.png" alt=""></a>
+      <div class="corpo">
+        <h2><span>F</span>Bento colorido</h2>
+        <p>Cartões de cor chapada e números enormes. A tela que ganha o print no site de vendas.</p>
+        <ul><li>Cada setor tem a sua cor, da fila ao gráfico</li><li>Decisão da vez em cartão escuro, ação principal em lima</li><li>Dock flutuante no lugar do menu lateral</li><li>Só tema claro, para manter as cores vibrantes</li></ul>
+        <div class="ab"><a href="f/index.html#/espera">Espera você</a><a href="f/index.html#/canal">Canal</a></div>
+      </div>
+    </article>
+  </div>
+  <p class="nota">Só as telas Espera você e Canal estão desenhadas; os outros seis grupos do menu mostram um aviso. Os valores são ilustrativos e não há segredo em nenhum arquivo. Os estilos A, B e C ficam em <a href="index.html">index.html</a>.</p>
+</main>
+</body>
+</html>

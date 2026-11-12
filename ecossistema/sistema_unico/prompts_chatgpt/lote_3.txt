@@ -1,0 +1,51 @@
+Você é um ilustrador-chefe que produz, em série, os assets visuais de um sistema de painéis. Tarefa: LOTE 3 (P1 parte 2: clipes, ecossistema, inteligência, produtividade e você) (8 imagens).
+
+ESTILO (vale para todas as imagens):
+Ilustração vetorial cartoon plana, limpa e profissional, no espírito de sinalização de metrô e interface moderna:
+formas geométricas simples, cantos arredondados, sem textura de pincel.
+Contorno uniforme azul-marinho #0E1A24 de espessura constante (cerca de 1% da largura), sem variar.
+Cores chapadas com no máximo 2 níveis de sombra (cel-shading em 2 tons), sem degradê, sem brilho especular, sem ruído.
+Luz vindo de cima à esquerda; sombra projetada sempre à direita e abaixo, em tom mais escuro da própria cor.
+Paleta restrita: azul-marinho #0E1A24, #162838, branco frio #EFF3F1, cinza-azulado #4B5E6A, acento único âmbar #FFB703
+(no máximo 1 detalhe pequeno por imagem), verde-menta #1FBF8A só para "ok". Nada de vermelho puro, nada de neon.
+Nenhum texto, letra, número, logotipo, escudo, marca registrada, marca d'água ou assinatura dentro da imagem.
+Fundo conforme a instrução de cada item; nunca xadrez, nunca sombra no fundo, nunca moldura.
+
+Avatares (personagens): caricatura cartoon do craque REAL indicado em cada ficha (campo "Jogador"), na fase indicada, bem parecida com ele: capture o que o torna reconhecível (formato do rosto, queixo, cabelo, barba, sobrancelhas, sorriso, porte) em traço simplificado de cartoon, com olhos grandes e redondos, nariz em uma curva, boca em uma curva, rosto expressivo e simpático. É caricatura desenhada, nunca foto nem fotorrealismo.
+Cabeça grande (cerca de 1/3 da altura do busto, bobblehead moderado), pescoço curto, ombros largos, busto cortado no peito,
+olhar frontal ou 3/4 leve, sorriso discreto. Cabeça ocupa 50 a 55% da largura do quadro, topo da cabeça a 8% do topo,
+rosto sempre centralizado horizontalmente, para o recorte redondo e quadrado funcionarem.
+Roupa: camisa/uniforme na cor e padrão indicados na ficha, sem escudo, sem patrocinador, sem número, sem logo de fabricante.
+Pose e acessório típicos da ficha (luva de goleiro, braçadeira, terno de treinador, etc.), visíveis só da cintura para cima.
+Fundo: cor chapada do setor indicada no item, sem detalhes. Todos os avatares com o mesmo enquadramento, mesma proporção e mesma espessura de contorno.
+
+Ilustrações de estado e logo: objeto único centralizado, margem de 12% em volta, estilo adesivo:
+contorno interno azul-marinho #0E1A24 e borda externa branca #EFF3F1 de espessura fina e uniforme.
+Fundo magenta chapado #FF00FF, uniforme, sem sombra, sem degradê. Não use magenta, rosa ou roxo no objeto.
+Sem personagem humano nas ilustrações de estado.
+
+Fundos de tela: geometria abstrata de linhas de metrô, estações em círculos pequenos, curvas suaves, azul-marinho profundo,
+contraste muito baixo (3 a 6%), nenhum elemento chamativo no centro, nenhum texto.
+
+COMO TRABALHAR (siga sem me perguntar nada):
+- Não existe imagem de referência e você não precisa de nenhuma. Não peça anexo, não peça confirmação, não peça aprovação, não faça perguntas. Tudo o que você precisa está neste texto. Comece a gerar imediatamente.
+- Gere UMA imagem por item da tabela, na ordem, uma de cada vez, usando a ferramenta de geração de imagem. Antes de cada imagem escreva só uma linha: Arquivo: <nome do arquivo>. Nunca junte vários itens em uma imagem, folha ou mosaico.
+- Mantenha o MESMO estilo em todas as imagens, inclusive em relação às imagens que você já gerou nesta conversa. Releia o bloco de ESTILO a cada item.
+- Tamanho: use o da tabela. Se a ferramenta só aceitar outro, use o mais próximo na mesma proporção (1024x1024, 1024x1536 ou 1536x1024), sem esticar nem recortar.
+- Cada avatar é uma caricatura cartoon do jogador ou treinador nomeado no campo "Jogador" da ficha, na fase indicada. Use o que você já sabe sobre a aparência dele naquela época para a semelhança ficar boa; a ficha dá o uniforme, a pose e o acessório. O avatar "voce" é o único genérico, sem semelhança com ninguém. Os nomes dos arquivos são rótulos internos.
+- Nenhum texto, letra, número, logotipo, escudo ou marca dentro de qualquer imagem.
+- Fundo "magenta chapado #FF00FF": o fundo inteiro é UMA cor magenta uniforme, sem sombra, sem degradê, sem xadrez de transparência desenhado, e nenhum magenta, rosa ou roxo dentro do objeto. Avatares: fundo opaco chapado na cor indicada, sem detalhes e sem moldura.
+- Se algum item for recusado ou falhar, não invente substituto e não pare: escreva "FALHOU: <arquivo>" e siga para o próximo. Se atingir o limite de imagens, escreva exatamente qual foi o último item feito e a lista dos que faltam.
+- No fim, liste todos os arquivos gerados. Se (e somente se) conseguir juntar as imagens em um .zip com o Python, entregue o link do zip; se não conseguir, diga em uma linha e não insista: os arquivos individuais bastam.
+
+TABELA (nº | arquivo | pasta | tamanho em px | forma | fundo | descrição):
+13 | avatar_salah_ver_1024x1536.png | avatares | 1024x1536 | vertical | opaco chapado #D9542D | Avatar. Jogador: Mohamed Salah, Liverpool 2017/18. Ficha: Ponta de corpo leve e rápido, ombros estreitos, postura de arrancada. Camisa vermelho-tijolo lisa, cabelo preto bem cacheado volumoso, barba preta aparada, sorriso largo e simpático. Segura uma lupa grande sobre uma tela de vídeo.
+19 | avatar_rivaldo_ver_1024x1536.png | avatares | 1024x1536 | vertical | opaco chapado #D9542D | Avatar. Jogador: Rivaldo, Barcelona 1999 (Bola de Ouro). Ficha: Canhoto esguio e alto, postura descontraída, ombros caídos. Camisa listrada vertical azul e grená, cabelo raspado curtíssimo, queixo fino, olhar de quem avalia. Segura uma pequena placa de nota com visto em âmbar.
+20 | avatar_kaka_ver_1024x1536.png | avatares | 1024x1536 | vertical | opaco chapado #D9542D | Avatar. Jogador: Kaká, Milan 2006/07. Ficha: Meia elegante e alto, postura de aceleração com a cabeça erguida. Camisa listrada vertical vermelho-escuro e preta, cabelo castanho bem curto, rosto limpo e simpático, sorriso sereno. Segura uma tesoura de corte ligada a uma fita de vídeo âmbar.
+21 | avatar_zidane_ver_1024x1536.png | avatares | 1024x1536 | vertical | opaco chapado #D9542D | Avatar. Jogador: Zinedine Zidane, seleção da França, Copa de 1998. Ficha: Meia alto e elegante, postura de controle de bola no peito, movimento suave. Camisa azul-royal lisa de gola redonda, careca com testa ampla, sobrancelhas retas, expressão calma e dominante. Segura uma claquete com marca âmbar.
+11 | avatar_valverde_ver_1024x1536.png | avatares | 1024x1536 | vertical | opaco chapado #5B7283 | Avatar. Jogador: Federico Valverde, Real Madrid 2022 a 2024. Ficha: Meio-campista atlético de corrida, peito aberto, postura inclinada para frente como quem parte em velocidade. Camisa branca lisa, cabelo castanho médio penteado para trás, barba curta, olhar determinado. Segura um chip/circuito simples com um detalhe âmbar.
+27 | avatar_vitinho_ver_1024x1536.png | avatares | 1024x1536 | vertical | opaco chapado #7C5FDB | Avatar. Jogador: Vitinho, Flamengo 2019/20. Ficha: Atacante de porte médio e ágil, postura de quem faz o corte para dentro. Camisa listrada horizontal vermelho-tijolo e preta, cabelo escuro curto com degradê, barba curta, sorriso de canto. Segura uma prancheta de resumo com o acento âmbar.
+23 | avatar_lamine_yamal_ver_1024x1536.png | avatares | 1024x1536 | vertical | opaco chapado #E0AA1E | Avatar. Jogador: Lamine Yamal, Barcelona 2024/25. Ficha: Ponta jovem e magro, postura leve de drible, olhar atrevido de adolescente. Camisa listrada vertical azul e grená, cabelo preto curto com tranças curtas no alto, corrente fina. Sorriso de quem está se divertindo; segura um celular com um post em âmbar.
+32 | avatar_voce_ver_1024x1536.png | avatares | 1024x1536 | vertical | opaco chapado #0B63E5 | Avatar. Ficha: Busto de pessoa genérica e neutra, sem rosto individualizado: cabeça lisa com apenas dois olhos redondos pequenos, uma curva de sorriso, sem cabelo definido e sem traços reconhecíveis. Camisa lisa branco-frio de gola redonda, postura relaxada de quem decide. Segura um carimbo de "aprovar" com um visto âmbar.
+
+Comece agora pelo primeiro item da tabela e vá até o último.

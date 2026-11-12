@@ -117,7 +117,7 @@ Os agentes deixam, na seção "Recados" do próprio arquivo, linhas neste format
 
 `PARA RONALDO | <id> | <AAAA-MM-DD HH:MM ou HH:MM> | <repete: nunca, diario ou dias_uteis> | <texto do aviso>`
 
-A cada chamada: leia `tarefas.md`, `horas.md`, `acessos.md` e `linkedin/rascunhos.md`, ache as linhas `PARA RONALDO` cujo `<id>` ainda não está em "Recados processados", crie o lembrete em `lembretes.json` e registre o id como processado. Nunca edite o arquivo de outro agente.
+A cada chamada: leia `tarefas.md`, `horas.md`, `acessos.md`, `linkedin/rascunhos.md` e `../clipes/pendencias.md` (setor de Clipes), ache as linhas `PARA RONALDO` cujo `<id>` ainda não está em "Recados processados", crie o lembrete em `lembretes.json` e registre o id como processado. Nunca edite o arquivo de outro agente.
 
 ## Padrões de aviso (o Guilherme pode mudar)
 

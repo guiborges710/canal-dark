@@ -1,0 +1,82 @@
+{
+  "projetos": [
+    {
+      "slug": "clip-001",
+      "titulo": "GTA 6 gameplay clip #1",
+      "status": "fazendo",
+      "fonte": {
+        "url": "https://youtube.com/watch?v=ABC",
+        "criador": "Flow Games FGN",
+        "autorizacao": "permissao"
+      },
+      "etapa_atual": "triagem",
+      "etapa_nome": "Triagem",
+      "agente_nome": "Rivaldo",
+      "notas": {
+        "rivaldo": 87
+      },
+      "tempo_inicio": "2026-11-11T10:00:00Z",
+      "cortes_prontos": 0
+    },
+    {
+      "slug": "clip-002",
+      "titulo": "React na votação do senado",
+      "status": "esperando_voce",
+      "fonte": {
+        "url": "https://youtube.com/watch?v=XYZ",
+        "criador": "Podcast XYZ",
+        "autorizacao": "permissao"
+      },
+      "etapa_atual": "coment",
+      "etapa_nome": "Gancho/fecho/CTA",
+      "agente_nome": "Zidane",
+      "notas": {
+        "rivaldo": 91,
+        "totti": 82
+      },
+      "tempo_inicio": "2026-11-11T15:00:00Z",
+      "cortes_prontos": 0,
+      "propostas": {
+        "gancho": "Reação viral ao resultado do senado",
+        "fecho": "Siga para mais momentos assim",
+        "cta": "Assista os clips completos no TikTok"
+      }
+    },
+    {
+      "slug": "clip-003",
+      "titulo": "Meme do TikTok",
+      "status": "prontos",
+      "fonte": {
+        "url": "https://tiktok.com/video/ABC",
+        "criador": "Creator X",
+        "autorizacao": "livre"
+      },
+      "etapa_atual": "embal",
+      "etapa_nome": "Embalagem",
+      "agente_nome": null,
+      "notas": {
+        "rivaldo": 79,
+        "totti": 82
+      },
+      "tempo_inicio": "2026-11-10T10:00:00Z",
+      "cortes_prontos": 2
+    },
+    {
+      "slug": "clip-004",
+      "titulo": "Vídeo deletado",
+      "status": "erro",
+      "fonte": {
+        "url": "https://youtube.com/watch?v=DELETED",
+        "criador": "YouTube (deletado)",
+        "autorizacao": "unknown"
+      },
+      "etapa_atual": "fonte",
+      "etapa_nome": "Fonte",
+      "agente_nome": null,
+      "notas": {},
+      "tempo_inicio": "2026-11-12T08:00:00Z",
+      "cortes_prontos": 0,
+      "erro": "Acesso negado. Vídeo não existe mais ou está privado."
+    }
+  ]
+}

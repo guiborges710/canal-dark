@@ -1,0 +1,58 @@
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                          ┃
+┃     ✨ ECOSSISTEMA - PRONTO PARA ACESSAR                ┃
+┃     📱 DO CELULAR / OUTRO PC / QUALQUER LUGAR          ┃
+┃                                                          ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+═══════════════════════════════════════════════════════════════════
+
+  🎯 O QUE FAZER AGORA:
+
+  1. Clique 2x em: 00_CLIQUE_AQUI.bat
+
+  2. Uma janela vai abrir. Aguarde a URL aparecer:
+     https://abc123-xyz.ngrok.io
+
+  3. Copie essa URL
+
+  4. Cola no navegador do celular / outro PC
+
+  5. Você vê a tela de login:
+     👤 Usuário: guilherme
+     🔐 Senha:   ecossistema123
+
+  6. Clica em ENTRAR
+
+  ✅ PRONTO! Você tá dentro do Ecossistema!
+
+═══════════════════════════════════════════════════════════════════
+
+  ⚠️  IMPORTANTE:
+
+  • A janela do servidor precisa ficar ABERTA
+  • Se fechar, perde a conexão
+  • Pra sair do Ecossistema, clica no botão "Sair"
+  • Cada vez que reinicia, tem um novo link
+
+═══════════════════════════════════════════════════════════════════
+
+  📖 QUER MAIS DETALHES?
+
+  Arquivos de ajuda:
+  • COMECE_AQUI.txt
+  • ECOSSISTEMA_ACESSO.txt
+  • ECOSSISTEMA_STATUS.txt
+
+═══════════════════════════════════════════════════════════════════
+
+  🆘 ALGO DEU ERRADO?
+
+  Tenta isso:
+  1. Fecha a janela do servidor
+  2. Abre de novo o 00_CLIQUE_AQUI.bat
+  3. Se der erro de porta, tenta rodar como Admin
+
+═══════════════════════════════════════════════════════════════════
+
+  ✨ Divirta-se! Qualquer dúvida, é só chamar.

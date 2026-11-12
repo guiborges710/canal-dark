@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Três estilos para o Contexto Explica</title>
+<style>
+  :root { --ink: #1c1d20; --mut: #5d626b; --bg: #eeeeea; --card: #fff; --line: #d9d9d3; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.5 -apple-system, "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif; }
+  main { max-width: 1240px; margin: 0 auto; padding: 56px 24px 72px; }
+  h1 { font-size: clamp(30px, 4vw, 46px); line-height: 1.08; letter-spacing: -.025em; font-weight: 600; margin: 0; max-width: 20ch; }
+  .lead { color: var(--mut); max-width: 62ch; margin: 16px 0 40px; }
+  .trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .op { display: flex; flex-direction: column; background: var(--card); border-radius: 24px; overflow: hidden; text-decoration: none; color: inherit; border: 2px solid transparent; transition: border-color .15s, transform .15s; }
+  .op:hover { border-color: var(--ink); transform: translateY(-3px); }
+  .op:focus-visible { outline: 3px solid #0a5fd6; outline-offset: 3px; }
+  .op svg { display: block; width: 100%; height: auto; }
+  .tx { padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .tx h2 { margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -.015em; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .rec { font-size: 13px; font-weight: 600; background: #0a5fd6; color: #fff; padding: 2px 11px; border-radius: 12px; }
+  .tx p { margin: 0; color: var(--mut); font-size: 16px; }
+  .tx .ir { margin-top: auto; padding-top: 14px; font-weight: 600; }
+  .tel { display: flex; gap: 8px; flex-wrap: wrap; padding: 0 24px 24px; }
+  .tel a { min-height: 44px; display: inline-flex; align-items: center; padding: 0 16px; border-radius: 22px; border: 1px solid var(--line); color: var(--ink); text-decoration: none; font-size: 15px; }
+  .tel a:hover { background: var(--bg); }
+  .tel a:focus-visible { outline: 3px solid #0a5fd6; outline-offset: 2px; }
+  .nota { margin-top: 32px; color: var(--mut); font-size: 15px; max-width: 70ch; }
+  @media (max-width: 980px) { .trio { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Três jeitos de usar o seu sistema todo dia</h1>
+  <p class="lead">Mesmas duas telas em cada estilo, Espera você e Canal, com os mesmos dados do protótipo. Abra, clique nas decisões, aprove, troque o tema e veja no celular.</p>
+  <div class="trio">
+    <div class="op" style="padding:0;border:0">
+      <a class="op" href="a/index.html" style="border-radius:24px 24px 0 0;flex:0 0 auto" aria-label="Abrir estilo A, Apple clean, recomendado">
+        <svg viewBox="0 0 400 230" aria-hidden="true"><rect width="400" height="230" fill="#f5f5f7"/><rect x="0" y="0" width="92" height="230" fill="#ececef"/><rect x="14" y="26" width="64" height="12" rx="6" fill="#d6d6db"/><rect x="14" y="54" width="64" height="30" rx="10" fill="#d6e6f7"/><rect x="14" y="94" width="64" height="12" rx="6" fill="#dcdce0"/><rect x="14" y="116" width="64" height="12" rx="6" fill="#dcdce0"/><rect x="112" y="24" width="120" height="16" rx="8" fill="#1d1d1f"/><rect x="112" y="52" width="270" height="130" rx="22" fill="#fff"/><rect x="132" y="72" width="170" height="12" rx="6" fill="#1d1d1f"/><rect x="132" y="94" width="210" height="8" rx="4" fill="#c9c9ce"/><rect x="132" y="150" width="230" height="20" rx="10" fill="#0066cc"/><rect x="112" y="192" width="270" height="30" rx="14" fill="#fff"/></svg>
+        <div class="tx"><h2>A. Apple clean <span class="rec">Recomendado</span></h2><p>Fundo cinza muito claro, cartões brancos, cantos grandes, números leves e um único azul. Uma decisão por vez, botão grande sempre no mesmo lugar.</p></div>
+      </a>
+      <div class="tel" style="background:#fff;border-radius:0 0 24px 24px"><a href="a/index.html#/espera">Espera você</a><a href="a/index.html#/canal">Canal</a></div>
+    </div>
+    <div class="op" style="padding:0;border:0">
+      <a class="op" href="b/index.html" style="border-radius:24px 24px 0 0;flex:0 0 auto" aria-label="Abrir estilo B, dashboard escuro denso">
+        <svg viewBox="0 0 400 230" aria-hidden="true"><rect width="400" height="230" fill="#0f1114"/><rect width="80" height="230" fill="#171a1f"/><rect x="12" y="24" width="56" height="10" rx="3" fill="#f2b441"/><rect x="12" y="50" width="56" height="12" rx="3" fill="#2a2f37"/><rect x="12" y="70" width="56" height="12" rx="3" fill="#1e2228"/><g fill="#171a1f" stroke="#2a2f37"><rect x="92" y="16" width="62" height="46" rx="6"/><rect x="160" y="16" width="62" height="46" rx="6"/><rect x="228" y="16" width="62" height="46" rx="6"/><rect x="296" y="16" width="62" height="46" rx="6"/></g><text x="102" y="48" fill="#f2b441" font-size="22" font-family="sans-serif" font-weight="700">20</text><text x="170" y="48" fill="#e9ebee" font-size="22" font-family="sans-serif" font-weight="700">3</text><g fill="#2a2f37"><rect x="92" y="74" width="170" height="20" rx="4"/><rect x="92" y="98" width="170" height="20" rx="4"/><rect x="92" y="122" width="170" height="20" rx="4"/><rect x="92" y="146" width="170" height="20" rx="4"/><rect x="92" y="170" width="170" height="20" rx="4"/></g><rect x="92" y="74" width="3" height="20" fill="#f2b441"/><rect x="272" y="74" width="120" height="130" rx="6" fill="#171a1f" stroke="#2a2f37"/><rect x="284" y="180" width="96" height="16" rx="4" fill="#f2b441"/><polyline points="236,52 248,44 260,50 272,36" fill="none" stroke="#6aa7ff" stroke-width="2"/></svg>
+        <div class="tx"><h2>B. Dashboard escuro denso</h2><p>Grafite, tabela de decisões com painel fixo, seis métricas por tela e fluxo em faixas. Cor só para estado: âmbar espera você, verde pronto, azul rodando.</p></div>
+      </a>
+      <div class="tel" style="background:#fff;border-radius:0 0 24px 24px"><a href="b/index.html#/espera">Espera você</a><a href="b/index.html#/canal">Canal</a></div>
+    </div>
+    <div class="op" style="padding:0;border:0">
+      <a class="op" href="c/index.html" style="border-radius:24px 24px 0 0;flex:0 0 auto" aria-label="Abrir estilo C, híbrido">
+        <svg viewBox="0 0 400 230" aria-hidden="true"><rect width="400" height="230" fill="#f0f1ed"/><rect x="10" y="10" width="380" height="102" rx="22" fill="#0e1a26"/><circle cx="30" cy="30" r="6" fill="#6fdcd0"/><rect x="52" y="22" width="40" height="16" rx="8" fill="#f2f5f7"/><rect x="98" y="22" width="40" height="16" rx="8" fill="#182a3c"/><rect x="144" y="22" width="40" height="16" rx="8" fill="#182a3c"/><g fill="#f2f5f7"><rect x="28" y="60" width="44" height="26" rx="4"/><rect x="120" y="60" width="44" height="26" rx="4"/><rect x="212" y="60" width="44" height="26" rx="4"/></g><polyline points="300,92 316,84 332,88 350,70 370,64" fill="none" stroke="#6fdcd0" stroke-width="2.5"/><rect x="10" y="124" width="220" height="44" rx="14" fill="#fff"/><rect x="10" y="174" width="220" height="44" rx="14" fill="#fff" stroke="#0b7a75" stroke-width="2"/><rect x="240" y="124" width="150" height="94" rx="16" fill="#fff"/><rect x="252" y="196" width="126" height="14" rx="7" fill="#0b7a75"/></svg>
+        <div class="tx"><h2>C. Híbrido: ilha escura sobre papel</h2><p>A estrutura clara do A, mas navegação e números ficam numa faixa escura no topo, e o verde-petróleo guia a ação. Dá o painel do B sem pesar a leitura.</p></div>
+      </a>
+      <div class="tel" style="background:#fff;border-radius:0 0 24px 24px"><a href="c/index.html#/espera">Espera você</a><a href="c/index.html#/canal">Canal</a></div>
+    </div>
+  </div>
+  <p class="nota">Cada variante tem tema claro e escuro (botão no menu). O protótipo atual em ecossistema/prototipo/ não foi alterado. Os números de visualizações por dia são ilustrativos, porque o protótipo só traz o total por vídeo.</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Navegador de Sistemas — Ecossistema do Guilherme</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(135deg, #0e1a24 0%, #162838 100%);
+    color: #eff3f1;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: #fff;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  .card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 183, 3, 0.3);
+    transform: translateY(-4px);
+  }
+  .card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #ffb703;
+  }
+  .card p {
+    font-size: 0.9rem;
+    color: rgba(255, 243, 241, 0.7);
+    margin-bottom: 1.5rem;
+  }
+  .card a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #ffb703;
+    color: #0e1a24;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  .card a:hover {
+    background: #ffc826;
+    transform: scale(1.05);
+  }
+  .card a.ext {
+    background: #2f7de1;
+    color: #fff;
+  }
+  .card a.ext:hover {
+    background: #3b89e8;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    background: rgba(47, 125, 225, 0.3);
+    color: #3b89e8;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+  }
+  .badge.ok { background: rgba(31, 175, 138, 0.3); color: #1faf8a; }
+  .badge.dev { background: rgba(255, 183, 3, 0.3); color: #ffb703; }
+  .badge.planejado { background: rgba(107, 95, 219, 0.3); color: #6b5fdb; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>🗺️ Navegador de Sistemas</h1>
+
+  <div class="grid">
+    <!-- Finanças -->
+    <div class="card">
+      <span class="badge ok">✓ Entregue</span>
+      <h2>💰 Finanças</h2>
+      <p>Saldos, movimentos, vencimentos. Visual H com dados do Casemiro.</p>
+      <a href="app/index.html#/financas" target="_blank">Abrir →</a>
+    </div>
+
+    <!-- Versão H Completa -->
+    <div class="card">
+      <span class="badge dev">🔨 Em andamento</span>
+      <h2>H — Versão Profissional</h2>
+      <p>Dashboard com decisões, agentes e KPIs do canal. Protótipo com dados de exemplo.</p>
+      <a href="prototipo_estilos/h/index.html" target="_blank">Abrir →</a>
+    </div>
+
+    <!-- Finanças Protótipo H -->
+    <div class="card">
+      <span class="badge dev">🔨 Em andamento</span>
+      <h2>Finanças — Protótipo H</h2>
+      <p>Mesma tela de Finanças no estilo H (versão de testes).</p>
+      <a href="prototipo_estilos/h/financas/index.html" target="_blank">Abrir →</a>
+    </div>
+
+    <!-- Ecossistema Sistema Único -->
+    <div class="card">
+      <span class="badge planejado">📋 Documentação</span>
+      <h2>📚 Sistema Único — Docs</h2>
+      <p>Especificação, pesquisa de referências, e paleta visual H.</p>
+      <a href="sistema_unico/" target="_blank">Ver pasta →</a>
+    </div>
+
+    <!-- Protótipos A–G -->
+    <div class="card">
+      <span class="badge planejado">🎨 Exploração</span>
+      <h2>Protótipos A–G</h2>
+      <p>Variações de design (rail, cartões, topbar, etc). Exploração visual.</p>
+      <a href="prototipo_estilos/" target="_blank">Ver pasta →</a>
+    </div>
+
+    <!-- Clipes — Setor -->
+    <div class="card">
+      <span class="badge planejado">🎬 Fora do escopo atual</span>
+      <h2>🎬 Clipes — Setor</h2>
+      <p>Setor de clips (cortes de vídeos de terceiros). Procure por onde estão os Clipes funcionando.</p>
+      <a href="../" target="_blank" class="ext">Explorar repositório →</a>
+    </div>
+
+    <!-- Canal — Produção -->
+    <div class="card">
+      <span class="badge planejado">📺 PROG-028</span>
+      <h2>📺 Canal — Produção</h2>
+      <p>Status de vídeos, cronograma de postagem, próximas entregas. (Em desenvolvimento)</p>
+      <a href="app/index.html#/canal" target="_blank">Abrir →</a>
+    </div>
+
+    <!-- Inteligência -->
+    <div class="card">
+      <span class="badge planejado">🔍 PROG-033b</span>
+      <h2>🔍 Inteligência</h2>
+      <p>Métricas, canais, análises de mercado dark. (Em desenvolvimento)</p>
+      <a href="app/index.html#/inteligencia" target="_blank">Abrir →</a>
+    </div>
+
+    <!-- Trabalho -->
+    <div class="card">
+      <span class="badge planejado">💼 PROG-033c</span>
+      <h2>💼 Trabalho</h2>
+      <p>Tarefas, projetos, produtividade do iOS. (Em desenvolvimento)</p>
+      <a href="app/index.html#/trabalho" target="_blank">Abrir →</a>
+    </div>
+
+    <!-- Programação -->
+    <div class="card">
+      <span class="badge planejado">⚙️ PROG-033d</span>
+      <h2>⚙️ Programação</h2>
+      <p>Quadro, sprints, backlog do setor de dev. (Em desenvolvimento)</p>
+      <a href="app/index.html#/programacao" target="_blank">Abrir →</a>
+    </div>
+
+    <!-- Agentes -->
+    <div class="card">
+      <span class="badge dev">🤖 Ao vivo + Catálogo</span>
+      <h2>🤖 Agentes</h2>
+      <p>Quem está trabalhando agora, status, histórico. Visual H.</p>
+      <a href="app/index.html#/ecossistema/agentes" target="_blank">Abrir →</a>
+    </div>
+
+    <!-- Documentos -->
+    <div class="card">
+      <span class="badge planejado">📄 PROG-019</span>
+      <h2>📄 Documentos</h2>
+      <p>Arquivos recentes do ecossistema, com datas e mudanças. (Em desenvolvimento)</p>
+      <a href="app/index.html#/ecossistema/documentos" target="_blank">Abrir →</a>
+    </div>
+  </div>
+
+  <div style="margin-top: 4rem; text-align: center; padding: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 243, 241, 0.6); font-size: 0.9rem;">
+    <p>💡 <strong>Dica:</strong> Clique em cada sistema acima para abrir. Se vir "Tela ainda não conectada", significa que ela está no roadmap mas não foi implementada ainda.</p>
+    <p style="margin-top: 1rem;">🔗 Ou <strong><a href="app/index.html" style="color: #ffb703;">clique aqui para ir direto ao App Principal</a></strong> e navegar de lá.</p>
+  </div>
+</div>
+</body>
+</html>

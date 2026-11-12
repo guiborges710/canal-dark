@@ -1,0 +1,134 @@
+{
+ "total": 1710,
+ "fps": 30,
+ "eventos": [
+  {
+   "frame": 30,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 111,
+   "kind": "impact"
+  },
+  {
+   "frame": 156,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 183,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 225,
+   "kind": "ding"
+  },
+  {
+   "frame": 275,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 275,
+   "kind": "impact"
+  },
+  {
+   "frame": 341,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 365,
+   "kind": "ding"
+  },
+  {
+   "frame": 401,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 425,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 470,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 538,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 562,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 613,
+   "kind": "ding"
+  },
+  {
+   "frame": 682,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 712,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 799,
+   "kind": "ding"
+  },
+  {
+   "frame": 844,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 967,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 967,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 1072,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 1159,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 1230,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 1287,
+   "kind": "impact"
+  },
+  {
+   "frame": 1356,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 1404,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 1407,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 1488,
+   "kind": "impact"
+  },
+  {
+   "frame": 1530,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 1617,
+   "kind": "whoosh"
+  },
+  {
+   "frame": 1662,
+   "kind": "ding"
+  }
+ ]
+}

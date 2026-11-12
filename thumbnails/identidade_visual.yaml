@@ -53,3 +53,12 @@ historico_decisoes:
     não aparece como miniatura de vídeo. A vertical 9:16 continua como padrão.'
   motivo: A API aceitou a miniatura vertical, mas o vídeo mostrou o frame gerado pelo
     YouTube em 16:9.
+- data: '2026-10-29'
+  decisao: 'Variante sketch (shorts em caderno pautado, ex. jovens-bebendo-menos): papel bege #F5F3EA com linhas e margem vermelha, traço grafite irregular, bonecos de palito, vermelho de marcador #B91C1C e âmbar #F2B13C. Texto principal de 2 a 5 palavras mais um carimbo de contexto de 1 a 2 palavras (ex.: EUA) quando o recorte geográfico fizer parte da promessa.'
+  motivo: 'Manter o reconhecimento do canal entre vídeo e miniatura; o recorte EUA evita generalizar o dado.'
+- data: '2026-10-29'
+  decisao: 'Textos de capa do sketch revisados (jovens-bebendo-menos): teste A/B/C com MENOR DESDE 1939 (+54%, copo com X), A GEN Z NÃO ESTÁ SOZINHA e ATÉ OS TIOS BEBEM MENOS, todos com selo EUA. Regras: a capa completa o título e não repete; no máximo um número; sem parou/ninguém/todo mundo; 1939 é o início da série Gallup; sem emoji nem bandeira.'
+  motivo: 'O dono achou fracos os textos anteriores (repetiam o título e não usavam o número). Base: thumb_cristiano.md e thumb_memphis.md.'
+- data: '2026-10-31'
+  decisao: 'Regras firmes do dono para TODAS as thumbs: (1) o texto diz o tema grande e inequivoco (ex.: PIRAMIDE em caixa alta, legivel de longe) e complementa o titulo sem repeti-lo; (2) sensacionalismo obrigatorio -- choque/curiosidade/urgencia com vermelho/amarelo/preto, dinheiro subindo, base perdendo, setas/alerta, emocao exagerada do boneco. Pode usar fundo escuro/dramatico (sair do caderno bege) quando ficar mais forte, mantendo o traco sketch e a coerencia com o video. Limites CLAUDE.md seguem: sem pessoa real, sem marca, sem acusar empresa legal, numeros so das notas e com hedge.'
+  motivo: 'Thumb de esquema-de-piramide foi reprovada por ser morna e nao dizer o tema. Refeita com conceito de IMPACTO (piramide de palitos, dinheiro subindo em setas vermelhas, base em desespero, PIRAMIDE + VOCE E A BASE).'

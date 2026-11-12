@@ -15,7 +15,7 @@ O canal defende que comportamentos atribuídos a "gerações" (Z, millennials, b
 
 Ensinamos o espectador a trocar a pergunta "como é essa geração?" por "que situação produziu esse comportamento, e quem lucra com o rótulo?".
 
-Cada vídeo deve sustentar a tese com dados das notas. Se as notas contradisserem a tese naquele tema, o vídeo diz isso. A tese é lente, não conclusão pré-fabricada.
+Cada vídeo sustenta a tese com fatos das notas: situações, casos e comparações, e no máximo 2 números (`prompts/tipos_de_roteiro.md`). Se as notas contradisserem a tese naquele tema, o vídeo diz isso. A tese é lente, não conclusão pré-fabricada.
 
 ## 2. Tom
 
@@ -39,7 +39,7 @@ Garantias anti-resumo (alinhadas à política de conteúdo inautêntico do YouTu
 - Nenhum vídeo é só lista de fatos ou paráfrase de um artigo/vídeo.
 - Fatos só de notas.md com 3+ fontes; interpretação sempre sinalizada como tal.
 
-Assinatura de marca: toda edição termina com a "pergunta de volta" (uma pergunta de reflexão que o espectador leva para si), e o canal sempre mostra o **contraexemplo** (onde a tese não se aplica).
+Assinatura de marca: toda edição deixa uma **tese em uma frase** que o espectador consegue repetir. O fechamento varia entre a tese, a pergunta de volta e a volta à cena do começo. Se a tese não vale para todo mundo, o vídeo diz isso em uma frase (decisão do dono em 2026-11-03).
 
 ## 4. Público-alvo primário
 

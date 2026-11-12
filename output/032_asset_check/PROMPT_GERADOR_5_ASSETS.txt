@@ -1,0 +1,80 @@
+GERAR 5 ILUSTRAÇÕES E SALVAR NUM ZIP
+
+Você é um gerador de imagens. Crie as 5 ilustrações abaixo (PNG, exatamente nos tamanhos indicados) e devolva TODAS em um arquivo ZIP chamado "assets_p0.zip". Cada arquivo é criado com o nome exato indicado.
+
+---
+
+ESPECIFICAÇÃO TÉCNICA GERAL
+- Formato: PNG com fundo opaco (sem transparência, sem canal alpha)
+- Estilo: Ilustração vetorial cartoon plana, profissional, formas geométricas simples e cantos arredondados
+- Contorno: azul-marinho uniforme #0E1A24 (cerca de 1% da largura)
+- Cores: chapadas, até dois níveis de sombra cel-shading, SEM degradê, brilho especular, ruído ou textura
+- Luz: de cima à esquerda; sombra projetada à direita e abaixo
+- Paleta visual: azul-marinho #0E1A24/#162838, branco frio #EFF3F1, cinza-azulado #4B5E6A, detalhe âmbar #FFB703
+- Sem texto, letras, números, logotipos, escudos, marcas, marca d'água ou assinatura
+
+---
+
+AVATAR 1: avatar_casemiro_ver_1024x1536.png
+Tamanho: 1024×1536 (vertical, 2:3)
+Personagem: Caricatura reconhecível do jogador real Casemiro.
+Descrição: Volante forte e largo, peito aberto, postura firme e queixo levemente erguido. Camisa branca lisa de gola redonda; cabelo escuro bem curto, barba cheia aparada, sobrancelhas marcadas; expressão séria e confiante. Braço direito junto ao peito como quem protege; segura calculadora pequena com um detalhe âmbar no visor. Busto até o peito; cabeça grande moderada (cerca de 1/3 da altura do busto), olhos redondos grandes, nariz e boca simplificados. Cabeça ocupa 50–55% da largura; topo a 8% do quadro; rosto centralizado.
+Fundo: Totalmente opaco, plano e uniforme no hex EXATO #1FA37B (verde setorial Finanças). SEM padrão, xadrez, transparência, moldura ou sombra. Os quatro cantos superiores devem ser integralmente nessa cor: cabelo, orelhas, roupa e acessórios não podem tocar os cantos superiores. Ombros podem chegar à base.
+Encadernação: Mesmo enquadramento, proporção, contorno e luz que os demais avatares.
+
+---
+
+AVATAR 2: avatar_ronaldo_ver_1024x1536.png
+Tamanho: 1024×1536 (vertical, 2:3)
+Personagem: Caricatura reconhecível do jogador real Ronaldo.
+Descrição: Fase do corte de cabelo com laterais raspadas e pequeno triângulo de cabelo no alto da frente. Atacante potente, ombros largos, corrida contida, sorriso aberto de dentes grandes e olhar alegre. Camisa amarela canarinho com gola verde, sem escudo; dedo apontando para cima e celular na mão esquerda com símbolo abstrato âmbar de notificação, sem letras/algarismos. Mesmo enquadramento dos demais (busto, cabeça grande, rosto centralizado).
+Fundo: Opaco uniforme EXATAMENTE #E0AA1E (amarelo setorial Trabalho). Os quatro cantos superiores devem permanecer integralmente nesse hex; cabelo, orelhas, roupa não tocam os cantos. Rosto central e seguro para os recortes.
+Encadernação: Mesmo contorno, proporção, luz e estilo dos demais.
+
+---
+
+AVATAR 3: avatar_de_bruyne_ver_1024x1536.png
+Tamanho: 1024×1536 (vertical, 2:3)
+Personagem: Caricatura reconhecível do jogador real Kevin De Bruyne.
+Descrição: Meia armador alto e magro preparando um passe longo, pescoço levemente inclinado. Camisa azul-celeste lisa; cabelo ruivo-loiro curto penteado de lado, barba ruiva rala e sardas simples. Expressão calma e concentrada, uma sobrancelha levemente erguida; segura prancheta com setas abstratas de passe, sem escrita ou números. Mesmo busto/cabeça/proporção.
+Fundo: Opaco uniforme #2F7DE1 (azul setorial Canal). Rosto central; cantos superiores totalmente planos e sem elementos, no hex exato.
+Encadernação: Mesmo contorno, luz e estilo.
+
+---
+
+AVATAR 4: avatar_luiz_henrique_ver_1024x1536.png
+Tamanho: 1024×1536 (vertical, 2:3)
+Personagem: Caricatura reconhecível do treinador real Luiz Henrique, fase moderna.
+Descrição: Homem de meia-idade, magro e atlético; postura em pé, braços cruzados ou mão na cintura. Agasalho de treino azul-marinho fechado até o pescoço (ou terno escuro sem gravata), cabelo grisalho curtíssimo, queixo marcado e barba por fazer. Olhar firme e sorriso discreto; segura mapa de metrô dobrado com linhas simples e ponto âmbar. Mesmo enquadramento.
+Fundo: Opaco uniforme #5B7283 (cinza-azulado setorial Ecossistema). Rosto central; cantos superiores sem cabelo ou acessório e no hex exato.
+Encadernação: Mesmo contorno, luz e estilo.
+
+---
+
+ILUSTRAÇÃO 5: vazio_espera_ret_1536x1024.png
+Tamanho: 1536×1024 (horizontal, 3:2)
+Objeto: Bandeja de entrada de papéis vazia com um grande check verde-menta #1FBF8A.
+Descrição: Mensagem visual "tudo em dia". Objeto único central ocupando cerca de 60% da largura, margem livre de 12%, SEM personagens. Adesivo com contorno interno #0E1A24 e borda fina #EFF3F1.
+Fundo: Magenta/fúcsia chapado #FF00FF, SEM sombra, degradê ou xadrez. Nenhum verde, azul ou cor no objeto — só a check é verde-menta.
+Encadernação: Mesmo estilo vetorial cartoon plano dos avatares.
+
+---
+
+SAÍDA FINAL
+Salve TODOS os 5 arquivos (4 avatares + 1 ilustração) como PNG com exatamente os nomes acima. Crie um arquivo ZIP chamado "assets_p0.zip" contendo:
+- avatar_casemiro_ver_1024x1536.png
+- avatar_ronaldo_ver_1024x1536.png
+- avatar_de_bruyne_ver_1024x1536.png
+- avatar_luiz_henrique_ver_1024x1536.png
+- vazio_espera_ret_1536x1024.png
+
+Devolva o ZIP pronto para download.
+
+---
+
+NOTAS FINAIS
+- Tamanhos exatos: não redimensionar nem cortar
+- Nomes exatos: copiar como estão (incluindo _ver_ e _ret_ e a resolução)
+- Sem transparência: fundo sólido em cada arquivo (já especificado)
+- Qual ferramenta usar: DALL-E, Midjourney, Leonardo.ai ou similar (você escolhe)
+- Estilo consistente: todos os avatares devem ter proporção, contorno, luz e cromia iguais; só mudam os personagens e cores de fundo setoriais

@@ -1,0 +1,52 @@
+╔════════════════════════════════════════════════════════════════════╗
+║                  ACESSE SEU ECOSSISTEMA AGORA                       ║
+╚════════════════════════════════════════════════════════════════════╝
+
+✅ TUDO PRONTO PARA USAR!
+
+🚀 PASSO 1 — LIGAR O SERVIDOR:
+   • Clique 2x em: subir_ecossistema.bat
+   • Uma janela preta vai abrir
+   • Aguarde aparecer uma URL tipo: https://abc123-xyz.ngrok.io
+   • ⚠️  NÃO FECHE ESSA JANELA (ela é o servidor)
+
+📱 PASSO 2 — ACESSAR DO CELULAR:
+   • Copie a URL da janela
+   • Cola no navegador do celular
+   • Você vai ver uma tela de login
+
+🔓 PASSO 3 — FAZER LOGIN:
+
+   Usuário: guilherme
+   Senha:   ecossistema123
+
+✨ PRONTO!
+   Você está dentro. Vê o dashboard do Ecossistema.
+   Clica em "Sair" quando quiser desconectar.
+
+─────────────────────────────────────────────────────────────────────
+
+📖 DETALHES & AJUDA:
+   Leia: ECOSSISTEMA_ACESSO.txt
+
+🔐 TROCAR CREDENCIAIS:
+   Edite: ecossistema/app/login.html (procure por "const CREDENCIAIS")
+
+─────────────────────────────────────────────────────────────────────
+
+⏹️  PARA PARAR:
+   • Feche a janela do servidor
+   • Ou Ctrl+C dentro da janela
+   • Depois clica em "Sair" no celular
+
+🆘 PROBLEMA:
+   • Ngrok precisa de conta gratuita em ngrok.com (já instalado)
+   • Porta 8000 precisa estar livre
+   • Se der erro, tenta rodar como Admin
+
+─────────────────────────────────────────────────────────────────────
+
+🎯 PRÓXIMOS PASSOS:
+   ✨ Dashboard funciona em qualquer lugar, qualquer aparelho
+   ✨ Dados estão no PC (seguro, privado)
+   ✨ Pode customizar mais tarde

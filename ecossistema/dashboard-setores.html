@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard · Ecossistema do Guilherme</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .sectors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .sector-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .sector-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .sector-card.primary {
+            border-top: 4px solid #667eea;
+        }
+
+        .sector-card.intelligence {
+            border-top: 4px solid #f093fb;
+        }
+
+        .sector-card.productivity {
+            border-top: 4px solid #4facfe;
+        }
+
+        .sector-card.finance {
+            border-top: 4px solid #43e97b;
+        }
+
+        .sector-card.programming {
+            border-top: 4px solid #fa709a;
+        }
+
+        .sector-card.transversal {
+            border-top: 4px solid #ffa751;
+        }
+
+        .sector-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 15px;
+        }
+
+        .sector-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .sector-badge {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .sector-badge.leader {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .sector-badge.tech-lead {
+            background: #fff3e0;
+            color: #e65100;
+        }
+
+        .sector-badge.qa {
+            background: #f3e5f5;
+            color: #6a1b9a;
+        }
+
+        .sector-badge.devops {
+            background: #e0f2f1;
+            color: #00695c;
+        }
+
+        .agents-list {
+            list-style: none;
+        }
+
+        .agents-list li {
+            padding: 10px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .agents-list li:last-child {
+            border-bottom: none;
+        }
+
+        .agent-bullet {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #667eea;
+            border-radius: 50%;
+            margin-top: 7px;
+            flex-shrink: 0;
+        }
+
+        .agents-list li.leader .agent-bullet {
+            background: #1976d2;
+        }
+
+        .agents-list li.tech-lead .agent-bullet {
+            background: #e65100;
+        }
+
+        .agents-list li.qa .agent-bullet {
+            background: #6a1b9a;
+        }
+
+        .agents-list li.devops .agent-bullet {
+            background: #00695c;
+        }
+
+        .agent-name {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .agent-role {
+            font-size: 0.85em;
+            color: #999;
+            display: block;
+            margin-top: 3px;
+        }
+
+        .agent-id {
+            font-size: 0.75em;
+            color: #bbb;
+            font-family: 'Courier New', monospace;
+            display: block;
+            margin-top: 2px;
+        }
+
+        .sector-stats {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #f0f0f0;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .stat {
+            flex: 1;
+            text-align: center;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 0.8em;
+            color: #999;
+        }
+
+        .summary-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .summary-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .summary-item {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .summary-item h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .summary-item p {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        .hierarchy-chart {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .hierarchy-chart h2 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 1.8em;
+        }
+
+        .hierarchy-tree {
+            margin-left: 20px;
+        }
+
+        .hierarchy-item {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #ddd;
+            position: relative;
+        }
+
+        .hierarchy-item::before {
+            content: '';
+            position: absolute;
+            left: -2px;
+            top: 8px;
+            width: 12px;
+            height: 2px;
+            background: #ddd;
+        }
+
+        .hierarchy-item strong {
+            color: #667eea;
+        }
+
+        .hierarchy-item em {
+            color: #999;
+            font-style: normal;
+            font-size: 0.9em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: white;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .sectors-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Ecossistema do Guilherme</h1>
+            <p class="subtitle">Dashboard de Setores e Agentes · Atualizado em 2026-11-04</p>
+        </header>
+
+        <div class="sectors-grid">
+            <!-- CANAL DARK -->
+            <div class="sector-card primary">
+                <div class="sector-header">
+                    <div class="sector-title">🎬 Canal Dark</div>
+                    <span class="sector-badge leader">Produção</span>
+                </div>
+                <ul class="agents-list">
+                    <li class="leader"><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">De Bruyne</span>
+                            <span class="agent-role">Orquestrador / CEO</span>
+                            <span class="agent-id">debruyne-orquestrador</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Modric</span>
+                            <span class="agent-role">Pesquisador de Tema</span>
+                            <span class="agent-id">modric-pesquisador-tema</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Neymar</span>
+                            <span class="agent-role">Roteirista</span>
+                            <span class="agent-id">neymar-roteirista</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Courtois</span>
+                            <span class="agent-role">Revisor de Fatos</span>
+                            <span class="agent-id">courtois-revisor-fatos</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Raphinha</span>
+                            <span class="agent-role">Curador de Componentes</span>
+                            <span class="agent-id">raphinha-curador-componentes</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Olise</span>
+                            <span class="agent-role">Diretor de Arte</span>
+                            <span class="agent-id">olise-diretor-arte</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Mbappé</span>
+                            <span class="agent-role">Editor de Metadados</span>
+                            <span class="agent-id">mbappe-editor-metadados</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Vini</span>
+                            <span class="agent-role">Auditor de Conformidade</span>
+                            <span class="agent-id">vini-auditor-conformidade</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Memphis</span>
+                            <span class="agent-role">Social Media</span>
+                            <span class="agent-id">memphis-social-media</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="sector-stats">
+                    <div class="stat">
+                        <span class="stat-number">9</span>
+                        <span class="stat-label">Agentes</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Formato</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INTELIGÊNCIA -->
+            <div class="sector-card intelligence">
+                <div class="sector-header">
+                    <div class="sector-title">📊 Inteligência</div>
+                    <span class="sector-badge leader">Análise</span>
+                </div>
+                <ul class="agents-list">
+                    <li class="leader"><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">De Bruyne</span>
+                            <span class="agent-role">Chefe do Setor</span>
+                            <span class="agent-id">debruyne-orquestrador</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Hugo Souza</span>
+                            <span class="agent-role">Pesquisador de Canais</span>
+                            <span class="agent-id">hugo-souza-pesquisador-canais</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Fagner</span>
+                            <span class="agent-role">Analista de Títulos</span>
+                            <span class="agent-id">fagner-analista-titulos</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">André Carrillo</span>
+                            <span class="agent-role">Analista de Thumbnails</span>
+                            <span class="agent-id">andre-carrillo-analista-thumbnails</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Raniele</span>
+                            <span class="agent-role">Analista de Produção</span>
+                            <span class="agent-id">raniele-analista-producao</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Yuri Alberto</span>
+                            <span class="agent-role">Analista de Métricas</span>
+                            <span class="agent-id">yuri-alberto-analista-metricas</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Vitinho</span>
+                            <span class="agent-role">Consolidador</span>
+                            <span class="agent-id">vitinho-consolidador</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="sector-stats">
+                    <div class="stat">
+                        <span class="stat-number">7</span>
+                        <span class="stat-label">Agentes</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">1x/sem</span>
+                        <span class="stat-label">Ciclo</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRODUTIVIDADE -->
+            <div class="sector-card productivity">
+                <div class="sector-header">
+                    <div class="sector-title">⚡ Produtividade</div>
+                    <span class="sector-badge leader">Pessoal</span>
+                </div>
+                <ul class="agents-list">
+                    <li class="leader"><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Guardiola</span>
+                            <span class="agent-role">PO e Agilista</span>
+                            <span class="agent-id">guardiola-po-agilista</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Ronaldo</span>
+                            <span class="agent-role">Assistente Pessoal</span>
+                            <span class="agent-id">ronaldo-assistente</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Pedri</span>
+                            <span class="agent-role">Gestor de Tarefas</span>
+                            <span class="agent-id">pedri-gestor-tarefas</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Rodri</span>
+                            <span class="agent-role">Apontamento de Horas</span>
+                            <span class="agent-id">rodri-apontamento-horas</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Kroos</span>
+                            <span class="agent-role">Acessos e Segurança</span>
+                            <span class="agent-id">kroos-acessos-seguranca</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Lamine Yamal</span>
+                            <span class="agent-role">LinkedIn</span>
+                            <span class="agent-id">lamine-yamal-linkedin</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="sector-stats">
+                    <div class="stat">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Agentes</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">Diária</span>
+                        <span class="stat-label">Cadência</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FINANÇAS -->
+            <div class="sector-card finance">
+                <div class="sector-header">
+                    <div class="sector-title">💰 Finanças</div>
+                    <span class="sector-badge leader">Pessoal</span>
+                </div>
+                <ul class="agents-list">
+                    <li class="leader"><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Casemiro</span>
+                            <span class="agent-role">Financeiro</span>
+                            <span class="agent-id">casemiro-financeiro</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="sector-stats">
+                    <div class="stat">
+                        <span class="stat-number">1</span>
+                        <span class="stat-label">Agente</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Dados</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROGRAMAÇÃO -->
+            <div class="sector-card programming">
+                <div class="sector-header">
+                    <div class="sector-title">💻 Programação</div>
+                    <span class="sector-badge tech-lead">Ágil</span>
+                </div>
+                <ul class="agents-list">
+                    <li class="leader"><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Zico</span>
+                            <span class="agent-role">PO</span>
+                            <span class="agent-id">zico-po-programacao</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Xavi</span>
+                            <span class="agent-role">Scrum Master</span>
+                            <span class="agent-id">xavi-scrum-master</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Thiago Silva</span>
+                            <span class="agent-role">Tech Lead</span>
+                            <span class="agent-id">thiago-silva-tech-lead</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Ancelotti</span>
+                            <span class="agent-role">Agile Coach</span>
+                            <span class="agent-id">ancelotti-agile-coach</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Rodrygo</span>
+                            <span class="agent-role">Dev Backend</span>
+                            <span class="agent-id">rodrygo-dev-back</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Endrick</span>
+                            <span class="agent-role">Dev Frontend</span>
+                            <span class="agent-id">endrick-dev-front</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Iniesta</span>
+                            <span class="agent-role">UX</span>
+                            <span class="agent-id">iniesta-ux-corte</span>
+                        </div>
+                    </li>
+                    <li class="qa"><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Alisson</span>
+                            <span class="agent-role">QA</span>
+                            <span class="agent-id">alisson-qa</span>
+                        </div>
+                    </li>
+                    <li class="devops"><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Marquinhos</span>
+                            <span class="agent-role">DevOps</span>
+                            <span class="agent-id">marquinhos-devops-release</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="sector-stats">
+                    <div class="stat">
+                        <span class="stat-number">9</span>
+                        <span class="stat-label">Agentes</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">1 semana</span>
+                        <span class="stat-label">Sprint</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TRANSVERSAL -->
+            <div class="sector-card transversal">
+                <div class="sector-header">
+                    <div class="sector-title">🔧 Transversal</div>
+                    <span class="sector-badge leader">Engenharia</span>
+                </div>
+                <ul class="agents-list">
+                    <li class="leader"><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Luiz Henrique</span>
+                            <span class="agent-role">Cabeça do Ecossistema</span>
+                            <span class="agent-id">luiz-henrique-ecossistema</span>
+                        </div>
+                    </li>
+                    <li><span class="agent-bullet"></span>
+                        <div>
+                            <span class="agent-name">Valverde</span>
+                            <span class="agent-role">Engenheiro de IA</span>
+                            <span class="agent-id">valverde-engenheiro-ia</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="sector-stats">
+                    <div class="stat">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">Agentes</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Alcance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="summary-section">
+            <h2>📋 Resumo do Ecossistema</h2>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <h3>🎯 Total de Agentes</h3>
+                    <p>35 agentes em 5 setores + 2 transversais = 42 agentes especializados colaborando 24/7</p>
+                </div>
+                <div class="summary-item">
+                    <h3>🎬 Canal Dark</h3>
+                    <p>Squad de produção autônoma de Shorts de análise de comportamento social. Fluxo otimizado com auditoria de conformidade.</p>
+                </div>
+                <div class="summary-item">
+                    <h3>📊 Inteligência</h3>
+                    <p>Coleta, análise e consolidação de dados do mercado dark. Relatórios cíclicos para orientar a produção.</p>
+                </div>
+                <div class="summary-item">
+                    <h3>⚡ Produtividade</h3>
+                    <p>Organização pessoal do Guilherme: tarefas, horas, agenda, acessos e comunicação unificada pelo Telegram.</p>
+                </div>
+                <div class="summary-item">
+                    <h3>💰 Finanças</h3>
+                    <p>Gestão de recebimentos, gastos, previsões e dashboard local. Avisos automáticos no Telegram.</p>
+                </div>
+                <div class="summary-item">
+                    <h3>💻 Programação</h3>
+                    <p>Evolução do código (Corte, pipeline, render) com metodologia ágil, sprint semanal e testes obrigatórios.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- HIERARCHY -->
+        <div class="hierarchy-chart">
+            <h2>🏛️ Hierarquia e Comunicação</h2>
+            <div class="hierarchy-tree">
+                <div class="hierarchy-item">
+                    <strong>Guilherme</strong> <em>(Dono · Decisões e ações externas)</em>
+                </div>
+                <div class="hierarchy-item" style="margin-left: 30px;">
+                    <strong>Luiz Henrique</strong> <em>(Cabeça do Ecossistema · Cria agentes e setores)</em>
+                </div>
+                <div class="hierarchy-item" style="margin-left: 60px;">
+                    <strong>De Bruyne</strong> <em>(CEO do Canal · Coordena produção e inteligência)</em>
+                </div>
+                <div class="hierarchy-item" style="margin-left: 60px;">
+                    <strong>Guardiola</strong> <em>(PO Produtividade · Prioriza tarefas pessoais)</em>
+                </div>
+                <div class="hierarchy-item" style="margin-left: 60px;">
+                    <strong>Zico</strong> <em>(PO Programação · Backlog e aceite técnico)</em>
+                </div>
+                <div class="hierarchy-item" style="margin-left: 60px;">
+                    <strong>Casemiro</strong> <em>(Financeiro · Dashboard de finanças)</em>
+                </div>
+                <div class="hierarchy-item" style="margin-left: 60px;">
+                    <strong>Valverde</strong> <em>(Engenheiro de IA · Otimiza consumo de token)</em>
+                </div>
+                <div class="hierarchy-item" style="margin-left: 30px; margin-top: 20px;">
+                    <strong>Ronaldo</strong> <em>(Único canal do Telegram com Guilherme)</em>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Ecossistema do Guilherme · 2026</p>
+            <p style="margin-top: 10px; font-size: 0.8em;">Mantido por <strong>Luiz Henrique</strong> · Dashboard gerado por <strong>Valverde</strong></p>
+        </footer>
+    </div>
+</body>
+</html>

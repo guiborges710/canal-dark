@@ -113,13 +113,22 @@ def render(out, cenas_path=None, voz_cfg=None):
 
     falas = {}
     if voz.tem_falas(cenas):
-        print("   narrando as cenas (Chatterbox, CPU; leva alguns minutos)...", flush=True)
-        falas = voz.gerar(out, cenas_path, voz_cfg)
+        from .sketch import _falas_salvas  # aqui dentro: sketch.py importa este módulo
+        falas = _falas_salvas(Path(out), cenas)  # narração já gerada e aprovada no estúdio para exatamente estas falas
+        if falas:
+            print("   reaproveitando a narração já gerada (as falas não mudaram)", flush=True)
+        else:
+            print("   narrando as cenas (Chatterbox, CPU; leva alguns minutos)...", flush=True)
+            falas = voz.gerar(out, cenas_path, voz_cfg)
+    inicio_s = float((voz_cfg or {}).get("inicio_s", 0.05))  # silêncio antes da voz, no começo da cena
+    respiro_s = float((voz_cfg or {}).get("respiro_s", 0.12))  # respiro depois da fala, até a próxima cena
     spec = []
     for i, c in enumerate(cenas):
         d = float(c["duracao"])
         if str(i) in falas:
-            d = max(d, falas[str(i)]["dur"] + 0.6)  # 0,6 s de respiro depois da fala
+            # A cena dura o que a fala dura (+ respiro): a duracao escrita deixa de ser piso e não gera
+            # silêncio. Fica só o mínimo do tipo (SPEC_TIPOS), que a animação da cena precisa para completar.
+            d = max(SPEC_TIPOS[c["tipo"]]["min"], inicio_s + falas[str(i)]["dur"] + respiro_s)
         spec.append({**c, "duracao": round(d, 3)})
     total_s = validate(spec)
     spec_path = out / "cenas_render.json"
@@ -131,7 +140,7 @@ def render(out, cenas_path=None, voz_cfg=None):
     for c in spec:
         inicios.append(t)
         t += c["duracao"]
-    falas_mix = [(inicios[int(k)] + 0.3, v["wav"]) for k, v in falas.items()]
+    falas_mix = [(inicios[int(k)] + inicio_s, v["wav"]) for k, v in falas.items()]
     sfx.build(eventos["eventos"], eventos["total"], eventos["fps"], out / "audio.wav", falas=falas_mix)
     video = _encode(out, eventos["total"], eventos["fps"])
     _thumbnail(out)

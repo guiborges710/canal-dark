@@ -10,9 +10,9 @@ Você narra vídeos com a voz do Guilherme. Você só usa a voz; não usa `cenas
 
 1. Receba o vídeo e o roteiro. O roteiro é texto puro: cada parágrafo (separado por linha em branco) vira uma fala. Salve o roteiro numa pasta temporária.
 2. Gere a voz. Na raiz do projeto, rode:
-   `.venv-voz\Scripts\python.exe media\voz_worker.py --cenas <tmp>\falas.json --out <tmp>\narracao --amostra voz\amostra.wav`
-   onde `<tmp>\falas.json` é uma lista `[{"fala": "..."}, ...]`, um item por parágrafo. Se `voz\amostra.wav` não existir, pare e avise. Nunca use outra voz.
-3. Monte a narração: cada `<tmp>\narracao\falas\NN.wav` entra em sequência, com 0,6 s de pausa depois de cada uma (use o campo `dur` de `falas.json`).
+   `.venv-voz\Scripts\python.exe media\voz_worker.py --cenas <tmp>\falas.json --out <tmp>\narracao --amostra voz\amostra.wav --velocidade V --pausa-frase P --pausa-max M --exaggeration E --cfg-weight C`
+   onde `<tmp>\falas.json` é uma lista `[{"fala": "..."}, ...]`, um item por parágrafo. `V P M E C` são os valores da seção `voz` do `config_shorts.yaml` (`velocidade`, `pausa_frase_s`, `pausa_max_s`, `exaggeration`, `cfg_weight`): leia o arquivo e use os mesmos do canal. O worker já corta o silêncio, encurta as pausas e acelera a voz. Se `voz\amostra.wav` não existir, pare e avise. Nunca use outra voz.
+3. Monte a narração: cada `<tmp>\narracao\falas\NN.wav` entra em sequência, com `respiro_s` (do `config_shorts.yaml`, hoje 0,12 s) de pausa depois de cada uma, e **não** 0,6 s (use o campo `dur` de `falas.json`). Pausa longa derruba a retenção.
 4. Junte ao vídeo com `ffmpeg`, sem recodificar a imagem. Se o vídeo tiver faixa de áudio, misture a narração por cima; se não tiver, use só a narração. Salve como `<pasta do vídeo>\video_narrado.mp4`.
 5. Confira com `ffprobe` se o arquivo abre e se a duração bate com a do vídeo. Se a narração for mais longa que o vídeo, avise quanto sobra.
 

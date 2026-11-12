@@ -1,0 +1,220 @@
+[
+ {
+  "tipo": "documentary_collage",
+  "desenho": "cena_0",
+  "fala": "Em 2013, um adulto passava quase sete horas por semana com amigos.",
+  "duracao": 3.4,
+  "acao": "O relatório pousa na mesa e a câmera vai até a linha do número, ligada à foto",
+  "superficie": "mesa_preta",
+  "recortes": [
+   {
+    "id": "doc",
+    "tipo": "documento",
+    "x": 540,
+    "y": 800,
+    "larg": 800,
+    "rot": -2.5,
+    "t": 0,
+    "entrada": "pousa",
+    "fita": true,
+    "titulo": "TEMPO COM AMIGOS",
+    "linhas": [
+     "Horas por semana, adultos",
+     "2013: quase 7 horas",
+     "2021: menos de 3 horas"
+    ]
+   },
+   {
+    "id": "foto",
+    "tipo": "foto",
+    "figura": "pessoa",
+    "x": 290,
+    "y": 1240,
+    "larg": 340,
+    "rot": -5,
+    "t": 0.6,
+    "entrada": "desliza",
+    "legenda": "sozinho",
+    "camada": "frente",
+    "ax": 90,
+    "ay": -180
+   },
+   {
+    "id": "quando",
+    "tipo": "data",
+    "data": "2021",
+    "x": 770,
+    "y": 1230,
+    "rot": 6,
+    "t": 1.0,
+    "entrada": "pousa",
+    "camada": "frente",
+    "ay": -54,
+    "ax": -80
+   }
+  ],
+  "conexoes": [
+   {
+    "de": "foto",
+    "para": "quando",
+    "t": 1.5,
+    "dur": 0.45
+   }
+  ],
+  "destaques": [
+   {
+    "em": "doc",
+    "linha": 2,
+    "t": 1.8,
+    "dur": 0.5
+   }
+  ],
+  "carimbos": [
+   {
+    "texto": "CAIU",
+    "x": 760,
+    "y": 960,
+    "rot": -12,
+    "t": 2.4
+   }
+  ],
+  "textos": [
+   {
+    "texto": "CADÊ OS AMIGOS?",
+    "x": 540,
+    "y": 320,
+    "tam": 92,
+    "t": 0
+   }
+  ],
+  "camera": {
+   "chaves": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.0
+    },
+    {
+     "t": 2.0,
+     "x": 560,
+     "y": 900,
+     "zoom": 1.22
+    }
+   ]
+  },
+  "transicao": {
+   "entrada": "corte",
+   "saida": "virada"
+  },
+  "sons": [
+   {
+    "t": 2.4,
+    "tipo": "impact"
+   }
+  ]
+ },
+ {
+  "tipo": "documentary_collage",
+  "desenho": "cena_1",
+  "fala": "O que sumiu não foram as pessoas. Foram os lugares.",
+  "duracao": 3.4,
+  "acao": "A manchete é rasgada e revela o mapa com os pontos que fecharam",
+  "superficie": "kraft",
+  "recortes": [
+   {
+    "id": "mapa",
+    "tipo": "mapa",
+    "x": 540,
+    "y": 980,
+    "larg": 780,
+    "rot": 2,
+    "t": 0,
+    "entrada": "corte",
+    "camada": "fundo",
+    "pinos": [
+     {
+      "x": 0.34,
+      "y": 0.4,
+      "rotulo": "clube"
+     },
+     {
+      "x": 0.62,
+      "y": 0.56,
+      "rotulo": "bar"
+     }
+    ]
+   },
+   {
+    "id": "jornal",
+    "tipo": "jornal",
+    "x": 540,
+    "y": 560,
+    "larg": 740,
+    "rot": -3,
+    "t": 0.4,
+    "entrada": "rasga",
+    "manchete": "Terceiros lugares somem"
+   },
+   {
+    "id": "linha",
+    "tipo": "linha_tempo",
+    "x": 760,
+    "y": 1260,
+    "larg": 480,
+    "rot": 3,
+    "t": 1.2,
+    "entrada": "desliza",
+    "camada": "frente",
+    "eventos": [
+     {
+      "data": "1990",
+      "texto": "bairro cheio"
+     },
+     {
+      "data": "2021",
+      "texto": "só o trabalho"
+     }
+    ]
+   }
+  ],
+  "anotacoes": [
+   {
+    "texto": "era aqui!",
+    "x": 300,
+    "y": 1240,
+    "t": 1.8,
+    "seta_para": [
+     400,
+     1040
+    ]
+   }
+  ],
+  "camera": {
+   "chaves": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 820,
+     "zoom": 1.16
+    },
+    {
+     "t": 1.9,
+     "x": 520,
+     "y": 1040,
+     "zoom": 1.06
+    }
+   ]
+  },
+  "transicao": {
+   "entrada": "virada",
+   "saida": "loop"
+  },
+  "sons": [
+   {
+    "t": 0.4,
+    "tipo": "whoosh"
+   }
+  ]
+ }
+]

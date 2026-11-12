@@ -1,0 +1,19 @@
+# Itens para o lote de reposicao (cole estes nomes no ChatGPT, com o bloco de estilo)
+avatar_casemiro_ver_1024x1536.png	P0	faltou
+avatar_ronaldo_ver_1024x1536.png	P0	fundo diferente da cor do setor #E0AA1E (desvio 191)
+avatar_de_bruyne_ver_1024x1536.png	P0	faltou
+avatar_luiz_henrique_ver_1024x1536.png	P0	faltou
+vazio_espera_ret_1536x1024.png	P0	faltou
+avatar_olise_ver_1024x1536.png	P1	faltou
+avatar_vini_ver_1024x1536.png	P1	faltou
+avatar_neymar_ver_1024x1536.png	P1	fundo diferente da cor do setor #2F7DE1 (desvio 145)
+avatar_raphinha_ver_1024x1536.png	P1	fundo diferente da cor do setor #2F7DE1 (desvio 139)
+avatar_seedorf_ver_1024x1536.png	P1	fundo diferente da cor do setor #2F7DE1 (desvio 121)
+avatar_memphis_ver_1024x1536.png	P1	fundo diferente da cor do setor #2F7DE1 (desvio 161)
+avatar_lamine_yamal_ver_1024x1536.png	P1	faltou
+avatar_modric_ver_1024x1536.png	P1	fundo diferente da cor do setor #2F7DE1 (desvio 182)
+avatar_courtois_ver_1024x1536.png	P1	fundo diferente da cor do setor #2F7DE1 (desvio 168)
+avatar_mbappe_ver_1024x1536.png	P1	fundo diferente da cor do setor #2F7DE1 (desvio 113)
+avatar_vitinho_ver_1024x1536.png	P1	faltou
+avatar_endrick_ver_1024x1536.png	P1	faltou
+fundo_hero_ilha_hor_1536x1024.png	P1	faltou

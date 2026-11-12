@@ -1,0 +1,45 @@
+# Itens para o lote de reposicao (cole estes nomes no ChatGPT, com o bloco de estilo)
+avatar_casemiro_ver_1024x1536.png	P0	faltou
+avatar_ronaldo_ver_1024x1536.png	P0	fundo com padrao/xadrez nos cantos
+avatar_de_bruyne_ver_1024x1536.png	P0	faltou
+avatar_luiz_henrique_ver_1024x1536.png	P0	faltou
+vazio_espera_ret_1536x1024.png	P0	faltou
+avatar_olise_ver_1024x1536.png	P1	faltou
+avatar_vini_ver_1024x1536.png	P1	faltou
+avatar_neymar_ver_1024x1536.png	P1	fundo com padrao/xadrez nos cantos
+avatar_raphinha_ver_1024x1536.png	P1	fundo com padrao/xadrez nos cantos
+avatar_seedorf_ver_1024x1536.png	P1	fundo com padrao/xadrez nos cantos
+avatar_memphis_ver_1024x1536.png	P1	fundo com padrao/xadrez nos cantos
+avatar_rivaldo_ver_1024x1536.png	P1	fundo com padrao/xadrez nos cantos
+avatar_zidane_ver_1024x1536.png	P1	fundo com padrao/xadrez nos cantos
+avatar_lamine_yamal_ver_1024x1536.png	P1	faltou
+avatar_modric_ver_1024x1536.png	P1	fundo com padrao/xadrez nos cantos
+avatar_courtois_ver_1024x1536.png	P1	fundo com padrao/xadrez nos cantos
+avatar_mbappe_ver_1024x1536.png	P1	fundo com padrao/xadrez nos cantos
+avatar_vitinho_ver_1024x1536.png	P1	faltou
+avatar_endrick_ver_1024x1536.png	P1	faltou
+avatar_thiago_silva_ver_1024x1536.png	P1	fundo com padrao/xadrez nos cantos
+avatar_voce_ver_1024x1536.png	P1	fundo com padrao/xadrez nos cantos
+fundo_hero_ilha_hor_1536x1024.png	P1	faltou
+avatar_haaland_ver_1024x1536.png	P2	faltou
+avatar_messi_ver_1024x1536.png	P2	faltou
+avatar_cristiano_ver_1024x1536.png	P2	faltou
+avatar_kane_ver_1024x1536.png	P2	fundo com padrao/xadrez nos cantos
+avatar_hugo_souza_ver_1024x1536.png	P2	fundo com padrao/xadrez nos cantos
+avatar_fagner_ver_1024x1536.png	P2	fundo com padrao/xadrez nos cantos
+avatar_yuri_alberto_ver_1024x1536.png	P2	fundo com padrao/xadrez nos cantos
+avatar_garro_ver_1024x1536.png	P2	fundo com padrao/xadrez nos cantos
+avatar_figo_ver_1024x1536.png	P2	fundo com padrao/xadrez nos cantos
+avatar_totti_ver_1024x1536.png	P2	fundo com padrao/xadrez nos cantos
+avatar_buffon_ver_1024x1536.png	P2	fundo diferente da cor do setor #D9542D (desvio 203)
+avatar_lewandowski_ver_1024x1536.png	P2	fundo diferente da cor do setor #D9542D (desvio 100)
+avatar_roberto_carlos_ver_1024x1536.png	P2	fundo com padrao/xadrez nos cantos
+avatar_pirlo_ver_1024x1536.png	P2	fundo com padrao/xadrez nos cantos
+avatar_guardiola_ver_1024x1536.png	P2	fundo com padrao/xadrez nos cantos
+avatar_pedri_ver_1024x1536.png	P2	fundo diferente da cor do setor #E0AA1E (desvio 100)
+avatar_rodri_ver_1024x1536.png	P2	fundo com padrao/xadrez nos cantos
+avatar_kroos_ver_1024x1536.png	P2	fundo com padrao/xadrez nos cantos
+avatar_xavi_ver_1024x1536.png	P2	fundo com padrao/xadrez nos cantos
+avatar_firmino_ver_1024x1536.png	P2	fundo com padrao/xadrez nos cantos
+fundo_splash_ver_1024x1536.png	P2	faltou
+extra_og_capa_hor_1536x1024.png	P2	faltou

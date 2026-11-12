@@ -1,0 +1,1267 @@
+[
+ {
+  "tipo": "documentary_collage",
+  "desenho": "cena_0",
+  "fala": "Seu filho trocou os amigos por um robô? A pesquisa diz quase o contrário.",
+  "duracao": 5.2,
+  "acao": "Filho e amigos já na mesa no quadro 0, o barbante leva os dois ao robô e o carimbo desmente a pergunta",
+  "superficie": "mesa_preta",
+  "recortes": [
+   {
+    "id": "papel_QUASE O CONTRÁRIO",
+    "tipo": "papel",
+    "cor": "#F5F1E6",
+    "larg": 804.0,
+    "proporcao": 0.21144278606965175,
+    "x": 540,
+    "y": 1412,
+    "rot": -3,
+    "t": 3.5500000000000003,
+    "entrada": "corte",
+    "rasgo": "de"
+   },
+   {
+    "id": "foto_adolescente_celular",
+    "tipo": "foto",
+    "arquivo": "componentes/figuras/adolescente_celular.png",
+    "larg": 350,
+    "proporcao": 1.0,
+    "legenda": "seu filho",
+    "x": 210,
+    "y": 715,
+    "rot": -3,
+    "t": 0,
+    "entrada": "corte",
+    "ax": 150,
+    "ay": 200
+   },
+   {
+    "id": "foto_amigos",
+    "tipo": "foto",
+    "figura": "grupo",
+    "larg": 350,
+    "proporcao": 0.92,
+    "legenda": "os amigos",
+    "x": 860,
+    "y": 705,
+    "rot": 3,
+    "t": 0,
+    "entrada": "corte",
+    "ax": -150,
+    "ay": 190
+   },
+   {
+    "id": "foto_robo",
+    "tipo": "foto",
+    "arquivo": "componentes/figuras/robo.png",
+    "larg": 270,
+    "proporcao": 0.85,
+    "legenda": "um robô?",
+    "x": 540,
+    "y": 1115,
+    "rot": -2,
+    "t": 1.0,
+    "entrada": "pousa",
+    "ay": -170
+   }
+  ],
+  "conexoes": [
+   {
+    "de": "foto_adolescente_celular",
+    "para": "foto_robo",
+    "t": 1.3,
+    "dur": 0.4
+   },
+   {
+    "de": "foto_amigos",
+    "para": "foto_robo",
+    "t": 1.5,
+    "dur": 0.4
+   }
+  ],
+  "textos": [
+   {
+    "texto": "TROCOU OS AMIGOS",
+    "tam": 80,
+    "x": 540,
+    "y": 265,
+    "t": 0,
+    "entrada": "corte"
+   },
+   {
+    "texto": "POR UM ROBÔ?",
+    "tam": 80,
+    "x": 540,
+    "y": 395,
+    "t": 0,
+    "entrada": "corte"
+   }
+  ],
+  "carimbos": [
+   {
+    "texto": "QUASE O CONTRÁRIO",
+    "x": 540,
+    "y": 1412,
+    "rot": -3,
+    "t": 3.7
+   }
+  ],
+  "camera": {
+   "chaves": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.0
+    },
+    {
+     "t": 5,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.05
+    }
+   ]
+  },
+  "transicao": {
+   "entrada": "corte",
+   "saida": "virada"
+  },
+  "sons": [
+   {
+    "t": 1.0,
+    "tipo": "whoosh"
+   },
+   {
+    "t": 3.7,
+    "tipo": "impact"
+   }
+  ]
+ },
+ {
+  "tipo": "documentary_collage",
+  "desenho": "cena_1",
+  "fala": "A pesquisa é americana, feita com adolescentes de verdade.",
+  "duracao": 3.98,
+  "acao": "O documento da pesquisa pousa, o mapa marca os EUA e o barbante liga aos adolescentes",
+  "superficie": "kraft",
+  "recortes": [
+   {
+    "id": "doc_pesquisa",
+    "tipo": "documento",
+    "larg": 860,
+    "titulo": "PESQUISA NACIONAL",
+    "linhas": [
+     "Estados Unidos",
+     "Adolescentes de verdade",
+     "Ilustração do canal"
+    ],
+    "x": 540,
+    "y": 640,
+    "rot": -2,
+    "t": 0.1,
+    "fita": true
+   },
+   {
+    "id": "mapa_eua",
+    "tipo": "mapa",
+    "larg": 430,
+    "pinos": [
+     {
+      "x": 0.42,
+      "y": 0.48
+     }
+    ],
+    "x": 275,
+    "y": 1280,
+    "rot": -3,
+    "t": 0.9,
+    "entrada": "desliza",
+    "ax": 205
+   },
+   {
+    "id": "foto_adolescentes",
+    "tipo": "foto",
+    "figura": "grupo",
+    "larg": 390,
+    "proporcao": 0.92,
+    "legenda": "adolescentes",
+    "x": 790,
+    "y": 1185,
+    "rot": 4,
+    "t": 1.8,
+    "entrada": "desliza",
+    "ax": -185
+   }
+  ],
+  "conexoes": [
+   {
+    "de": "mapa_eua",
+    "para": "foto_adolescentes",
+    "t": 2.2,
+    "dur": 0.4
+   }
+  ],
+  "textos": [
+   {
+    "texto": "A PESQUISA É AMERICANA",
+    "tam": 84,
+    "x": 540,
+    "y": 300,
+    "t": 0.1
+   },
+   {
+    "texto": "EUA",
+    "tam": 72,
+    "x": 275,
+    "y": 962,
+    "t": 1.0
+   }
+  ],
+  "destaques": [
+   {
+    "em": "doc_pesquisa",
+    "linha": 0,
+    "t": 1.1,
+    "dur": 0.5
+   },
+   {
+    "em": "doc_pesquisa",
+    "linha": 1,
+    "t": 2.3,
+    "dur": 0.5
+   }
+  ],
+  "camera": {
+   "chaves": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.0
+    },
+    {
+     "t": 3.6,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.05
+    }
+   ]
+  },
+  "transicao": {
+   "entrada": "virada",
+   "saida": "corte"
+  },
+  "sons": [
+   {
+    "t": 0.9,
+    "tipo": "whoosh"
+   },
+   {
+    "t": 2.3,
+    "tipo": "ding"
+   }
+  ]
+ },
+ {
+  "tipo": "documentary_collage",
+  "desenho": "cena_2",
+  "fala": "Quase metade vê a companhia de IA como ferramenta, não como amiga.",
+  "duracao": 4.2,
+  "acao": "Quase metade surge em tira, a chave de boca pousa e o marca-texto corre em ferramenta, não amiga",
+  "superficie": "mesa_preta",
+  "recortes": [
+   {
+    "id": "foto_ferramenta",
+    "tipo": "foto",
+    "arquivo": "componentes/figuras/ferramenta.png",
+    "larg": 500,
+    "proporcao": 0.85,
+    "legenda": "ferramenta",
+    "x": 540,
+    "y": 720,
+    "rot": -3,
+    "t": 1.0,
+    "ax": 235,
+    "ay": 245
+   },
+   {
+    "id": "doc_como_veem",
+    "tipo": "documento",
+    "larg": 860,
+    "titulo": "COMO ELES VEEM",
+    "linhas": [
+     "Principalmente como",
+     "ferramenta"
+    ],
+    "x": 540,
+    "y": 1230,
+    "rot": 2,
+    "t": 2.2,
+    "entrada": "desliza",
+    "fita": true,
+    "ax": 330,
+    "ay": -150
+   }
+  ],
+  "conexoes": [
+   {
+    "de": "foto_ferramenta",
+    "para": "doc_como_veem",
+    "t": 2.5,
+    "dur": 0.3
+   }
+  ],
+  "textos": [
+   {
+    "texto": "QUASE METADE",
+    "tam": 118,
+    "x": 540,
+    "y": 300,
+    "t": 0
+   }
+  ],
+  "destaques": [
+   {
+    "em": "doc_como_veem",
+    "linha": 0,
+    "t": 3.0,
+    "dur": 0.6
+   }
+  ],
+  "camera": {
+   "chaves": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.0
+    },
+    {
+     "t": 2.9,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.0
+    },
+    {
+     "t": 3.4,
+     "x": 540,
+     "y": 1010,
+     "zoom": 1.1,
+     "curva": "rapida"
+    },
+    {
+     "t": 4.4,
+     "x": 540,
+     "y": 1010,
+     "zoom": 1.12
+    }
+   ]
+  },
+  "transicao": {
+   "entrada": "corte",
+   "saida": "corte"
+  },
+  "sons": [
+   {
+    "t": 0.0,
+    "tipo": "impact"
+   },
+   {
+    "t": 2.2,
+    "tipo": "whoosh"
+   },
+   {
+    "t": 3.0,
+    "tipo": "ding"
+   }
+  ]
+ },
+ {
+  "tipo": "documentary_collage",
+  "desenho": "cena_3",
+  "fala": "O motivo mais citado é diversão. Depois, curiosidade.",
+  "duracao": 4.545,
+  "acao": "O controle pousa em diversão, o bilhete aponta o que vem depois e a lupa entra em curiosidade",
+  "superficie": "papel_bege",
+  "recortes": [
+   {
+    "id": "papel_nota_depois",
+    "tipo": "papel",
+    "cor": "#F2C230",
+    "larg": 357,
+    "proporcao": 0.41495327102803736,
+    "x": 270,
+    "y": 1130,
+    "rot": -3,
+    "t": 1.8,
+    "entrada": "corte",
+    "rasgo": ""
+   },
+   {
+    "id": "foto_diversao",
+    "tipo": "foto",
+    "arquivo": "componentes/figuras/controle.png",
+    "larg": 520,
+    "proporcao": 0.72,
+    "legenda": "diversão",
+    "x": 390,
+    "y": 690,
+    "rot": -3,
+    "t": 0.8,
+    "ax": 120,
+    "ay": 240
+   },
+   {
+    "id": "foto_curiosidade",
+    "tipo": "foto",
+    "arquivo": "componentes/figuras/lupa.png",
+    "larg": 400,
+    "proporcao": 0.9,
+    "legenda": "curiosidade",
+    "x": 720,
+    "y": 1170,
+    "rot": 4,
+    "t": 2.3,
+    "entrada": "desliza",
+    "ay": -250
+   }
+  ],
+  "conexoes": [
+   {
+    "de": "foto_diversao",
+    "para": "foto_curiosidade",
+    "t": 2.5,
+    "dur": 0.4
+   }
+  ],
+  "textos": [
+   {
+    "texto": "O MOTIVO MAIS CITADO",
+    "tam": 88,
+    "x": 540,
+    "y": 285,
+    "t": 0
+   }
+  ],
+  "anotacoes": [
+   {
+    "texto": "e depois...",
+    "cor": "#141312",
+    "x": 270,
+    "y": 1130,
+    "rot": -3,
+    "t": 2.0,
+    "seta_para": [
+     500,
+     1060
+    ]
+   }
+  ],
+  "camera": {
+   "chaves": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.0
+    },
+    {
+     "t": 3.6,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.04
+    }
+   ]
+  },
+  "transicao": {
+   "entrada": "corte",
+   "saida": "corte"
+  },
+  "sons": [
+   {
+    "t": 0.8,
+    "tipo": "whoosh"
+   },
+   {
+    "t": 2.3,
+    "tipo": "whoosh"
+   }
+  ]
+ },
+ {
+  "tipo": "documentary_collage",
+  "desenho": "cena_4",
+  "fala": "E a maioria diz passar mais tempo com amigos de verdade.",
+  "duracao": 4.8,
+  "acao": "O grupo de amigos de verdade domina a mesa, o robô fica pequeno e o bilhete aponta menos tempo com a IA",
+  "superficie": "kraft",
+  "recortes": [
+   {
+    "id": "papel_nota_menos_tempo",
+    "tipo": "papel",
+    "cor": "#F2C230",
+    "larg": 455,
+    "proporcao": 0.5051244509516838,
+    "x": 320,
+    "y": 1385,
+    "rot": -3,
+    "t": 2.3,
+    "entrada": "corte",
+    "rasgo": ""
+   },
+   {
+    "id": "foto_amigos_de_verdade",
+    "tipo": "foto",
+    "figura": "grupo",
+    "larg": 640,
+    "proporcao": 0.72,
+    "legenda": "amigos de verdade",
+    "x": 540,
+    "y": 810,
+    "rot": -2,
+    "t": 0.8,
+    "fita": true
+   },
+   {
+    "id": "foto_robo_pequena",
+    "tipo": "foto",
+    "arquivo": "componentes/figuras/robo.png",
+    "larg": 240,
+    "proporcao": 0.85,
+    "legenda": "a IA",
+    "x": 840,
+    "y": 1290,
+    "rot": 5,
+    "t": 2.2,
+    "entrada": "desliza"
+   }
+  ],
+  "textos": [
+   {
+    "texto": "A MAIORIA DIZ",
+    "tam": 84,
+    "x": 540,
+    "y": 265,
+    "t": 0
+   },
+   {
+    "texto": "MAIS TEMPO COM AMIGOS",
+    "tam": 84,
+    "x": 540,
+    "y": 405,
+    "t": 1.0
+   }
+  ],
+  "anotacoes": [
+   {
+    "texto": "menos tempo",
+    "cor": "#141312",
+    "x": 318,
+    "y": 1344,
+    "rot": -3,
+    "t": 2.5,
+    "seta_para": [
+     690,
+     1255
+    ]
+   },
+   {
+    "texto": "com a IA",
+    "cor": "#141312",
+    "x": 322,
+    "y": 1426,
+    "rot": -3,
+    "t": 2.95
+   }
+  ],
+  "camera": {
+   "chaves": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.0
+    },
+    {
+     "t": 4.4,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.04
+    }
+   ]
+  },
+  "transicao": {
+   "entrada": "corte",
+   "saida": "recorte"
+  },
+  "sons": [
+   {
+    "t": 0.8,
+    "tipo": "whoosh"
+   },
+   {
+    "t": 2.5,
+    "tipo": "ding"
+   }
+  ]
+ },
+ {
+  "tipo": "documentary_collage",
+  "desenho": "cena_5",
+  "fala": "Só que tem coisa que ninguém devia ignorar. Entre quem usa, um em cada três já escolheu falar de assunto sério com a IA, e não com alguém.",
+  "duracao": 9.5,
+  "acao": "Três figuras na mesa, o selo marca 1 em cada 3 e o documento mostra o assunto sério, sem dramatizar",
+  "superficie": "mesa_preta",
+  "recortes": [
+   {
+    "id": "papel_ATENÇÃO",
+    "tipo": "papel",
+    "cor": "#F5F1E6",
+    "larg": 432.0,
+    "proporcao": 0.39351851851851855,
+    "x": 540,
+    "y": 1405,
+    "rot": -4,
+    "t": 0.85,
+    "entrada": "corte",
+    "rasgo": "de"
+   },
+   {
+    "id": "selo_um_em_cada_tres",
+    "tipo": "data",
+    "data": "1 EM CADA 3",
+    "x": 540,
+    "y": 305,
+    "rot": -2,
+    "t": 3.9
+   },
+   {
+    "id": "foto_um_em_cada_tres",
+    "tipo": "foto",
+    "arquivo": "componentes/figuras/um_em_cada_tres.png",
+    "larg": 640,
+    "proporcao": 0.56,
+    "legenda": "entre quem usa",
+    "x": 540,
+    "y": 655,
+    "rot": 1.5,
+    "t": 0.4,
+    "ax": 300,
+    "ay": 240
+   },
+   {
+    "id": "doc_assunto_serio",
+    "tipo": "documento",
+    "larg": 860,
+    "titulo": "ASSUNTO SÉRIO",
+    "linhas": [
+     "Falou com a IA,",
+     "e não com alguém"
+    ],
+    "x": 540,
+    "y": 1095,
+    "rot": -2,
+    "t": 5.4,
+    "entrada": "desliza",
+    "fita": true,
+    "ax": 340,
+    "ay": -195
+   }
+  ],
+  "conexoes": [
+   {
+    "de": "foto_um_em_cada_tres",
+    "para": "doc_assunto_serio",
+    "t": 5.8,
+    "dur": 0.4
+   }
+  ],
+  "destaques": [
+   {
+    "em": "doc_assunto_serio",
+    "linha": 0,
+    "t": 7.6,
+    "dur": 0.6
+   },
+   {
+    "em": "doc_assunto_serio",
+    "linha": 1,
+    "t": 8.8,
+    "dur": 0.6
+   }
+  ],
+  "carimbos": [
+   {
+    "texto": "ATENÇÃO",
+    "x": 540,
+    "y": 1405,
+    "rot": -4,
+    "t": 1.0
+   }
+  ],
+  "camera": {
+   "chaves": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.0
+    },
+    {
+     "t": 10,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.08
+    }
+   ]
+  },
+  "transicao": {
+   "entrada": "recorte",
+   "saida": "corte"
+  },
+  "sons": [
+   {
+    "t": 1.0,
+    "tipo": "whoosh"
+   },
+   {
+    "t": 3.9,
+    "tipo": "ding"
+   },
+   {
+    "t": 5.4,
+    "tipo": "whoosh"
+   }
+  ]
+ },
+ {
+  "tipo": "documentary_collage",
+  "desenho": "cena_6",
+  "fala": "Na nossa leitura, isso não é defeito de uma geração. A IA responde na hora e não julga. E conversar com gente dá mais trabalho.",
+  "duracao": 8.772,
+  "acao": "A leitura do canal aparece marcada, e a IA e a gente entram lado a lado, cada uma com sua ficha",
+  "superficie": "papel_bege",
+  "recortes": [
+   {
+    "id": "foto_ia",
+    "tipo": "foto",
+    "arquivo": "componentes/figuras/robo.png",
+    "larg": 300,
+    "proporcao": 0.95,
+    "legenda": "a IA",
+    "x": 205,
+    "y": 600,
+    "rot": -3,
+    "t": 3.5,
+    "ax": 148
+   },
+   {
+    "id": "doc_ia",
+    "tipo": "documento",
+    "larg": 570,
+    "titulo": "ALGUNS RELATAM",
+    "linhas": [
+     "Percebem disponibilidade",
+     "e ausência de julgamento"
+    ],
+    "x": 715,
+    "y": 600,
+    "rot": 1.5,
+    "t": 3.8,
+    "entrada": "desliza",
+    "ax": -282
+   },
+   {
+    "id": "foto_gente",
+    "tipo": "foto",
+    "figura": "grupo",
+    "larg": 300,
+    "proporcao": 0.95,
+    "legenda": "gente",
+    "x": 205,
+    "y": 1040,
+    "rot": 3,
+    "t": 6.4,
+    "ax": 148
+   },
+   {
+    "id": "doc_gente",
+    "tipo": "documento",
+    "larg": 570,
+    "titulo": "GENTE",
+    "linhas": [
+     "Conversar dá",
+     "mais trabalho"
+    ],
+    "x": 715,
+    "y": 1040,
+    "rot": -1.5,
+    "t": 6.7,
+    "entrada": "desliza",
+    "ax": -282
+   }
+  ],
+  "conexoes": [
+   {
+    "de": "foto_ia",
+    "para": "doc_ia",
+    "t": 4.2,
+    "dur": 0.3
+   },
+   {
+    "de": "foto_gente",
+    "para": "doc_gente",
+    "t": 7.1,
+    "dur": 0.3
+   }
+  ],
+  "textos": [
+   {
+    "texto": "LEITURA DO CANAL",
+    "tam": 96,
+    "cor": "#C8281E",
+    "x": 540,
+    "y": 285,
+    "t": 0
+   },
+   {
+    "texto": "NÃO É DEFEITO DE GERAÇÃO",
+    "tam": 72,
+    "x": 540,
+    "y": 800,
+    "t": 1.2,
+    "ate": 3.4
+   },
+   {
+    "texto": "NÃO É DEFEITO DE GERAÇÃO",
+    "tam": 72,
+    "x": 540,
+    "y": 1370,
+    "t": 3.45,
+    "entrada": "corte"
+   }
+  ],
+  "destaques": [
+   {
+    "em": "doc_ia",
+    "linha": 0,
+    "t": 4.5,
+    "dur": 0.5
+   },
+   {
+    "em": "doc_ia",
+    "linha": 1,
+    "t": 5.4,
+    "dur": 0.4
+   },
+   {
+    "em": "doc_gente",
+    "linha": 1,
+    "t": 7.6,
+    "dur": 0.5
+   }
+  ],
+  "camera": {
+   "chaves": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.0
+    },
+    {
+     "t": 9,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.04
+    }
+   ]
+  },
+  "transicao": {
+   "entrada": "corte",
+   "saida": "sobrepoe"
+  },
+  "sons": [
+   {
+    "t": 0.0,
+    "tipo": "whoosh"
+   },
+   {
+    "t": 3.5,
+    "tipo": "whoosh"
+   },
+   {
+    "t": 6.4,
+    "tipo": "whoosh"
+   }
+  ]
+ },
+ {
+  "tipo": "documentary_collage",
+  "desenho": "cena_7",
+  "fala": "E atenção: a pesquisa é dos Estados Unidos. Não dá para dizer que o Brasil é igual.",
+  "duracao": 5.8,
+  "acao": "O mapa dos EUA recebe o carimbo e o do Brasil entra com a interrogação: os dados não valem para os dois",
+  "superficie": "folha_branca",
+  "recortes": [
+   {
+    "id": "papel_DADOS DOS EUA",
+    "tipo": "papel",
+    "cor": "#F5F1E6",
+    "larg": 650.0,
+    "proporcao": 0.26153846153846155,
+    "x": 540,
+    "y": 1185,
+    "rot": -5,
+    "t": 1.75,
+    "entrada": "corte",
+    "rasgo": "de"
+   },
+   {
+    "id": "papel_nota_nao_da",
+    "tipo": "papel",
+    "cor": "#F2C230",
+    "larg": 611,
+    "proporcao": 0.37663755458515286,
+    "x": 540,
+    "y": 1420,
+    "rot": -3,
+    "t": 3.0,
+    "entrada": "corte",
+    "rasgo": ""
+   },
+   {
+    "id": "mapa_eua",
+    "tipo": "mapa",
+    "larg": 470,
+    "pinos": [
+     {
+      "x": 0.42,
+      "y": 0.48
+     }
+    ],
+    "x": 275,
+    "y": 810,
+    "rot": -3,
+    "t": 0.6
+   },
+   {
+    "id": "mapa_brasil",
+    "tipo": "mapa",
+    "larg": 470,
+    "pinos": [
+     {
+      "x": 0.56,
+      "y": 0.52
+     }
+    ],
+    "x": 805,
+    "y": 810,
+    "rot": 3,
+    "t": 4.2,
+    "entrada": "desliza"
+   }
+  ],
+  "textos": [
+   {
+    "texto": "E ATENÇÃO",
+    "tam": 96,
+    "cor": "#C8281E",
+    "x": 540,
+    "y": 265,
+    "t": 0
+   },
+   {
+    "texto": "EUA",
+    "tam": 96,
+    "x": 275,
+    "y": 445,
+    "t": 0.7
+   },
+   {
+    "texto": "BRASIL?",
+    "tam": 96,
+    "x": 805,
+    "y": 445,
+    "t": 4.3
+   }
+  ],
+  "carimbos": [
+   {
+    "texto": "DADOS DOS EUA",
+    "x": 540,
+    "y": 1185,
+    "rot": -5,
+    "t": 1.9
+   }
+  ],
+  "anotacoes": [
+   {
+    "texto": "não dá para dizer",
+    "cor": "#141312",
+    "x": 538,
+    "y": 1379,
+    "rot": -3,
+    "t": 3.2
+   },
+   {
+    "texto": "que o Brasil é igual",
+    "cor": "#141312",
+    "x": 542,
+    "y": 1461,
+    "rot": -3,
+    "t": 3.65
+   }
+  ],
+  "camera": {
+   "chaves": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.0
+    },
+    {
+     "t": 6,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.04
+    }
+   ]
+  },
+  "transicao": {
+   "entrada": "sobrepoe",
+   "saida": "corte"
+  },
+  "sons": [
+   {
+    "t": 1.9,
+    "tipo": "impact"
+   },
+   {
+    "t": 4.2,
+    "tipo": "whoosh"
+   }
+  ]
+ },
+ {
+  "tipo": "documentary_collage",
+  "desenho": "cena_8",
+  "fala": "Já há empresa anunciando o fim do chat aberto para menores.",
+  "duracao": 4.195,
+  "acao": "A manchete ilustrada pousa, o marca-texto corre pela frase e o carimbo marca que é só um anúncio",
+  "superficie": "kraft",
+  "recortes": [
+   {
+    "id": "papel_ANUNCIADO",
+    "tipo": "papel",
+    "cor": "#F5F1E6",
+    "larg": 521.3333333333333,
+    "proporcao": 0.3260869565217392,
+    "x": 540,
+    "y": 1350,
+    "rot": -7,
+    "t": 2.65,
+    "entrada": "corte",
+    "rasgo": "de"
+   },
+   {
+    "id": "jornal_aviso",
+    "tipo": "jornal",
+    "larg": 900,
+    "manchete": "Empresa anuncia o fim do chat aberto para menores",
+    "sub": "Ilustração do canal",
+    "x": 540,
+    "y": 760,
+    "rot": -2,
+    "t": 0.1,
+    "fita": true
+   }
+  ],
+  "destaques": [
+   {
+    "em": "jornal_aviso",
+    "linha": 1,
+    "t": 1.6,
+    "dur": 0.6
+   }
+  ],
+  "carimbos": [
+   {
+    "texto": "ANUNCIADO",
+    "x": 540,
+    "y": 1350,
+    "rot": -7,
+    "t": 2.8
+   }
+  ],
+  "camera": {
+   "chaves": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.0
+    },
+    {
+     "t": 1.0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.0
+    },
+    {
+     "t": 1.5,
+     "x": 540,
+     "y": 900,
+     "zoom": 1.08,
+     "curva": "rapida"
+    },
+    {
+     "t": 4,
+     "x": 540,
+     "y": 900,
+     "zoom": 1.1
+    }
+   ]
+  },
+  "transicao": {
+   "entrada": "corte",
+   "saida": "corte"
+  },
+  "sons": [
+   {
+    "t": 0.1,
+    "tipo": "whoosh"
+   },
+   {
+    "t": 2.8,
+    "tipo": "impact"
+   }
+  ]
+ },
+ {
+  "tipo": "documentary_collage",
+  "desenho": "cena_9",
+  "fala": "Então a pergunta não é se eles usam. É com quem falam quando o assunto pesa.",
+  "duracao": 6.0,
+  "acao": "O adolescente fica de um lado, o contorno vazio entra do outro e o barbante liga os dois à pergunta final",
+  "superficie": "mesa_preta",
+  "recortes": [
+   {
+    "id": "papel_nota_nao_e_se_usam",
+    "tipo": "papel",
+    "cor": "#F2C230",
+    "larg": 556,
+    "proporcao": 0.4136690647482014,
+    "x": 540,
+    "y": 1310,
+    "rot": -3,
+    "t": 0.09999999999999998,
+    "entrada": "corte",
+    "rasgo": ""
+   },
+   {
+    "id": "foto_adolescente_celular",
+    "tipo": "foto",
+    "arquivo": "componentes/figuras/adolescente_celular.png",
+    "larg": 400,
+    "proporcao": 1.0,
+    "legenda": "seu filho",
+    "x": 285,
+    "y": 850,
+    "rot": -3,
+    "t": 0.2,
+    "ax": 197,
+    "ay": 0
+   },
+   {
+    "id": "foto_com_quem",
+    "tipo": "foto",
+    "arquivo": "componentes/figuras/com_quem.png",
+    "larg": 400,
+    "proporcao": 1.1,
+    "legenda": "com quem?",
+    "x": 800,
+    "y": 850,
+    "rot": 3,
+    "t": 2.9,
+    "entrada": "desliza",
+    "ax": -197,
+    "ay": 0
+   }
+  ],
+  "conexoes": [
+   {
+    "de": "foto_adolescente_celular",
+    "para": "foto_com_quem",
+    "t": 3.3,
+    "dur": 0.5
+   }
+  ],
+  "textos": [
+   {
+    "texto": "COM QUEM ELES FALAM",
+    "tam": 84,
+    "x": 540,
+    "y": 265,
+    "t": 2.9
+   },
+   {
+    "texto": "QUANDO O ASSUNTO PESA",
+    "tam": 84,
+    "cor": "#C8281E",
+    "x": 540,
+    "y": 405,
+    "t": 4.3
+   }
+  ],
+  "anotacoes": [
+   {
+    "texto": "a pergunta não é",
+    "cor": "#141312",
+    "x": 538,
+    "y": 1269,
+    "rot": -3,
+    "t": 0.3
+   },
+   {
+    "texto": "se eles usam",
+    "cor": "#141312",
+    "x": 542,
+    "y": 1351,
+    "rot": -3,
+    "t": 0.75
+   }
+  ],
+  "camera": {
+   "chaves": [
+    {
+     "t": 0,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.0
+    },
+    {
+     "t": 6,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.05
+    }
+   ]
+  },
+  "transicao": {
+   "entrada": "corte",
+   "saida": "corte"
+  },
+  "sons": [
+   {
+    "t": 2.9,
+    "tipo": "whoosh"
+   },
+   {
+    "t": 4.4,
+    "tipo": "ding"
+   }
+  ]
+ }
+]

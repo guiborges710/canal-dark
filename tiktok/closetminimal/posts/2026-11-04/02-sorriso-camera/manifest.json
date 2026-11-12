@@ -1,0 +1,58 @@
+{
+  "id": "7704309427696012545",
+  "status": "agendado",
+  "scheduled_or_published_at": "2026-11-04T15:00:00-03:00",
+  "timezone": "America/Sao_Paulo",
+  "source": "TikTok Studio native content list verified 2026-11-04",
+  "slides": [
+    {
+      "file": "01.png",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "sha256": "65840264f40242cef3b8ef13e4379130bd03f171438b5aa52e88c9cb0e616e04"
+    },
+    {
+      "file": "02.png",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "sha256": "9a9469243a9b3fc775574eb22d88a97ba670ab9756fe4e66f170667a56fb3079"
+    },
+    {
+      "file": "03.png",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "sha256": "648a8d8bfd983e4cb7b62026a1a483eea1dac2c07f808d45174b04d93907daa7"
+    },
+    {
+      "file": "04.png",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "sha256": "460f18cece1a3b8783a8d5c57fe39dafd1ac74930f3128785fc61773c5be7f5a"
+    },
+    {
+      "file": "05.png",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "sha256": "da43b92b46c7ff3fa67406eb0063488fddd72608de9e6502c562cb91b7b241c2"
+    },
+    {
+      "file": "06.png",
+      "dimensions": [
+        768,
+        1024
+      ],
+      "sha256": "c6e646919160aef629f2b6cc7b3187922eeba3deb57a430cecec47b5626973dc"
+    }
+  ],
+  "review": "Vertical 3:4; six files same size; native mobile preview checked; AI native label enabled; account menu profile @closetminimal verified immediately before upload and submission."
+}

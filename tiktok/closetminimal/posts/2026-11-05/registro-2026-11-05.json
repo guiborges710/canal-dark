@@ -1,0 +1,19 @@
+{
+  "data": "2026-11-05",
+  "conta": "@closetminimal",
+  "posts": [
+    {
+      "pasta": "flash",
+      "status": "publicado",
+      "id": "7704744470390066439",
+      "hora": "14:43"
+    },
+    {
+      "pasta": "abraco",
+      "status": "agendado",
+      "id": "7704744810631924999",
+      "hora": "20:30"
+    }
+  ],
+  "fuso": "America/Sao_Paulo"
+}

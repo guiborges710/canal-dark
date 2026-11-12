@@ -17,3 +17,4 @@ Você é o revisor de fatos. Compare `output/<slug>/roteiro.txt` com `output/<sl
 2. Escreva a lista de problemas e correções em `output/<slug>/revisao.md`.
 
 Se faltar `roteiro.txt` ou `notas.md`, pare e diga o que falta. Não aprove o que não pôde conferir.
+- Confira também a regra de `prompts/tipos_de_roteiro.md`: no máximo 2 números no vídeo e nenhum na abertura (fora do estilo Cartão). Se passar, corte ou traduza os que menos importam, sem mudar o sentido, e registre em `revisao.md`. Tirar o número não libera a frase: a afirmação continua precisando estar nas notas.

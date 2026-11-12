@@ -10,6 +10,7 @@ verificação (audit) do app pelo Google. Você revê no YouTube Studio e clica 
 Nada aqui publica em público sozinho. Nada envia chaves a terceiros além do próprio Google.
 """
 import json
+from datetime import timezone
 from pathlib import Path
 
 # Escopos: enviar o vídeo e definir a miniatura.
@@ -78,10 +79,12 @@ def _read_metadata(out: Path):
     return meta, desc
 
 
-def upload(cfg, out: Path, root: Path, privacy=None):
+def upload(cfg, out: Path, root: Path, privacy=None, publish_at=None):
     """Sobe out/video.mp4 para o YouTube e define a miniatura. Devolve dict com id/url.
 
     `privacy` sobrepõe o config; o padrão do canal é 'private'.
+    `publish_at` (datetime com fuso) agenda a publicação: o YouTube exige privacidade 'private' até lá e
+    depois publica sozinho no horário.
     """
     _require_libs()
     from googleapiclient.discovery import build
@@ -93,6 +96,11 @@ def upload(cfg, out: Path, root: Path, privacy=None):
         raise SystemExit(f"Falta {video_file}. Gere o vídeo antes de publicar.")
 
     privacy = privacy or pub.get("privacy", "private")
+    if publish_at:
+        if privacy != "private":
+            raise SystemExit("Agendamento exige privacidade 'private' até a data (o YouTube publica sozinho depois).")
+        if publish_at.tzinfo is None:
+            raise SystemExit("publish_at precisa ter fuso horário.")
     client_secret = root / pub.get("client_secret_file", "client_secret.json")
     token_file = root / pub.get("token_file", ".youtube_token.json")
 
@@ -117,6 +125,8 @@ def upload(cfg, out: Path, root: Path, privacy=None):
             "madeForKids": False,
         },
     }
+    if publish_at:
+        body["status"]["publishAt"] = publish_at.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     media = MediaFileUpload(str(video_file), mimetype="video/mp4",
                             chunksize=4 * 1024 * 1024, resumable=True)

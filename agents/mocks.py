@@ -27,13 +27,13 @@ ANGLE = ("## Tese\nTese simulada do vídeo de teste.\n\n## Pergunta que prende\n
 # Cenas de teste (--mock): a animação roda de verdade, só o texto é simulado.
 CENAS = [
     {"tipo": "gancho", "duracao": 4, "numeros": ["3%", "15%"], "legenda": ["TESTE SIMULADO", "SEM API"],
-     "pergunta": ["ESTE É O TESTE", "DO MOTOR?"], "rodape": ["PIPELINE OK"]},
+     "pergunta": ["ESTE É O TESTE", "DO MOTOR?"], "rodape": ["PIPELINE OK"], "fala": "Este é um teste simulado do pipeline."},
     {"tipo": "barras", "duracao": 6, "titulo": ["BARRAS DE TESTE"], "escala_max": 15,
      "barras": [{"rotulo": "A", "valor": 3, "cor": "azul"}, {"rotulo": "B", "valor": 15, "cor": "laranja"}],
-     "rodape": ["SIMULADO, SEM DADOS"]},
+     "rodape": ["SIMULADO, SEM DADOS"], "fala": "Estas barras servem só para testar o motor."},
     {"tipo": "barras_horizontais", "duracao": 6, "titulo": ["COMPARAÇÃO DE TESTE"],
      "barras": [{"rotulo": ["PRIMEIRA"], "valor": 60, "cor": "azul"}, {"rotulo": ["SEGUNDA"], "valor": 33, "cor": "laranja"}],
-     "destaque": ["RESULTADO", "SIMULADO"]},
+     "destaque": ["RESULTADO", "SIMULADO"], "fala": "Esta é uma comparação simulada, sem dados reais."},
     {"tipo": "fechamento", "duracao": 10, "negacao": ["NÃO É: TESTE", "É ESSA?"], "afirmacao": ["É: O MOTOR", "FUNCIONA?"],
-     "reforco": ["SE VOCÊ VIU ISTO,", "O RENDER ESTÁ OK"], "pergunta": ["QUAL CARTÃO", "FICOU MELHOR?"]},
+     "reforco": ["SE VOCÊ VIU ISTO,", "O RENDER ESTÁ OK"], "pergunta": ["QUAL CARTÃO", "FICOU MELHOR?"], "fala": "Se você ouviu isto, o render está funcionando. Qual cartão ficou melhor?"},
 ]

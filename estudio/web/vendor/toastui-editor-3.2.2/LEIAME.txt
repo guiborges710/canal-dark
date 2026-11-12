@@ -1,0 +1,6 @@
+Toast UI Editor 3.2.2 (@toast-ui/editor, NHN Cloud), licenca MIT. Vendorizado: nada e carregado de CDN em tempo de execucao.
+
+- toastui-editor-bundle.js: o editor + prosemirror + idioma pt-BR, empacotado com esbuild (IIFE, minificado) a partir de
+  npm i @toast-ui/editor@3.2.2 ; entrada: import Editor from "@toast-ui/editor"; import "@toast-ui/editor/dist/i18n/pt-br"; window.toastui = { Editor }
+  (o dist do npm nao roda direto no navegador: pede os modulos do prosemirror por fora.)
+- toastui-editor.css e toastui-editor-dark.css: copiados sem alteracao de dist/ e dist/theme/ do mesmo pacote.

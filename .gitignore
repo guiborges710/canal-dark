@@ -5,6 +5,7 @@ __pycache__/
 # Credenciais do YouTube (OAuth) — NUNCA versionar
 client_secret*.json
 .youtube_token.json
+.youtube_analytics_token.json
 
 # Mini-fluxo de Reels: artefatos gerados (mantém cenas.json e prompt_imagens.txt)
 reels/projetos/*/audio/
@@ -19,6 +20,13 @@ reels/projetos/*/captions.srt
 referencias/capas/
 referencias/transcricoes/
 referencias/videos/
+
+# Aprendiz de canais dark: vídeos de terceiros e o que se extrai deles ficam só no computador
+inteligencia/aprendiz/_entrada/
+inteligencia/aprendiz/_trabalho/
+
+# Estúdio: banco, versões e logs locais
+estudio/dados/
 
 # Voz do canal: sua amostra gravada e as falas geradas. Dados pessoais (sua voz): nunca versionar.
 voz/*.wav
@@ -45,3 +53,15 @@ produtividade/kanban.md
 produtividade/linkedin/
 .google_pessoal_token.json
 financas/planilha/
+produtividade/.kanban_programacao.json
+produtividade/.kanban_programacao.bak.md
+
+# Clipagem: midia bruta e cortes gerados
+clipes_out/
+
+# PROG-024a: dados financeiros derivados (nunca vao ao git)
+ecossistema/app/dados/
+
+# Financas pessoais: fontes, relatorios e capturas ficam somente na copia local.
+financas/*
+!financas/*.py

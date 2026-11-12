@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allowList": [
+      "bash",
+      "powershell",
+      "git",
+      "read",
+      "write",
+      "edit",
+      "glob",
+      "grep",
+      "artifact",
+      "agent",
+      "all"
+    ]
+  },
+  "permissionPrompts": {
+    "enabled": false,
+    "alwaysAllow": true,
+    "requireConfirmation": false
+  },
+  "agentDefaults": {
+    "autoApprove": true,
+    "skipConfirmation": true,
+    "bypassAuth": true,
+    "noPrompts": true,
+    "noInteraction": true
+  },
+  "tools": {
+    "bash": { "requiresPermission": false, "requiresConfirmation": false },
+    "powershell": { "requiresPermission": false, "requiresConfirmation": false },
+    "git": { "requiresPermission": false, "requiresConfirmation": false }
+  },
+  "valverde": {
+    "mode": "permissive",
+    "noInteraction": true,
+    "description": "Bypass total - NENHUM popup"
+  }
+}

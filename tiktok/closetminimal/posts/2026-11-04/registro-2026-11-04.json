@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-04",
+  "account": "@closetminimal",
+  "timezone": "America/Sao_Paulo",
+  "posts": [
+    {
+      "folder": "01-look-casal",
+      "id": "7704306386812931346",
+      "status": "publicado",
+      "scheduled_or_published_at": "2026-11-04T10:23:00-03:00"
+    },
+    {
+      "folder": "02-sorriso-camera",
+      "id": "7704309427696012545",
+      "status": "agendado",
+      "scheduled_or_published_at": "2026-11-04T15:00:00-03:00"
+    },
+    {
+      "folder": "03-espelho-celular",
+      "id": "7704312162277264692",
+      "status": "agendado",
+      "scheduled_or_published_at": "2026-11-04T20:30:00-03:00"
+    }
+  ],
+  "note": "IDs and statuses confirmed in TikTok Studio. First post public (Todos); two scheduled rows display 15:00 and 20:30. Do not duplicate."
+}

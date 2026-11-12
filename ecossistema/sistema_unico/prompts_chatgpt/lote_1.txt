@@ -1,0 +1,52 @@
+Você é um ilustrador-chefe que produz, em série, os assets visuais de um sistema de painéis. Tarefa: LOTE 1 (P0, teste: 4 avatares, 4 ilustrações e o logo) (9 imagens).
+
+ESTILO (vale para todas as imagens):
+Ilustração vetorial cartoon plana, limpa e profissional, no espírito de sinalização de metrô e interface moderna:
+formas geométricas simples, cantos arredondados, sem textura de pincel.
+Contorno uniforme azul-marinho #0E1A24 de espessura constante (cerca de 1% da largura), sem variar.
+Cores chapadas com no máximo 2 níveis de sombra (cel-shading em 2 tons), sem degradê, sem brilho especular, sem ruído.
+Luz vindo de cima à esquerda; sombra projetada sempre à direita e abaixo, em tom mais escuro da própria cor.
+Paleta restrita: azul-marinho #0E1A24, #162838, branco frio #EFF3F1, cinza-azulado #4B5E6A, acento único âmbar #FFB703
+(no máximo 1 detalhe pequeno por imagem), verde-menta #1FBF8A só para "ok". Nada de vermelho puro, nada de neon.
+Nenhum texto, letra, número, logotipo, escudo, marca registrada, marca d'água ou assinatura dentro da imagem.
+Fundo conforme a instrução de cada item; nunca xadrez, nunca sombra no fundo, nunca moldura.
+
+Avatares (personagens): caricatura cartoon do craque REAL indicado em cada ficha (campo "Jogador"), na fase indicada, bem parecida com ele: capture o que o torna reconhecível (formato do rosto, queixo, cabelo, barba, sobrancelhas, sorriso, porte) em traço simplificado de cartoon, com olhos grandes e redondos, nariz em uma curva, boca em uma curva, rosto expressivo e simpático. É caricatura desenhada, nunca foto nem fotorrealismo.
+Cabeça grande (cerca de 1/3 da altura do busto, bobblehead moderado), pescoço curto, ombros largos, busto cortado no peito,
+olhar frontal ou 3/4 leve, sorriso discreto. Cabeça ocupa 50 a 55% da largura do quadro, topo da cabeça a 8% do topo,
+rosto sempre centralizado horizontalmente, para o recorte redondo e quadrado funcionarem.
+Roupa: camisa/uniforme na cor e padrão indicados na ficha, sem escudo, sem patrocinador, sem número, sem logo de fabricante.
+Pose e acessório típicos da ficha (luva de goleiro, braçadeira, terno de treinador, etc.), visíveis só da cintura para cima.
+Fundo: cor chapada do setor indicada no item, sem detalhes. Todos os avatares com o mesmo enquadramento, mesma proporção e mesma espessura de contorno.
+
+Ilustrações de estado e logo: objeto único centralizado, margem de 12% em volta, estilo adesivo:
+contorno interno azul-marinho #0E1A24 e borda externa branca #EFF3F1 de espessura fina e uniforme.
+Fundo magenta chapado #FF00FF, uniforme, sem sombra, sem degradê. Não use magenta, rosa ou roxo no objeto.
+Sem personagem humano nas ilustrações de estado.
+
+Fundos de tela: geometria abstrata de linhas de metrô, estações em círculos pequenos, curvas suaves, azul-marinho profundo,
+contraste muito baixo (3 a 6%), nenhum elemento chamativo no centro, nenhum texto.
+
+COMO TRABALHAR (siga sem me perguntar nada):
+- Não existe imagem de referência e você não precisa de nenhuma. Não peça anexo, não peça confirmação, não peça aprovação, não faça perguntas. Tudo o que você precisa está neste texto. Comece a gerar imediatamente.
+- Gere UMA imagem por item da tabela, na ordem, uma de cada vez, usando a ferramenta de geração de imagem. Antes de cada imagem escreva só uma linha: Arquivo: <nome do arquivo>. Nunca junte vários itens em uma imagem, folha ou mosaico.
+- Mantenha o MESMO estilo em todas as imagens, inclusive em relação às imagens que você já gerou nesta conversa. Releia o bloco de ESTILO a cada item.
+- Tamanho: use o da tabela. Se a ferramenta só aceitar outro, use o mais próximo na mesma proporção (1024x1024, 1024x1536 ou 1536x1024), sem esticar nem recortar.
+- Cada avatar é uma caricatura cartoon do jogador ou treinador nomeado no campo "Jogador" da ficha, na fase indicada. Use o que você já sabe sobre a aparência dele naquela época para a semelhança ficar boa; a ficha dá o uniforme, a pose e o acessório. O avatar "voce" é o único genérico, sem semelhança com ninguém. Os nomes dos arquivos são rótulos internos.
+- Nenhum texto, letra, número, logotipo, escudo ou marca dentro de qualquer imagem.
+- Fundo "magenta chapado #FF00FF": o fundo inteiro é UMA cor magenta uniforme, sem sombra, sem degradê, sem xadrez de transparência desenhado, e nenhum magenta, rosa ou roxo dentro do objeto. Avatares: fundo opaco chapado na cor indicada, sem detalhes e sem moldura.
+- Se algum item for recusado ou falhar, não invente substituto e não pare: escreva "FALHOU: <arquivo>" e siga para o próximo. Se atingir o limite de imagens, escreva exatamente qual foi o último item feito e a lista dos que faltam.
+- No fim, liste todos os arquivos gerados. Se (e somente se) conseguir juntar as imagens em um .zip com o Python, entregue o link do zip; se não conseguir, diga em uma linha e não insista: os arquivos individuais bastam.
+
+TABELA (nº | arquivo | pasta | tamanho em px | forma | fundo | descrição):
+01 | avatar_casemiro_ver_1024x1536.png | avatares | 1024x1536 | vertical | opaco chapado #1FA37B | Avatar. Jogador: Casemiro, volante, Real Madrid 2017/18. Ficha: Volante forte e largo, postura firme de peito aberto, queixo levemente erguido. Camisa branca lisa de gola redonda, cabelo escuro bem curto e barba cheia aparada, sobrancelhas marcadas. Expressão séria e confiante, braço direito ao peito como quem protege; segura uma calculadora pequena com o acento âmbar no visor.
+02 | avatar_ronaldo_ver_1024x1536.png | avatares | 1024x1536 | vertical | opaco chapado #E0AA1E | Avatar. Jogador: Ronaldo Nazário (o Fenômeno), Seleção Brasileira, Copa de 2002. Ficha: Atacante potente, ombros largos, pose de corrida contida, sorriso de dentes grandes e olhar alegre. Camisa amarela canarinho de gola verde (sem escudo), cabelo raspado nas laterais com um pequeno triângulo no alto da frente, o penteado marcante da época. Dedo apontando para o alto; um celular com notificação em âmbar na mão esquerda.
+03 | avatar_de_bruyne_ver_1024x1536.png | avatares | 1024x1536 | vertical | opaco chapado #2F7DE1 | Avatar. Jogador: Kevin De Bruyne, Manchester City 2019/20. Ficha: Meia armador de porte alto e magro, postura de quem vai fazer o passe longo, pescoço levemente inclinado. Camisa azul-celeste lisa, cabelo ruivo-loiro curto penteado de lado e barba rala ruiva, sardas simples. Expressão calma e concentrada, uma sobrancelha levemente erguida; segura uma prancheta com setas de passes desenhadas.
+04 | avatar_luiz_henrique_ver_1024x1536.png | avatares | 1024x1536 | vertical | opaco chapado #5B7283 | Avatar. Jogador: Luis Enrique, treinador, PSG 2024/25. Ficha: Treinador de meia-idade, magro e atlético, postura de pé com braços cruzados ou uma mão na cintura. Agasalho de treino azul-marinho com zíper fechado até o pescoço (ou terno escuro sem gravata), cabelo grisalho curtíssimo, queixo marcado, barba por fazer. Olhar firme e sorriso discreto de quem tem o plano; segura um mapa de metrô dobrado com um ponto âmbar.
+05 | vazio_espera_ret_1536x1024.png | ilustracoes | 1536x1024 | retangular | magenta chapado #FF00FF | Ilustração de estado vazio: uma caixa de entrada (bandeja de papéis) vazia, com um grande sinal de check em verde-menta #1FBF8A. Mensagem visual: tudo em dia. Objeto único, sem personagem.
+06 | vazio_financas_ret_1536x1024.png | ilustracoes | 1536x1024 | retangular | magenta chapado #FF00FF | Ilustração de estado vazio: uma carteira (ou cofrinho) aberta e vazia, com uma única moeda pequena em âmbar #FFB703 ao lado. Objeto único, sem personagem.
+07 | erro_geral_ret_1536x1024.png | ilustracoes | 1536x1024 | retangular | magenta chapado #FF00FF | Ilustração de erro: um cabo de tomada desconectado, plugue e tomada separados por um pequeno espaço, com uma faísca pequena em âmbar #FFB703. Objeto único, sem personagem.
+08 | vazio_generico_ret_1536x1024.png | ilustracoes | 1536x1024 | retangular | magenta chapado #FF00FF | Ilustração de estado vazio: uma prancheta vazia com um sinal de mais grande no centro da folha, detalhe em âmbar #FFB703. Objeto único, sem personagem.
+09 | logo_contexto_explica_sq_1024x1024.png | icones | 1024x1024 | quadrada | magenta chapado #FF00FF | Marca (símbolo, sem nenhuma letra): um balão de fala redondo com uma linha de metrô saindo dele e uma estação circular na ponta em âmbar #FFB703. Formas geométricas, cabe num círculo inscrito, ocupa cerca de 65% do quadro.
+
+Comece agora pelo primeiro item da tabela e vá até o último.

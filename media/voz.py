@@ -33,6 +33,12 @@ def gerar(out, cenas_path, cfg):
         raise SystemExit(f"Amostra de voz não encontrada: {amostra}. Confira voz.amostra no config_shorts.yaml.")
     threads = str((cfg or {}).get("threads", 8))
     cmd = [str(PY_VOZ), str(WORKER), "--cenas", str(cenas_path), "--out", str(out), "--threads", threads]
+    # Ritmo da voz (config_shorts.yaml, seção voz). O que faltar fica no padrão do voz_worker.py.
+    for chave, flag in (("velocidade", "--velocidade"), ("pausa_frase_s", "--pausa-frase"),
+                        ("pausa_max_s", "--pausa-max"), ("exaggeration", "--exaggeration"),
+                        ("cfg_weight", "--cfg-weight")):
+        if (cfg or {}).get(chave) is not None:
+            cmd += [flag, str(cfg[chave])]
     if amostra:
         cmd += ["--amostra", str(ROOT / amostra if not Path(amostra).is_absolute() else amostra)]
     r = subprocess.run(cmd, capture_output=True)  # bytes: a barra de progresso do modelo não é UTF-8 puro

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Central de Programação</title></head>
+<body>
+<h1>Central</h1>
+<p><a href="/">Corte</a> | Setores: <span id="setores"></span></p>
+<h2>Programação</h2>
+<h3>Sprint ativa</h3><div id="sprint">...</div>
+<h3>Ações</h3>
+<button onclick="acao('rodar_daily')">Rodar Daily</button>
+<button onclick="acao('abrir_planning')">Abrir Planning</button>
+<input id="item" value="PROG-004" size="9">
+<button onclick="acao('pausar',true)">Pausar</button>
+<button onclick="acao('retomar',true)">Retomar</button>
+<pre id="msg"></pre>
+<h3>Quadro</h3><div id="quadro">...</div>
+<h3>Agentes</h3><div id="agentes">...</div>
+<h3 id="ag_t"></h3><pre id="ag"></pre>
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+async function get(u){const r=await fetch(u);return r.json()}
+async function acao(t,item){
+  const r=await fetch('/api/central/acao/'+t,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(item?{item:$('item').value.trim()}:{})});
+  $('msg').textContent=JSON.stringify(await r.json(),null,1);carregar();
+}
+async function ver(id){
+  const a=await get('/api/central/agentes/'+id);
+  $('ag_t').textContent='Agente '+id;
+  $('ag').textContent=['estado: '+a.estado,'precisa autorizar: '+(a.precisa_autorizar?'SIM':'não'),'job: '+(a.job??'-')+' '+(a.titulo??''),
+    'motor: '+(a.motor??'-'),'última atualização: '+(a.atualizado??'-'),'consultado: '+a.agora,'','prompt:',a.prompt??'(sem job registrado)','','pedidos recentes:',JSON.stringify(a.pedidos,null,1)].join('\n');
+}
+async function carregar(){
+  const [s,sp,q,ag]=await Promise.all([get('/api/central/setores'),get('/api/sprints/ativa'),get('/api/central/quadro'),get('/api/agentes/status')]);
+  $('setores').innerHTML=s.setores.map(x=>x.ativo?'<b>'+esc(x.nome)+'</b>':esc(x.nome)+' (em breve)').join(' | ');
+  $('sprint').textContent=sp.erro||`${sp.nome} | ${sp.inicio}-${sp.fim} | estado: ${sp.estado} | meta: ${sp.meta}`;
+  $('quadro').innerHTML='<table border=1 cellpadding=4><tr>'+q.colunas.map(c=>`<th>${esc(c.nome)} (${c.n}${c.wip?' / WIP '+esc(c.wip):''})</th>`).join('')+'</tr><tr valign=top>'+
+    q.colunas.map(c=>'<td>'+(c.itens.map(i=>`<b>${i.id}</b>${i.pausado?' [PAUSADO]':''}<br>${esc(i.pessoas.join(', '))}<br><small>${esc(i.texto.slice(0,110))}</small>`).join('<hr>')||'-')+'</td>').join('')+'</tr></table>';
+  $('agentes').innerHTML='<table border=1 cellpadding=4><tr><th>Agente</th><th>Estado</th><th>Autorizar?</th><th>Atualizado</th><th></th></tr>'+
+    ag.agentes.map(a=>`<tr><td>${a.id}</td><td>${esc(a.estado)}</td><td>${a.precisa_autorizar?'SIM':'não'}</td><td>${esc(a.atualizado??'-')}</td><td><button onclick="ver('${a.id}')">Ver</button></td></tr>`).join('')+'</table>';
+}
+carregar();setInterval(carregar,5000);
+</script>
+</body></html>

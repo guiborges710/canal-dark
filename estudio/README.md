@@ -125,7 +125,7 @@ Abre em http://127.0.0.1:8765/ (só nesta máquina). `--porta N` troca a porta; 
 | Auditoria final | **Vini** | depois de cada render | só se bloquear |
 
 Na API de estado (`/api/producoes/<slug>`): `execucao` (id da execução ativa), e por etapa `motivo_nao_aplica` (texto) e `bloqueio` (`{execucao, no, nome, status, nota}`, também em `acoes.iniciar.bloqueio`) quando um nó do fluxo falhado ou parado segura a etapa; "Tentar de novo" é `POST /api/execucoes/<id>/repetir {no}`. Em produção conduzida por grafo, `acoes.iniciar.via_fluxo` pede ao grafo o próximo passo (`POST .../iniciar` chama `grafos.avancar`). Um trabalho concluído fora do grafo pelo mesmo agente resolve o nó que tinha falhado (`grafos._resolver_por_fora`). `grafos.migrar_execucao(slug)` leva uma execução ativa para a versão mais nova do fluxo.
-| Thumbnail | **Sidorf** | botão | não |
+| Thumbnail | **Seedorf** | botão | não |
 
 Abrir uma produção nunca dispara agente. Só disparam, sozinhos, os agentes logo depois de um trabalho ou de uma aprovação, e o botão diz isso antes do clique. Narração e render sempre têm botão próprio. Publicar continua fora do estúdio: `python run.py publish --slug <pasta>`.
 

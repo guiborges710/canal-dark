@@ -1,0 +1,209 @@
+================================================================================
+RELATORIO FINAL: AUTOMAÇÃO DO FLUXO DE PROGRAMAÇÃO
+================================================================================
+
+DATA: 2026-11-04
+RESPONSÁVEL: Valverde (valverde-engenheiro-ia)
+SITUAÇÃO: ✅ Pronto para aprovação e implementação
+
+================================================================================
+PROBLEMA MAPEADO
+================================================================================
+
+Guilherme reportou que o fluxo de programação exige muita intervenção manual dele.
+
+Diagnóstico específico:
+- 5 itens em "Code Review" (PROG-015, 001, 002, 004, 005)
+- Todos aprovados pelo QA ✅
+- Aguardando revisão técnica de **Thiago Silva**
+- Nenhuma notificação automática sai
+- Devs ficam ociosos (WIP 0/2) esperando revisão
+- Guilherme cobra manualmente ("Thiago, revisa os itens")
+
+Causa raiz:
+1. Fluxo é sequencial (dev → QA → Code Review → Thiago → Aceite)
+2. Não há gatilho automático quando item entra em CR
+3. Thiago não sabe que espera revisar
+4. Devs não puxam próximo item enquanto espera (bloqueado)
+
+================================================================================
+SOLUÇÕES PROPOSTAS (5 total, prioridade de impacto)
+================================================================================
+
+P1: NOTIFICAÇÃO AUTOMÁTICA (30 min) ✅
+   Quando item aprovado pelo QA entra em Code Review, o maestro da sprint
+   (programacao/maestro.py) chama **Thiago Silva** sozinho. (Proposta
+   original: notificação via **Ronaldo**; substituída pelo maestro.)
+
+   Status: ✅ Superado pelo maestro
+
+P2: MAESTRO DA SPRINT (antes "monitor de fila") ✅
+   programacao/maestro.py roda a cada 15 min (tarefa ContextoExplica-Sprint,
+   só com a Sprint ABERTA, 07h-23h), chama o agente dono de cada coluna e é
+   o único que move cartões, aplicando a decisão gravada em
+   programacao/maestro/decisoes/PROG-NNN.json. Substituiu o monitor_cr.py.
+
+   Status: ✅ Ver INSTALACAO-MONITOR-CR.md
+
+P3: PARALELIZAR FLUXO (20 min) ✅
+   Devs não ficam bloqueados esperando revisão.
+   Enquanto **Thiago Silva** revisa PROG-005, **Rodrygo** pula PROG-012 do backlog.
+   WIP vai de 0/2 para 2/2 (aproveita capacidade ociosa).
+
+   Implementação: Editar programacao/README.md (fluxo paralelo documentado)
+   Status: ✅ Pronto
+
+P4: DESBLOQUEAR PROG-004 (5 min) ✅
+   PROG-004 está em CR mas espera D-005 (decisão sobre Codex).
+   D-005 já existe em programacao/tecnico/decisoes.md (2026-11-04).
+   Só precisa comunicar ao **Zico** + **Thiago Silva**.
+
+   Status: ✅ D-005 pronto, só falta marcar critério como revisado
+
+P5: CACHE DE POLÍTICAS YOUTUBE (1h) ⏳ Depois
+   **Vini** faz WebFetch de políticas a cada vídeo.
+   Manter cache local (atualizar 1x/semana) economiza ~1-2 chamadas/vídeo.
+
+   Status: Proposta, implementar depois da sprint 01
+
+================================================================================
+O QUE FOI CRIADO / EDITADO
+================================================================================
+
+CRIADO:
+✅ ecossistema/engenharia-ia/DIAGNOSTICO-FLUXO-PROGRAMACAO.md
+   - Análise completa (situação, diagnóstico, soluções, plano de ação)
+   - 340 linhas, detalhado
+
+✅ ecossistema/engenharia-ia/ACAO-IMEDIATA.md
+   - Sumário executivo para Guilherme (5 min de leitura)
+   - 120 linhas, ação imediata
+
+✅ programacao/maestro.py (substituiu o antigo monitor_cr.py, removido)
+   - Chama o dono de cada coluna a cada 15 min e move os cartões
+
+✅ ecossistema/engenharia-ia/INSTALACAO-MONITOR-CR.md
+   - Nota curta sobre o maestro (tarefa, --simular, --forcar, pausar)
+
+EDITADO:
+✅ .claude/agents/xavi-scrum-master.md
+   - Adicionado: "Procedimento: movê-lo para Code Review"
+   - (Checklist de notificação superado pelo maestro)
+   - 3 linhas, integrado no workflow
+
+✅ programacao/README.md
+   - Seção "Cadências": daily agora às 10:30
+   - Seção "Fluxo de trabalho": refatorado para fluxo paralelo
+   - Adicionado: SLA (2h notificação / 8h escalação)
+   - 20 linhas adicionadas
+
+✅ ecossistema/engenharia-ia/README.md
+   - Reorganizado para 2 projetos (Fluxo Programação + Token)
+   - Adicionados links, status, implementação esperada
+   - 60 linhas
+
+================================================================================
+PLANO DE AÇÃO (O QUE FAZER AGORA)
+================================================================================
+
+1. HOJE (11/04):
+   [ ] Guilherme: lê ACAO-IMEDIATA.md
+   [ ] Guilherme: aprova (sim/não/ajustes)
+
+2. SE APROVADO:
+   [ ] Luiz Henrique: aplica P1, P3, P4
+       - Edita xavi-scrum-master.md (5 min)
+       - Edita programacao/README.md (5 min)
+       - Valida o maestro (python programacao/maestro.py --simular)
+
+   [ ] Marquinhos: confere o maestro
+       - Tarefa Windows ContextoExplica-Sprint (ver INSTALACAO-MONITOR-CR.md)
+
+3. AMANHÃ (11/05, 10:30):
+   [ ] Daily com equipe
+   [ ] **Xavi**: "Fluxo mudou, devs puxam paralelo agora"
+   [ ] Equipe: começa a usar novo fluxo
+
+4. ESTA SEMANA:
+   [ ] Sprint roda com novo fluxo
+   [ ] Colher feedback durante daily
+
+5. PRÓXIMA SEMANA (11/10):
+   [ ] Retro da sprint 01
+   [ ] **Ancelotti**: mede fluxo (lead time, WIP, SLA cumprido?)
+   [ ] Decidir: manter? ajustar? expandir para outros fluxos?
+
+================================================================================
+IMPACTO ESPERADO
+================================================================================
+
+ANTES (hoje):
+- Notificação: Manual (Guilherme cobra)
+- Devs ociosos: Sim (WIP 0/2, bloqueados)
+- Tempo de sprint: ~8h
+- SLA de revisão: Indeterminado
+
+DEPOIS (amanhã+):
+- Notificação: Automática (via **Xavi** + script)
+- Devs ociosos: Não (WIP 2/2, puxam paralelo)
+- Tempo de sprint: ~6h
+- SLA de revisão: 2h (notificação) / 8h (escalação)
+
+TOKENS:
+- Impacto: NENHUM (fluxo, não token)
+- Proposta anterior de economia (cache YouTube, separar Vini/Courtois):
+  mantém em backlog, implementar depois
+
+================================================================================
+RISCOS E MITIGAÇÃO
+================================================================================
+
+Risco: maestro gasta demais
+Mitigação: limite diário de gasto e teto por chamada (constantes no topo de maestro.py)
+
+Risco: Devs puxam itens que têm dependência do que está em revisão
+Mitigação: **Zico** ordena backlog por prioridade, **Xavi** valida
+
+Risco: Não pronto em 1 dia
+Mitigação: Tudo é reversível; se não funcionar, desativa em 2 min
+
+Risco: maestro não roda
+Mitigação: --simular e --forcar PROG-NNN; log em programacao/maestro/log.md
+
+================================================================================
+REVERSIBILIDADE
+================================================================================
+
+Se não funcionar, volta em MINUTOS:
+
+- Desfazer **Xavi**: editar xavi-scrum-master.md (remover checklist)
+- Pausar o maestro: Disable-ScheduledTask ContextoExplica-Sprint
+- Fluxo sequencial: editar programacao/README.md (reverter "fluxo paralelo")
+
+Nenhum banco de dados, nenhuma mudança no código de produção,
+nenhuma publicação, nenhuma perda.
+
+================================================================================
+PRÓXIMAS ANÁLISES (VALVERDE)
+================================================================================
+
+Se aprovado este fluxo:
+
+1. P5: Cache de políticas YouTube (economizar 1-2 WebFetch/vídeo)
+2. Métricas de fluxo: **Ancelotti** mede lead time, WIP, SLA na retro
+3. Expansão: mesmas técnicas (notificação + SLA) para outros fluxos?
+4. Automação total: pode haver mais 2-3 gates que podem rodar sozinhos?
+
+================================================================================
+CONTATO
+================================================================================
+
+**Valverde** (valverde-engenheiro-ia)
+ecossistema/engenharia-ia/
+
+Dúvidas? Leia:
+1. ACAO-IMEDIATA.md (sumário)
+2. DIAGNOSTICO-FLUXO-PROGRAMACAO.md (detalhes)
+3. INSTALACAO-MONITOR-CR.md (maestro da sprint)
+
+================================================================================

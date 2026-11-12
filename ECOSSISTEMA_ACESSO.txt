@@ -1,0 +1,46 @@
+╔════════════════════════════════════════════════════════════════════╗
+║          ECOSSISTEMA — INSTRUÇÕES DE ACESSO REMOTO                 ║
+╚════════════════════════════════════════════════════════════════════╝
+
+📱 ACESSO DO CELULAR / OUTRO PC:
+
+1. Na máquina principal (onde o projeto está):
+   • Clique 2x em: subir_ecossistema.bat
+   • Aparecerá uma janela com a URL pública (tipo: https://abc123-xyz.ngrok.io)
+   • Copie essa URL
+
+2. No celular/outro PC:
+   • Cole a URL no navegador
+   • Você vai ver a tela de LOGIN
+
+3. Credenciais de login:
+
+   👤 Usuário: guilherme
+   🔐 Senha:   ecossistema123
+
+4. Pronto! Acessa o Ecossistema de qualquer lugar, qualquer aparelho.
+
+─────────────────────────────────────────────────────────────────────
+
+⚠️  IMPORTANTE:
+
+• O servidor só roda enquanto a janela do bat estiver aberta.
+• Se fechar a janela, perde a conexão.
+• A URL muda cada vez que reinicia (novo link ngrok).
+• Se a URL vazou, troca a senha no login.html
+
+─────────────────────────────────────────────────────────────────────
+
+🔒 PARA MUDAR CREDENCIAIS:
+
+Edite: ecossistema/app/login.html
+Procure: const CREDENCIAIS = {
+Mude "usuario" e "senha"
+
+─────────────────────────────────────────────────────────────────────
+
+❓ DÚVIDAS:
+
+• Porta: 8000 (servidor local)
+• Tunel: ngrok (ngrok.io — gratuito)
+• Autenticação: localStorage (sua máquina guarda a sessão)

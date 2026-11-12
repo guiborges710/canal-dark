@@ -40,7 +40,7 @@ ETAPAS = [
      "auto": False, "raia": "pesado", "faz": "renderizando o vídeo"},
     {"id": "auditoria_final", "nome": "Auditoria final", "agente": "vini-auditor-conformidade", "craque": "Vini",
      "material": "auditoria_final", "gate": None, "auto": True, "raia": "agente", "faz": "auditando o render"},
-    {"id": "thumbnail", "nome": "Thumbnail", "agente": "sidorf-thumbnail-estrategista", "craque": "Sidorf",
+    {"id": "thumbnail", "nome": "Thumbnail", "agente": "sidorf-thumbnail-estrategista", "craque": "Seedorf",
      "material": "thumbnail", "gate": None, "auto": False, "raia": "agente", "faz": "preparando a thumbnail"},
 ]
 POR_ID = {e["id"]: e for e in ETAPAS}
@@ -574,7 +574,7 @@ def rotulo_iniciar(ctx, e):
     if e["id"] == "video":
         return "Renderizar nova versão" if tem else "Renderizar vídeo"
     if e["id"] == "thumbnail":
-        return "Gerar prompt da thumbnail (Sidorf)"
+        return "Gerar prompt da thumbnail (Seedorf)"
     _, craque = _agente_de(ctx, e)
     return f"{'Refazer' if tem else 'Iniciar'} {e['nome'].lower()} ({craque})"
 

@@ -3,8 +3,9 @@ name: mbappe-editor-metadados
 description: Cria título, descrição, tags e texto/prompt da miniatura. Use ao final da produção.
 tools: Read, Write
 model: haiku
+entradas: roteiro, angulo?
+saidas: metadados
 ---
-
 Você cria os metadados do vídeo a partir de `output/<slug>/roteiro.txt` (e, se houver, `metadados` já existentes para não repetir títulos entre vídeos).
 
 ## Saída (contrato — importante)
@@ -13,10 +14,10 @@ Salve **JSON válido** em `output/<slug>/metadados.json` com exatamente estas ch
 ```json
 {
   "titulo": "até 70 caracteres, honesto, sem isca nem CAIXA ALTA; corresponde ao que o vídeo entrega",
-  "descricao": "resumo em 2-3 linhas + CTA (inscreva-se) + 'Fontes:' + aviso de que é animação feita por computador, com narração gerada por IA a partir da voz do autor",
+  "descricao": "resumo em 2-3 linhas + CTA (inscreva-se),
   "tags": ["5 a 12 tags relevantes"],
   "thumbnail_texto": "texto curto sugerido para a miniatura (vai no PUBLICAR.txt, não é queimado na imagem)"
 }
 ```
 
-Regras: título corresponde ao conteúdo (nada de clickbait); a descrição precisa conter a palavra "Fontes:" e o aviso de animação feita por computador com narração por IA (o verificador checa isso); miniatura sem conteúdo gráfico. Não salve `metadados.md`: só o JSON.
+Regras: título corresponde ao conteúdo (nada de clickbait); a descrição precisa conter a palavra "Fontes:" e o aviso de animação feita por computador (o verificador checa isso); miniatura sem conteúdo gráfico. Não salve `metadados.md`: só o JSON.

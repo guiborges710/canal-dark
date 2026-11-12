@@ -1,0 +1,72 @@
+╔════════════════════════════════════════════════════════════════════╗
+║          DEPLOY ECOSSISTEMA NO GITHUB PAGES (GRATUITO)             ║
+╚════════════════════════════════════════════════════════════════════╝
+
+✅ O código já está no GitHub em: new-video-style
+
+Agora precisa ativar GitHub Pages:
+
+═══════════════════════════════════════════════════════════════════
+
+📌 OPÇÃO 1 — GitHub Pages (RECOMENDADO):
+
+1. Va para: https://github.com/guiborges710/canal-dark
+
+2. Clique em "Settings" (engrenagem, canto superior direito)
+
+3. Na esquerda, clique em "Pages"
+
+4. Em "Source", selecione:
+   - Branch: new-video-style
+   - Folder: / (root)
+
+5. Clique "Save"
+
+6. Aguarde 1-2 minutos
+
+7. Uma URL aparecerá tipo:
+   https://guiborges710.github.io/canal-dark/ecossistema/app/
+
+✅ Acessa dessa URL no celular/qualquer lugar!
+
+═══════════════════════════════════════════════════════════════════
+
+📌 OPÇÃO 2 — Vercel (AINDA MAIS FÁCIL):
+
+1. Va para: https://vercel.com/import
+
+2. Cole a URL do repo: https://github.com/guiborges710/canal-dark
+
+3. Clique "Import"
+
+4. Aguarde o deploy
+
+5. Uma URL pública aparecerá. Acessa: /ecossistema/app/
+
+═══════════════════════════════════════════════════════════════════
+
+🎯 RESULTADO:
+
+Qualquer uma das opções vai te dar uma URL pública que:
+  ✅ Funciona no celular
+  ✅ Não precisa de servidor rodando
+  ✅ Não precisa de ngrok
+  ✅ Acessa de qualquer lugar
+  ✅ Tem login seguro
+
+═══════════════════════════════════════════════════════════════════
+
+⏱️  TEMPO:
+  - GitHub Pages: 5 minutos
+  - Vercel: 3 minutos
+
+═══════════════════════════════════════════════════════════════════
+
+❓ QUAL ESCOLHER?
+
+  GitHub Pages → Simples, tudo no GitHub
+  Vercel → Mais rápido, melhor performance
+
+═══════════════════════════════════════════════════════════════════
+
+DÚVIDAS? Me chama que faço para você!

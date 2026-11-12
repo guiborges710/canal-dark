@@ -1,0 +1,79 @@
+{
+  "id": "geral",
+  "versao": 1,
+  "arquivado": false,
+  "atualizado_em": 1794328413,
+  "nome": "Geral (qualquer vídeo)",
+  "descricao": "Método único para qualquer vídeo falado: fofoca, vlog, podcast, entrevista, react, aula, gameplay comentado.",
+  "publico": "Público de Reels e TikTok no Brasil",
+  "idioma": "pt-BR",
+  "idioma_fala": "auto",
+  "objetivo": "Trechos que se entendem sozinhos e prendem nos primeiros segundos",
+  "temas": [],
+  "palavras_chave": [],
+  "entidades": [],
+  "termos_tecnicos": [],
+  "assuntos_desejados": [
+    "revelação ou novidade",
+    "história com começo, meio e fim",
+    "opinião forte com argumento",
+    "reação forte (surpresa, risada, indignação)",
+    "explicação clara de algo",
+    "conflito ou discordância",
+    "momento engraçado"
+  ],
+  "assuntos_excluir": [
+    "publi",
+    "publicidade",
+    "código de desconto",
+    "cupom",
+    "link na bio",
+    "inscreva-se"
+  ],
+  "selecao": {
+    "pesos": {
+      "pico_audio": 0.8,
+      "palavras_chave": 0.0,
+      "abertura_forte": 0.6,
+      "densidade_fala": 0.7,
+      "assunto_excluido": -2.0
+    },
+    "limite_palavras": 4,
+    "criterios": [
+      "O trecho se entende sem o resto do vídeo (quem, o quê, por quê)",
+      "Começa forte: a primeira frase já desperta curiosidade, surpresa ou riso",
+      "Termina numa conclusão, virada ou reação, não no meio de uma ideia",
+      "Sem afirmar como fato o que no vídeo é boato ou suposição (fofoca: deixe claro que é o que a pessoa diz)"
+    ]
+  },
+  "duracao": {
+    "min": 20.0,
+    "max": 60.0
+  },
+  "quantidade": 5,
+  "contexto": {
+    "antes": 1.5,
+    "depois": 1.0
+  },
+  "estilo_editorial": "Fiel ao vídeo: o gancho promete só o que o trecho entrega; tom respeitoso com pessoas citadas.",
+  "formato": "9:16",
+  "preset_edicao": "borrado",
+  "estilo_legenda": "padrao",
+  "fontes": {
+    "tema_pesquisa": "",
+    "canais": []
+  },
+  "hashtags": [
+    "#cortes",
+    "#viral",
+    "#fyp"
+  ],
+  "instrucoes_agentes": {
+    "kaka": "Serve para qualquer tipo de vídeo. Primeiro identifique pela transcrição o tipo (fofoca, vlog, podcast, entrevista, react, aula, gameplay) e escolha o que funciona nesse tipo: em vlog, situações e reações; em fofoca e podcast, revelações e opiniões com o contexto de quem fala; em aula, uma ideia completa. Não há análise visual: se o que importa é só a imagem (paisagem, jogada sem narração), diga isso no parecer.",
+    "zidane": "Em fofoca, o gancho e o fecho deixam claro que é o relato ou a opinião de quem fala, sem afirmar como fato.",
+    "figo": "",
+    "totti": "Tema quente: o quanto o assunto do trecho está em alta agora; sem dado de alcance, diga que é estimativa.",
+    "lewandowski": "",
+    "pirlo": ""
+  }
+}

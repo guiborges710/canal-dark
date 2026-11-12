@@ -1,112 +1,46 @@
-<title>Ecossistema</title>
+<!doctype html>
+<html lang="pt-BR" data-tema="claro">
+<head>
+<meta charset="utf-8">
+<base href="/financas/">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body { font-family: system-ui; background: #0d0d0d; color: #fff; padding: 20px; }
-.login { text-align: center; max-width: 400px; margin: 100px auto; }
-.login h1 { font-size: 32px; margin-bottom: 20px; }
-.login input { width: 100%; padding: 12px; margin: 10px 0; background: #1a1a19; border: 1px solid #2c2c2a; color: #fff; border-radius: 6px; font-size: 14px; }
-.login button { width: 100%; padding: 12px; background: #2a78d6; color: #fff; border: none; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer; margin-top: 20px; }
-.login button:hover { background: #3987e5; }
-.erro { color: #e66767; margin: 10px 0; font-size: 13px; display: none; }
-.dashboard { display: none; }
-.dashboard.show { display: block; }
-.tile { background: #1a1a19; padding: 20px; border-radius: 8px; margin: 20px 0; }
-.tile-label { color: #898781; font-size: 13px; }
-.tile-value { font-size: 32px; font-weight: 700; margin: 10px 0; }
-.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
-.header h1 { margin: 0; }
-.logout { background: #d03b3b; color: #fff; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer; font-weight: 600; }
-</style>
-
-<div class="login" id="loginDiv">
-  <h1>Ecossistema</h1>
-  <div class="erro" id="erro"></div>
-
-  <input type="text" id="usuario" placeholder="Usuário" value="guilherme">
-  <input type="password" id="senha" placeholder="Senha" value="">
-
-  <button onclick="entrar()">Entrar</button>
-</div>
-
-<div class="dashboard" id="dashDiv">
-  <div class="header">
-    <h1>Ecossistema</h1>
-    <button class="logout" onclick="sair()">Sair</button>
-  </div>
-
-  <div class="tile">
-    <div class="tile-label">Saldo bancário</div>
-    <div class="tile-value">R$ 112,93</div>
-  </div>
-
-  <div class="tile">
-    <div class="tile-label">Entradas (6 meses)</div>
-    <div class="tile-value">R$ 6.500,35</div>
-  </div>
-
-  <div class="tile">
-    <div class="tile-label">Saídas (6 meses)</div>
-    <div class="tile-value">R$ 6.148,45</div>
-  </div>
-
-  <div class="tile">
-    <div class="tile-label">Resultado acumulado</div>
-    <div class="tile-value">R$ 351,90</div>
-  </div>
-
-  <h2>Resultado por mês</h2>
-  <div class="tile">
-    <strong>Outubro:</strong> +R$ 3.805,84
-    <div style="background: #2a78d6; height: 20px; border-radius: 4px; margin: 10px 0; width: 100%;"></div>
-  </div>
-
-  <div class="tile">
-    <strong>Novembro:</strong> −R$ 3.453,94
-    <div style="background: #d03b3b; height: 20px; border-radius: 4px; margin: 10px 0; width: 25%;"></div>
-  </div>
-
-  <h2>Gastos de novembro</h2>
-  <div class="tile">
-    <p><strong>Cartão:</strong> 72,6%</p>
-    <p><strong>Não classificado:</strong> 12,5%</p>
-    <p><strong>Dívidas:</strong> 6,1%</p>
-    <p><strong>Mercado:</strong> 5,1%</p>
-  </div>
-
-  <h2>⚠️ Pendências</h2>
-  <div class="tile">
-    <p>• Em qual banco caíram os R$ 4.008,73 de 30/10?</p>
-    <p>• Qual é o saldo total de todas as contas?</p>
-    <p>• Qual é o emissor da fatura de R$ 2.584,13?</p>
-    <p>• Quando é o próximo salário?</p>
-    <p>• 11 gastos em "não classificado" — confirmar categorias</p>
-  </div>
-</div>
-
+<title>Ecossistema do Guilherme</title>
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="estilo.css">
+<link rel="stylesheet" href="financas.css">
+<link rel="stylesheet" href="clipes.css">
+</head>
+<body>
+<a class="pular" href="#principal">Pular para o conteúdo</a>
+<div id="app"></div>
+<div id="toast" class="toasts" role="status" aria-live="polite"></div>
+<!-- dados_demo.js: só o catálogo de nomes que base.js exige (agentes, menu). Nenhum dado financeiro. -->
+<script src="dados_demo.js"></script>
+<script src="base.js"></script>
+<script src="comum_gh.js"></script>
+<!-- Router: determina qual tela renderizar baseado no #hash -->
 <script>
-function entrar() {
-  const user = document.getElementById("usuario").value;
-  const pass = document.getElementById("senha").value;
-  const erro = document.getElementById("erro");
-
-  if (user === "guilherme" && pass === "ecossistema123") {
-    document.getElementById("loginDiv").style.display = "none";
-    document.getElementById("dashDiv").style.display = "block";
-  } else {
-    erro.style.display = "block";
-    erro.textContent = "Usuário ou senha incorretos";
+(function () {
+  function rota() {
+    var r = (location.hash.replace(/^#\/?/, "").split("/")[0]) || "financas";
+    return r;
   }
-}
-
-function sair() {
-  document.getElementById("dashDiv").style.display = "none";
-  document.getElementById("loginDiv").style.display = "block";
-  document.getElementById("usuario").value = "guilherme";
-  document.getElementById("senha").value = "";
-  document.getElementById("erro").style.display = "none";
-}
-
-document.getElementById("senha").addEventListener("keypress", function(e) {
-  if (e.key === "Enter") entrar();
-});
+  var r = rota();
+  window.addEventListener("hashchange", function () {
+    if ((rota() === "clipes") !== (r === "clipes")) location.reload();
+  });
+  if (r === "clipes") {
+    document.body.classList.remove("fin");
+    var script = document.createElement("script");
+    script.src = "clipes.js";
+    document.body.appendChild(script);
+  } else {
+    document.body.classList.add("fin");
+    var script = document.createElement("script");
+    script.src = "financas.js";
+    document.body.appendChild(script);
+  }
+})();
 </script>
+</body>
+</html>

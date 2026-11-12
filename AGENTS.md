@@ -26,9 +26,13 @@ Objetivo: canal sem rosto, automatizado ao máximo, **monetizável**. Seguir TOD
 
 ## Fluxo (agentes em .Codex/agents; debruyne-orquestrador coordena de ponta a ponta)
 **Fluxo ENXUTO (padrão diário de SHORTS, com auditoria de texto antes do render):**
-modric-pesquisador-tema → neymar-roteirista (ângulo + texto de 30-60s + direcao_viral.md, num passe) → courtois-revisor-fatos → **vini-auditor-conformidade, modo TEXTO** (valida roteiro.txt, notas e metadados ANTES de qualquer render; grava `auditoria_texto.md`) → olise-diretor-arte (cenas animadas, lendo direcao_viral.md) → mbappe-editor-metadados → **python run.py video --topic "..."** (render da animação + sons + conformidade) → vini-auditor-conformidade, modo FINAL (só imagem, som, animação e miniatura; grava `auditoria.md`, que libera o publish) → **sidorf-thumbnail-estrategista** (prompt da thumbnail para o ChatGPT; não gera imagem) → upload manual (Memphis).
+modric-pesquisador-tema (+ memphis-social-media, se as referências tiverem mais de ~7 dias; juntos) → neymar-roteirista (ângulo + texto de 30-60s + direcao_viral.md, num passe) → courtois-revisor-fatos → **olise-diretor-arte** (cenas animadas, lendo direcao_viral.md) **em paralelo com** mbappe-editor-metadados (metadados) → **vini-auditor-conformidade, modo TEXTO** (valida roteiro.txt, notas, metadados e textos das cenas ANTES de qualquer render; grava `auditoria_texto.md`) → **python run.py video --topic "..."** (render da animação + sons + conformidade) → vini-auditor-conformidade, modo FINAL (só imagem, som, animação e miniatura; grava `auditoria.md`, que libera o publish) → **sidorf-thumbnail-estrategista** (prompt da thumbnail para o ChatGPT; não gera imagem) → upload manual (Memphis).
+
+**Orquestração por dependência:** o **De Bruyne** dispara de uma vez, na mesma mensagem, todos os agentes cujo insumo já existe (ex.: **Olise** e **Mbappé** juntos) e só segura quem espera uma entrega. Em lote, cada slug corre em paralelo; só o render roda um por vez.
 
 **Regra do texto:** nenhum vídeo entra no render sem `auditoria_texto.md` APROVADO. Problema de texto depois do render não é corrigido refazendo o vídeo: é tratado no texto, antes do render. A auditoria final só revisa o que o render produziu (imagem, som, animação, narração).
+
+**Regra inviolável de congelamento (decisão do Guilherme, 2026-11-03):** o roteiro precisa ser aprovado pelo **Vini** antes de produzir o vídeo. Depois dessa aprovação, `roteiro.txt` é imutável: ninguém o reescreve nem o corrige. Antes do render, cenas, narração e demais materiais devem ser preparados e validados contra esse roteiro aprovado. Depois que o vídeo final for gerado, o pacote audiovisual fica congelado: não alterar roteiro, cenas, narração/voz, áudio, edição nem `video.mp4`, e não regenerar o vídeo por parecer posterior do **Vini**. A auditoria final pode bloquear a publicação somente por metadados (`titulo`, `descricao`, `tags`, texto/miniatura); ressalvas audiovisuais são observações, sem bloquear nem modificar o vídeo. Só o Guilherme pode autorizar explicitamente uma nova versão do vídeo.
 
 **Agentes sob-demanda (fora do fluxo diário):**
 - memphis-social-media → referencias_virais.md: rodar **~1x por semana**; o neymar reusa o arquivo existente.
@@ -56,7 +60,7 @@ Ao **mencionar** outro agente em mensagens, updates de progresso, handoffs e rel
 | **De Bruyne** | debruyne-orquestrador 
 | **Cristiano** | cristiano-otimizador-viral
 | **Memphis** | memphis-social-media
-| **Sidorf** | sidorf-thumbnail-estrategista
+| **Seedorf** | sidorf-thumbnail-estrategista
 
 ## Contrato de arquivos (a squad produz, o run.py consome) — em output/<slug>/
 - `notas.md`: fatos com fonte (3+ sites).
@@ -96,7 +100,7 @@ Duas camadas distintas: a **squad** são os subagentes do Codex em [.Codex/agent
 2. `angulo.md` ← `make_angle` (ponto de vista próprio, antes do texto)
 3. `roteiro.txt` ← [agents/script.py](agents/script.py) `write_script`+`review_script` (só com `--allow-paid`; a squad escreve normalmente)
 4. `cenas.json` ← a squad (olise). Com `--mock`, usa [agents/mocks.py](agents/mocks.py) `CENAS`.
-5. render → `video.mp4`, `prompt_thumbnail.txt` (feito pelo Sidorf), `eventos.json` e `audio.wav` ← [media/motion.py](media/motion.py) (valida o cenas.json, chama `render/render.mjs`, gera o áudio com [media/sfx.py](media/sfx.py) e codifica com ffmpeg)
+5. render → `video.mp4`, `prompt_thumbnail.txt` (feito pelo Seedorf), `eventos.json` e `audio.wav` ← [media/motion.py](media/motion.py) (valida o cenas.json, chama `render/render.mjs`, gera o áudio com [media/sfx.py](media/sfx.py) e codifica com ffmpeg)
 6. `metadados.json` ← a squad (mbappe); `PUBLICAR.txt`; [compliance.py](compliance.py) → `CONFORMIDADE.md`; `custo.json`
 
 **Módulos-chave:**

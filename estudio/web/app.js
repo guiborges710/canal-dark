@@ -122,7 +122,7 @@ function mostrarErroGeral(texto) {
 
 /* ---------- Tela: Produções ---------- */
 function montarProducoes() {
-  document.title = "Projetos · Corte";
+  document.title = "Projetos · Ecossistema do Guilherme";
   app.replaceChildren(h("div", { class: "pagina" },
     h("div", { class: "topo-pagina" }, h("h1", { class: "marca" }, "Projetos"), h("span", { class: "espaco" }),
       h("button", { class: "btn principal", id: "novo", onclick: () => Corte.abrirNovo() }, "＋ Novo projeto")),
@@ -373,7 +373,7 @@ function vistaRoteiro(e, d) {
   const corpo = atual === "cenas" ? listaCenas(d) : atual === "mudancas" ? blocoMudancas(d.mudancas)
     : atual === "direcao" ? h("div", {}, d.direcao_geral ? h("div", { class: "folha texto", style: "margin-bottom:12px" }, d.direcao_geral) : null, d.revisao ? h("div", { class: "folha texto" }, d.revisao) : null)
       : emEdicao(e) ? formRoteiro(e, d) : h("div", {}, caixaReauditar(e), botaoEditar(e), h("div", { class: "folha leitura" }, d.paragrafos.map((p) => h("p", {}, p))));
-  return h("div", {}, h("div", { class: "abas", role: "tablist" }, abas.map(([id, t]) => h("button", { class: "aba" + (id === atual ? " ativa" : ""), role: "tab", onclick: () => { S.aba[e.id] = id; atualizar(); } }, t))), corpo);
+  return h("div", {}, h("div", { class: "abas", role: "tablist" }, abas.map(([id, t]) => h("button", { class: "aba" + (id === atual ? " ativa" : ""), role: "tab", type: "button", "aria-selected": String(id === atual), onclick: () => { S.aba[e.id] = id; atualizar(); } }, t))), corpo);
 }
 
 function blocoMudancas(m) {
@@ -474,7 +474,7 @@ function vistaAssets(e, d) {
   const contador = h("div", { class: "contador", id: "contador" },
     d.pendentes ? h("b", {}, `${d.pendentes} de ${d.total} ainda ${d.pendentes === 1 ? "precisa" : "precisam"} de revisão`) : h("b", { style: "color:var(--ok)" }, `Os ${d.total} estão aprovados`),
     fase, h("span", { class: "espaco" }), h("span", { class: "mudo pequeno num" }, `${aprovadas} aprovados`),
-    h("div", { class: "chips", style: "margin:0" }, filtros.map(([id, t]) => h("button", { class: "chip" + (S.filtro === id ? " on" : ""), onclick: () => { S.filtro = id; atualizar(); } }, t))));
+    h("div", { class: "chips", style: "margin:0" }, filtros.map(([id, t]) => h("button", { class: "chip" + (S.filtro === id ? " on" : ""), type: "button", "aria-pressed": String(S.filtro === id), onclick: () => { S.filtro = id; atualizar(); } }, t))));
   const passa = (it) => S.filtro === "todos" || (S.filtro === "pendentes" ? it.decisao !== "aprovado" : it.decisao === "aprovado");
   const todos = d.grupos.flatMap((g) => g.itens);
   const grupos = d.grupos.map((g) => {
@@ -764,7 +764,7 @@ function desenharComposer() {
   if (!c.versao || !c.e_atual) { alvo.replaceChildren(); alvo.classList.add("oculto"); return; }
   alvo.classList.remove("oculto");
   if (!S.categoria || !e.categorias.includes(S.categoria)) S.categoria = e.categorias[0] || null;
-  const texto = h("textarea", { id: "fb-texto", placeholder: e.material === "video" ? "Pause no ponto e descreva a correção" : e.material === "narracao" ? "Ex.: ‘IBGE’ está sendo lido como palavra" : e.material === "roteiro" ? "Descreva a mudança" : "O que precisa mudar?",
+  const texto = h("textarea", { id: "fb-texto", "aria-label": "Seu comentário para a revisão", placeholder: e.material === "video" ? "Pause no ponto e descreva a correção" : e.material === "narracao" ? "Ex.: ‘IBGE’ está sendo lido como palavra" : e.material === "roteiro" ? "Descreva a mudança" : "O que precisa mudar?",
     oninput: (ev) => { try { localStorage.setItem(chaveRascunho(), ev.target.value); } catch (x) { /* sem armazenamento, sem rascunho */ } } });
   try { texto.value = localStorage.getItem(chaveRascunho()) || ""; } catch (x) { /* idem */ }
   const chips = e.categorias.length > 1 ? h("div", { class: "chips", id: "fb-cats" }, e.categorias.map((k) => h("button", { class: "chip" + (k === S.categoria ? " on" : ""), type: "button", onclick: (ev) => { S.categoria = k; ev.currentTarget.parentNode.querySelectorAll(".chip").forEach((x) => x.classList.toggle("on", x === ev.currentTarget)); } }, k))) : null;
@@ -793,7 +793,7 @@ function desenharAlvo() {
   if (e.material === "video") {
     partes.push(a && a.tempo_s != null ? [h("span", { class: "mudo pequeno" }, "Neste instante:"), h("span", { class: "marca-tempo", id: "marca-tempo" }, tempo(a.tempo_s)), a.rotulo ? h("span", { class: "selo" }, a.rotulo) : null] : h("span", { class: "mudo pequeno" }, "Pause o vídeo para marcar o instante."));
   } else if (e.material === "roteiro" && d && d.cenas && d.cenas.length) {
-    partes.push(h("span", { class: "mudo pequeno" }, "Sobre:"), h("select", { id: "fb-cena", onchange: (ev) => { const v = ev.target.value; S.alvo = v === "" ? null : { cena: Number(v), rotulo: `Cena ${Number(v) + 1}` }; } },
+    partes.push(h("span", { class: "mudo pequeno" }, "Sobre:"), h("select", { id: "fb-cena", "aria-label": "Parte do roteiro a que o comentário se refere", onchange: (ev) => { const v = ev.target.value; S.alvo = v === "" ? null : { cena: Number(v), rotulo: `Cena ${Number(v) + 1}` }; } },
       h("option", { value: "" }, "O roteiro todo"), d.cenas.map((c) => h("option", { value: c.i, selected: a && a.cena === c.i }, `Cena ${c.i + 1}: ${c.fala.slice(0, 38)}…`))));
   } else if (e.material === "narracao") {
     if (a) {

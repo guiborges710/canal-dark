@@ -14,6 +14,7 @@ Responsável: **Luiz Henrique** (`luiz-henrique-ecossistema`).
 | **Rodri** | `rodri-apontamento-horas` | `horas.md` |
 | **Kroos** | `kroos-acessos-seguranca` | `acessos.md` |
 | **Lamine Yamal** | `lamine-yamal-linkedin` | `linkedin/rascunhos.md` |
+| **Bellingham** | `bellingham-dicas-ios` | `dicas_ios/dicas.md` (dicas conceituais de iOS; uso raro; nunca recebe código, projeto ou dado do trabalho) |
 
 ## Como se falam
 
@@ -29,6 +30,26 @@ Pela troca de arquivos, como no setor de inteligência. **Rodri** lê `tarefas.m
 - **Resumo diário 08:30:** emojis e marcadores (⏳ pendente, ✅ feito) montados pelo `avisar.py` a partir de `agenda.json`.
 - Credenciais só no `.env`: `TELEGRAM_BOT_TOKEN` e `TELEGRAM_CHAT_ID`. O estado local fica em `.estado_avisos.json` (ignorado pelo git).
 - O computador precisa ficar ligado e sem suspender.
+
+## Painel do Ronaldo (navegador, desde 2026-11-04)
+
+Central de controle local, no estilo da referência "AETHER" do Guilherme. Abrir: `produtividade\painel.bat` (ou `python produtividade/painel.py`) e acessar http://127.0.0.1:8766/. Arquivos: `painel.py` (servidor, só biblioteca padrão), `painel.html` (a tela).
+
+- **Mostra** o que já existe, lido dos arquivos a cada 6 s: agenda e tarefas (`agenda.json`), próximos avisos (`lembretes.json`), finanças (`financas/movimentos.csv`), sprint (`programacao/quadro.md`), consumo (`.ronaldo_custo.jsonl`) e estado das conexões (Telegram, Google Agenda, Trello). **Clima** (desde 2026-11-04): previsão do Open-Meteo (grátis, sem chave), atualizada a cada 10 min em segundo plano, com temperatura, sensação, umidade, vento, chuva de hoje e amanhã, próximas 12 h e nascer/pôr do sol. Só as coordenadas da cidade saem do computador. Cidade padrão: **Jundiaí** (suposição, pela conta de água); para trocar, crie `produtividade/.ronaldo_painel_local.json` com `{"nome": "Cidade", "lat": -00.0000, "lon": -00.0000}` (ignorado pelo git). Sem internet, o cartão mostra o último dado como `DESATUALIZADO` ou `OFFLINE`. O **Ronaldo** no Telegram não enxerga o clima (não tem internet): quem lê é o painel. Casa/IoT, segurança, Slack e e-mail aparecem como **NÃO CONECTADO**: nunca se inventa status.
+- **Controla**: caixa de comando com o mesmo roteamento do Telegram (`@Pedri ...`, "Casemiro, ..."), mesmos agentes, permissões, orçamento por mensagem e histórico de conversa (cada ordem gasta uma chamada do Claude; **De Bruyne** continua só pelo Claude Remote). Sem Claude e sem custo: marcar tarefa/compromisso como feito, criar tarefa, compromisso ou lembrete (gravados direto em `agenda.json` e `lembretes.json`, com `origem` "Painel") e o "Resumo do dia" (mesmo texto das 08:30).
+- **Segurança**: só ouve em `127.0.0.1`; recusa `Host` e `Origin` de fora e POST sem o cabeçalho `X-Painel`; não envia nada ao Telegram nem a terceiros; não guarda senha, token ou chave. O histórico das ordens fica em `.ronaldo_painel_ordens.jsonl` (ignorado pelo git).
+- **Limites**: precisa do computador ligado; uma ordem por vez (a segunda recebe aviso); sem voz por enquanto (o áudio continua pelo Telegram); não abre pelo celular (para isso, só pelo Telegram ou pelo Claude Remote).
+
+## Kanban geral (trabalho + projeto do canal)
+
+O quadro "Kanban Trabalho" (espelhado em `kanban.md`) é um só: trabalho do Guilherme **e** o setor de programação. `kanban_programacao.py` (chamado pelo `trello_sync.py` antes de sincronizar, ou rodável à parte com `--simular`) lê `programacao/backlog.md` e `programacao/quadro.md` e cria/atualiza os cartões `[PROG-NNN] título` (candidatos ainda sem id: `[PROG-C-01]`). O id entre colchetes identifica o cartão; o título não muda depois de criado. Quem move esses cartões é o **Xavi** (e o **Zico**), pelos arquivos de `programacao/`; o **Guardiola** não os move nem os repriorizam, e o Guilherme continua ganhando no Trello. Mapa de colunas (o estado fino fica no texto do cartão, `estado: Em teste`):
+
+| Quadro do Xavi | Kanban geral |
+|---|---|
+| Backlog da sprint, Em refinamento técnico | Backlog |
+| Fazendo, Em teste, Pronto para aceite | Fazendo |
+| Feito | Feito |
+| Bloqueado | Bloqueado |
 
 ## Regras
 

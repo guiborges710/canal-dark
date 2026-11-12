@@ -1,0 +1,54 @@
+{
+  "data": "2026-11-06",
+  "timezone": "America/Sao_Paulo",
+  "conta": "@closetminimal",
+  "autorizacao": "Tres fotos aprovadas: publicar primeira agora, segunda 16h, terceira19h30",
+  "posts": [
+    {
+      "tema": "paz-teste",
+      "id": "7705121166955924743",
+      "horario": "15:05",
+      "status": "publicado_publico",
+      "arquivo": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-11-06\\paz-teste.png",
+      "dimensoes": [
+        1086,
+        1448
+      ],
+      "sha256": "ad8cdad7625b30e7256ae6fa82c526ad870a59bf129866b35455cb687926c3fa",
+      "conta_verificada_antes_upload_e_envio": true,
+      "rotulo_nativo_ia": true,
+      "previa_feed_revisada": true
+    },
+    {
+      "tema": "planos",
+      "id": "7705121550487260423",
+      "horario": "16:00",
+      "status": "agendado_confirmado",
+      "arquivo": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-11-06\\planos.png",
+      "dimensoes": [
+        1086,
+        1448
+      ],
+      "sha256": "76b0d6ecf4f9b7157abd8b86e3c8937c238a4d0d36456248633632678290f319",
+      "conta_verificada_antes_upload_e_envio": true,
+      "rotulo_nativo_ia": true,
+      "previa_feed_revisada": true
+    },
+    {
+      "tema": "razao",
+      "id": "7705121945741790471",
+      "horario": "19:30",
+      "status": "agendado_confirmado",
+      "arquivo": "C:\\Users\\Guilherme\\Documents\\canal-dark\\tiktok\\closetminimal\\posts\\2026-11-06\\razao.png",
+      "dimensoes": [
+        1086,
+        1448
+      ],
+      "sha256": "cd9c9d5886b83a2374f5d7be1da44d77b6da57f6624a77eef3e3ce9c55a4ad56",
+      "conta_verificada_antes_upload_e_envio": true,
+      "rotulo_nativo_ia": true,
+      "previa_feed_revisada": true
+    }
+  ],
+  "comprovante": "comprovante-camisetas.png"
+}

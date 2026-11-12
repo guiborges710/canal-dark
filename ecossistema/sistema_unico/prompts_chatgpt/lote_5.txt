@@ -1,0 +1,51 @@
+Você é um ilustrador-chefe que produz, em série, os assets visuais de um sistema de painéis. Tarefa: LOTE 5 (P2 parte 1: canal restante, splash e capa) (8 imagens).
+
+ESTILO (vale para todas as imagens):
+Ilustração vetorial cartoon plana, limpa e profissional, no espírito de sinalização de metrô e interface moderna:
+formas geométricas simples, cantos arredondados, sem textura de pincel.
+Contorno uniforme azul-marinho #0E1A24 de espessura constante (cerca de 1% da largura), sem variar.
+Cores chapadas com no máximo 2 níveis de sombra (cel-shading em 2 tons), sem degradê, sem brilho especular, sem ruído.
+Luz vindo de cima à esquerda; sombra projetada sempre à direita e abaixo, em tom mais escuro da própria cor.
+Paleta restrita: azul-marinho #0E1A24, #162838, branco frio #EFF3F1, cinza-azulado #4B5E6A, acento único âmbar #FFB703
+(no máximo 1 detalhe pequeno por imagem), verde-menta #1FBF8A só para "ok". Nada de vermelho puro, nada de neon.
+Nenhum texto, letra, número, logotipo, escudo, marca registrada, marca d'água ou assinatura dentro da imagem.
+Fundo conforme a instrução de cada item; nunca xadrez, nunca sombra no fundo, nunca moldura.
+
+Avatares (personagens): caricatura cartoon do craque REAL indicado em cada ficha (campo "Jogador"), na fase indicada, bem parecida com ele: capture o que o torna reconhecível (formato do rosto, queixo, cabelo, barba, sobrancelhas, sorriso, porte) em traço simplificado de cartoon, com olhos grandes e redondos, nariz em uma curva, boca em uma curva, rosto expressivo e simpático. É caricatura desenhada, nunca foto nem fotorrealismo.
+Cabeça grande (cerca de 1/3 da altura do busto, bobblehead moderado), pescoço curto, ombros largos, busto cortado no peito,
+olhar frontal ou 3/4 leve, sorriso discreto. Cabeça ocupa 50 a 55% da largura do quadro, topo da cabeça a 8% do topo,
+rosto sempre centralizado horizontalmente, para o recorte redondo e quadrado funcionarem.
+Roupa: camisa/uniforme na cor e padrão indicados na ficha, sem escudo, sem patrocinador, sem número, sem logo de fabricante.
+Pose e acessório típicos da ficha (luva de goleiro, braçadeira, terno de treinador, etc.), visíveis só da cintura para cima.
+Fundo: cor chapada do setor indicada no item, sem detalhes. Todos os avatares com o mesmo enquadramento, mesma proporção e mesma espessura de contorno.
+
+Ilustrações de estado e logo: objeto único centralizado, margem de 12% em volta, estilo adesivo:
+contorno interno azul-marinho #0E1A24 e borda externa branca #EFF3F1 de espessura fina e uniforme.
+Fundo magenta chapado #FF00FF, uniforme, sem sombra, sem degradê. Não use magenta, rosa ou roxo no objeto.
+Sem personagem humano nas ilustrações de estado.
+
+Fundos de tela: geometria abstrata de linhas de metrô, estações em círculos pequenos, curvas suaves, azul-marinho profundo,
+contraste muito baixo (3 a 6%), nenhum elemento chamativo no centro, nenhum texto.
+
+COMO TRABALHAR (siga sem me perguntar nada):
+- Não existe imagem de referência e você não precisa de nenhuma. Não peça anexo, não peça confirmação, não peça aprovação, não faça perguntas. Tudo o que você precisa está neste texto. Comece a gerar imediatamente.
+- Gere UMA imagem por item da tabela, na ordem, uma de cada vez, usando a ferramenta de geração de imagem. Antes de cada imagem escreva só uma linha: Arquivo: <nome do arquivo>. Nunca junte vários itens em uma imagem, folha ou mosaico.
+- Mantenha o MESMO estilo em todas as imagens, inclusive em relação às imagens que você já gerou nesta conversa. Releia o bloco de ESTILO a cada item.
+- Tamanho: use o da tabela. Se a ferramenta só aceitar outro, use o mais próximo na mesma proporção (1024x1024, 1024x1536 ou 1536x1024), sem esticar nem recortar.
+- Cada avatar é uma caricatura cartoon do jogador ou treinador nomeado no campo "Jogador" da ficha, na fase indicada. Use o que você já sabe sobre a aparência dele naquela época para a semelhança ficar boa; a ficha dá o uniforme, a pose e o acessório. O avatar "voce" é o único genérico, sem semelhança com ninguém. Os nomes dos arquivos são rótulos internos.
+- Nenhum texto, letra, número, logotipo, escudo ou marca dentro de qualquer imagem.
+- Fundo "magenta chapado #FF00FF": o fundo inteiro é UMA cor magenta uniforme, sem sombra, sem degradê, sem xadrez de transparência desenhado, e nenhum magenta, rosa ou roxo dentro do objeto. Avatares: fundo opaco chapado na cor indicada, sem detalhes e sem moldura.
+- Se algum item for recusado ou falhar, não invente substituto e não pare: escreva "FALHOU: <arquivo>" e siga para o próximo. Se atingir o limite de imagens, escreva exatamente qual foi o último item feito e a lista dos que faltam.
+- No fim, liste todos os arquivos gerados. Se (e somente se) conseguir juntar as imagens em um .zip com o Python, entregue o link do zip; se não conseguir, diga em uma linha e não insista: os arquivos individuais bastam.
+
+TABELA (nº | arquivo | pasta | tamanho em px | forma | fundo | descrição):
+35 | avatar_haaland_ver_1024x1536.png | avatares | 1024x1536 | vertical | opaco chapado #2F7DE1 | Avatar. Jogador: Erling Haaland, Manchester City 2022/23. Ficha: Centroavante gigante e muito forte, postura de peito estufado e olhar fixo. Camisa azul-celeste lisa, cabelo loiro comprido preso em coque ou rabo, sem barba, expressão de foco intenso. Segura uma bússola com o acento âmbar.
+36 | avatar_messi_ver_1024x1536.png | avatares | 1024x1536 | vertical | opaco chapado #2F7DE1 | Avatar. Jogador: Lionel Messi, Barcelona 2011/12. Ficha: Baixo e compacto, ombros caídos, postura de condução de bola de cabeça baixa. Camisa listrada vertical azul e grená, cabelo castanho curto, barba rala, olhar de calma e foco. Segura um papel com uma tese de uma frase e um sublinhado âmbar.
+37 | avatar_cristiano_ver_1024x1536.png | avatares | 1024x1536 | vertical | opaco chapado #2F7DE1 | Avatar. Jogador: Cristiano Ronaldo, Manchester United 2007/08. Ficha: Atacante atlético de tronco largo, postura de herói com o queixo erguido. Camisa vermelho-tijolo lisa de gola alta, cabelo preto penteado para trás com gel, sobrancelhas retas, sorriso confiante. Segura um gráfico de barras subindo com a barra final âmbar.
+38 | avatar_barcola_ver_1024x1536.png | avatares | 1024x1536 | vertical | opaco chapado #2F7DE1 | Avatar. Jogador: Bradley Barcola, PSG 2024/25. Ficha: Ponta esguio e ágil, postura de arrancada para a esquerda. Camisa azul-marinho lisa de gola redonda, cabelo preto curto com degradê, sorriso discreto. Segura uma moldura horizontal 16:9 com o acento âmbar.
+39 | avatar_kane_ver_1024x1536.png | avatares | 1024x1536 | vertical | opaco chapado #2F7DE1 | Avatar. Jogador: Harry Kane, Tottenham 2017/18. Ficha: Centroavante alto e robusto, queixo marcado, postura de finalizador. Camisa branca lisa de gola em V, cabelo castanho-claro curto penteado de lado, barba rala, expressão serena. Segura um microfone com a espuma âmbar.
+63 | avatar_dembele_ver_1024x1536.png | avatares | 1024x1536 | vertical | opaco chapado #2F7DE1 | Avatar. Jogador: Ousmane Dembélé, PSG 2024/25. Ficha: Ponta veloz e magro, postura de arrancada, dribla com os dois pés. Camisa azul-marinho lisa com acabamento vermelho-tijolo na gola, cabelo curto com degradê e barba rala. Sorriso de canto; segura um celular em pé (formato vertical) com a tela em âmbar.
+65 | fundo_splash_ver_1024x1536.png | fundos | 1024x1536 | vertical | cena (opaco, sem transparência) | Fundo de tela vertical, mesma linguagem do fundo de linhas de metrô: azul-marinho profundo, contraste de 3 a 6%, curvas suaves, estações em círculos pequenos, centro limpo, sem texto.
+66 | extra_og_capa_hor_1536x1024.png | extras | 1536x1024 | horizontal | cena (opaco, sem transparência) | Capa de vitrine: o mesmo símbolo da marca (balão de fala com linha de metrô e estação âmbar, sem letras) ao centro, sobre linhas de metrô em azul-marinho profundo, centro limpo, sem texto.
+
+Comece agora pelo primeiro item da tabela e vá até o último.

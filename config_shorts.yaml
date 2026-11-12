@@ -1,4 +1,5 @@
-# Perfil do canal (Shorts 9:16, animação vetorial por código). Único perfil: o estilo novo é só Short por enquanto.
+# Perfil do canal (Shorts 9:16, animação vetorial por código). Perfil padrão. O vídeo horizontal sobrepõe só o bloco
+# `render` em config_horizontal.yaml (python run.py video --formato horizontal).
 channel:
   niche: "Análise de Comportamento Social e Gerações"   # nicho do canal (definido em 2026-10-07)
   audience: "brasileiros 18-45 interessados em entender comportamento, gerações e sociedade com nuance"
@@ -31,7 +32,7 @@ tiers:
 
 models:
   fast: claude-haiku-4-5-20251001
-  smart: claude-sonnet-5-5
+  smart: claude-opus-4-8
 
 research:
   youtube_queries: []    # ex.: ["curiosidades históricas", "mistérios da história"]
@@ -44,9 +45,18 @@ research:
 voz:
   amostra: "voz/amostra.wav"
   threads: 8
+  # Ritmo da narração (mais dinâmico = mais retenção). Mexa aqui, não no código.
+  velocidade: 1.15       # 1.0 = como o modelo falou; 1.1 a 1.25 = ritmo de Short; acelera sem mudar o tom
+  pausa_frase_s: 0.10    # pausa entre frases dentro de uma fala
+  pausa_max_s: 0.18      # pausas internas (vírgulas, etc.) maiores que isso são encurtadas para este valor
+  exaggeration: 0.6      # expressividade da voz (padrão do modelo 0.5; mais alto = mais energia)
+  cfg_weight: 0.4        # peso da amostra (padrão do modelo 0.5; mais baixo = ritmo mais solto)
+  inicio_s: 0.05         # silêncio antes da voz no começo de cada cena
+  respiro_s: 0.12        # respiro depois da fala, até a próxima cena
 
 # Vídeo: animação vetorial (render/) com efeitos sonoros por código. Sem imagens.
 render:
+  formato: vertical          # vertical (Short) | horizontal (ver config_horizontal.yaml)
   width: 1080
   height: 1920
   fps: 30
@@ -62,3 +72,9 @@ prices:
   llm_per_mtok:
     claude-haiku-4-5-20251001: {in: 1.0, out: 5.0}
     claude-sonnet-5-5: {in: 3.0, out: 15.0}   # confirmar preço do modelo atual
+
+# Cronograma de postagem (PROG-011): só SUGERE data e hora para publicar no Studio; não agenda nem publica.
+# Sem esta seção vale 1 vídeo por dia às 18:00. Descomente e ajuste quando a cadência for decidida.
+# cronograma:
+#   dias: [seg, qua, sex]   # ou "todos"
+#   hora: "18:00"

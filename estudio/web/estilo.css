@@ -221,3 +221,17 @@ pre.log { background: var(--palco); color: #d8d8d2; padding: 11px 13px; border-r
   .cena, .cena-cabeca { grid-template-columns: 64px minmax(0, 1.4fr) minmax(0, 1fr); }
   .cena .dir, .cena-cabeca .c-dir { grid-column: 2 / -1; }
 }
+
+/* UX-CORTE-2026-11-09: áreas de clique e caixas de marcar (mesmas cores; só o tamanho do alvo) */
+.btn.mini, .btn.leve.mini { min-height: 30px; }
+.chip { min-height: 28px; }
+a.voltar { display: inline-flex; align-items: center; min-height: 32px; }
+.lado a:not(.btn) { display: inline-flex; align-items: center; min-height: 28px; }
+input[type=checkbox], input[type=radio] { width: 16px; height: 16px; accent-color: var(--acao); flex: none; }
+label.linha-flex { min-height: 28px; }
+.fb .x { min-width: 28px; min-height: 28px; }
+.aba:focus-visible, .etapa-botao:focus-visible, .cartao-revisao:focus-visible, table.lista tbody tr:focus-visible { outline-offset: -2px; }
+@media (hover: none), (pointer: coarse), (max-width: 820px) {
+  a.voltar, .lado a:not(.btn), label.linha-flex, .fb .x, .chip { min-height: 40px; }
+  input[type=checkbox], input[type=radio] { width: 22px; height: 22px; }
+}

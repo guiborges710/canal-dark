@@ -1,0 +1,121 @@
+[
+  {
+    "tipo": "sketch",
+    "desenho": "cena_0",
+    "duracao": 4,
+    "fala": "O colega novo pediu demissão. Poucos meses de casa. E alguém solta: essa geração não segura emprego.",
+    "rotulos": [
+      "poucos meses",
+      "essa geração não",
+      "segura emprego"
+    ],
+    "sons": [
+      {
+        "t": 2.9,
+        "tipo": "impact"
+      }
+    ]
+  },
+  {
+    "tipo": "sketch",
+    "desenho": "cena_1",
+    "duracao": 4,
+    "fala": "Só que, nos Estados Unidos, pesquisadores acompanharam por décadas as mesmas pessoas, da geração dos nossos pais e avós.",
+    "rotulos": [
+      "EUA",
+      "as mesmas pessoas",
+      "pais e avós"
+    ]
+  },
+  {
+    "tipo": "sketch",
+    "desenho": "cena_2",
+    "duracao": 4,
+    "fala": "Hoje elas parecem o povo estável. Mas, no começo da vida adulta, tiveram mais de cinco empregos.",
+    "rotulos": [
+      "mais de 5 empregos",
+      "hoje",
+      "começo da vida adulta"
+    ],
+    "sons": [
+      {
+        "t": 3.4,
+        "tipo": "ding"
+      }
+    ]
+  },
+  {
+    "tipo": "sketch",
+    "desenho": "cena_3",
+    "duracao": 2.5,
+    "fala": "Depois a troca foi caindo, com a idade.",
+    "rotulos": [
+      "a troca cai com a idade"
+    ]
+  },
+  {
+    "tipo": "sketch",
+    "desenho": "cena_4",
+    "duracao": 4,
+    "fala": "E lá o jovem adulto de hoje fica quase três anos no emprego. Parecido com o que ficava décadas atrás. Na média, não em todos os casos.",
+    "rotulos": [
+      "quase 3 anos",
+      "no emprego",
+      "décadas atrás",
+      "hoje",
+      "≈"
+    ],
+    "sons": [
+      {
+        "t": 2.4,
+        "tipo": "ding"
+      }
+    ]
+  },
+  {
+    "tipo": "sketch",
+    "desenho": "cena_5",
+    "duracao": 5,
+    "fala": "No Brasil, não achei essa comparação entre gerações. Mas o que aparece são vagas curtas, salário baixo e horário que briga com a escola. E parte da troca é decisão da empresa.",
+    "rotulos": [
+      "Brasil",
+      "?",
+      "vaga curta",
+      "salário baixo",
+      "horário x escola",
+      "decisão da empresa"
+    ],
+    "sons": [
+      {
+        "t": 8.0,
+        "tipo": "impact"
+      }
+    ]
+  },
+  {
+    "tipo": "sketch",
+    "desenho": "cena_6",
+    "duracao": 4,
+    "fala": "Na nossa leitura: o jovem troca de emprego porque está começando, não porque nasceu em uma geração.",
+    "rotulos": [
+      "nossa leitura",
+      "está começando",
+      "geração"
+    ],
+    "sons": [
+      {
+        "t": 4.8,
+        "tipo": "impact"
+      }
+    ]
+  },
+  {
+    "tipo": "sketch",
+    "desenho": "cena_7",
+    "duracao": 4,
+    "fala": "Pensa no colega de novo. Talvez ele só esteja na fase de trocar.",
+    "rotulos": [
+      "fase de trocar"
+    ]
+  }
+]

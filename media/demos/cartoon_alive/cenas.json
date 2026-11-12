@@ -1,0 +1,187 @@
+[
+ {
+  "tipo": "cartoon_alive",
+  "desenho": "cena_0",
+  "fala": "Você marcou com os amigos e todo mundo cancelou de novo.",
+  "duracao": 3.2,
+  "paleta": "sol",
+  "acao": "Bia olha o celular feliz e leva um susto com a mensagem",
+  "cenario": "rua",
+  "personagens": [
+   {
+    "id": "bia",
+    "x": 400,
+    "y": 1440,
+    "escala": 1.15,
+    "olha": "dir",
+    "segura": {
+     "tipo": "celular",
+     "texto": "Hoje não vai dar",
+     "escala": 1.15
+    },
+    "poses": [
+     {
+      "t": 0,
+      "pose": "segura",
+      "expressao": "feliz"
+     },
+     {
+      "t": 1.3,
+      "pose": "segura",
+      "expressao": "surpresa"
+     }
+    ]
+   }
+  ],
+  "textos": [
+   {
+    "texto": "CANCELOU DE NOVO",
+    "x": 540,
+    "y": 340,
+    "tam": 88,
+    "t": 1.3,
+    "entrada": "pop",
+    "cor": "destaque"
+   }
+  ],
+  "objetos": [
+   {
+    "tipo": "exclamacao",
+    "x": 720,
+    "y": 640,
+    "escala": 0.8,
+    "t": 1.35,
+    "entrada": "pop"
+   }
+  ],
+  "camera": {
+   "chaves": [
+    {
+     "t": 1.25,
+     "x": 540,
+     "y": 960,
+     "zoom": 1.0
+    },
+    {
+     "t": 1.45,
+     "x": 470,
+     "y": 820,
+     "zoom": 1.32,
+     "curva": "rapida"
+    }
+   ],
+   "tremidas": [
+    {
+     "t": 1.45,
+     "forca": 22
+    }
+   ]
+  },
+  "transicao": {
+   "entrada": "corte",
+   "saida": "chicote"
+  },
+  "sons": [
+   {
+    "t": 1.3,
+    "tipo": "impact"
+   }
+  ]
+ },
+ {
+  "tipo": "cartoon_alive",
+  "desenho": "cena_1",
+  "fala": "Mas os dados mostram que isso não é só com você.",
+  "duracao": 3.2,
+  "paleta": "sol",
+  "acao": "Bia encolhe os ombros e Téo chega apontando o gráfico",
+  "cenario": "liso",
+  "personagens": [
+   {
+    "id": "bia",
+    "x": 300,
+    "y": 1440,
+    "escala": 1.05,
+    "olha": "dir",
+    "poses": [
+     {
+      "t": 0,
+      "pose": "triste",
+      "expressao": "triste"
+     },
+     {
+      "t": 1.6,
+      "pose": "ombros",
+      "expressao": "pensativa"
+     }
+    ]
+   },
+   {
+    "id": "teo",
+    "x": 790,
+    "y": 1440,
+    "escala": 1.05,
+    "olha": "esq",
+    "entrada": "salto",
+    "t": 0.5,
+    "fala": true,
+    "poses": [
+     {
+      "t": 0,
+      "pose": "neutra",
+      "expressao": "feliz"
+     },
+     {
+      "t": 1.2,
+      "pose": "aponta",
+      "expressao": "surpresa"
+     }
+    ]
+   }
+  ],
+  "objetos": [
+   {
+    "tipo": "grafico",
+    "x": 330,
+    "y": 800,
+    "escala": 0.72,
+    "t": 1.2,
+    "entrada": "pop",
+    "barras": [
+     {
+      "rotulo": "2013",
+      "valor": 7,
+      "texto": "7h"
+     },
+     {
+      "rotulo": "2021",
+      "valor": 3,
+      "texto": "3h"
+     }
+    ]
+   }
+  ],
+  "baloes": [
+   {
+    "de": "teo",
+    "linhas": [
+     "olha isso!"
+    ],
+    "t": 0.9,
+    "ate": 2.2,
+    "x": 800,
+    "y": 620
+   }
+  ],
+  "transicao": {
+   "entrada": "chicote",
+   "saida": "loop"
+  },
+  "sons": [
+   {
+    "t": 1.2,
+    "tipo": "ding"
+   }
+  ]
+ }
+]

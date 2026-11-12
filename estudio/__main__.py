@@ -16,10 +16,12 @@ def main():
     ap.add_argument("--porta", type=int, default=PORTA)
     ap.add_argument("--nao-abrir", action="store_true", help="não abre o navegador")
     ap.add_argument("--rede", action="store_true", help="também aceita o celular e outros aparelhos do Wi-Fi de casa, com senha")
+    ap.add_argument("--pagina", default="/", help="pagina local para abrir ao iniciar")
     a = ap.parse_args()
     from . import acesso
     from .servidor import servir
-    url = f"http://127.0.0.1:{a.porta}/"
+    pagina = "/" + a.pagina.strip("/") if a.pagina.strip("/") else "/"
+    url = f"http://127.0.0.1:{a.porta}{pagina}"
     print(f"Corte em {url}  (Ctrl+C encerra; trabalhos em andamento continuam e são reencontrados na próxima vez)", flush=True)
     if a.rede:
         acesso.ativar(True)

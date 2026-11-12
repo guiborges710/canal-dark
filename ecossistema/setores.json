@@ -1,0 +1,118 @@
+{
+  "_aviso": "Fonte única de setores e agentes (lida por estudio/painel.py e estudio/central.py). Agente fora daqui aparece como 'Sem setor'.",
+  "nomes_compostos": [
+    "andre-carrillo",
+    "hugo-souza",
+    "lamine-yamal",
+    "luiz-henrique",
+    "roberto-carlos",
+    "thiago-silva",
+    "xabi-alonso"
+  ],
+  "setores": [
+    {
+      "id": "programacao",
+      "nome": "Programação",
+      "ativo": true,
+      "agentes": [
+        "zico-po-programacao",
+        "xavi-scrum-master",
+        "ancelotti-agile-coach",
+        "thiago-silva-tech-lead",
+        "rodrygo-dev-back",
+        "endrick-dev-front",
+        "iniesta-ux-corte",
+        "alisson-qa",
+        "marquinhos-devops-release"
+      ]
+    },
+    {
+      "id": "inteligencia",
+      "nome": "Inteligência",
+      "ativo": false,
+      "agentes": [
+        "hugo-souza-pesquisador-canais",
+        "fagner-analista-titulos",
+        "andre-carrillo-analista-thumbnails",
+        "raniele-analista-producao",
+        "yuri-alberto-analista-metricas",
+        "vitinho-consolidador",
+        "busquets-aprendiz-canais-dark",
+        "xabi-alonso-curador-referencias",
+        "garro-scout-tecnologia-ia"
+      ]
+    },
+    {
+      "id": "producao",
+      "nome": "Canal dark (produção)",
+      "ativo": false,
+      "agentes": [
+        "debruyne-orquestrador",
+        "modric-pesquisador-tema",
+        "memphis-social-media",
+        "haaland-pesquisador-nicho",
+        "messi-estrategista-angulo",
+        "neymar-roteirista",
+        "courtois-revisor-fatos",
+        "cristiano-otimizador-viral",
+        "raphinha-curador-componentes",
+        "olise-diretor-arte",
+        "barcola-diretor-horizontal",
+        "mbappe-editor-metadados",
+        "vini-auditor-conformidade",
+        "sidorf-thumbnail-estrategista",
+        "kane-narrador",
+        "dembele-reels-instagram"
+      ]
+    },
+    {
+      "id": "clipes",
+      "nome": "Clipes (Instagram e TikTok)",
+      "ativo": false,
+      "agentes": [
+        "pele-chefe-clipes",
+        "salah-scout-fontes",
+        "rivaldo-avaliador-fonte",
+        "kaka-cacador-momentos",
+        "zidane-editor-cortes",
+        "buffon-auditor-originalidade",
+        "lewandowski-embalagem-plataformas",
+        "roberto-carlos-gestor-perfis",
+        "figo-diretor-ganchos",
+        "totti-avaliador-potencial"
+      ]
+    },
+    {
+      "id": "pesquisa_videos",
+      "nome": "Pesquisa de vídeos longos",
+      "ativo": false,
+      "agentes": [
+        "pirlo-pesquisador-videos"
+      ]
+    },
+    {
+      "id": "pessoal",
+      "nome": "Produtividade pessoal",
+      "ativo": false,
+      "agentes": [
+        "ronaldo-assistente",
+        "guardiola-po-agilista",
+        "pedri-gestor-tarefas",
+        "rodri-apontamento-horas",
+        "kroos-acessos-seguranca",
+        "lamine-yamal-linkedin",
+        "casemiro-financeiro",
+        "bellingham-dicas-ios"
+      ]
+    },
+    {
+      "id": "ecossistema",
+      "nome": "Ecossistema / transversal",
+      "ativo": false,
+      "agentes": [
+        "luiz-henrique-ecossistema",
+        "valverde-engenheiro-ia"
+      ]
+    }
+  ]
+}

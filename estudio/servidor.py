@@ -219,12 +219,16 @@ class Manipulador(BaseHTTPRequestHandler):
         u = urlparse(self.path)
         q = {k: v[0] for k, v in parse_qs(u.query).items()}
         c = u.path
+        if c == "/":
+            if not self._so_computador():
+                return
+            return self._arquivo_app("index.html")
         if c == "/financas" or c.startswith("/financas/"):
             if not self._so_computador():
                 return
             rel = c[len("/financas/"):] if c.startswith("/financas/") else "index.html"
             return self._arquivo_app(rel)
-        if c == "/" or c.startswith(("/producao/", "/estudio/", "/editor/", "/agentes", "/fluxos")):
+        if c.startswith(("/producao/", "/estudio/", "/editor/", "/agentes", "/fluxos")):
             return self._arquivo(WEB / "index.html", "text/html; charset=utf-8")
         if c == "/central":
             return self._arquivo(WEB / "central.html", "text/html; charset=utf-8")
